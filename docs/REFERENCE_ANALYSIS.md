@@ -100,3 +100,16 @@ All values at 1440 wide unless stated. `motion` = `motion/react`; "ease-out" ≈
 | 390 | 371 × 872, inset 10, r24, pad 110/20/28 | 50 / 42 | Moments stacked (343 cards); pack 713 tall; footer 803 tall |
 
 Takeaways: breakpoints ≈ 810 and ≈ 1200; hero is always full viewport height; type steps are large jumps, not fluid. *Proposed:* use `clamp()` for smoother scaling with the same endpoints.
+
+## 8. Hero frame (re-measured in Phase 4, `scripts/measure-frame.mjs` → `docs/reference-frame.json`)
+
+| Viewport | Frame margin (left/right/top) | Radius | Frame height | Logo offset in frame (left, top) | Nav cluster offset (right, top) |
+|---|---|---|---|---|---|
+| 1440×900 | 14 / 14 / 14 | 32 px | 871 (viewport − 29) | 38, 29 | 38, 46 |
+| 1366×768 | 14 / 14 / 14 | 32 px | 741 (viewport − 27) | 36, 27 | 36, 43 |
+| 1024×768 | 12 / 12 / 12 | 32 px | 720 | 32, 24 | 32, 38 |
+| 768×1024 | 8 / 8 / 8 | 24 px | 620 | 16, 14 | 14, 19 |
+| 390×844 | 8 / 8 / 8 | 24 px | 620 | 16, 14 | 14, 19 |
+
+The wrapper is `position: sticky`, the frame has `overflow: clip`; page background `#FBF6ED` shows in the margin. The reference's flavor-detail page also uses rounded inset blocks (14 px margin, 32 px radius) — but as two side-by-side cards with the navbar above them, not a framed full hero.
+Implemented: margins 8 / 12 / 14 px, radius 24 / 32 px, frame height 620 px (< 1024), 720 px (1024–1199), viewport − 28 px (≥ 1200); navbar offsets = margin + measured offsets.

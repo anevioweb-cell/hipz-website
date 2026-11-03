@@ -31,56 +31,60 @@ function FlavorPage({ flavor }) {
 
   return (
     <FlavorTheme flavor={flavor} className="contents">
-      <section
-        className="relative min-h-[88svh] overflow-hidden bg-flavor"
-        aria-label={flavor.name}
-      >
-        <m.div
-          key={flavor.slug}
-          className="absolute inset-0"
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: duration.base, ease }}
+      {/* same measured inset frame as the home hero (the reference detail page also uses 14 px / 32 px
+          rounded inset blocks); min-height instead of a fixed height so the text never clips */}
+      <div className="hero-frame-wrap">
+        <section
+          className="detail-frame relative overflow-hidden bg-flavor"
+          aria-label={flavor.name}
         >
-          <FlavorScene flavor={flavor} effects="low" priority />
-        </m.div>
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 left-0 hidden w-[64%] bg-linear-to-r from-paper/65 via-paper/40 to-transparent landscape:block"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-[68%] bg-linear-to-t from-ink via-ink/80 to-transparent portrait:block"
-        />
-        <div className="relative z-10 mx-auto flex min-h-svh max-w-site flex-col justify-end gap-5 px-gutter pt-28 pb-10 text-ink portrait:text-paper lg:px-gutter-lg lg:pb-16 landscape:[&>*]:max-w-[min(34rem,46vw)]">
-          <ul className="flex flex-wrap gap-2" aria-label="Facts">
-            {attrs.map((k) => (
-              <li key={k}>
-                <Chip tone="paper">{flavor.attributes[k]}</Chip>
-              </li>
-            ))}
-          </ul>
-          <SplitLines
-            immediate
-            lines={[flavor.name]}
-            delay={0.05}
-            className="font-display text-display font-extrabold landscape:text-[clamp(3rem,6.2vw,6.5rem)]"
+          <m.div
+            key={flavor.slug}
+            className="absolute inset-0"
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: duration.base, ease }}
+          >
+            <FlavorScene flavor={flavor} effects="low" priority />
+          </m.div>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-0 left-0 hidden w-[64%] bg-linear-to-r from-paper/65 via-paper/40 to-transparent landscape:block"
           />
-          <Ar display className="self-start text-h2">
-            {flavor.nameAr}
-          </Ar>
-          <p className="font-display text-h3 font-bold">{copy.flavors[flavor.slug].tagline}</p>
-          <p className="max-w-[36ch] text-lead">{copy.flavors[flavor.slug].blurb}</p>
-          <div className="flex flex-wrap gap-3">
-            <Button to="/distributors" variant="primary">
-              {copy.flavors.findIt.text}
-            </Button>
-            <Button to="/flavors" variant="ghost" arrow={false}>
-              {copy.flavors.pageTitle.title}
-            </Button>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-[68%] bg-linear-to-t from-ink via-ink/80 to-transparent portrait:block"
+          />
+          <div className="relative z-10 mx-auto detail-frame-content flex max-w-site flex-col justify-end gap-5 px-gutter pt-28 pb-10 text-ink portrait:text-paper lg:px-gutter-lg lg:pb-16 landscape:[&>*]:max-w-[min(34rem,46vw)]">
+            <ul className="flex flex-wrap gap-2" aria-label="Facts">
+              {attrs.map((k) => (
+                <li key={k}>
+                  <Chip tone="paper">{flavor.attributes[k]}</Chip>
+                </li>
+              ))}
+            </ul>
+            <SplitLines
+              immediate
+              lines={[flavor.name]}
+              delay={0.05}
+              className="font-display text-display font-extrabold landscape:text-[clamp(3rem,6.2vw,6.5rem)]"
+            />
+            <Ar display className="self-start text-h2">
+              {flavor.nameAr}
+            </Ar>
+            <p className="font-display text-h3 font-bold">{copy.flavors[flavor.slug].tagline}</p>
+            <p className="max-w-[36ch] text-lead">{copy.flavors[flavor.slug].blurb}</p>
+            <div className="flex flex-wrap gap-3">
+              <Button to="/distributors" variant="primary">
+                {copy.flavors.findIt.text}
+              </Button>
+              <Button to="/flavors" variant="ghost" arrow={false}>
+                {copy.flavors.pageTitle.title}
+              </Button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {attrs.length > 0 && (
         <Section tone="paper">

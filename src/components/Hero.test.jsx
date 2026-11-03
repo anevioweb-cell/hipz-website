@@ -31,6 +31,15 @@ const setup = () =>
   );
 
 describe('<Hero>', () => {
+  it('sits in the measured rounded frame: sticky page-colored margin + clipping container', () => {
+    const { container } = setup();
+    const wrap = container.firstElementChild;
+    expect(wrap).toHaveClass('hero-frame-wrap', 'sticky');
+    const frame = container.querySelector('section');
+    expect(frame).toHaveClass('hero-frame', 'overflow-hidden');
+    // everything visual (scenes, effects) lives inside the clipping frame
+    expect(frame.querySelector('picture')).toBeTruthy();
+  });
   it('has one h1, both flavor switches, and links to the flavors section and /distributors', () => {
     setup();
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Thirsty? Say Hipz.');

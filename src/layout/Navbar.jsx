@@ -62,7 +62,8 @@ export default function Navbar() {
 
   return (
     <m.header
-      className={`absolute inset-x-0 top-0 z-40 px-gutter pt-6 lg:px-gutter-lg ${dark ? 'text-ink' : 'text-paper'}`}
+      // offsets measured inside the reference frame: frame margin + 16/32/38 px sides, + 14/24/29 px top
+      className={`absolute inset-x-0 top-0 z-40 px-6 pt-[22px] lg:px-11 lg:pt-9 min-[1200px]:px-[52px] min-[1200px]:pt-[43px] ${dark ? 'text-ink' : 'text-paper'}`}
       initial={reduce ? false : { y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: duration.nav, ease, delay: navDelay }}

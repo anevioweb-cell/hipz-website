@@ -1,0 +1,640 @@
+{
+ "home": {
+  "1440x900": {
+   "viewport": [
+    1440,
+    900
+   ],
+   "clientWidth": 1440,
+   "hero": {
+    "x": 14,
+    "y": 14,
+    "w": 1411,
+    "h": 871,
+    "right": 14
+   },
+   "heroMargin": {
+    "left": 14,
+    "right": 14,
+    "top": 14
+   },
+   "radius": "32px",
+   "overflow": "clip",
+   "wrapPadding": "12px",
+   "wrapPosition": "sticky",
+   "heroVsViewportH": -29,
+   "logo": {
+    "x": 53,
+    "y": 43,
+    "w": 139,
+    "h": 84,
+    "right": 1248,
+    "fromHeroLeft": 38,
+    "fromHeroTop": 29
+   },
+   "actions": {
+    "x": 1129,
+    "y": 60,
+    "w": 258,
+    "h": 50,
+    "right": 53,
+    "fromHeroRight": 38,
+    "fromHeroTop": 46
+   },
+   "pageBg": "rgb(251, 246, 237)"
+  },
+  "1366x768": {
+   "viewport": [
+    1366,
+    768
+   ],
+   "clientWidth": 1366,
+   "hero": {
+    "x": 14,
+    "y": 14,
+    "w": 1339,
+    "h": 741,
+    "right": 14
+   },
+   "heroMargin": {
+    "left": 14,
+    "right": 14,
+    "top": 14
+   },
+   "radius": "32px",
+   "overflow": "clip",
+   "wrapPadding": "12px",
+   "wrapPosition": "sticky",
+   "heroVsViewportH": -27,
+   "logo": {
+    "x": 50,
+    "y": 41,
+    "w": 132,
+    "h": 80,
+    "right": 1184,
+    "fromHeroLeft": 36,
+    "fromHeroTop": 27
+   },
+   "actions": {
+    "x": 1075,
+    "y": 57,
+    "w": 241,
+    "h": 48,
+    "right": 50,
+    "fromHeroRight": 36,
+    "fromHeroTop": 43
+   },
+   "pageBg": "rgb(251, 246, 237)"
+  },
+  "1024x768": {
+   "viewport": [
+    1024,
+    768
+   ],
+   "clientWidth": 1024,
+   "hero": {
+    "x": 12,
+    "y": 12,
+    "w": 1000,
+    "h": 720,
+    "right": 12
+   },
+   "heroMargin": {
+    "left": 12,
+    "right": 12,
+    "top": 12
+   },
+   "radius": "32px",
+   "overflow": "clip",
+   "wrapPadding": "12px",
+   "wrapPosition": "sticky",
+   "heroVsViewportH": -48,
+   "logo": {
+    "x": 44,
+    "y": 36,
+    "w": 116,
+    "h": 70,
+    "right": 864,
+    "fromHeroLeft": 32,
+    "fromHeroTop": 24
+   },
+   "actions": {
+    "x": 766,
+    "y": 50,
+    "w": 214,
+    "h": 42,
+    "right": 44,
+    "fromHeroRight": 32,
+    "fromHeroTop": 38
+   },
+   "pageBg": "rgb(251, 246, 237)"
+  },
+  "768x1024": {
+   "viewport": [
+    768,
+    1024
+   ],
+   "clientWidth": 768,
+   "hero": {
+    "x": 8,
+    "y": 8,
+    "w": 752,
+    "h": 620,
+    "right": 8
+   },
+   "heroMargin": {
+    "left": 8,
+    "right": 8,
+    "top": 8
+   },
+   "radius": "24px",
+   "overflow": "clip",
+   "wrapPadding": "8px",
+   "wrapPosition": "sticky",
+   "heroVsViewportH": -404,
+   "logo": {
+    "x": 24,
+    "y": 22,
+    "w": 86,
+    "h": 52,
+    "right": 658,
+    "fromHeroLeft": 16,
+    "fromHeroTop": 14
+   },
+   "actions": {
+    "x": 532,
+    "y": 27,
+    "w": 214,
+    "h": 42,
+    "right": 22,
+    "fromHeroRight": 14,
+    "fromHeroTop": 19
+   },
+   "pageBg": "rgb(251, 246, 237)"
+  },
+  "390x844": {
+   "viewport": [
+    390,
+    844
+   ],
+   "clientWidth": 390,
+   "hero": {
+    "x": 8,
+    "y": 8,
+    "w": 374,
+    "h": 620,
+    "right": 8
+   },
+   "heroMargin": {
+    "left": 8,
+    "right": 8,
+    "top": 8
+   },
+   "radius": "24px",
+   "overflow": "clip",
+   "wrapPadding": "8px",
+   "wrapPosition": "sticky",
+   "heroVsViewportH": -224,
+   "logo": {
+    "x": 24,
+    "y": 22,
+    "w": 86,
+    "h": 52,
+    "right": 280,
+    "fromHeroLeft": 16,
+    "fromHeroTop": 14
+   },
+   "actions": {
+    "x": 154,
+    "y": 27,
+    "w": 214,
+    "h": 42,
+    "right": 22,
+    "fromHeroRight": 14,
+    "fromHeroTop": 19
+   },
+   "pageBg": "rgb(251, 246, 237)"
+  }
+ },
+ "detail": {
+  "1440x900": {
+   "firstBlocks": [
+    {
+     "n": "Product",
+     "x": 0,
+     "y": 101,
+     "w": 1440,
+     "h": 941,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "n": "Media",
+     "x": 14,
+     "y": 115,
+     "w": 641,
+     "h": 770,
+     "radius": "32px",
+     "bg": "rgb(255, 220, 203)"
+    },
+    {
+     "n": "Stage",
+     "x": 83,
+     "y": 164,
+     "w": 504,
+     "h": 672,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "n": "Info",
+     "x": 670,
+     "y": 115,
+     "w": 756,
+     "h": 913,
+     "radius": "32px",
+     "bg": "rgb(255, 255, 255)"
+    }
+   ],
+   "names": [
+    "Navbar wrap",
+    "Navbar",
+    "Logo",
+    "Links",
+    "Actions",
+    "Account",
+    "Icon",
+    "Cart",
+    "Viewport scale",
+    "Product",
+    "Media",
+    "Stage",
+    "Art",
+    "Can",
+    "Tag",
+    "Info",
+    "Heading",
+    "Star",
+    "Title",
+    "Tagline",
+    "Price",
+    "Description",
+    "Pack size",
+    "4 cans",
+    "8 cans",
+    "12 cans",
+    "Buy",
+    "1",
+    "Minus",
+    "Value",
+    "Plus",
+    "Add to cart",
+    "Arrow",
+    "Details",
+    "Row",
+    "More flavors",
+    "Header",
+    "Dark",
+    "Pill",
+    "Label"
+   ]
+  },
+  "1366x768": {
+   "firstBlocks": [
+    {
+     "n": "Product",
+     "x": 0,
+     "y": 96,
+     "w": 1366,
+     "h": 893,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "n": "Media",
+     "x": 14,
+     "y": 109,
+     "w": 608,
+     "h": 660,
+     "radius": "32px",
+     "bg": "rgb(255, 220, 203)"
+    },
+    {
+     "n": "Stage",
+     "x": 79,
+     "y": 121,
+     "w": 478,
+     "h": 637,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "n": "Art",
+     "x": 56,
+     "y": 196,
+     "w": 523,
+     "h": 486,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "n": "Info",
+     "x": 635,
+     "y": 109,
+     "w": 717,
+     "h": 866,
+     "radius": "32px",
+     "bg": "rgb(255, 255, 255)"
+    }
+   ],
+   "names": [
+    "Navbar wrap",
+    "Navbar",
+    "Logo",
+    "Links",
+    "Actions",
+    "Account",
+    "Icon",
+    "Cart",
+    "Viewport scale",
+    "Product",
+    "Media",
+    "Stage",
+    "Art",
+    "Can",
+    "Tag",
+    "Info",
+    "Heading",
+    "Star",
+    "Title",
+    "Tagline",
+    "Price",
+    "Description",
+    "Pack size",
+    "4 cans",
+    "8 cans",
+    "12 cans",
+    "Buy",
+    "1",
+    "Minus",
+    "Value",
+    "Plus",
+    "Add to cart",
+    "Arrow",
+    "Details",
+    "Row",
+    "More flavors",
+    "Header",
+    "Dark",
+    "Pill",
+    "Label"
+   ]
+  },
+  "1024x768": {
+   "firstBlocks": [
+    {
+     "n": "Product",
+     "x": 0,
+     "y": 84,
+     "w": 1024,
+     "h": 1373,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "n": "Media",
+     "x": 12,
+     "y": 96,
+     "w": 1000,
+     "h": 600,
+     "radius": "32px",
+     "bg": "rgb(255, 220, 203)"
+    },
+    {
+     "n": "Stage",
+     "x": 302,
+     "y": 116,
+     "w": 420,
+     "h": 560,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "n": "Art",
+     "x": 282,
+     "y": 182,
+     "w": 460,
+     "h": 427,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    }
+   ],
+   "names": [
+    "Navbar wrap",
+    "Navbar",
+    "Logo",
+    "Links",
+    "Actions",
+    "Account",
+    "Icon",
+    "Cart",
+    "Viewport scale",
+    "Product",
+    "Media",
+    "Stage",
+    "Art",
+    "Can",
+    "Tag",
+    "Info",
+    "Heading",
+    "Star",
+    "Title",
+    "Tagline",
+    "Price",
+    "Description",
+    "Pack size",
+    "4 cans",
+    "8 cans",
+    "12 cans",
+    "Buy",
+    "1",
+    "Minus",
+    "Value",
+    "Plus",
+    "Add to cart",
+    "Arrow",
+    "Details",
+    "Row",
+    "More flavors",
+    "Header",
+    "Dark",
+    "Pill",
+    "Label"
+   ]
+  },
+  "768x1024": {
+   "firstBlocks": [
+    {
+     "n": "Product",
+     "x": 0,
+     "y": 76,
+     "w": 768,
+     "h": 1156,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "n": "Media",
+     "x": 8,
+     "y": 84,
+     "w": 752,
+     "h": 440,
+     "radius": "24px",
+     "bg": "rgb(255, 220, 203)"
+    },
+    {
+     "n": "Stage",
+     "x": 227,
+     "y": 94,
+     "w": 315,
+     "h": 420,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "n": "Art",
+     "x": 212,
+     "y": 144,
+     "w": 345,
+     "h": 320,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    }
+   ],
+   "names": [
+    "Navbar wrap",
+    "Navbar",
+    "Logo",
+    "Actions",
+    "Account",
+    "Icon",
+    "Cart",
+    "Viewport scale",
+    "Product",
+    "Media",
+    "Stage",
+    "Art",
+    "Can",
+    "Tag",
+    "Info",
+    "Heading",
+    "Star",
+    "Title",
+    "Tagline",
+    "Price",
+    "Description",
+    "Pack size",
+    "4 cans",
+    "8 cans",
+    "12 cans",
+    "Buy",
+    "1",
+    "Minus",
+    "Value",
+    "Plus",
+    "Add to cart",
+    "Arrow",
+    "Details",
+    "Row",
+    "More flavors",
+    "Header",
+    "Dark",
+    "Pill",
+    "Label",
+    "Flavor list"
+   ]
+  },
+  "390x844": {
+   "firstBlocks": [
+    {
+     "n": "Product",
+     "x": 0,
+     "y": 76,
+     "w": 390,
+     "h": 1236,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "n": "Media",
+     "x": 8,
+     "y": 84,
+     "w": 374,
+     "h": 440,
+     "radius": "24px",
+     "bg": "rgb(255, 220, 203)"
+    },
+    {
+     "n": "Stage",
+     "x": 38,
+     "y": 94,
+     "w": 315,
+     "h": 420,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "n": "Art",
+     "x": 23,
+     "y": 144,
+     "w": 345,
+     "h": 320,
+     "radius": "0px",
+     "bg": "rgba(0, 0, 0, 0)"
+    }
+   ],
+   "names": [
+    "Navbar wrap",
+    "Navbar",
+    "Logo",
+    "Actions",
+    "Account",
+    "Icon",
+    "Cart",
+    "Viewport scale",
+    "Product",
+    "Media",
+    "Stage",
+    "Art",
+    "Can",
+    "Tag",
+    "Info",
+    "Heading",
+    "Star",
+    "Title",
+    "Tagline",
+    "Price",
+    "Description",
+    "Pack size",
+    "4 cans",
+    "8 cans",
+    "12 cans",
+    "Buy",
+    "1",
+    "Minus",
+    "Value",
+    "Plus",
+    "Add to cart",
+    "Arrow",
+    "Details",
+    "Row",
+    "More flavors",
+    "Header",
+    "Dark",
+    "Pill",
+    "Label",
+    "Flavor list"
+   ]
+  }
+ }
+}

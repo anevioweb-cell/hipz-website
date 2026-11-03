@@ -21,6 +21,7 @@ export default function FlavorScene({
   effects = 'full',
   paused = false,
   crop = 'auto',
+  onImageLoad,
   sizes = '100vw',
   className = '',
 }) {
@@ -36,8 +37,10 @@ export default function FlavorScene({
       const measure = () => {
         const W = el.clientWidth || window.innerWidth;
         const H = el.clientHeight || window.innerHeight;
-        // 'portrait' forces the 4:5 crop (bands); 'auto' follows the <picture> media query (viewport aspect)
-        const meta = crop === 'portrait' || W / H <= 1 ? portrait : wide;
+        // 'portrait' forces the 4:5 crop (bands); 'auto' follows the <picture> media query (VIEWPORT aspect,
+        // not the container: inside the framed hero the two can differ, e.g. 768×1024)
+        const portraitViewport = window.matchMedia('(max-aspect-ratio: 1/1)').matches;
+        const meta = crop === 'portrait' || portraitViewport ? portrait : wide;
         setBox(
           coverBox({
             W,
@@ -105,6 +108,7 @@ export default function FlavorScene({
               alt={flavor.alt}
               sizes={sizes}
               priority={priority}
+              onLoad={onImageLoad}
               className="block h-full w-full"
               imgClassName="h-full w-full object-cover object-(--pos-wide) portrait:object-(--pos-portrait)"
             />

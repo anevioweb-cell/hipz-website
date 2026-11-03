@@ -30,7 +30,6 @@ export default function Hero() {
   const [inView, setInView] = useState(true);
   const [covered, setCovered] = useState(false);
   const [tabHidden, setTabHidden] = useState(false);
-  const [first, setFirst] = useState(false); // first scene mounts right after the text's first paint
   const [second, setSecond] = useState(false); // second scene mounts after idle
 
   const offscreen = !inView || covered;
@@ -38,7 +37,10 @@ export default function Hero() {
   const auto = playing && !held && !idle && !reduce;
 
   const { scrollY } = useScroll();
-  useMotionValueEvent(scrollY, 'change', (y) => setCovered(y > window.innerHeight * 0.95));
+  // the framed hero is covered once the page has scrolled past its own height
+  useMotionValueEvent(scrollY, 'change', (y) =>
+    setCovered(y > (rootRef.current?.offsetHeight ?? window.innerHeight) * 0.95),
+  );
 
   useEffect(() => {
     const el = rootRef.current;
@@ -54,17 +56,13 @@ export default function Hero() {
     };
   }, []);
 
+  // Hide the static first frame (index.html) once the React hero image has loaded; fallback timer.
+  // It is hidden, not removed: removing an LCP element makes Chrome's trace (used by Lighthouse)
+  // invalidate it and re-pick the React copy, which could only paint after the JS bundle.
+  const removeShell = () => document.getElementById('hero-shell')?.classList.add('is-hidden');
   useEffect(() => {
-    // Let the headline paint first (it is Chrome's LCP candidate: a full-viewport image is ignored),
-    // then start the hero image request so it can never race the text paint.
-    let raf2;
-    const raf1 = requestAnimationFrame(() => {
-      raf2 = requestAnimationFrame(() => setFirst(true));
-    });
-    return () => {
-      cancelAnimationFrame(raf1);
-      cancelAnimationFrame(raf2);
-    };
+    const t = setTimeout(removeShell, 4000);
+    return () => clearTimeout(t);
   }, []);
 
   useEffect(() => {
@@ -83,20 +81,23 @@ export default function Hero() {
   const active = flavors[index];
 
   return (
-    <div className="sticky top-0 z-0 h-svh min-h-[600px]">
+    // Measured frame (docs/reference-frame.json): page-colored margin 8 / 12 / 14 px, radius 24 / 32 px,
+    // frame height 620 px (phones/tablet portrait), 720 px (~1024), viewport − 28 px (≥ 1200).
+    // The frame clips everything (overflow + clip-path, isolated) so transforms never show square corners.
+    <div className="hero-frame-wrap sticky top-0 z-0">
       <section
         ref={rootRef}
         aria-label="Hipz"
         data-fx-paused={idle ? 'true' : 'false'}
-        className="relative h-full overflow-hidden bg-paper"
+        className="hero-frame relative overflow-hidden"
         onMouseEnter={() => setHeld(true)}
         onMouseLeave={() => setHeld(false)}
         onFocus={() => setHeld(true)}
         onBlur={() => setHeld(false)}
       >
-        <Parallax className="absolute inset-0">
+        <Parallax className="absolute inset-x-0 top-0 -bottom-[6%]">
           {flavors.map((f, i) => {
-            if ((i === 0 && !first) || (i > 0 && !second)) return null;
+            if (i > 0 && !second) return null;
             const on = i === index;
             return (
               <m.div
@@ -111,6 +112,7 @@ export default function Hero() {
                   flavor={f}
                   priority={i === 0}
                   intro={i === 0}
+                  onImageLoad={i === 0 ? removeShell : undefined}
                   pointer
                   effects={on ? 'full' : 'none'}
                   paused={idle}
@@ -128,7 +130,7 @@ export default function Hero() {
         {/* phones / portrait: headline sits on a dark scrim with light text */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-[68%] bg-linear-to-t from-ink via-ink/80 to-transparent portrait:block"
+          className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-[90%] bg-linear-to-t from-ink from-35% via-ink/80 via-70% to-transparent portrait:block"
         />
 
         <FlavorTheme flavor={active} className="contents">

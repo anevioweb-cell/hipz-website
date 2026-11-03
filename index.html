@@ -8,13 +8,14 @@
     <meta name="description" content="Hipz — lemon and peach drinks." />
     <link rel="icon" href="/logo-badge.png" type="image/png" />
     <script>
-      // Route-aware LCP preload (flavor pages only; the home hero image is requested right after the
-      // headline's first paint on purpose). Names/widths mirror scripts/images.config.mjs.
+      // Route-aware LCP preload for the hero image of the page being opened (home, /flavors, flavor pages).
+      // Names/widths mirror scripts/images.config.mjs.
       (function () {
         var p = location.pathname;
         var m = /^\/flavors\/(lemon|peach)\/?$/.exec(p);
         var list = /^\/flavors\/?$/.test(p);
-        var f = m ? m[1] : list ? 'lemon' : null;
+        var home = p === '/' || p === '';
+        var f = m ? m[1] : list || home ? 'lemon' : null;
         if (!f) return;
         var portrait = list || innerWidth / innerHeight <= 1;
         var n = 'hero-' + f + '-' + (portrait ? 'portrait' : 'wide');

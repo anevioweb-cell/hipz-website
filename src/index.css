@@ -83,7 +83,11 @@
   --text-display: clamp(3.125rem, 1.6rem + 6.5vw, 7rem);
   --text-display--line-height: 0.92;
   --text-display--letter-spacing: -0.03em;
-  --text-h2: clamp(2.625rem, 2rem + 1.6vw, 3.75rem);
+  --text-h2: clamp(
+    2.625rem,
+    1.2rem + 4.4vw,
+    5.125rem
+  ); /* measured: 42 px (390) · 60 px (1024) · 82 px (1440) */
   --text-h2--line-height: 1.04;
   --text-h2--letter-spacing: -0.03em;
   --text-h3: 1.5rem;

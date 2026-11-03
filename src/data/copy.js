@@ -66,11 +66,88 @@ export const copy = {
   },
   sections: {
     flavors: draft({ title: 'A flavor for every mood.', eyebrow: 'Lemon · Peach' }),
-    moments: draft({ title: 'Pop. Sip. Smile.', eyebrow: 'Moments' }),
-    why: draft({ title: 'Made to be shared.', eyebrow: 'Why Hipz' }),
-    community: draft({ title: 'Seen with Hipz.', eyebrow: 'Community' }),
-    pack: draft({ title: 'Can’t pick one? Take both.', eyebrow: 'Pack' }),
-    empty: draft({ title: 'Coming soon', text: 'This part of the page is on its way.' }),
+  },
+  moments: {
+    header: draft({
+      eyebrow: 'Moments',
+      lines: ['A Hipz for', 'every moment.'],
+      text: 'Cold, fizzy and made to pass around, wherever the day takes you.',
+    }),
+    // one entry per card (ids match src/data/moments.js); `ar` is the Arabic accent word
+    match: draft({
+      title: 'Match night',
+      ar: 'ماتش',
+      text: 'Kick-off in five. Grab a cold one before the first whistle.',
+    }),
+    road: draft({
+      title: 'Road trip',
+      ar: 'طريق',
+      text: 'Windows down, playlist up, a bottle in the door.',
+    }),
+    friends: draft({
+      title: 'Friends over',
+      ar: 'لمّة',
+      text: 'Someone brings the snacks. Someone brings the Hipz.',
+    }),
+    study: draft({
+      title: 'Study break',
+      ar: 'راحة',
+      text: 'Ten minutes off the books. Pop, sip, back to it.',
+    }),
+  },
+  why: {
+    header: draft({ eyebrow: 'Why Hipz', lines: ['Simple.', 'Cold. Ours.'], cta: 'Our story' }),
+    // only owner-confirmed statements (BRAND_BRIEF rows 12, 22, 25, 33): two flavors, the creators' own
+    // soda brand, a serving mood. No ingredient / health / origin / quality / number claims.
+    pillars: draft({
+      items: [
+        {
+          id: 'two',
+          title: 'Two flavors. That’s it.',
+          text: 'Lemon or peach. Pick a side, or have both.',
+          ar: 'ليمون أو خوخ',
+        },
+        {
+          id: 'creators',
+          title: 'Kada & Miloud’s own soda.',
+          text: 'Hipz is the soda brand of Kada & Miloud.',
+        },
+        {
+          id: 'cold',
+          title: 'Best served ice cold.',
+          text: 'Straight from the fridge, or over ice.',
+        },
+      ],
+    }),
+  },
+  both: {
+    feature: draft({
+      eyebrow: 'Both flavors',
+      lines: ['Can’t pick?', 'Don’t.'],
+      text: 'Lemon and peach, side by side.',
+      cta: 'Find it',
+    }),
+  },
+  community: {
+    header: draft({
+      eyebrow: 'Community',
+      lines: ['Share your', 'Hipz moment.'],
+      text: 'Snap it, tag @hipzdrink and use #hipz.',
+      cta: 'Tag @hipzdrink',
+      label: 'Hipz on Instagram',
+    }),
+    // words used on the designed fallback tiles (never handles, names or quotes)
+    words: draft({
+      items: [
+        { text: '#hipz' },
+        { ar: 'هايبز' },
+        { text: 'Lemon' },
+        { text: 'Peach' },
+        { ar: 'ليمون' },
+        { ar: 'خوخ' },
+        { text: 'Ice cold' },
+      ],
+    }),
   },
   footer: {
     tagline: draft({ text: 'Smile in a bottle.' }),

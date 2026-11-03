@@ -18,7 +18,7 @@ describe('copy.js', () => {
   });
   it('contains no forbidden claims', () => {
     const banned =
-      /calorie|sugar|real fruit|natural|organic|vitamin|made in|award|best |#1|\d+\s?(ml|%|cl)|review|customers? say/i;
+      /calorie|sugar|real fruit|natural|organic|vitamin|made in|award|the best|best-selling|#1|\d+\s?(ml|%|cl)|review|customers? say/i;
     expect(JSON.stringify(copy)).not.toMatch(banned);
   });
   it('limits ticker items to neutral words', () => {

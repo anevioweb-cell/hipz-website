@@ -2,3 +2,12 @@ node_modules
 dist
 .env*
 .DS_Store
+"sourse of Kada and Miloud/"
+docs/inputs/source-video.mp4
+docs/inputs/source-photo.jpg
+docs/inputs/screenshot-*.png
+docs/reference-shots/
+docs/inputs/crop-*.png
+coverage
+.lighthouseci
+docs/inputs/frames/

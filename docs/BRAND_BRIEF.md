@@ -60,3 +60,55 @@ Young Algerian consumers (teens to 30s) who follow Kada & Miloud on YouTube/Inst
 ## 6. Inputs needed from the owner → `docs/inputs/`
 
 See [`docs/inputs/README.md`](inputs/README.md) for the exact checklist.
+
+---
+
+# Update — Phase 1 Part 0: owner-supplied inputs
+
+## Files received
+| File (original) | Stored as | Type / size | Committed? |
+|---|---|---|---|
+| `sourse of Kada and Miloud/868381593_…_n.jpg` | `docs/inputs/source-photo.jpg` | JPEG 3024×4032, 870 KB | No (gitignored) |
+| `sourse of Kada and Miloud/Video-50939.mp4` | `docs/inputs/source-video.mp4` | H.264+AAC, 720×1280, 30 fps, 72.7 s, 14.5 MB | No (gitignored) |
+| `docs/inputs/Screenshot from 2026-11-03 14-33-54.png` | `screenshot-1.png` (Instagram @hipzdrink grid) | PNG 1366×768 | No |
+| `docs/inputs/Screenshot from 2026-11-03 14-42-35.png` | `screenshot-2.png` (Instagram post by doctoroverlap, #hipz) | PNG 1366×768 | No |
+| derived | `docs/inputs/frames/f_001..024.jpg` (every 3 s, 360 px wide) | 716 KB total | No (contain faces; gitignored) |
+
+Not extracted: **speech transcript.** No local speech-to-text tool (whisper/vosk) is installed; I did not install heavy models. The audio was extracted but not transcribed — everything from the video comes from frames only.
+
+## What is visible
+- **Product = PET plastic bottles (~small single-serve size), NOT cans.** Screw cap in the flavour colour. (Phase 0 and the reference say "cans"; the product pages must use bottles.) Exact volume: not legible → unknown.
+- **Logo:** custom, hand-lettered, bubbly rounded wordmark "Hipz" in white, with a **smile-shaped curve underneath** the wordmark; the "z" has a curled tail. A small ® mark sits at the top right. On the Instagram avatar it sits on a **lime-green circle with a darker wavy pattern**. Because the lettering is custom, we do not imitate it with a font; the logo file is needed as vector.
+- **Lemon bottle:** yellow liquid, yellow cap, wordmark embossed/printed in white on the bottle, a lemon-slice graphic with leaves near the bottom and a green label strip reading "Lemon" (screenshot-1). Shrink-wrapped packs on a pallet in a factory carry labels with printed faces (appear to be the creators) — details unreadable.
+- **Peach bottle:** orange liquid, orange cap, peach-slice graphic, label text reads "Peach" (screenshot-2, and the video caption "هذا Peach").
+- **Photo (source-photo.jpg):** two men in white hygiene coats and shoe covers in a bottling plant, holding lemon bottles in front of a pallet of shrink-wrapped lemon bottles; a machine plate reads "DCGF 18-18-6 Filling Machine". A hoodie print reads "Golden Coast". Identity of the two men is not stated in the file.
+- **Video (frames):** a creator tour of the production line in a clean factory: stainless tanks, bottle blow-moulding/preform, rinsing, a rotary filler, capping, sleeve-label application with yellow lemon labels, conveyor of filled lemon bottles, pallet of packs. Two men in hairnets/white coats; one is also seen with a mask and ear protection. No on-screen text beyond machine plates was legible. Audio not transcribed.
+- **Instagram:** profile shows "Following" state, "Followed by mourad_oudia, aarkaam + 7 more", grid of reels (lemon bottle hero shot, store visit with a pink-shirted man holding a peach bottle, factory photo). Post by **doctoroverlap** (verified) with hashtags #algeria #dz #dzpower #hipz #viral; the brand account replied with 🔥 emoji; viewer comments are positive (Arabic) and mention Blida ("للمدية و البليدة" asks for distribution to Médéa and Blida). 375+ likes on that post (2 days old at capture).
+
+## New facts
+| # | Fact | Source | Confidence |
+|---|---|---|---|
+| 12 | Hipz has **exactly two flavours: lemon and peach.** | Owner statement | **High (confirmed)** |
+| 13 | **Lemon = yellow bottle, yellow cap, green "Lemon" label strip.** | screenshot-1 (label "Lemon"), source-photo (yellow bottles with "Lemon" strip) | High (text on label) |
+| 14 | **Peach = orange bottle, orange cap, label "Peach".** | screenshot-2 (label "Peach", caption "هذا Peach") | High |
+| 15 | Product is sold in PET bottles with screw caps (not cans). | all images | High |
+| 16 | Logo: white custom wordmark "Hipz" with smile curve, lime-green circular avatar, ® sign visible. | screenshot-1/2 | High (visual); registration status unverified |
+| 17 | Sampled colours: logo green `#9BBD24` / `#9EC023`; lemon bottle `#F6C72F`, lemon cap ≈ `#CEAF02`; peach bottle ≈ `#D97E2B`, peach cap ≈ `#F58735`; lemon label green ≈ `#708A1B`. (Photo lighting varies ±10%.) | pixel sampling, files in notes below | Medium (screen-captured, lit) |
+| 18 | Production is shown in a bottling plant with a "DCGF 18-18-6" filling machine; plant name/location not shown. | source-photo, video frames | Medium |
+| 19 | The two men in the factory media are presumed to be Kada and Miloud. | owner supplied folder named "Kada and Miloud" | Medium (not stated in image) |
+| 20 | Audience in Algeria asks for distribution in other wilayas (Médéa, Blida). | screenshot-2 comments | Medium |
+| 21 | Instagram: reels grid, creator collaboration posts (doctoroverlap, #hipz). | screenshots | High (seen) |
+
+Pixel sampling method: median RGB of pixels with saturation ≥ 0.5–0.6 and value ≥ 0.45–0.55 inside the region: avatar (screenshot-2, 306–346×650–690) → `#9BBD24`; comment avatar → `#9EC023`; lemon body (screenshot-1) → `#F6C72F`; lemon cap (source-photo) → `#CEAF02`; peach body (screenshot-1 frame) → `#D97E2B`; peach cap → `#F58735`.
+
+## Questions for the owner
+1. Is it correct that product is **bottles**, and which sizes (ml) exist? Any multi-packs sold (shrink packs of how many)?
+2. Official names: "Lemon" / "Peach" in English only, or Arabic names too (e.g. ليمون / خوخ)? Which spelling: "Hipz" (as lettered) vs "HIPZ"?
+3. Are the two men in the photo/video Kada and Miloud (which is which)? May their faces and videos be used on the site, and is there written permission?
+4. Producer / factory name and city; can it be shown? (Used for the "our story".)
+5. The pallets show creators' faces on the packs — is that a permanent label design? Please supply the label artwork.
+6. Is ® registered (Algerian trademark number)?
+7. Which sentence best describes the product (juice drink? carbonated?). The video does not say; no ingredient or "real fruit" claims will be shown until you confirm.
+8. Do you have a vector logo, plus a transparent-background studio photo of each bottle for product pages?
+9. Tagline, launch date and where it is sold; may the commercial phone numbers go on the distributors page?
+10. May we embed or reuse the doctoroverlap and other creator posts in a community section (their permission needed)?

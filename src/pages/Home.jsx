@@ -4,10 +4,11 @@ import Section from '../components/Section.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
 import EmptyState from '../components/EmptyState.jsx';
 import Reveal from '../components/Reveal.jsx';
+import FlavorsSection from '../components/FlavorsSection.jsx';
 import { copy } from '../data/copy.js';
+import { useNavTone } from '../hooks/useNavTone.js';
 
 const placeholders = [
-  { id: 'flavors', key: 'flavors', tone: 'paper' },
   { id: 'moments', key: 'moments', tone: 'ink' },
   { id: 'why', key: 'why', tone: 'paper' },
   { id: 'community', key: 'community', tone: 'ink' },
@@ -17,11 +18,13 @@ const placeholders = [
 // Phase 2: hero + ticker are real; the sections below are empty placeholders so routing and scroll
 // can be tested. They slide over the sticky hero (z-10, solid backgrounds).
 export default function Home() {
+  useNavTone('dark');
   return (
     <>
       <Hero />
       <div className="relative z-10">
         <Ticker />
+        <FlavorsSection />
         {placeholders.map(({ id, key, tone }) => (
           <Section key={id} id={id} tone={tone} className="scroll-mt-0">
             <Reveal>

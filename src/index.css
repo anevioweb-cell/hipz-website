@@ -76,7 +76,7 @@
   --font-display: 'Bricolage Grotesque Variable', 'Inter Variable', system-ui, sans-serif;
   --font-sans: 'Inter Variable', system-ui, sans-serif;
   --font-mono: 'DM Mono', ui-monospace, monospace;
-  --font-arabic: 'Cairo Variable', 'Lalezar', system-ui, sans-serif;
+  --font-arabic: 'Cairo Variable', system-ui, sans-serif;
   --font-arabic-display: 'Lalezar', 'Cairo Variable', system-ui, sans-serif;
 
   /* Type scale: fluid between the measured reference endpoints (390 → 1440) */
@@ -194,5 +194,103 @@
     .hero-mask {
       mask-image: linear-gradient(to right, transparent 0%, #000 28%);
     }
+  }
+}
+
+/* ---------- Thirst effects (transform + opacity only) ---------- */
+@keyframes fx-slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.55;
+  }
+  80% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate3d(0, var(--travel, 140px), 0);
+    opacity: 0;
+  }
+}
+@keyframes fx-rise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(var(--sway, 6px), calc(var(--rise, 300px) * -1), 0) scale(1);
+    opacity: 0;
+  }
+}
+@keyframes scene-float {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+@layer components {
+  .fx-droplet {
+    position: absolute;
+    width: var(--s);
+    height: calc(var(--s) * 1.4);
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    background: radial-gradient(
+      circle at 35% 30%,
+      rgb(255 255 255 / 0.95),
+      rgb(255 255 255 / 0.25) 55%,
+      transparent 70%
+    );
+    box-shadow: 0 1px 2px rgb(22 19 14 / 0.25);
+    opacity: 0;
+    animation: fx-slide var(--t) ease-in var(--d) infinite;
+    will-change: transform, opacity;
+  }
+  .fx-bubble {
+    position: absolute;
+    bottom: 4%;
+    width: var(--s);
+    height: var(--s);
+    border-radius: 9999px;
+    border: 1px solid rgb(255 255 255 / 0.85);
+    background: radial-gradient(circle at 30% 30%, rgb(255 255 255 / 0.5), transparent 60%);
+    opacity: 0;
+    animation: fx-rise var(--t) ease-out var(--d) infinite;
+    will-change: transform, opacity;
+  }
+  .scene-float {
+    animation: scene-float 7s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+  .fx-paused .fx-droplet,
+  .fx-paused .fx-bubble,
+  .fx-paused.scene-float,
+  .fx-paused .scene-float {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fx-droplet,
+    .fx-bubble {
+      display: none;
+    }
+    .scene-float {
+      animation: none;
+    }
+  }
+}
+
+@layer components {
+  .blob {
+    border-radius: 58% 42% 55% 45% / 48% 56% 44% 52%;
+  }
+  .bottle-fade {
+    mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
   }
 }

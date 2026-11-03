@@ -4,6 +4,7 @@ import { AnimatePresence, m, useReducedMotion } from 'motion/react';
 import Logo from '../components/Logo.jsx';
 import Button from '../components/Button.jsx';
 import { navLinks } from './navLinks.js';
+import { useNavToneValue } from '../hooks/useNavTone.js';
 import { copy } from '../data/copy.js';
 import { ease, duration, navDelay, stagger } from '../motion.js';
 
@@ -16,6 +17,8 @@ const FOCUSABLE = 'a[href], button:not([disabled])';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
+  const tone = useNavToneValue();
+  const dark = tone === 'dark'; // bright area behind the navbar → ink text/logo
   const toggleRef = useRef(null);
   const dialogRef = useRef(null);
 
@@ -51,17 +54,21 @@ export default function Navbar() {
   }, [open]);
 
   const linkCls = ({ isActive }) =>
-    `rounded-pill px-4 py-2 font-medium transition-colors hover:bg-white/20 ${isActive ? 'bg-white/20' : ''}`;
+    `rounded-pill px-4 py-2 font-medium transition-colors ${
+      dark
+        ? `hover:bg-ink/10 ${isActive ? 'bg-ink/10' : ''}`
+        : `hover:bg-white/20 ${isActive ? 'bg-white/20' : ''}`
+    }`;
 
   return (
     <m.header
-      className="absolute inset-x-0 top-0 z-40 px-gutter pt-6 text-paper lg:px-gutter-lg"
+      className={`absolute inset-x-0 top-0 z-40 px-gutter pt-6 lg:px-gutter-lg ${dark ? 'text-ink' : 'text-paper'}`}
       initial={reduce ? false : { y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: duration.nav, ease, delay: navDelay }}
     >
       <nav aria-label="Main" className="mx-auto flex max-w-site items-center justify-between">
-        <Logo />
+        <Logo tone={dark ? 'dark' : 'light'} />
         <div className="hidden items-center gap-2 md:flex">
           <ul className="flex items-center gap-1">
             {navLinks.map((l) => (
@@ -72,14 +79,14 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <Button to="/distributors" variant="secondary" className="ml-2">
+          <Button to="/distributors" variant={dark ? 'primary' : 'secondary'} className="ml-2">
             {copy.nav.buy.text}
           </Button>
         </div>
         <button
           ref={toggleRef}
           type="button"
-          className="grid size-11 place-items-center rounded-full bg-white/15 md:hidden"
+          className={`grid size-11 place-items-center rounded-full md:hidden ${dark ? 'bg-ink/10' : 'bg-white/15'}`}
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={copy.nav.menuOpen.text}

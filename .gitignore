@@ -17,3 +17,4 @@ docs/inputs/*.png
 docs/inputs/cutouts/
 docs/inputs/creators/
 docs/shots/
+.claude/

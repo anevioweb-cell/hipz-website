@@ -1,6 +1,7 @@
 // Flavors: exactly two, confirmed by the owner (docs/BRAND_BRIEF.md rows 12–14, 22).
-// Unknown facts stay null — in particular `volume`: the size is unknown and must never be shown.
+// Only verified facts live here. `volume` stays null: the size is unknown and is never displayed.
 // Colors reference tokens in src/index.css; hex values live ONLY there.
+// Mood copy for each flavor is in src/data/copy.js (copy.flavors[slug]), all draft.
 export const flavors = [
   {
     slug: 'lemon',
@@ -8,11 +9,17 @@ export const flavors = [
     nameAr: 'ليمون',
     accent: 'var(--color-lemon)',
     accentDeep: 'var(--color-lemon-cap)',
+    label: 'var(--color-brand-leaf)',
     onAccent: 'var(--color-ink)',
-    description: null,
     volume: null,
-    heroImage: 'hero-lemon',
-    bottleImage: 'bottle-lemon',
+    images: {
+      bottle: 'bottle-lemon',
+      heroWide: 'hero-lemon-wide',
+      heroPortrait: 'hero-lemon-portrait',
+    },
+    alt: 'Lemon Hipz bottle with lemon slices, ice and a splash',
+    // verified attributes only: format, cap color, serving suggestion
+    attributes: { format: 'PET bottle with screw cap', cap: 'Yellow cap', serve: 'Serve ice cold' },
   },
   {
     slug: 'peach',
@@ -20,12 +27,20 @@ export const flavors = [
     nameAr: 'خوخ',
     accent: 'var(--color-peach)',
     accentDeep: 'var(--color-peach-cap)',
+    label: null,
     onAccent: 'var(--color-ink)',
-    description: null,
     volume: null,
-    heroImage: 'hero-peach',
-    bottleImage: 'bottle-peach',
+    images: {
+      bottle: 'bottle-peach',
+      bottleScale: 1.4, // the cropped cutout shows a narrower bottle: scale up to match the lemon card
+      bottleCropped: true, // cutout ends under the label (AI small print cropped out): fade the cut edge
+      heroWide: 'hero-peach-wide',
+      heroPortrait: 'hero-peach-portrait',
+    },
+    alt: 'Peach Hipz bottle with peach slices, ice and a splash',
+    attributes: { format: 'PET bottle with screw cap', cap: 'Orange cap', serve: 'Serve ice cold' },
   },
 ];
 
 export const getFlavor = (slug) => flavors.find((f) => f.slug === slug);
+export const otherFlavor = (slug) => flavors.find((f) => f.slug !== slug);

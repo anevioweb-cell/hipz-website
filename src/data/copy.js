@@ -13,10 +13,11 @@ export const copy = {
     menuClose: draft({ text: 'Close menu' }),
   },
   hero: {
-    headline: draft({ lines: ['Smile in', 'a bottle.'] }),
-    subtitle: draft({ text: 'Lemon and peach. Ice cold. Pop one, share it.' }),
+    eyebrow: draft({ ar: 'عطشان؟' }),
+    headline: draft({ lines: ['Thirsty?', 'Say Hipz.'] }),
+    subtitle: draft({ text: 'Lemon or peach. Ice cold. Fizz on.' }),
     primaryCta: draft({ text: 'Meet the flavors' }),
-    secondaryCta: draft({ text: 'Become a distributor' }),
+    secondaryCta: draft({ text: 'Find it' }),
     pause: draft({ text: 'Pause' }),
     play: draft({ text: 'Play' }),
     switchLabel: draft({ text: 'Choose a flavor' }),
@@ -36,6 +37,31 @@ export const copy = {
       ],
     }),
   },
+  flavors: {
+    lemon: draft({
+      tagline: 'Bright. Loud. Cold.',
+      blurb: 'A sunny-day mood in a bottle. Pop it open, pass it around.',
+    }),
+    peach: draft({
+      tagline: 'Golden hour. Ice cold.',
+      blurb: 'A golden-hour mood in a bottle. Pop it open, say cheers.',
+    }),
+    both: draft({
+      name: 'Both flavors',
+      tagline: 'Can’t pick? Don’t.',
+      blurb: 'Lemon and peach, side by side.',
+    }),
+    findIt: draft({ text: 'Find it' }),
+    meet: draft({ text: 'Meet' }),
+    more: draft({ title: 'More to sip.' }),
+    attributesTitle: draft({ title: 'The basics' }),
+    attrLabels: draft({ format: 'Format', cap: 'Cap', serve: 'Serve' }),
+    closing: draft({ title: 'Cold one, please.', text: 'Find your Hipz near you.' }),
+    pageTitle: draft({ title: 'Flavors', subtitle: 'Two flavors. One smile.' }),
+    prev: draft({ text: 'Previous flavor' }),
+    next: draft({ text: 'Next flavor' }),
+    carouselLabel: draft({ text: 'Flavors' }),
+  },
   sections: {
     flavors: draft({ title: 'A flavor for every mood.', eyebrow: 'Lemon · Peach' }),
     moments: draft({ title: 'Pop. Sip. Smile.', eyebrow: 'Moments' }),
@@ -46,6 +72,6 @@ export const copy = {
   },
   footer: {
     tagline: draft({ text: 'Smile in a bottle.' }),
-    follow: draft({ text: 'Instagram' }),
+    follow: draft({ text: 'Follow along' }),
   },
 };

@@ -4,6 +4,7 @@ const variants = {
   primary: 'bg-ink text-paper hover:bg-ink-soft',
   secondary: 'bg-white text-ink hover:bg-paper',
   lime: 'bg-brand-lime text-ink hover:bg-lemon',
+  flavor: 'bg-flavor text-ink hover:brightness-95',
   ghost: 'bg-transparent text-current ring-2 ring-current hover:bg-ink hover:text-paper',
 };
 
@@ -36,7 +37,7 @@ export default function Button({
   const inner = (
     <>
       <span>{children}</span>
-      {arrow && <ArrowChip onLime={variant === 'lime'} />}
+      {arrow && <ArrowChip onLime={variant === 'lime' || variant === 'flavor'} />}
     </>
   );
   if (to) {

@@ -59,3 +59,17 @@ await sharp(trimmed)
   .toFile('public/logo-white.png');
 const meta = await sharp('public/logo-white.png').metadata();
 console.log('logo-white.png', meta.width, 'x', meta.height);
+
+// 3) ink version (same alpha, ink color) for use on bright backgrounds
+await sharp({
+  create: {
+    width: meta.width,
+    height: meta.height,
+    channels: 4,
+    background: { r: 22, g: 19, b: 14, alpha: 1 },
+  },
+})
+  .composite([{ input: 'public/logo-white.png', blend: 'dest-in' }])
+  .png()
+  .toFile('public/logo-ink.png');
+console.log('logo-ink.png written');

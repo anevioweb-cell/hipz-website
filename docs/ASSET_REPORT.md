@@ -42,3 +42,42 @@ Result:
 
 ## Pipeline
 `npm run images` (`scripts/images.mjs`, config `scripts/images.config.mjs`) → AVIF + WebP + JPG/PNG fallback at 480/768/1280/1856 (scenes) or native width (cutouts) in `public/images/`, plus `src/data/images.generated.js` (exact width/height). Raw masters are not committed.
+
+---
+
+# Phase 3 additions
+
+## New wide hero scenes (`LemonBg.jpeg`, `PeachBg.jpeg`, 2752×1536 JPEG, 16:9)
+| Check | LemonBg | PeachBg |
+|---|---|---|
+| Logo "Hipz" + smile | matches the real logo; **® mark present** | matches; **® mark not visible** (minor, it is faint on the real bottle too) |
+| Flavor label | "Lemon" on green strip: correct | "Peach" with the small-cap "h" lettering: correct (same as the real bottle) |
+| Cap / bottle shape | yellow cap, PET bottle: correct | orange cap, PET bottle: correct |
+| Invented small print, "ml", extra words | none found (lower label zoomed) | none found (lower label zoomed; area is a smooth mist, the creator illustration appears only partially) |
+| Bottle cut off? | no: whole bottle inside the frame | no: whole bottle inside the frame (base is covered by ice/mist) |
+| **Verdict** | **ACCEPTED** | **ACCEPTED** |
+
+Composition (fractions of the 2752×1536 master; hand-measured on a 2000 px preview, ±1 %):
+| | bottle box (left, top, right, bottom) | bottle center / focal | calm zone |
+|---|---|---|---|
+| Lemon | 0.588, 0.036, 0.780, 0.972 (body; splash/fruit extend wider) | x 0.685, y 0.50 | left ≈ 0–35 %, smooth green-yellow gradient |
+| Peach | 0.598, 0.036, 0.750, 0.950 | x 0.674, y 0.50 | left ≈ 0–38 %, smooth orange gradient |
+
+The bottle sits at ≈ 67–69 % from the left (the brief asked for ≈ 62 %): close enough, the left third stays calm.
+
+Calm-zone text contrast (zone x 4–34 %, y 25–90 %, relative luminance of pixels):
+| | luminance p5 / mean / p95 | white text vs mean (worst) | ink `#16130E` text vs mean (worst) |
+|---|---|---|---|
+| Lemon | 0.37 / 0.48 / 0.63 | 1.98 (1.55) → **fails AA** | 9.33 (**7.39**) → passes AA/AAA |
+| Peach | 0.26 / 0.38 / 0.51 | 2.43 (1.89) → **fails AA** | 7.62 (**5.50**) → passes AA |
+
+Decision: on wide (landscape) viewports the headline and secondary text use **dark ink text**, and the navbar uses the dark logo/text. On portrait (phones) the portrait crop gets a dark bottom scrim with light text.
+
+## Volume check on REAL photos only
+Looked at: `screenshot-1.png` (lemon bottle close-up, lower body), `source-photo.jpg` (two bottles held by the men; shrink-wrapped pallet labels), `frames/f_011.jpg` (video close-up).
+- A small block of printed text (Arabic-looking lines) and tiny icons / a QR-like square sit under the flavor label on the real bottle, and a small flavor word near the base.
+- **No volume text (ml / cl / "330") is legible in any real photo** at the available resolution (best file: `source-photo.jpg`, bottle at left, region ≈ x 560–800, y 1580–2030; and the pallet packs at x 1080–1780, y 2300–2900). I cannot read the small print, so I have not put any volume anywhere. Please confirm the number with the owner/producer or send a sharp close-up of the label's small print.
+- The "330ML" visible in the earlier `Peach.jpeg` scene is AI-generated and is never used.
+
+## Reference
+`https://joybliss.framer.website/flavors` returns **404**: the reference has no flavors listing page (only `/#flavors` and `/flavors/<slug>`), so our `/flavors` is a showcase page.

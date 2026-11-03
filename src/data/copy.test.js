@@ -10,7 +10,7 @@ const leaves = [];
 
 describe('copy.js', () => {
   it('has copy entries', () => {
-    expect(leaves.length).toBeGreaterThan(15);
+    expect(leaves.length).toBeGreaterThan(25);
   });
   it('marks every entry draft: true until the owner approves it', () => {
     for (const [path, leaf] of leaves) expect(leaf.draft, path).toBe(true);

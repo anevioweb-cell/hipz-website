@@ -14,3 +14,19 @@ describe('site data', () => {
     expect(SITE.nameAr).toBe('هايبز');
   });
 });
+
+describe('SOCIAL_LINKS', () => {
+  it('has the three owner-supplied links, https and external-safe, and no TikTok', async () => {
+    const { SOCIAL_LINKS } = await import('./site.js');
+    expect(SOCIAL_LINKS.map((s) => s.href)).toEqual([
+      'https://www.instagram.com/hipzdrink/',
+      'https://www.youtube.com/@kadaWmiloud',
+      'https://www.instagram.com/kadawmiloud/',
+    ]);
+    for (const s of SOCIAL_LINKS) {
+      expect(s.href).toMatch(/^https:\/\//);
+      expect(s.label).toBeTruthy();
+    }
+    expect(JSON.stringify(SOCIAL_LINKS)).not.toMatch(/tiktok/i);
+  });
+});

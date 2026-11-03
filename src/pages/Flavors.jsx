@@ -1,27 +1,50 @@
-import { Link } from 'react-router-dom';
 import Section from '../components/Section.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
-import FlavorTheme from '../components/FlavorTheme.jsx';
+import Reveal from '../components/Reveal.jsx';
+import Button from '../components/Button.jsx';
+import FlavorBand from '../components/FlavorBand.jsx';
+import BothFlavorsCard from '../components/BothFlavorsCard.jsx';
 import { flavors } from '../data/flavors.js';
+import { copy } from '../data/copy.js';
+import { useNavTone } from '../hooks/useNavTone.js';
+import { usePageTitle } from '../hooks/usePageTitle.js';
 
+// The reference has no flavors listing (its /flavors is a 404), so this is a showcase:
+// two alternating bands in each flavor's color, the "Both flavors" tile and a closing call to action.
 export default function Flavors() {
+  useNavTone('dark');
+  usePageTitle('Flavors — Hipz');
   return (
-    <Section tone="ink" className="pt-32">
-      <SectionHeader as="h1" title="Flavors" />
-      <ul className="mt-12 grid gap-5 md:grid-cols-2">
-        {flavors.map((f) => (
-          <li key={f.slug}>
-            <FlavorTheme flavor={f}>
-              <Link
-                to={`/flavors/${f.slug}`}
-                className="flex h-80 items-end rounded-card bg-flavor p-8 font-display text-h2 font-extrabold shadow-card"
-              >
-                {f.name}
-              </Link>
-            </FlavorTheme>
-          </li>
-        ))}
-      </ul>
-    </Section>
+    <>
+      <h1 className="sr-only">{copy.flavors.pageTitle.title}</h1>
+      {flavors.map((f, i) => (
+        <FlavorBand key={f.slug} flavor={f} flip={i % 2 === 1} first={i === 0} />
+      ))}
+      <Section tone="paper">
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+          <Reveal>
+            <SectionHeader
+              as="h2"
+              eyebrow={copy.flavors.pageTitle.subtitle}
+              title={copy.flavors.both.name}
+            />
+            <p className="mt-4 max-w-[34ch] text-lead">{copy.flavors.both.blurb}</p>
+          </Reveal>
+          <Reveal delay={0.1} y={70} className="flex justify-center">
+            <BothFlavorsCard />
+          </Reveal>
+        </div>
+      </Section>
+      <Section tone="ink">
+        <Reveal className="flex flex-col items-start gap-6">
+          <SectionHeader as="h2" title={copy.flavors.closing.title}>
+            {copy.flavors.closing.text}
+          </SectionHeader>
+          <Button to="/distributors" variant="lime">
+            {copy.flavors.findIt.text}
+          </Button>
+        </Reveal>
+      </Section>
+    </>
   );
 }

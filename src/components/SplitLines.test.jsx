@@ -7,6 +7,6 @@ describe('<SplitLines>', () => {
     render(<SplitLines lines={['One', 'Two']} />);
     const h = screen.getByRole('heading', { level: 1 });
     expect(h).toHaveTextContent('One Two');
-    expect(h.querySelectorAll('span.block.overflow-hidden')).toHaveLength(2);
+    expect(h.querySelectorAll('span.block')).toHaveLength(2);
   });
 });

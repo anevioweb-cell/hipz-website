@@ -19,8 +19,8 @@ UI language: English with Arabic accent words through a small `<Ar>` component (
 
 - Layout: `Navbar` (overlay, mobile menu), `Footer`, `PageTransition`, `SmoothScroll` (optional), `Section`, `InsetCard`
 - UI: `Button` (pill + arrow chip), `Chip`, `Ar`, `SectionHeader`, `Marquee`, `Reveal`, `SplitLines`, `Parallax`, `Toast` (simulated success), `EmptyState`
-- Flavors: `FlavorCard`, `FlavorCarousel` (scroll-snap + arrows), `FlavorHero`, `FlavorAttributes`, `MoreToSip`, `Bottle` (image + blob + hover), `PackBuilder` card
-- Home: `Hero`, `Ticker`, `Moments`, `WhyHipz` (pillars), `IngredientsStage` (only if ingredients confirmed), `Community`, `PackCard`
+- Flavors: `FlavorCard`, `FlavorCarousel` (scroll-snap + arrows), `FlavorHero`, `FlavorAttributes`, `MoreToSip`, `Bottle` (image + blob + hover), `BothFlavorsCard`
+- Home: `Hero`, `Ticker`, `FlavorsSection`, `Moments`, `WhyHipz` (pillars), `IngredientsStage` (only if ingredients confirmed), `Community`, `BothFlavorsCard`
 - Distributors: `WaysToWork`, `WholesaleForm` (validation, DEMO_MODE), `StoreFinderEmpty`
 - Data/config: `src/config.js` (`DEMO_MODE = true`), `src/data/flavors.js`, `src/data/wilayas.js`, `src/data/site.js`
 - Head: `<meta name="robots" content="noindex, nofollow">`, `public/robots.txt` (`Disallow: /`)
@@ -36,7 +36,7 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 | **1 Scaffold + design system** | Vite+React+Tailwind+motion, ESLint/Prettier, `npm run check`, tokens (colour, type, spacing, radii), fonts self-hosted, `Button`, `Ar`, `Section`, `Marquee`, layout shell, `config.js`, noindex meta + robots.txt, README (DEMO_MODE) | check passes; tokens match chosen palette; Lighthouse mobile ≥90 on shell |
 | **2 Hero + motion** | Navbar, Hero with entrance + parallax, ticker, SplitLines, Reveal, page transitions | 60 fps scroll in dev-tools profile; reduced-motion static; no layout shift on entrance; a11y 100 |
 | **3 Flavors** | Carousel on home, `/flavors`, `/flavors/:slug`, per-flavour colours, quick-add (simulated) | all flavours come from `flavors.js` (only confirmed ones); keyboard-operable carousel; images lazy + sized |
-| **4 Moments / why / community / pack** | Moments cards, pillars, community strip with empty state, pack card | no fabricated reviews/numbers; empty states look intentional; responsive at 390/768/1024/1440 |
+| **4 Moments / why / community / both flavors** | Moments cards, pillars, community strip with empty state, the "Both flavors" card (replaces the pack builder; no pack/quantity/price claim) | no fabricated reviews/numbers; empty states look intentional; responsive at 390/768/1024/1440 |
 | **5 Distributors** | Ways-to-work, wholesale form, 69-wilaya select, store-finder empty state | wilaya list verified from two sources and cross-checked count = 69; form validates, success message under DEMO_MODE, no network call (verified in devtools) |
 | **6 Our story** | `/our-story` with approved copy and media | every statement traceable to BRAND_BRIEF "confirmed" |
 | **7 Performance + a11y** | image optimisation (AVIF/WebP), code-split routes, font subsetting, contrast pass, focus states, RTL checks for `<Ar>` | Lighthouse mobile ≥90 (perf), a11y 100, best-practices ≥95; reduced-motion verified; keyboard-only tour |
@@ -78,3 +78,12 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 - Page transitions: the reference changes pages instantly (measured). We use a ≤120 ms fade-in only (no exit wait).
 - **/distributors (Phase 5, not built yet):** "Become a distributor" with the public contact numbers from `PUBLIC_CONTACT` (`src/data/site.js`), the simulated wholesale form (DEMO_MODE), and the empty-state store finder, because distribution areas are unknown. No areas are listed.
 - Phase 2 shipped: navbar, two-state hero (lemon/peach, auto-advance 6 s, pause on hover/focus/button, none under reduced motion), ticker at 72 px/s, `SplitLines`, `Reveal` (measured 82 % trigger, 0.9 s), `Parallax`, `Picture`/`Bottle`, optional Lenis (`SMOOTH_SCROLL`), `LazyMotion` (domAnimation). Home sections below the ticker are empty placeholders.
+
+## 8. Phase 3 decisions and notes
+
+- "Quick add" → **"Find it"** (→ `/distributors`). No cart, price, stock or add-to-cart interaction anywhere.
+- "Variety Pack" tile → **"Both flavors"** tile (Lemon + Peach bottles). The Phase 4 "pack builder" deliverable is now the "Both flavors" card.
+- Social links live only in `SOCIAL_LINKS` (`src/data/site.js`); no TikTok anywhere.
+- The reference's `/flavors` URL is a 404 (no listing page exists), so our `/flavors` is a showcase page (two alternating flavor bands, the "Both flavors" tile, a closing "Find it" call to action).
+- Hero is now full-bleed (no dark card) with the owner's wide scenes; thirst effects are transform/opacity only and fully off under reduced motion.
+- Performance lessons (details in the Phase 3 report): Chrome ignores a full-viewport hero image as an LCP candidate, so the home LCP is the headline text; the hero image request is started right after the headline's first paint; flavor pages preload their route's hero image via a tiny inline script in `index.html`.

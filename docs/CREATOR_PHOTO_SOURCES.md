@@ -6,9 +6,8 @@ I did **not** download any photo of Kada or Miloud and ran **no face recognition
 | Source | Link | Status |
 |---|---|---|
 | Hipz Instagram (brand account, confirmed in your screenshots) | https://www.instagram.com/hipzdrink/ | Confirmed |
-| KadaWMiloud YouTube ("kadaWmiloud Plus") | https://www.youtube.com/@kadawmiloud_plus | Handle taken from a Social Blade listing (third party); **unverified** |
-| KadaWMiloud TikTok | https://www.tiktok.com/@kadawmiloudtiktok | Handle seen in a search snippet; page not opened; **unverified** |
-| Their official Instagram | not found by search — please send me the correct handle | **Unknown** |
+| KadaWMiloud YouTube | https://www.youtube.com/@kadaWmiloud | Supplied by the owner (replaces the earlier unverified handle) |
+| KadaWMiloud Instagram | https://www.instagram.com/kadawmiloud/ | Supplied by the owner |
 
 (Third-party listings such as Collabstr describe the duo, but their pages are marketplace profiles — do not use their images.)
 

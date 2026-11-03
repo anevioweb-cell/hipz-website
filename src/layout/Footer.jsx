@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import Logo from '../components/Logo.jsx';
 import { navLinks } from './navLinks.js';
 import { copy } from '../data/copy.js';
-import { SITE } from '../data/site.js';
+import { SOCIAL_LINKS } from '../data/site.js';
 
-// Only confirmed public facts. Phone numbers are allowed on the distributors page only (PUBLIC_CONTACT).
+// Phone numbers stay out of the footer (PUBLIC_CONTACT is for /distributors only).
 export default function Footer() {
   return (
     <footer className="bg-ink text-paper">
@@ -14,29 +14,53 @@ export default function Footer() {
             <Logo height="h-20" />
             <p className="font-display text-h3 font-bold">{copy.footer.tagline.text}</p>
           </div>
-          <nav aria-label="Footer" className="flex gap-16">
-            <ul className="flex flex-col gap-3">
-              {navLinks.map((l) => (
-                <li key={l.to}>
-                  <Link className="hover:underline" to={l.to}>
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <ul className="flex flex-col gap-3">
-              <li>
-                <a
-                  className="hover:underline"
-                  href={SITE.instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {copy.footer.follow.text}
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <div className="flex flex-wrap gap-16">
+            <nav aria-label="Footer">
+              <ul className="flex flex-col gap-3">
+                {navLinks.map((l) => (
+                  <li key={l.to}>
+                    <Link className="hover:underline" to={l.to}>
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <nav aria-label="Social">
+              <p className="mb-3 font-mono text-label uppercase opacity-70">
+                {copy.footer.follow.text}
+              </p>
+              <ul className="flex flex-col gap-3">
+                {SOCIAL_LINKS.map((s) => (
+                  <li key={s.id}>
+                    <a
+                      className="inline-flex items-center gap-2 hover:underline"
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${s.short} (opens in a new tab)`}
+                    >
+                      {s.short}
+                      <svg
+                        aria-hidden="true"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                      >
+                        <path
+                          d="M3 9l6-6M4 3h5v5"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
         <p className="border-t border-white/15 pt-6 text-sm opacity-70">
           © {new Date().getFullYear()} Hipz

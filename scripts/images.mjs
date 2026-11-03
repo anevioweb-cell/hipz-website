@@ -18,11 +18,27 @@ for (const spec of specs) {
   const buf = await base.toBuffer();
   const { width: mw, height: mh } = await sharp(buf).metadata();
   const entry = { width: mw, height: mh, kind: spec.kind, variants: [] };
+  if (spec.box) {
+    // convert master-relative fractions into fractions of this output (crop)
+    const c = spec.crop ?? { left: 0, top: 0, width: 2752, height: 1536 };
+    const X = (f) => (f * 2752 - c.left) / c.width;
+    const Y = (f) => (f * 1536 - c.top) / c.height;
+    const r = (n) => Math.round(n * 1000) / 1000;
+    entry.box = {
+      x: r(X(spec.box.l)),
+      y: r(Y(spec.box.t)),
+      w: r(X(spec.box.r) - X(spec.box.l)),
+      h: r(Y(spec.box.b) - Y(spec.box.t)),
+    };
+    entry.focal = { x: r(X(spec.focal.x)), y: r(Y(spec.focal.y)) };
+  }
   for (const w of spec.widths) {
     const width = Math.min(w, mw); // never upscale
     const height = Math.round((mh * width) / mw);
     const img = () => sharp(buf).resize({ width, kernel: 'lanczos3' });
-    await img().avif({ quality: 55, effort: 5 }).toFile(`${OUT}/${spec.name}-${width}.avif`);
+    await img()
+      .avif({ quality: spec.kind === 'scene' ? 48 : 55, effort: 5 })
+      .toFile(`${OUT}/${spec.name}-${width}.avif`);
     await img().webp({ quality: 80 }).toFile(`${OUT}/${spec.name}-${width}.webp`);
     if (spec.kind === 'scene')
       await img().jpeg({ quality: 80, mozjpeg: true }).toFile(`${OUT}/${spec.name}-${width}.jpg`);

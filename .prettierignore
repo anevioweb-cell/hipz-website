@@ -4,3 +4,5 @@ node_modules
 docs
 package-lock.json
 "sourse of Kada and Miloud"
+.claude
+src/data/images.generated.js

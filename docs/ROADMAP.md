@@ -87,3 +87,11 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 - The reference's `/flavors` URL is a 404 (no listing page exists), so our `/flavors` is a showcase page (two alternating flavor bands, the "Both flavors" tile, a closing "Find it" call to action).
 - Hero is now full-bleed (no dark card) with the owner's wide scenes; thirst effects are transform/opacity only and fully off under reduced motion.
 - Performance lessons (details in the Phase 3 report): Chrome ignores a full-viewport hero image as an LCP candidate, so the home LCP is the headline text; the hero image request is started right after the headline's first paint; flavor pages preload their route's hero image via a tiny inline script in `index.html`.
+
+## 9. Phase 4 decisions
+
+- Hero approved as built; only the measured rounded inset frame was restored (see REFERENCE_ANALYSIS §8). Headline + Arabic chip are approved copy.
+- Volume 330 ml (owner) — text-only attribute in "The basics"; images never carry it.
+- No people imagery: Moments, Community and "Both flavors" use bottles, flavor colors, logo and our own SVG icons only; data slots are ready for real photos/posts later.
+- The reference's ingredients section (rotating cans + ingredient callouts) is **skipped on purpose**: no confirmed ingredients.
+- Home order: hero, ticker, flavors, moments, why Hipz, both flavors, community, footer.

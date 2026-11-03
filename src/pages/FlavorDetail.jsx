@@ -28,6 +28,23 @@ function FlavorPage({ flavor }) {
   usePageTitle(`${flavor.name} — Hipz`);
   const other = otherFlavor(flavor.slug);
   const attrs = ATTRS.filter((k) => flavor.attributes?.[k]);
+  // "The basics": verified attributes + the confirmed volume (written as text, never on an image)
+  const basics = [
+    ...attrs.map((k) => ({
+      key: k,
+      label: copy.flavors.attrLabels[k],
+      value: flavor.attributes[k],
+    })),
+    ...(flavor.volume
+      ? [
+          {
+            key: 'size',
+            label: copy.flavors.attrLabels.size,
+            value: `${flavor.volume.amount} ${flavor.volume.unit}`,
+          },
+        ]
+      : []),
+  ];
 
   return (
     <FlavorTheme flavor={flavor} className="contents">
@@ -86,28 +103,30 @@ function FlavorPage({ flavor }) {
         </section>
       </div>
 
-      {attrs.length > 0 && (
+      {basics.length > 0 && (
         <Section tone="paper">
           <div className="grid items-center gap-12 lg:grid-cols-[320px_1fr]">
-            <Reveal className="mx-auto w-[260px]">
-              <Bottle flavor={flavor} sizes="260px" />
+            <Reveal className="mx-auto flex justify-center">
+              <Bottle
+                flavor={flavor}
+                sizes="200px"
+                imgClassName="h-[460px] w-auto drop-shadow-2xl"
+              />
             </Reveal>
             <div>
               <Reveal>
                 <SectionHeader as="h2" title={copy.flavors.attributesTitle.title} />
               </Reveal>
-              <dl className="mt-8 grid gap-5 sm:grid-cols-3">
-                {attrs.map((k, i) => (
+              <dl className="mt-8 grid gap-5 sm:grid-cols-2">
+                {basics.map((b, i) => (
                   <Reveal
-                    key={k}
+                    key={b.key}
                     delay={i * 0.1}
                     y={50}
                     className="rounded-card bg-white p-7 shadow-card"
                   >
-                    <dt className="font-mono text-label uppercase opacity-70">
-                      {copy.flavors.attrLabels[k]}
-                    </dt>
-                    <dd className="mt-3 font-display text-h3 font-bold">{flavor.attributes[k]}</dd>
+                    <dt className="font-mono text-label uppercase opacity-70">{b.label}</dt>
+                    <dd className="mt-3 font-display text-h3 font-bold">{b.value}</dd>
                   </Reveal>
                 ))}
               </dl>

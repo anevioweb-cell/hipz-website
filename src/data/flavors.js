@@ -1,5 +1,6 @@
 // Flavors: exactly two, confirmed by the owner (docs/BRAND_BRIEF.md rows 12–14, 22).
-// Only verified facts live here. `volume` stays null: the size is unknown and is never displayed.
+// Only verified facts live here. `volume`: 330 ml, one single size (owner statement, BRAND_BRIEF row 34).
+// It is shown only as an attribute in "The basics" on flavor pages — never on images, never as "medium".
 // Colors reference tokens in src/index.css; hex values live ONLY there.
 // Mood copy for each flavor is in src/data/copy.js (copy.flavors[slug]), all draft.
 export const flavors = [
@@ -11,7 +12,7 @@ export const flavors = [
     accentDeep: 'var(--color-lemon-cap)',
     label: 'var(--color-brand-leaf)',
     onAccent: 'var(--color-ink)',
-    volume: null,
+    volume: { amount: 330, unit: 'ml' },
     images: {
       bottle: 'bottle-lemon',
       heroWide: 'hero-lemon-wide',
@@ -29,11 +30,9 @@ export const flavors = [
     accentDeep: 'var(--color-peach-cap)',
     label: null,
     onAccent: 'var(--color-ink)',
-    volume: null,
+    volume: { amount: 330, unit: 'ml' },
     images: {
       bottle: 'bottle-peach',
-      bottleScale: 1.4, // the cropped cutout shows a narrower bottle: scale up to match the lemon card
-      bottleCropped: true, // cutout ends under the label (AI small print cropped out): fade the cut edge
       heroWide: 'hero-peach-wide',
       heroPortrait: 'hero-peach-portrait',
     },

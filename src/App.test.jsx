@@ -32,7 +32,9 @@ describe('flavor pages', () => {
     const { container } = renderAt('/flavors/lemon');
     expect(container.textContent).toMatch(/PET bottle with screw cap/);
     expect(container.textContent).toMatch(/Serve ice cold/);
-    expect(container.textContent).not.toMatch(/\bnull\b|undefined|N\/A|\d+\s?ml|medium/i);
+    expect(container.textContent).not.toMatch(/\bnull\b|undefined|N\/A|medium/i);
+    // the confirmed size appears exactly once, as text in "The basics"
+    expect(container.textContent.match(/330 ml/g)).toHaveLength(1);
     expect(document.title).toBe('Lemon — Hipz');
   });
   it('renders the 404 for an unknown flavor slug', () => {

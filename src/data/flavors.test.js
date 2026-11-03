@@ -7,10 +7,10 @@ describe('flavors data', () => {
     expect(flavors.map((f) => f.slug)).toEqual(['lemon', 'peach']);
     expect(flavors.map((f) => f.nameAr)).toEqual(['ليمون', 'خوخ']);
   });
-  it('keeps the volume unknown (null) — a size is never invented', () => {
+  it('carries the owner-confirmed single size (330 ml) as structured data, never as "medium"', () => {
     for (const f of flavors) {
-      expect(f.volume).toBeNull();
-      expect(JSON.stringify(f)).not.toMatch(/\d+\s?(ml|cl|l)\b|medium/i);
+      expect(f.volume).toEqual({ amount: 330, unit: 'ml' });
+      expect(JSON.stringify(f)).not.toMatch(/medium/i);
     }
   });
   it('only carries verified attributes (format, cap, serve) with no empty values', () => {

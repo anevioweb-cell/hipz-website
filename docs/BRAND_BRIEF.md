@@ -139,3 +139,14 @@ Pixel sampling method: median RGB of pixels with saturation ≥ 0.5–0.6 and va
 | 31 | Social links (stored only in `src/data/site.js` → `SOCIAL_LINKS`): Hipz Instagram https://www.instagram.com/hipzdrink/ · Kada & Miloud YouTube https://www.youtube.com/@kadaWmiloud · Kada & Miloud Instagram https://www.instagram.com/kadawmiloud/ . **No TikTok anywhere** (site, data, creator-sources doc). | owner statement | High |
 | 32 | Bottle volume: believed to be a single medium size, number unknown. Keep `volume: null`; never show a size, "medium" or ml figure, and never take a number from an AI-generated image. Real photos checked: no legible volume text (see `docs/ASSET_REPORT.md`). | owner statement | High |
 | 33 | Product description: **soda (fizzy soft drink)**. No ingredient, sugar, calorie, "real fruit" or health claims. | owner statement | High |
+
+---
+
+# Update — Phase 4: owner decisions (all "owner statement, high confidence")
+
+| # | Decision / fact | Source | Confidence |
+|---|---|---|---|
+| 34 | **Bottle volume: 330 ml, one single size.** The figure was first seen on an AI-generated image (the earlier `Peach.jpeg` scene, which stays rejected for its invented small print); the owner states it is the real size. Stored as `volume: { amount: 330, unit: 'ml' }` in `src/data/flavors.js`, shown only as HTML text ("330 ml") in "The basics" on flavor pages. Never painted on or expected from images; never "medium". | owner statement | High |
+| 35 | The hero as built is approved, including the headline **"Thirsty? Say Hipz."** and the Arabic chip **عطشان؟** (`draft: false` in `copy.js`). All other copy stays draft. | owner statement | High |
+| 36 | The only hero change requested: restore the reference's rounded inset frame. | owner statement | High |
+| 37 | No lifestyle photos exist. No invented/generated imagery of people, never likenesses of Kada or Miloud. Only supplied assets and designed graphics (flavor blocks, bottle crops, our own simple SVG icons). | owner statement | High |

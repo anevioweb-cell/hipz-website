@@ -2,6 +2,8 @@
 // Rules: no health claims, ingredients, calories, sugar/fruit-content claims, origin, awards, numbers,
 // fake reviews or customer names. Arabic accent words go in `ar` and render through <Ar>.
 const draft = (fields) => ({ draft: true, ...fields });
+// Owner-approved copy (Phase 4): draft: false.
+const approved = (fields) => ({ draft: false, ...fields });
 
 export const copy = {
   nav: {
@@ -13,8 +15,8 @@ export const copy = {
     menuClose: draft({ text: 'Close menu' }),
   },
   hero: {
-    eyebrow: draft({ ar: 'عطشان؟' }),
-    headline: draft({ lines: ['Thirsty?', 'Say Hipz.'] }),
+    eyebrow: approved({ ar: 'عطشان؟' }),
+    headline: approved({ lines: ['Thirsty?', 'Say Hipz.'] }),
     subtitle: draft({ text: 'Lemon or peach. Ice cold. Fizz on.' }),
     primaryCta: draft({ text: 'Meet the flavors' }),
     secondaryCta: draft({ text: 'Find it' }),
@@ -55,7 +57,7 @@ export const copy = {
     meet: draft({ text: 'Meet' }),
     more: draft({ title: 'More to sip.' }),
     attributesTitle: draft({ title: 'The basics' }),
-    attrLabels: draft({ format: 'Format', cap: 'Cap', serve: 'Serve' }),
+    attrLabels: draft({ format: 'Format', cap: 'Cap', serve: 'Serve', size: 'Size' }),
     closing: draft({ title: 'Cold one, please.', text: 'Find your Hipz near you.' }),
     pageTitle: draft({ title: 'Flavors', subtitle: 'Two flavors. One smile.' }),
     prev: draft({ text: 'Previous flavor' }),

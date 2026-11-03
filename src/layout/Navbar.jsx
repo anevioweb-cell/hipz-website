@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
+import { AnimatePresence, m, useReducedMotion } from 'motion/react';
 import Logo from '../components/Logo.jsx';
 import Button from '../components/Button.jsx';
 import { navLinks } from './navLinks.js';
@@ -54,7 +54,7 @@ export default function Navbar() {
     `rounded-pill px-4 py-2 font-medium transition-colors hover:bg-white/20 ${isActive ? 'bg-white/20' : ''}`;
 
   return (
-    <motion.header
+    <m.header
       className="absolute inset-x-0 top-0 z-40 px-gutter pt-6 text-paper lg:px-gutter-lg"
       initial={reduce ? false : { y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -92,9 +92,10 @@ export default function Navbar() {
       </nav>
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             id="mobile-menu"
             ref={dialogRef}
+            data-lenis-prevent
             role="dialog"
             aria-modal="true"
             aria-label="Menu"
@@ -117,7 +118,7 @@ export default function Navbar() {
             </div>
             <ul className="mt-14 flex flex-col gap-4">
               {navLinks.map((l, i) => (
-                <motion.li
+                <m.li
                   key={l.to}
                   initial={reduce ? false : { opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -130,7 +131,7 @@ export default function Navbar() {
                   >
                     {l.label}
                   </NavLink>
-                </motion.li>
+                </m.li>
               ))}
             </ul>
             <div className="mt-auto">
@@ -138,9 +139,9 @@ export default function Navbar() {
                 {copy.nav.buy.text}
               </Button>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </m.header>
   );
 }

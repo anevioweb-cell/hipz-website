@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'motion/react';
+import { m, useReducedMotion } from 'motion/react';
 import { ease, duration, stagger } from '../motion.js';
 
 // Line-by-line headline reveal: each line slides up out of a mask. `lines` is an array of strings.
@@ -11,12 +11,12 @@ export default function SplitLines({
   inView = false,
 }) {
   const reduce = useReducedMotion();
-  const Tag = motion[as];
+  const Tag = m[as];
   return (
     <Tag className={className}>
       {lines.map((line, i) => (
         <span key={line} className="block overflow-hidden pb-[0.08em]">
-          <motion.span
+          <m.span
             className="block"
             initial={reduce ? false : { y: '110%' }}
             {...(inView
@@ -26,7 +26,7 @@ export default function SplitLines({
           >
             {line}
             {i < lines.length - 1 ? ' ' : ''}
-          </motion.span>
+          </m.span>
         </span>
       ))}
     </Tag>

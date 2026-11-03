@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'motion/react';
+import { m, useReducedMotion } from 'motion/react';
 import { ease, duration, revealMargin } from '../motion.js';
 
 // Scroll reveal, once. Measured on the reference: starts when the element's top reaches ≈ 82 % of the
@@ -6,7 +6,7 @@ import { ease, duration, revealMargin } from '../motion.js';
 // Under reduced motion it renders without movement.
 export default function Reveal({ children, delay = 0, y = 50, scale, className = '', as = 'div' }) {
   const reduce = useReducedMotion();
-  const Tag = motion[as];
+  const Tag = m[as];
   if (reduce) return <Tag className={className}>{children}</Tag>;
   return (
     <Tag

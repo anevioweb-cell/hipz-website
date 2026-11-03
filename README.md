@@ -9,6 +9,7 @@ npm install
 npm run dev          # http://localhost:5173  (dev-only component kit at /_kit)
 npm run check        # lint (0 warnings) + prettier check + build + tests; stops at the first failure
 npm run build && npm run preview
+npm run images       # masters in docs/inputs → AVIF/WebP/JPG|PNG in public/images + src/data/images.generated.js
 npm run measure:reference   # Playwright motion measurement of the reference (writes docs/reference-shots/)
 ```
 
@@ -21,9 +22,9 @@ src/motion.js        easing/duration mirrors for the motion JS API
 src/components/      Button, Chip, Ar, Section, SectionHeader, InsetCard, Marquee, Reveal, EmptyState, Toast, Logo, FlavorTheme
 src/layout/          Layout, Navbar (+ mobile menu), Footer, PageTransition
 src/pages/           Home, Flavors, FlavorDetail, Distributors, OurStory, NotFound, Kit (dev only)
-src/data/            flavors.js (lemon, peach — confirmed); wilayas.js comes in Phase 5
+src/data/            flavors.js (lemon, peach), site.js (PUBLIC_CONTACT — distributors page only), copy.js (ALL copy, draft: true), images.generated.js (build output)
 docs/                research, roadmap, reference analysis, font licenses; docs/inputs = owner material
-scripts/             check.mjs, measure-reference.mjs
+scripts/             check.mjs, measure-reference.mjs, images.mjs (+ config), make-logo.mjs
 ```
 
 Color rule: hex values live only in `src/index.css`. Tokens sampled from real Hipz images are labelled REAL, others PLACEHOLDER. Per-flavor colors come from `src/data/flavors.js` through the `--flavor-accent` CSS variable (`FlavorTheme`).
@@ -35,3 +36,12 @@ Color rule: hex values live only in `src/index.css`. Tokens sampled from real Hi
 ## Images stay private
 
 Photos, videos, logo and bottle images (`docs/inputs/`, `sourse of Kada and Miloud/`) are gitignored and must never be published. Keep this repository private; never make it public or deploy a public preview without the owners' written permission.
+
+## Config flags (`src/config.js`)
+
+- `DEMO_MODE` — see above.
+- `SMOOTH_SCROLL` — Lenis smooth scrolling, loaded after first paint, off under `prefers-reduced-motion`.
+
+## Images
+
+Masters (`docs/inputs/*.jpeg|png|jpg`) are gitignored. `npm run images` creates the optimized set. The logo is derived from `public/logo.jpg` (150×150 — request a vector/large PNG), see `docs/ASSET_REPORT.md`.

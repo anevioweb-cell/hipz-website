@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
+import { m, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import { heroParallax } from '../motion.js';
 
 // Transform-only parallax.
@@ -24,8 +24,8 @@ export default function Parallax({
   );
   if (reduce) return <div className={className}>{children}</div>;
   return (
-    <motion.div ref={ref} style={{ y }} className={className}>
+    <m.div ref={ref} style={{ y }} className={className}>
       {children}
-    </motion.div>
+    </m.div>
   );
 }

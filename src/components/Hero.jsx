@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { motion, useReducedMotion } from 'motion/react';
+import { m, useReducedMotion } from 'motion/react';
 import Button from './Button.jsx';
 import Chip from './Chip.jsx';
 import Ar from './Ar.jsx';
@@ -49,7 +49,7 @@ export default function Hero() {
           const first = i === 0;
           return (
             <FlavorTheme key={f.slug} flavor={f} className="pointer-events-none absolute inset-0">
-              <motion.div
+              <m.div
                 aria-hidden="true"
                 className="absolute inset-0 bg-[radial-gradient(70%_90%_at_78%_55%,var(--color-flavor),transparent_70%)] opacity-60"
                 initial={false}
@@ -57,7 +57,7 @@ export default function Hero() {
                 transition={{ duration: duration.reveal, ease }}
               />
               <Parallax className="absolute inset-x-0 top-0 h-[58%] lg:left-auto lg:h-full lg:w-auto">
-                <motion.div
+                <m.div
                   className="hero-mask h-full w-full"
                   initial={
                     first && !reduce
@@ -79,7 +79,7 @@ export default function Hero() {
                     className="block h-full w-full lg:flex lg:justify-end"
                     imgClassName="h-full w-full object-cover object-top lg:w-auto lg:max-w-none"
                   />
-                </motion.div>
+                </m.div>
               </Parallax>
             </FlavorTheme>
           );

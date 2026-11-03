@@ -35,7 +35,7 @@ Color rule: hex values live only in `src/index.css`. Tokens sampled from real Hi
 
 ## Images stay private
 
-Photos, videos, logo and bottle images (`docs/inputs/`, `sourse of Kada and Miloud/`) are gitignored and must never be published. Keep this repository private; never make it public or deploy a public preview without the owners' written permission.
+Photos, videos, logo and bottle images (`docs/inputs/`, `sourse of Kada and Miloud/`) are gitignored and must never be published. The optimized product images in `public/images/` and the logo files in `public/` ARE committed (the site needs them), which is one more reason this repository must stay private; never make it public or deploy a public preview without the owners' written permission.
 
 ## Config flags (`src/config.js`)
 

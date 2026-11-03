@@ -11,3 +11,9 @@ docs/inputs/crop-*.png
 coverage
 .lighthouseci
 docs/inputs/frames/
+docs/inputs/*.jpeg
+docs/inputs/*.jpg
+docs/inputs/*.png
+docs/inputs/cutouts/
+docs/inputs/creators/
+docs/shots/

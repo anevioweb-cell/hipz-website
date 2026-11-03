@@ -4,7 +4,7 @@ export const SITE = {
   nameAr: 'هايبز',
 };
 
-// Owner-supplied social links (no TikTok anywhere). Shown in the footer.
+// Owner-supplied social links. Shown in the footer.
 export const SOCIAL_LINKS = [
   {
     id: 'hipz-instagram',

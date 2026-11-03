@@ -46,6 +46,10 @@ function FlavorPage({ flavor }) {
         </m.div>
         <div
           aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 left-0 hidden w-[64%] bg-linear-to-r from-paper/65 via-paper/40 to-transparent landscape:block"
+        />
+        <div
+          aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-[68%] bg-linear-to-t from-ink via-ink/80 to-transparent portrait:block"
         />
         <div className="relative z-10 mx-auto flex min-h-svh max-w-site flex-col justify-end gap-5 px-gutter pt-28 pb-10 text-ink portrait:text-paper lg:px-gutter-lg lg:pb-16 landscape:[&>*]:max-w-[min(34rem,46vw)]">

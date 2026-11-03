@@ -120,6 +120,11 @@ export default function Hero() {
           })}
         </Parallax>
 
+        {/* landscape: a soft paper veil on the left lifts the darkest spots of the calm zone so ink text keeps AA */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 left-0 hidden w-[64%] bg-linear-to-r from-paper/65 via-paper/40 to-transparent landscape:block"
+        />
         {/* phones / portrait: headline sits on a dark scrim with light text */}
         <div
           aria-hidden="true"

@@ -16,3 +16,14 @@ window.matchMedia =
     addListener: () => {},
     removeListener: () => {},
   }));
+
+class ObserverStub {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+  takeRecords() {
+    return [];
+  }
+}
+window.IntersectionObserver = window.IntersectionObserver || ObserverStub;
+window.ResizeObserver = window.ResizeObserver || ObserverStub;

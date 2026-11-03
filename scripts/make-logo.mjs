@@ -46,6 +46,16 @@ for (let y = 0; y < H; y++) {
 const full = sharp(out, { raw: { width: W, height: H, channels: 4 } });
 // trim transparent margin
 const trimmed = await full.png().toBuffer();
-await sharp(trimmed).trim({ background: { r: 0, g: 0, b: 0, alpha: 0 }, threshold: 10 }).extend({ top: 8, bottom: 8, left: 8, right: 8, background: { r: 255, g: 255, b: 255, alpha: 0 } }).png().toFile('public/logo-white.png');
+await sharp(trimmed)
+  .trim({ background: { r: 0, g: 0, b: 0, alpha: 0 }, threshold: 10 })
+  .extend({
+    top: 8,
+    bottom: 8,
+    left: 8,
+    right: 8,
+    background: { r: 255, g: 255, b: 255, alpha: 0 },
+  })
+  .png()
+  .toFile('public/logo-white.png');
 const meta = await sharp('public/logo-white.png').metadata();
 console.log('logo-white.png', meta.width, 'x', meta.height);

@@ -12,7 +12,7 @@ const renderAt = (path) =>
 
 describe('routes', () => {
   it.each([
-    ['/', 'Hipz'],
+    ['/', 'Smile in a bottle.'],
     ['/flavors', 'Flavors'],
     ['/flavors/peach', 'Peach'],
     ['/distributors', 'Distributors'],
@@ -22,6 +22,6 @@ describe('routes', () => {
     ['/credits', 'Page not found'],
   ])('%s renders its h1 without crashing', (path, title) => {
     renderAt(path);
-    expect(screen.getByRole('heading', { level: 1, name: title })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(title);
   });
 });

@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef, useState } from 'react';
 
 // Infinite ticker. `speed` is px/second; `reverse` flips direction.
 // Pauses on hover/focus; static under prefers-reduced-motion (see .marquee-track in index.css).
-export default function Marquee({ children, speed = 60, reverse = false, className = '', label }) {
+export default function Marquee({ children, speed = 72, reverse = false, className = '', label }) {
   const trackRef = useRef(null);
   const [duration, setDuration] = useState(40);
 

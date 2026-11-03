@@ -24,7 +24,8 @@ for (const spec of specs) {
     const img = () => sharp(buf).resize({ width, kernel: 'lanczos3' });
     await img().avif({ quality: 55, effort: 5 }).toFile(`${OUT}/${spec.name}-${width}.avif`);
     await img().webp({ quality: 80 }).toFile(`${OUT}/${spec.name}-${width}.webp`);
-    if (spec.kind === 'scene') await img().jpeg({ quality: 80, mozjpeg: true }).toFile(`${OUT}/${spec.name}-${width}.jpg`);
+    if (spec.kind === 'scene')
+      await img().jpeg({ quality: 80, mozjpeg: true }).toFile(`${OUT}/${spec.name}-${width}.jpg`);
     else await img().png({ compressionLevel: 9 }).toFile(`${OUT}/${spec.name}-${width}.png`);
     if (!entry.variants.some((v) => v.width === width)) entry.variants.push({ width, height });
   }

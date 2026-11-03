@@ -122,7 +122,10 @@
   --duration-fast: 200ms;
   --duration-base: 400ms;
   --duration-slow: 700ms;
-  --duration-page: 300ms;
+  --duration-page: 120ms; /* reference changes pages instantly; ours is a 120 ms fade-in */
+  --duration-reveal: 900ms; /* measured: reveals settle in 0.8–1.1 s */
+  --duration-nav: 900ms; /* measured navbar entrance */
+  --duration-hero: 1200ms; /* measured hero image scale 1.35 → 1 */
 }
 
 @layer base {
@@ -179,5 +182,17 @@
 @keyframes marquee {
   to {
     transform: translateX(-50%);
+  }
+}
+
+@layer components {
+  /* hero image edge feather: blends the scene into the ink card (bottom on mobile, left on desktop) */
+  .hero-mask {
+    mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  }
+  @media (min-width: 1024px) {
+    .hero-mask {
+      mask-image: linear-gradient(to right, transparent 0%, #000 28%);
+    }
   }
 }

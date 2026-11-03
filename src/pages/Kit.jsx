@@ -7,6 +7,10 @@ import InsetCard from '../components/InsetCard.jsx';
 import Marquee from '../components/Marquee.jsx';
 import Reveal from '../components/Reveal.jsx';
 import Section from '../components/Section.jsx';
+import Bottle from '../components/Bottle.jsx';
+import Ticker from '../components/Ticker.jsx';
+import SplitLines from '../components/SplitLines.jsx';
+import Parallax from '../components/Parallax.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
 import { useToast } from '../components/toast-context.js';
 import { flavors } from '../data/flavors.js';
@@ -93,6 +97,25 @@ export default function Kit() {
           <EmptyState title="Nothing here yet">Empty states stay honest.</EmptyState>
         </div>
       </Section>
+      <Section tone="paper">
+        <h2 className="font-display text-h3 font-bold">Bottles (cutouts), SplitLines, Parallax</h2>
+        <div className="mt-6 flex flex-wrap items-end gap-8">
+          {flavors.map((f) => (
+            <div key={f.slug} className="w-44">
+              <Bottle flavor={f} sizes="176px" />
+            </div>
+          ))}
+          <Parallax mode="element" distance={30}>
+            <SplitLines
+              as="p"
+              inView
+              lines={['Line by line', 'reveal.']}
+              className="font-display text-h2 font-extrabold"
+            />
+          </Parallax>
+        </div>
+      </Section>
+      <Ticker />
       <Marquee className="bg-brand-lime py-4" speed={80} label="Marquee sample">
         {[...Array(6)].map((_, i) => (
           <span key={i} className="px-6 font-display text-h2 font-extrabold">

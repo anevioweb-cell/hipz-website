@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { useLocation, useOutlet } from 'react-router-dom';
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { duration } from '../motion.js';
 
-// Cross-fades routes (opacity only) and returns to the top on navigation.
+// The reference changes pages instantly (measured); we use only a very light 120 ms fade-in
+// (opacity, no exit wait) and return to the top on navigation.
 export default function PageTransition() {
   const { pathname } = useLocation();
-  const outlet = useOutlet(); // element snapshot keeps the exiting page intact
+  const outlet = useOutlet();
   const reduce = useReducedMotion();
 
   useEffect(() => {
@@ -15,16 +16,13 @@ export default function PageTransition() {
 
   if (reduce) return <div>{outlet}</div>;
   return (
-    <AnimatePresence mode="wait" initial={false}>
-      <motion.div
-        key={pathname}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: duration.page }}
-      >
-        {outlet}
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      key={pathname}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: duration.page }}
+    >
+      {outlet}
+    </motion.div>
   );
 }

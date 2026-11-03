@@ -4,7 +4,8 @@ import { copy } from './copy.js';
 const leaves = [];
 (function walk(node, path) {
   if (node && typeof node === 'object' && 'draft' in node) leaves.push([path, node]);
-  else if (node && typeof node === 'object') for (const [k, v] of Object.entries(node)) walk(v, `${path}.${k}`);
+  else if (node && typeof node === 'object')
+    for (const [k, v] of Object.entries(node)) walk(v, `${path}.${k}`);
 })(copy, 'copy');
 
 describe('copy.js', () => {
@@ -15,11 +16,22 @@ describe('copy.js', () => {
     for (const [path, leaf] of leaves) expect(leaf.draft, path).toBe(true);
   });
   it('contains no forbidden claims', () => {
-    const banned = /calorie|sugar|real fruit|natural|organic|vitamin|made in|award|best |#1|\d+\s?(ml|%|cl)|review|customers? say/i;
+    const banned =
+      /calorie|sugar|real fruit|natural|organic|vitamin|made in|award|best |#1|\d+\s?(ml|%|cl)|review|customers? say/i;
     expect(JSON.stringify(copy)).not.toMatch(banned);
   });
   it('limits ticker items to neutral words', () => {
-    const allowed = new Set(['Hipz', 'Lemon', 'Peach', 'Ice cold', 'Pop it', 'Share it', 'هايبز', 'ليمون', 'خوخ']);
+    const allowed = new Set([
+      'Hipz',
+      'Lemon',
+      'Peach',
+      'Ice cold',
+      'Pop it',
+      'Share it',
+      'هايبز',
+      'ليمون',
+      'خوخ',
+    ]);
     for (const i of copy.ticker.items.items) expect(allowed.has(i.text ?? i.ar)).toBe(true);
   });
 });

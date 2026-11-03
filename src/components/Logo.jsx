@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
 
-// PLACEHOLDER wordmark: the real logo is custom lettering and is NOT imitated with a font.
-// Swap this for the supplied vector logo file once it is in docs/inputs/.
-export default function Logo({ className = '' }) {
+// Real Hipz logo, derived from the supplied public/logo.jpg (white on transparent, see docs/ASSET_REPORT.md).
+export default function Logo({ className = '', height = 'h-12' }) {
   return (
-    <Link
-      to="/"
-      aria-label="Hipz — home"
-      className={`font-display text-3xl font-extrabold ${className}`}
-    >
-      Hipz
+    <Link to="/" aria-label="Hipz — home" className={`inline-block ${className}`}>
+      <img
+        src="/logo-white.png"
+        alt="Hipz"
+        width="398"
+        height="279"
+        className={`${height} w-auto`}
+      />
     </Link>
   );
 }

@@ -42,7 +42,10 @@ for (const spec of specs) {
     await img().webp({ quality: 80 }).toFile(`${OUT}/${spec.name}-${width}.webp`);
     if (spec.kind === 'scene')
       await img().jpeg({ quality: 80, mozjpeg: true }).toFile(`${OUT}/${spec.name}-${width}.jpg`);
-    else await img().png({ compressionLevel: 9 }).toFile(`${OUT}/${spec.name}-${width}.png`);
+    else
+      await img()
+        .png({ compressionLevel: 9, palette: true, quality: 85, effort: 8 })
+        .toFile(`${OUT}/${spec.name}-${width}.png`);
     if (!entry.variants.some((v) => v.width === width)) entry.variants.push({ width, height });
   }
   meta[spec.name] = entry;

@@ -48,13 +48,18 @@ export const specs = [
       focal: s.focal,
     },
   ]),
-  { name: 'bottle-lemon', src: 'docs/inputs/lemonNoBg.png', kind: 'cutout', widths: [448] },
+  // Full bottles cut out from the owner's white-background renders (scripts/cutout.py, rembg + hole fill).
+  // The bottles are tall and narrow: the masters are 815×2129 (lemon) and 636×2121 (peach).
   {
-    // Crop removes the AI-generated small print / "330ML" below the label (docs/ASSET_REPORT.md).
-    name: 'bottle-peach',
-    src: 'docs/inputs/PeachNoBg.png',
+    name: 'bottle-lemon',
+    src: 'docs/inputs/cutouts/lemon-bottle.png',
     kind: 'cutout',
-    crop: { left: 0, top: 0, width: 448, height: 402 },
-    widths: [448],
+    widths: [160, 240, 360, 480, 640, 815],
+  },
+  {
+    name: 'bottle-peach',
+    src: 'docs/inputs/cutouts/peach-bottle.png',
+    kind: 'cutout',
+    widths: [160, 240, 360, 480, 636],
   },
 ];

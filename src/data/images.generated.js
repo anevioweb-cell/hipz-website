@@ -141,24 +141,60 @@ export const images = {
     }
   },
   "bottle-lemon": {
-    "width": 448,
-    "height": 557,
+    "width": 815,
+    "height": 2129,
     "kind": "cutout",
     "variants": [
       {
-        "width": 448,
-        "height": 557
+        "width": 160,
+        "height": 418
+      },
+      {
+        "width": 240,
+        "height": 627
+      },
+      {
+        "width": 360,
+        "height": 940
+      },
+      {
+        "width": 480,
+        "height": 1254
+      },
+      {
+        "width": 640,
+        "height": 1672
+      },
+      {
+        "width": 815,
+        "height": 2129
       }
     ]
   },
   "bottle-peach": {
-    "width": 448,
-    "height": 402,
+    "width": 636,
+    "height": 2121,
     "kind": "cutout",
     "variants": [
       {
-        "width": 448,
-        "height": 402
+        "width": 160,
+        "height": 534
+      },
+      {
+        "width": 240,
+        "height": 800
+      },
+      {
+        "width": 360,
+        "height": 1201
+      },
+      {
+        "width": 480,
+        "height": 1601
+      },
+      {
+        "width": 636,
+        "height": 2121
       }
     ]
   }

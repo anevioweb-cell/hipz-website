@@ -102,7 +102,7 @@ export default function Kit() {
         <div className="mt-6 flex flex-wrap items-end gap-8">
           {flavors.map((f) => (
             <div key={f.slug} className="w-44">
-              <Bottle flavor={f} sizes="176px" />
+              <Bottle flavor={f} sizes="120px" imgClassName="h-[300px] w-auto" />
             </div>
           ))}
           <Parallax mode="element" distance={30}>

@@ -22,9 +22,12 @@ export default function FlavorCard({ flavor, tilt = 12 }) {
             style={{ rotate: `${tilt}deg` }}
           />
           <div className="absolute inset-0 flex items-center justify-center transition-transform duration-(--duration-base) ease-(--ease-spring) group-hover:-translate-y-3 group-hover:-rotate-3 motion-reduce:transition-none">
-            <div style={{ width: 250 * (flavor.images.bottleScale ?? 1) }} className="shrink-0">
-              <Bottle flavor={flavor} sizes="350px" />
-            </div>
+            {/* full-bottle cutout, sized by height like the reference can (≈ 347 px over a 297 px blob) */}
+            <Bottle
+              flavor={flavor}
+              sizes="140px"
+              imgClassName="h-[330px] w-auto drop-shadow-xl lg:h-[347px]"
+            />
           </div>
         </div>
         <div className="mt-6 flex flex-1 flex-col items-center gap-2 px-6 text-center">

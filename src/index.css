@@ -291,9 +291,6 @@
   .blob {
     border-radius: 58% 42% 55% 45% / 48% 56% 44% 52%;
   }
-  .bottle-fade {
-    mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
-  }
 }
 
 /* ---------- Hero frame (measured on the reference, docs/reference-frame.json) ---------- */

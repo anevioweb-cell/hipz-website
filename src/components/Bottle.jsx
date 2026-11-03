@@ -1,7 +1,7 @@
 import Picture from './Picture.jsx';
 
 // A flavor's bottle (PET bottle with a screw cap in the flavor color), from the cutout image.
-// Never shows a size: the volume is unknown.
+// The image never carries a size; the volume is only written as text in "The basics".
 export default function Bottle({
   flavor,
   sizes = '224px',
@@ -16,7 +16,7 @@ export default function Bottle({
       sizes={sizes}
       priority={priority}
       className={className}
-      imgClassName={`${imgClassName} ${flavor.images.bottleCropped ? 'bottle-fade' : ''}`}
+      imgClassName={imgClassName}
     />
   );
 }

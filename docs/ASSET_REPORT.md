@@ -81,3 +81,27 @@ Looked at: `screenshot-1.png` (lemon bottle close-up, lower body), `source-photo
 
 ## Reference
 `https://joybliss.framer.website/flavors` returns **404**: the reference has no flavors listing page (only `/#flavors` and `/flavors/<slug>`), so our `/flavors` is a showcase page.
+
+---
+
+# Phase 4 additions — high-resolution full bottles
+
+## Case that applied
+**New files arrived**: `lemon-white.jpeg`, `peach-white.jpeg` (1856×2304 JPEG, full bottle on white).
+
+| Check | lemon-white | peach-white |
+|---|---|---|
+| "Hipz" logo + smile | matches | matches |
+| ® mark | present | present |
+| Label text | "Lemon" (green strip) — correct | "Peach" (same lettering as the real bottle) — correct |
+| Cap / shape | yellow cap, PET bottle — correct | orange cap, PET bottle — correct |
+| Invented small print / volume text | none | none (lower body shows only the creator illustrations and leaves) |
+| Whole bottle in frame | yes | yes |
+| **Verdict** | **ACCEPTED** | **ACCEPTED** |
+
+## Cutouts (`scripts/cutout.py`, run in an isolated venv)
+- Tool: `rembg` 2.0.86 with the **`isnet-general-use`** model (≈ 179 MB ONNX, downloaded once to `~/.u2net`; owner-approved). onnxruntime 1.31 (CPU).
+- **Problem found and fixed:** plain rembg treated the white logo and the white label panels as background and punched holes through the brand mark (visible as the page color through "Hipz"). The mask is therefore post-processed: small edge gaps closed, every enclosed region filled, the liquid-filled body made fully opaque, and the clear neck keeps rembg's soft alpha. Then a white de-fringe (un-premultiply against white) removes light halos. The ORIGINAL pixels are kept — nothing repainted or re-lettered.
+- Checked on ink `#16130E`, lime `#9BBD24` and white: logo, ® and label text intact, no holes. Remaining minor artifact: a faint light rim on the top edge of the lemon cap (it is the render's own rim light) and a slightly milky clear neck on peach (the clear plastic was rendered over white).
+- Masters (lossless PNG, gitignored): `docs/inputs/cutouts/lemon-bottle.png` 815×2129, `peach-bottle.png` 636×2121. The bottles are tall and narrow, so "≥ 1400 px" applies to the height (2129 / 2121 px); widths are the full native widths.
+- Pipeline outputs: `bottle-lemon` 160/240/360/480/640/815 w, `bottle-peach` 160/240/360/480/636 w — AVIF + WebP + palette-quantized PNG fallback. They replace the old 448 px cutouts (and the peach crop/fade workaround).

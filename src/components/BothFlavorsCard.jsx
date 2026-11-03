@@ -14,11 +14,11 @@ export default function BothFlavorsCard() {
   return (
     <article className={base}>
       <div className="relative h-[297px] w-[277px] shrink-0">
-        <div className="absolute bottom-6 left-0 w-[150px] -rotate-6 transition-transform duration-(--duration-base) ease-(--ease-spring) group-hover:-translate-y-3 group-hover:-rotate-12 motion-reduce:transition-none">
-          <Bottle flavor={lemon} sizes="150px" />
+        <div className="absolute bottom-0 left-6 -rotate-6 transition-transform duration-(--duration-base) ease-(--ease-spring) group-hover:-translate-y-3 group-hover:-rotate-12 motion-reduce:transition-none">
+          <Bottle flavor={lemon} sizes="120px" imgClassName="h-[290px] w-auto drop-shadow-xl" />
         </div>
-        <div className="absolute right-0 bottom-6 w-[150px] rotate-6 transition-transform duration-(--duration-base) ease-(--ease-spring) group-hover:-translate-y-3 group-hover:rotate-12 motion-reduce:transition-none">
-          <Bottle flavor={peach} sizes="150px" />
+        <div className="absolute right-6 bottom-0 rotate-6 transition-transform duration-(--duration-base) ease-(--ease-spring) group-hover:-translate-y-3 group-hover:rotate-12 motion-reduce:transition-none">
+          <Bottle flavor={peach} sizes="120px" imgClassName="h-[290px] w-auto drop-shadow-xl" />
         </div>
       </div>
       <div className="mt-6 flex flex-1 flex-col items-center gap-2 px-6 text-center">

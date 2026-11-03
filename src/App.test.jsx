@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App.jsx';
 
@@ -43,12 +43,22 @@ describe('flavor pages', () => {
   });
   it('footer shows the social links safely and no TikTok or phone numbers', () => {
     const { container } = renderAt('/');
-    const links = screen.getAllByRole('link', { name: /opens in a new tab/ });
+    const footer = screen.getByRole('contentinfo');
+    const links = within(footer).getAllByRole('link', { name: /opens in a new tab/ });
     expect(links).toHaveLength(3);
     for (const a of links) {
       expect(a).toHaveAttribute('target', '_blank');
       expect(a).toHaveAttribute('rel', 'noopener noreferrer');
     }
     expect(container.textContent).not.toMatch(/tiktok|05 ?60|07 ?70/i);
+  });
+});
+
+describe('home page', () => {
+  it('assembles the sections in order and never renders a size', () => {
+    const { container } = renderAt('/');
+    const ids = [...container.querySelectorAll('main section[id]')].map((s) => s.id);
+    expect(ids).toEqual(['flavors', 'moments', 'why', 'both', 'community']);
+    expect(container.textContent).not.toMatch(/330|\bml\b|medium/i);
   });
 });

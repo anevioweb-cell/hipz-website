@@ -1,44 +1,27 @@
 import Hero from '../components/Hero.jsx';
 import Ticker from '../components/Ticker.jsx';
-import Section from '../components/Section.jsx';
-import SectionHeader from '../components/SectionHeader.jsx';
-import EmptyState from '../components/EmptyState.jsx';
-import Reveal from '../components/Reveal.jsx';
 import FlavorsSection from '../components/FlavorsSection.jsx';
-import { copy } from '../data/copy.js';
+import MomentsSection from '../components/MomentsSection.jsx';
+import WhySection from '../components/WhySection.jsx';
+import BothFlavorsFeature from '../components/BothFlavorsFeature.jsx';
+import CommunitySection from '../components/CommunitySection.jsx';
 import { useNavTone } from '../hooks/useNavTone.js';
 
-const placeholders = [
-  { id: 'moments', key: 'moments', tone: 'ink' },
-  { id: 'why', key: 'why', tone: 'paper' },
-  { id: 'community', key: 'community', tone: 'ink' },
-  { id: 'pack', key: 'pack', tone: 'lime' },
-];
-
-// Phase 2: hero + ticker are real; the sections below are empty placeholders so routing and scroll
-// can be tested. They slide over the sticky hero (z-10, solid backgrounds).
+// Order follows the reference where our sections map to it: hero, ticker, flavors, moments, why
+// (the reference's ingredients block is skipped: no confirmed ingredients), both flavors (its pack card),
+// community (its reviews). Sections slide over the sticky hero (z-10, solid backgrounds).
 export default function Home() {
   useNavTone('dark');
   return (
     <>
       <Hero />
-      <div className="relative z-10">
+      <div className="relative z-10 bg-paper">
         <Ticker />
         <FlavorsSection />
-        {placeholders.map(({ id, key, tone }) => (
-          <Section key={id} id={id} tone={tone} className="scroll-mt-0">
-            <Reveal>
-              <SectionHeader
-                as="h2"
-                eyebrow={copy.sections[key].eyebrow}
-                title={copy.sections[key].title}
-              />
-            </Reveal>
-            <Reveal className="mt-10" y={60}>
-              <EmptyState title={copy.sections.empty.title}>{copy.sections.empty.text}</EmptyState>
-            </Reveal>
-          </Section>
-        ))}
+        <MomentsSection />
+        <WhySection />
+        <BothFlavorsFeature />
+        <CommunitySection />
       </div>
     </>
   );

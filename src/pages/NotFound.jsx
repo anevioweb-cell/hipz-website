@@ -4,7 +4,7 @@ import Button from '../components/Button.jsx';
 
 export default function NotFound() {
   return (
-    <Section tone="paper" className="pt-32">
+    <Section tone="ink" className="pt-32">
       <SectionHeader as="h1" title="Page not found" />
       <div className="mt-10">
         <Button to="/" variant="lime">

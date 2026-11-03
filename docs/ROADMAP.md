@@ -64,3 +64,10 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 - [ ] Algerian legal items: company details, any labelling/advertising rules for beverages (check with the brand's counsel)
 - [ ] Licences for fonts and any third-party assets recorded
 - [ ] Repo stays private; no secrets committed
+
+## 6. Deviations after Phase 1 inputs
+
+- Product is sold in **PET bottles**, not cans (BRAND_BRIEF rows 15–16). Wherever this roadmap/reference say "can", read "bottle": `Can` component → `Bottle`, carousel cards show bottles.
+- Exactly two flavors (lemon, peach) → "variety pack" and flavor grid copy must not imply more. Pack content (what a "pack" is) is unconfirmed.
+- Reference motion is now measured (REFERENCE_ANALYSIS §6): the reference has **no** idle float, no pinned/rotating cans and no page-transition fade; our Phase 2 additions beyond it are proposals.
+- Reviews: no real reviews exist → community/empty state only.

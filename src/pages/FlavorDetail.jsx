@@ -13,7 +13,7 @@ export default function FlavorDetail() {
   if (!flavor) return <NotFound />;
   return (
     <FlavorTheme flavor={flavor}>
-      <Section tone="paper" className="pt-32">
+      <Section tone="ink" className="pt-32">
         <SectionHeader as="h1" title={flavor.name} />
         <div className="mt-12">
           <EmptyState title="More on this flavor soon">

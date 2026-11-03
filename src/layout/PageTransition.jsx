@@ -9,7 +9,9 @@ export default function PageTransition() {
   const outlet = useOutlet(); // element snapshot keeps the exiting page intact
   const reduce = useReducedMotion();
 
-  useEffect(() => window.scrollTo(0, 0), [pathname]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   if (reduce) return <div>{outlet}</div>;
   return (

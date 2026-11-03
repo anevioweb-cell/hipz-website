@@ -41,12 +41,12 @@ export default function Kit() {
   const toast = useToast();
   return (
     <>
-      <Section tone="paper" className="pt-28">
+      <Section tone="ink" className="pt-28">
         <SectionHeader as="h1" title="Kit" eyebrow="Tokens and components" />
         <h2 className="mt-12 font-display text-h3 font-bold">Colors</h2>
         <ul className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-5">
           {colors.map(([name, note]) => (
-            <li key={name} className="overflow-hidden rounded-card bg-white shadow-card">
+            <li key={name} className="overflow-hidden rounded-card bg-white text-ink shadow-card">
               <div className={`h-20 ${swatch[name]}`} />
               <p className="p-3 font-mono text-label">
                 {name}

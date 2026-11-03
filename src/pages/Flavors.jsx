@@ -6,7 +6,7 @@ import { flavors } from '../data/flavors.js';
 
 export default function Flavors() {
   return (
-    <Section tone="paper" className="pt-32">
+    <Section tone="ink" className="pt-32">
       <SectionHeader as="h1" title="Flavors" />
       <ul className="mt-12 grid gap-5 md:grid-cols-2">
         {flavors.map((f) => (

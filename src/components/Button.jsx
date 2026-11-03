@@ -7,11 +7,11 @@ const variants = {
   ghost: 'bg-transparent text-current ring-2 ring-current hover:bg-ink hover:text-paper',
 };
 
-function ArrowChip() {
+function ArrowChip({ onLime }) {
   return (
     <span
       aria-hidden="true"
-      className="grid size-10 place-items-center rounded-full bg-brand-lime text-ink transition-transform duration-(--duration-base) ease-(--ease-out) group-hover:rotate-45"
+      className={`grid size-10 place-items-center rounded-full ${onLime ? 'bg-ink text-paper' : 'bg-brand-lime text-ink'} transition-transform duration-(--duration-base) ease-(--ease-out) group-hover:rotate-45`}
     >
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -36,7 +36,7 @@ export default function Button({
   const inner = (
     <>
       <span>{children}</span>
-      {arrow && <ArrowChip />}
+      {arrow && <ArrowChip onLime={variant === 'lime'} />}
     </>
   );
   if (to) {

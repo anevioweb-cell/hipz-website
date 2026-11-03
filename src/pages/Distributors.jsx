@@ -4,7 +4,7 @@ import EmptyState from '../components/EmptyState.jsx';
 
 export default function Distributors() {
   return (
-    <Section tone="paper" className="pt-32">
+    <Section tone="ink" className="pt-32">
       <SectionHeader as="h1" title="Distributors" />
       <div className="mt-12">
         <EmptyState title="Ways to work with Hipz">

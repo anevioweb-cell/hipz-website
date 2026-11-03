@@ -19,7 +19,7 @@ UI language: English with Arabic accent words through a small `<Ar>` component (
 
 - Layout: `Navbar` (overlay, mobile menu), `Footer`, `PageTransition`, `SmoothScroll` (optional), `Section`, `InsetCard`
 - UI: `Button` (pill + arrow chip), `Chip`, `Ar`, `SectionHeader`, `Marquee`, `Reveal`, `SplitLines`, `Parallax`, `Toast` (simulated success), `EmptyState`
-- Flavors: `FlavorCard`, `FlavorCarousel` (scroll-snap + arrows), `FlavorHero`, `FlavorAttributes`, `MoreToSip`, `Can` (image + blob + hover), `PackBuilder` card
+- Flavors: `FlavorCard`, `FlavorCarousel` (scroll-snap + arrows), `FlavorHero`, `FlavorAttributes`, `MoreToSip`, `Bottle` (image + blob + hover), `PackBuilder` card
 - Home: `Hero`, `Ticker`, `Moments`, `WhyHipz` (pillars), `IngredientsStage` (only if ingredients confirmed), `Community`, `PackCard`
 - Distributors: `WaysToWork`, `WholesaleForm` (validation, DEMO_MODE), `StoreFinderEmpty`
 - Data/config: `src/config.js` (`DEMO_MODE = true`), `src/data/flavors.js`, `src/data/wilayas.js`, `src/data/site.js`
@@ -67,7 +67,13 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 
 ## 6. Deviations after Phase 1 inputs
 
-- Product is sold in **PET bottles**, not cans (BRAND_BRIEF rows 15–16). Wherever this roadmap/reference say "can", read "bottle": `Can` component → `Bottle`, carousel cards show bottles.
+- Product is sold in **PET bottles**, not cans (BRAND_BRIEF rows 15–16). Wherever this roadmap/reference say "can", read "bottle": `Bottle` component (was `Can` in the first draft), carousel cards show bottles.
 - Exactly two flavors (lemon, peach) → "variety pack" and flavor grid copy must not imply more. Pack content (what a "pack" is) is unconfirmed.
 - Reference motion is now measured (REFERENCE_ANALYSIS §6): the reference has **no** idle float, no pinned/rotating cans and no page-transition fade; our Phase 2 additions beyond it are proposals.
 - Reviews: no real reviews exist → community/empty state only.
+
+## 7. Phase 2 notes and later-phase notes
+
+- Mobile navigation: the reference has no hamburger (measured: only Logo, Account, Cart), but we need /flavors and /distributors on mobile, so our hamburger is a **deliberate documented deviation**: full-screen dialog overlay, focus trap, ESC closes, scroll lock, reduced-motion safe.
+- Page transitions: the reference changes pages instantly (measured). We use a ≤120 ms fade-in only (no exit wait).
+- **/distributors (Phase 5, not built yet):** "Become a distributor" with the public contact numbers from `PUBLIC_CONTACT` (`src/data/site.js`), the simulated wholesale form (DEMO_MODE), and the empty-state store finder, because distribution areas are unknown. No areas are listed.

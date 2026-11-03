@@ -9,6 +9,7 @@ describe('flavors data', () => {
     for (const f of flavors) {
       expect(f.description).toBeNull();
       expect(f.volume).toBeNull();
+      expect(f.nameAr).toBeTruthy();
     }
   });
   it('looks flavors up by slug', () => {

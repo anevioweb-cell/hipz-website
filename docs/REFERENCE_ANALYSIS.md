@@ -4,10 +4,14 @@ Reference: `https://joybliss.framer.website/` (a Framer template). **We study me
 
 How measured: opened in the in-app browser, read computed styles / bounding boxes via script at 1440, 1024, 768 and 390 px viewport widths (scrollbar ≈15 px at desktop, so usable width 1425). Flavour page `/flavors/ruby-orange` read through a text fetch (structure only).
 
+**Method update (Phase 1, Part 3).** Motion was measured with Playwright (Chromium, headless) by `scripts/measure-reference.mjs` at 1440×900 and 390×844: computed transforms/opacity sampled every frame or every 60–250 ms. Raw numbers: `docs/reference-measurements.json`; screenshots: `docs/reference-shots/` (gitignored). Each motion entry below is labelled **MEASURED** or **PROPOSAL**.
+
 **Honest limits.**
-- The pane did not run the marquee/carousel animations (positions stayed constant over 2 s samples), so **speed, direction and easing are NOT measured**. Items marked *proposed* are my recommendation, not a measurement.
-- Hover states, page transitions, cursor effects and mobile-menu behaviour were **not observed**. Playwright is not installed here; I did not install it in Phase 0.
-- Initial (pre-reveal) states were captured, which hints at reveal animations (below).
+- Easing is not read directly; "ease-out" below is inferred from the decay curve of sampled values (exponential-looking deceleration). Treat the exact cubic-bezier as approximate.
+- Reveal trigger offsets come from 20 px scroll steps (±3% of viewport); settle times include ~50 ms sampling granularity.
+- The hero button's hover could **not** be captured (the node my selector matched did not change); marked PROPOSAL.
+- Mobile (390) marquee speed measurement was **inconclusive** (the sampled item wrapped between samples); desktop value is used.
+- Page layout/section tables in sections 1–5 and 7 were measured in Phase 0.
 
 ## 1. Section order (verified by Y positions at 1440)
 
@@ -61,26 +65,30 @@ Pattern worth keeping: **alternating dark/light/accent bands** (plum → cream �
 - Moment card: 343 × 306 at 390, cream, padding 32.
 - **Button:** pill, radius 100, padding `6px 6px 6px 22px`, label + circular arrow chip (lilac) on the right; primary white-on-plum-hero, secondary plum. Hover state **not observed** — *proposed:* label slides/nudges, arrow chip rotates 45° and background flips, 250 ms `cubic-bezier(.22,1,.36,1)`.
 
-## 6. Animations
+## 6. Animations (MEASURED unless marked PROPOSAL)
 
-Measured facts first; everything else is a *proposal* in the `motion` (motion.dev, `motion/react`) idiom.
+All values at 1440 wide unless stated. `motion` = `motion/react`; "ease-out" ≈ `[0.22, 1, 0.36, 1]`.
 
-| Animation | Evidence | Trigger | Properties | Duration / easing | Implementation |
-|---|---|---|---|---|---|
-| Navbar entrance | initial `translateY(-24px)` seen | page load | y −24→0, opacity | *proposed* 0.6 s, `[.22,1,.36,1]`, delay 0.2 | `motion.nav initial={{y:-24,opacity:0}} animate={{y:0,opacity:1}}` |
-| Hero entrance | H1 split into lines in DOM ("A sparkling ritual / for better days"); photo rendered larger than card (parallax/scale) | load | line-by-line y 100%→0 with mask, photo scale 1.15→1 | *proposed* 0.9 s stagger 0.08 | wrap lines in `overflow:hidden`, `motion.span` y `110%→0`; photo `scale` via `animate` |
-| Hero photo parallax | photo box taller than hero (≈837 vs 620 at mobile; top −100) | scroll | translateY ±(~100px) | linear, scroll-linked | `useScroll({target})` + `useTransform(y,[0,1],[0,-100])` |
-| Star badge pop | `scale(0)` initial state | in view | scale 0→1, rotate | *proposed* spring stiffness 260, damping 18 | `whileInView` |
-| Yellow marquee | ticker translated −27 px, items + stars | continuous | translateX | **speed/direction not measured.** *Proposed* 30–40 s per loop, right-to-left, pause on hover | CSS `@keyframes marquee {to{transform:translateX(-50%)}}` on duplicated track; `animation-play-state` on hover; off under reduced-motion |
-| Flavour carousel | `overflow-x:auto`, scrollWidth 4379 vs 1200 visible, prev/next arrows, 3 repeated sets in DOM | arrows / drag / wheel | scrollLeft, scroll-snap | *proposed* `scrollBy({left:339, behavior:'smooth'})` | CSS scroll-snap + arrow buttons; optional drag with `motion` |
-| Card hover | can over blob | hover | can translateY −12, rotate −4°, blob scale 1.05 | *proposed* 400 ms spring | `whileHover` |
-| Scroll reveals | pillars have `translateY(50px)` initial | in view | y 50→0, opacity | *proposed* 0.7 s, stagger 0.1, once | `whileInView`, `viewport={{once:true, margin:"-10%"}}` |
-| Ingredients stage | cans "floating" on a cloud with callouts | scroll/idle | float y ±10, rotate ±3 | *proposed* 5–7 s infinite alternate | `animate={{y:[0,-10,0]}}` per can, different delays; sticky stage with `useScroll` for can rotation |
-| Review rows | 2 rows, 20 px gap, cards wider than viewport (x −24) | continuous | translateX, opposite directions | **not measured**; *proposed* row 1 left 60 s, row 2 right 70 s | same CSS marquee, `animation-direction: reverse` |
-| Pack card | big inset lilac card | in view | scale .96→1, radius preserved | *proposed* | `whileInView` |
-| Page transitions / cursor / mobile menu | **not observed** | – | – | – | *proposed:* route cross-fade 300 ms (`AnimatePresence`), no custom cursor, full-screen menu with staggered links |
+| Animation | Status | What was measured | Trigger | Implementation with `motion` / CSS |
+|---|---|---|---|---|
+| Navbar entrance | MEASURED | `translateY(-24px)`, opacity 0 → `translateY(0)`, opacity 1; holds ~300 ms, then ≈ 0.9 s decelerating (opacity .33 @392 ms, .68 @500, .94 @689, 1.0 @1190 ms) | page load | `initial={{y:-24,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:.9, ease, delay:.3}}` (built in Phase 1 with 0.7 s / 0.2 s; tune in Phase 2) |
+| Hero background photo | MEASURED | scale 1.35 → 1.0 over ≈ 1.2 s decelerating (1.30 @188 ms, 1.22 @288, 1.16 @392, 1.11 @500, 1.05 @689) | page load | `motion.div initial={{scale:1.35}} animate={{scale:1}} transition={{duration:1.2, ease}}` |
+| Hero photo parallax | MEASURED | photo box top shifts −0.3 px per px scrolled (0 → −45 @150, −226 @800); the hero wrapper is `position: sticky; top: 0`, so following sections slide over it | scroll | `position: sticky` on hero wrap + `useScroll`/`useTransform(scrollY,[0,800],[0,-240])` on photo |
+| Hero headline / lead / button | MEASURED | present from first frames (no transform/opacity animation on h1, lead, pill; the headline box widens 869 → 959 px at ~500 ms, i.e. a font/text layout settle). Pill rests at y=820 then settles to 784 by the end (~36 px rise) | load | PROPOSAL for Hipz: line-mask slide-up on headline (the reference does not do it) |
+| Star badge | MEASURED | rests at `scale(0)`, opacity 0 until revealed | scroll/in view | `whileInView={{scale:1}}` spring (PROPOSAL for spring values) |
+| Yellow ticker (marquee) | MEASURED | continuous leftward translation, **−71.9 px/s** (desktop), band height 68 px, 8 items, item width 292 px, items overlap in DOM (loop track) | continuous | CSS `@keyframes` on a duplicated track, duration = trackWidth / 72 (our `Marquee` has a `speed` prop; default tune 72). Pause on hover is PROPOSAL (not observed) |
+| Review rows | MEASURED | two rows: row 1 leftward **−53.9 px/s**, row 2 rightward **+53.9 px/s** | continuous | two `Marquee`, `reverse` on the second, speed 54 |
+| Flavor carousel | MEASURED | horizontal `overflow-x: auto`, no scroll-snap, `scroll-behavior: auto`; 15 cards = 5 flavors × 3 repeated sets; scrollWidth 4379 / viewport 1200; **Next click scrolls ≈ 289 px (one card 269 + gap 20)** with ≈ 0.4 s decelerating smooth scroll (1446 → 1660 @162 ms → 1727 @322 → 1734 @482) | arrow click / drag / wheel | `el.scrollBy({left: cardWidth+gap, behavior:'smooth'})`; optional scroll-snap is PROPOSAL |
+| Flavor card idle tilt | MEASURED | the soft blob behind each can is statically rotated (≈ ±13°, a different angle per card); no idle float animation (rotation constant over 9 s) | — | static CSS `rotate` per card (data driven) |
+| Card hover | MEASURED | card has no shadow/scale/background change on hover; the can only shows a ~1 px / 0.5° micro-settle (back to rest in ≈ 280 ms) | hover | effectively none. For Hipz: PROPOSAL `whileHover={{y:-12, rotate:-4}}` spring |
+| Scroll reveals | MEASURED | initial states: Moment cards `y +80`, op 0; Cloud (ingredients) `scale .85, y +120`, op 0; Pillars `y +50`, op 0; Review rows `y +60`, op 0; Footer brand/links `y +40`, op 0. Trigger when the element's top reaches ≈ **73–89 % of viewport height** (Moment cards 82, Cloud 73, Pillar 89, Review rows 76, Footer brand 89); settle ≈ **0.8–1.1 s**, decelerating | in view, once | `whileInView`, `viewport={{once:true, amount:...}}`, `transition={{duration:.9..1, ease}}` (our `Reveal` defaults y=50, 0.7 s, margin −10 %: adjust in Phase 2) |
+| Ingredients stage | MEASURED | not sticky/pinned (`position: relative`); cans/cloud are plain reveal (scale .85 → 1, y +120 → 0) as the stage enters (element top ≈ 73 % vh) | scroll | `Reveal`-style; no scroll-linked rotation exists in the reference |
+| Sticky elements | MEASURED | only the hero wrapper is sticky (`top: 0`) | scroll | CSS `sticky` |
+| Page transition | MEASURED | client-side route change is **instant**: URL changes within ~180 ms, scroll position resets to 0, no opacity fade on the content root | link click | Phase 1 `PageTransition` uses a 0.3 s opacity cross-fade — a deliberate PROPOSAL beyond the reference |
+| Mobile menu | MEASURED | at 390 the navbar only has Logo + Account + Cart icons; **there is no hamburger/menu**. The Cart button opens a cart panel (cart panel, items, subtotal, close) | tap | Not copied (we have no cart). Our Navbar's full-screen menu with staggered links is our own PROPOSAL |
+| Hero button hover | NOT MEASURED | selector matched a non-reactive node; no change seen | hover | PROPOSAL: arrow chip rotates 45° (as built), 200 ms |
 
-**Reduced motion:** every item above must degrade to opacity-only or static (`useReducedMotion()`, `@media (prefers-reduced-motion: reduce)`).
+**Reduced motion:** every item degrades to opacity-only or static (`useReducedMotion()`, `@media (prefers-reduced-motion: reduce)`); the reference was not tested for this.
 
 ## 7. Responsive behaviour (measured)
 

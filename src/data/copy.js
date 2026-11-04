@@ -249,6 +249,46 @@ export const copy = {
     }),
     closing: draft({ lines: ['Lemon or peach?', 'Both.'], cta: 'See the flavors' }),
   },
+  story: {
+    // /our-story. Describes only the visible, the mood and the brand idea — no founding story, dates,
+    // numbers or production claims. Optional blocks (origin, milestones, quotes, plant) only render when
+    // src/data/story.js has confirmed data; their headings are here.
+    pageTitle: draft({ title: 'Our story' }),
+    hero: draft({
+      eyebrow: 'Our story',
+      ar: 'قصتنا',
+      lines: ['Two friends.', 'One smile.'],
+      text: 'Kada & Miloud, and the soda that’s theirs.',
+      cta: 'Meet the duo',
+    }),
+    duo: draft({
+      eyebrow: 'The duo',
+      ar: 'قادة و ميلود',
+      lines: ['Kada & Miloud.', 'The owners of Hipz.'],
+      text: 'Two friends, two flavors, one smile. Follow them, and Hipz, where they post.',
+      follow: 'Follow',
+    }),
+    bottling: draft({
+      eyebrow: 'Behind the bottles',
+      lines: ['At the', 'bottling line.'],
+      text: 'The duo with Hipz bottles, from the brand’s own posts.',
+    }),
+    flavors: draft({
+      eyebrow: 'Two flavors, one smile',
+      ar: 'ليمون · خوخ',
+      lines: ['Lemon.', 'Peach.', 'One smile.'],
+      cta: 'See the flavors',
+    }),
+    origin: draft({ eyebrow: 'How it started', foundedLabel: 'Since' }),
+    milestones: draft({ eyebrow: 'Milestones', lines: ['Along', 'the way.'] }),
+    quotes: draft({ eyebrow: 'In their words', translation: 'Translation' }),
+    plant: draft({ eyebrow: 'Where it’s made' }),
+    closing: draft({
+      lines: ['Want Hipz', 'on your shelves?'],
+      cta: 'Become a distributor',
+      follow: 'Follow the duo and Hipz',
+    }),
+  },
   footer: {
     tagline: draft({ text: 'Smile in a bottle.' }),
     follow: draft({ text: 'Follow along' }),

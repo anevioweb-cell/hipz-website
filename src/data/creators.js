@@ -1,17 +1,25 @@
-// Creator photos for /our-story (Phase 6) — NOT used on any page yet, and no text about who is shown is
-// rendered anywhere. Sources and identification notes: docs/CREATOR_PHOTOS.md.
+// Creator photos for /our-story (Phase 6). Sources and identification notes: docs/CREATOR_PHOTOS.md.
 // Identification rule (owner): from context only (account, caption, tags) plus the owner's description —
 // Kada is the SHORTER of the two, Miloud the TALLER. No face recognition or face matching was used.
 // `image` = generated set name (npm run images → public/images/creators/, gitignored);
 // `focal` = point to keep in view when cropping (fractions of the image, set by hand).
 // `selected` = actually shown on a page. ONLY selected photos are copied into the build (dist/); the rest
 // stay local (vite.config.js prunes them, scripts/check-dist.mjs fails the check if one slips through).
+// `use` = where /our-story shows it: 'hero' (duo, big), 'solo' (duo-band collage, labelled with the one
+// person on his own account), 'bottling' (the bottling-line gallery). Solo photos of Kada are picked up
+// automatically once an entry with people: ['kada'], use: 'solo', selected: true exists.
+// `alt` describes only what is visible; `caption` names people ONLY where identity is verified (own
+// account, or the owner's height rule in the factory photos: Kada the shorter, Miloud the taller); the
+// seated avatar is captioned "Kada & Miloud" without left/right.
 // `people` lists who is shown, left to right; null = not determinable (e.g. both seated).
 // Written permission from Kada and Miloud is required before any public use (ROADMAP pre-launch list).
 export const creatorPhotos = [
   {
     id: 'miloud-01',
-    selected: false,
+    selected: true,
+    use: 'solo',
+    alt: 'Close-up portrait of a man with dark hair and a beard in a black hoodie, in a room with a lamp and plants.',
+    caption: 'Miloud',
     image: 'creators/miloud-01',
     people: ['miloud'],
     confidence: 'high (his own account, solo photo)',
@@ -20,7 +28,10 @@ export const creatorPhotos = [
   },
   {
     id: 'miloud-02',
-    selected: false,
+    selected: true,
+    use: 'solo',
+    alt: 'A man in a knitted beanie and a brown overshirt outdoors in warm evening light.',
+    caption: 'Miloud',
     image: 'creators/miloud-02',
     people: ['miloud'],
     confidence: 'high (his own account, solo photo)',
@@ -30,6 +41,9 @@ export const creatorPhotos = [
   {
     id: 'miloud-03',
     selected: false,
+    use: 'solo',
+    alt: 'A man in a dark suit seated in a studio.',
+    caption: 'Miloud',
     image: 'creators/miloud-03',
     people: ['miloud'],
     confidence: 'high (his own account, solo photo)',
@@ -38,7 +52,10 @@ export const creatorPhotos = [
   },
   {
     id: 'miloud-04',
-    selected: false,
+    selected: true,
+    use: 'solo',
+    alt: 'Studio portrait of a man in a navy suit and red tie against a lilac background.',
+    caption: 'Miloud',
     image: 'creators/miloud-04',
     people: ['miloud'],
     confidence: 'high (his own account, solo photo)',
@@ -47,7 +64,10 @@ export const creatorPhotos = [
   },
   {
     id: 'both-01',
-    selected: false,
+    selected: true,
+    use: 'bottling',
+    alt: 'Two men in white protective coats stand beside a pallet stacked with Hipz Lemon bottles in a bright bottling hall.',
+    caption: 'Kada (left) and Miloud (right) at the bottling line, next to a pallet of Hipz Lemon.',
     image: 'creators/both-01',
     people: ['kada', 'miloud'],
     confidence:
@@ -57,7 +77,10 @@ export const creatorPhotos = [
   },
   {
     id: 'both-02',
-    selected: false,
+    selected: true,
+    use: 'bottling',
+    alt: 'In a bright bottling hall, one man holds a Hipz Lemon bottle towards the camera while the other stands on the right by a pallet of bottles.',
+    caption: 'Kada holds up a Hipz Lemon; Miloud stands on the right.',
     image: 'creators/both-02',
     people: ['kada', 'miloud'],
     confidence: 'medium (same scene and rule as both-01)',
@@ -66,12 +89,15 @@ export const creatorPhotos = [
   },
   {
     id: 'both-03',
-    selected: false,
+    selected: true,
+    use: 'hero',
+    alt: 'Two smiling men in dark sweatshirts sitting side by side in front of a warm, patterned backdrop.',
+    caption: 'Kada & Miloud',
     image: 'creators/both-03',
     people: null,
     confidence: 'both confirmed by the channel; who is left/right not determinable (seated)',
     shot: 'official YouTube channel avatar, both seated',
-    focal: { x: 0.5, y: 0.45 },
+    focal: { x: 0.56, y: 0.42 },
   },
 ];
 

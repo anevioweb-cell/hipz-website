@@ -62,4 +62,14 @@ export const specs = [
     kind: 'cutout',
     widths: [160, 240, 360, 480, 636],
   },
+  // Creator photos for /our-story (Phase 6). Masters in docs/inputs/creators/ (gitignored); derivatives in
+  // public/images/creators/ (also gitignored: private photos, rebuild locally with `npm run images`).
+  ...['miloud-01', 'miloud-02', 'miloud-03', 'miloud-04', 'both-01', 'both-02', 'both-03'].map(
+    (n) => ({
+      name: `creators/${n}`,
+      src: `docs/inputs/creators/${n}.jpg`,
+      kind: 'scene',
+      widths: [480, 768, 1080, 1440, 2048],
+    }),
+  ),
 ];

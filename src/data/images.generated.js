@@ -197,5 +197,178 @@ export const images = {
         "height": 2121
       }
     ]
+  },
+  "creators/miloud-01": {
+    "width": 1228,
+    "height": 1228,
+    "kind": "scene",
+    "variants": [
+      {
+        "width": 480,
+        "height": 480
+      },
+      {
+        "width": 768,
+        "height": 768
+      },
+      {
+        "width": 1080,
+        "height": 1080
+      },
+      {
+        "width": 1228,
+        "height": 1228
+      }
+    ]
+  },
+  "creators/miloud-02": {
+    "width": 1440,
+    "height": 1800,
+    "kind": "scene",
+    "variants": [
+      {
+        "width": 480,
+        "height": 600
+      },
+      {
+        "width": 768,
+        "height": 960
+      },
+      {
+        "width": 1080,
+        "height": 1350
+      },
+      {
+        "width": 1440,
+        "height": 1800
+      }
+    ]
+  },
+  "creators/miloud-03": {
+    "width": 1440,
+    "height": 1441,
+    "kind": "scene",
+    "variants": [
+      {
+        "width": 480,
+        "height": 480
+      },
+      {
+        "width": 768,
+        "height": 769
+      },
+      {
+        "width": 1080,
+        "height": 1081
+      },
+      {
+        "width": 1440,
+        "height": 1441
+      }
+    ]
+  },
+  "creators/miloud-04": {
+    "width": 1440,
+    "height": 1441,
+    "kind": "scene",
+    "variants": [
+      {
+        "width": 480,
+        "height": 480
+      },
+      {
+        "width": 768,
+        "height": 769
+      },
+      {
+        "width": 1080,
+        "height": 1081
+      },
+      {
+        "width": 1440,
+        "height": 1441
+      }
+    ]
+  },
+  "creators/both-01": {
+    "width": 3072,
+    "height": 4096,
+    "kind": "scene",
+    "variants": [
+      {
+        "width": 480,
+        "height": 640
+      },
+      {
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "width": 1080,
+        "height": 1440
+      },
+      {
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "width": 2048,
+        "height": 2731
+      }
+    ]
+  },
+  "creators/both-02": {
+    "width": 3024,
+    "height": 4032,
+    "kind": "scene",
+    "variants": [
+      {
+        "width": 480,
+        "height": 640
+      },
+      {
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "width": 1080,
+        "height": 1440
+      },
+      {
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "width": 2048,
+        "height": 2731
+      }
+    ]
+  },
+  "creators/both-03": {
+    "width": 2048,
+    "height": 2048,
+    "kind": "scene",
+    "variants": [
+      {
+        "width": 480,
+        "height": 480
+      },
+      {
+        "width": 768,
+        "height": 768
+      },
+      {
+        "width": 1080,
+        "height": 1080
+      },
+      {
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "width": 2048,
+        "height": 2048
+      }
+    ]
   }
 };

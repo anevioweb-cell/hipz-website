@@ -57,6 +57,7 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 ## 5. Pre-launch checklist (not shown on the site)
 
 - [ ] Written permission from Kada and Miloud (names, likeness, content) and from Hipz owners
+- [ ] Written permission from Kada and Miloud for every creator photo taken from their public accounts/channel (`docs/CREATOR_PHOTOS.md`) before it is shown publicly
 - [ ] Replace `DEMO_MODE` with a real backend (or deliberately keep the flag)
 - [ ] Remove noindex / robots disallow **only** with owner approval
 - [ ] Confirm every product fact (flavours, ingredients, sizes, claims) with the brand

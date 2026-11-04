@@ -1,0 +1,47 @@
+# Creator photos (Phase 5, Part 6)
+
+Collected for the upcoming `/our-story` page (Phase 6), at the owner's explicit request. **Private pitch use only**: the photos come from Kada & Miloud's own public accounts and the official channel, are kept out of git (masters in `docs/inputs/creators/`, derivatives in `public/images/creators/`, both gitignored), are not shown on any page yet, and need the creators' **written permission before any public launch**.
+
+## How they were obtained
+- No login, no cookies or credentials, no browser extensions, no third-party downloader sites.
+- `gallery-dl` (open source, no login) **failed**: Instagram answered "user could not be found" for logged-out requests.
+- **Worked:** Playwright opening the public, logged-out profile and post pages, reading each post's own full-size image URL (largest `srcset` entry) and downloading it from the Instagram CDN. A login prompt overlays the carousel arrows; the "Next" button was clicked programmatically to see the other public slides (nothing was dismissed, no account used). Pacing: ~2.5 s between posts, 0.8 s between images, 5 posts in total.
+- YouTube: `yt-dlp` (open source, no login) for the official channel avatar, banner and the 8 most recent video thumbnails.
+- Logged-out Instagram only shows the most recent posts: Miloud's account exposed 4 photo posts + 1 reel, the duo's account 1 photo post + 3 reels.
+
+## Identification (context only — no face recognition or face matching)
+- **Miloud**: solo photos on his own account `@miloud.kwm` (display name "Bessaïh Miloud | بسايح ميلود", bio links `@kadawmiloud`).
+- **Both**: the duo's own posts/channel. In standing photos of both, the owner's rule applies: **Kada = the shorter, Miloud = the taller**.
+- **Kada alone: none found.** Neither the duo's Instagram bio nor Miloud's links to a personal Kada account, and every public duo post shows both of them. No solo Kada image was taken from anywhere else (no fan pages, news, wallpapers or reposts).
+- Useful public fact found on the way: the duo's Instagram bio says **"Owners of @hipzdrink 🍋🍑"** (also recorded in BRAND_BRIEF).
+
+## Images
+
+| File | Who (left → right) | Source / post | Date | Original size | Why / issues | Status | Confidence |
+|---|---|---|---|---|---|---|---|
+| `miloud-01.jpg` | Miloud | @miloud.kwm — https://www.instagram.com/miloud.kwm/p/CWREPJUMns9/ | 2021-11-14 | 1228×1228 | Sharp close-up, good light, plain hoodie, no text. Issue: a small framed photo on the shelf in the background (crop it out) | **selected** | high (own account, solo) |
+| `miloud-02.jpg` | Miloud | @miloud.kwm — https://www.instagram.com/miloud.kwm/p/CY61-G_N8qj/ (slide 1) | posted 2022-01-19 (page shows 2026-05-22 edit) | 1440×1800 | Half body, warm golden-hour light, outdoor | **selected** | high |
+| `miloud-03.jpg` | Miloud | @miloud.kwm — https://www.instagram.com/miloud.kwm/p/CpdREVbt96a/ (slide 2) | 2023-03-06 | 1440×1441 | Studio portrait, suit, clean grey background | **selected** | high |
+| `miloud-04.jpg` | Miloud | same post (slide 3) | 2023-03-06 | 1440×1441 | Studio close-up, suit, lilac background (cool grade) | **selected** | high |
+| `candidates/miloud-CY61-G_N8qj-2.jpg` | Miloud | same post as miloud-02 (slide 2) | — | 1440×1799 | Near-duplicate of miloud-02 | candidate | high |
+| `candidates/miloud-CpdREVbt96a-1.jpg` | Miloud | same post as miloud-03 (slide 1) | 2023-03-06 | 1440×1441 | Holds a YouTube play-button award: **another brand's logo** | rejected | high |
+| `candidates/miloud-C5Ygv3uNCTq-1.jpg` | Miloud | https://www.instagram.com/miloud.kwm/p/C5Ygv3uNCTq/ | 2024-04-05 | 1593×1593 | Night photo, small face, low light | rejected | high |
+| `both-01.jpg` | Kada, Miloud | @kadawmiloud — https://www.instagram.com/kadawmiloud/p/De9mIQDDAyc/ (slide 2) | 2026-10-26 | 3072×4096 | Both in the bottling plant with Hipz Lemon bottles; very sharp. Issues: "Golden Coast" hoodie print, machine plate text | **selected** | medium (left/right by height rule) |
+| `both-02.jpg` | Kada, Miloud | same post (slide 1) — **identical to the supplied `source-photo.jpg`** | 2026-10-26 | 3024×4032 | Same scene, Kada holds a bottle toward the camera | **selected** | medium |
+| `candidates/duo-De9mIQDDAyc-3.jpg`, `-4.jpg` | Kada, Miloud | same post (slides 3–4) | 2026-10-26 | 3024×4032 | Same scene, small pose changes | candidate | medium |
+| `both-03.jpg` | both (who is left/right: **unverified**, seated) | YouTube channel avatar, https://www.youtube.com/@kadaWmiloud | — | 2048×2048 | Official channel art, both smiling, plain background | **selected** | high that it is both; per-person unverified |
+| `candidates/yt-channel-banner.jpg` | both, small figures | YouTube channel banner | — | 2048×1152 | Faces small; good as a wide landscape | candidate | — |
+| `candidates/yt-thumbnails/*.jpg` (8) | various | latest 8 video thumbnails | — | 1280×720 | Big Arabic text overlays, other people, football-club and kit-brand logos, one with fake-blood make-up | rejected | — |
+
+Contact sheet of the selected images: `docs/shots/creators-sheet.png`.
+
+**Final selection:** Miloud 4, both 3, **Kada 0** (the brief asked for 4–6 per person). Missing: solo photos of Kada.
+
+## What the owner could add manually (for Kada)
+- Kada's personal Instagram handle (it is not linked from the duo or Miloud pages that are visible logged-out).
+- Older duo posts are hidden from logged-out visitors; https://www.instagram.com/kadawmiloud/ logged in may show solo photos of Kada in the duo's own feed.
+- The second official channel linked in the duo bio: https://www.youtube.com/@kadawmiloud_plus
+Please save any picks as `docs/inputs/creators/kada-01.jpg …` and tell me which post each came from.
+
+## Data
+`src/data/creators.js` lists every selected image with who is shown, confidence and a hand-set focal point; `npm run images` builds AVIF/WebP/JPG at 480/768/1080/1440/2048 w into `public/images/creators/` with exact sizes in `src/data/images.generated.js`.

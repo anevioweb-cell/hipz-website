@@ -56,3 +56,7 @@ The wholesale request form on `/distributors` sends through ONE function, `submi
 - A hidden honeypot field (`website`) makes bot submissions resolve silently without sending anything.
 
 **Before any public launch, DEMO_MODE must be replaced by a real backend (or consciously kept).**
+
+## Creator photos (private)
+
+`docs/inputs/creators/` (masters) and `public/images/creators/` (derivatives, `npm run images`) hold photos of Kada and Miloud taken from **their own public accounts and official channel** (see `docs/CREATOR_PHOTOS.md`). They are used **privately for the pitch only**, are gitignored, are not shown on any page yet, and **need the creators' written permission before any public launch**.

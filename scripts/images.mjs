@@ -2,6 +2,7 @@
 // into public/images/ and writes src/data/images.generated.js with exact sizes (no layout shift).
 import sharp from 'sharp';
 import { mkdirSync, writeFileSync, existsSync } from 'node:fs';
+import { dirname } from 'node:path';
 import { specs } from './images.config.mjs';
 
 const OUT = 'public/images';
@@ -17,6 +18,7 @@ for (const spec of specs) {
   if (spec.crop) base = base.extract(spec.crop);
   const buf = await base.toBuffer();
   const { width: mw, height: mh } = await sharp(buf).metadata();
+  mkdirSync(dirname(`${OUT}/${spec.name}`), { recursive: true });
   const entry = { width: mw, height: mh, kind: spec.kind, variants: [] };
   if (spec.box) {
     // convert master-relative fractions into fractions of this output (crop)

@@ -6,6 +6,7 @@ import SectionHeader from '../components/SectionHeader.jsx';
 import SplitLines from '../components/SplitLines.jsx';
 import ContactBand, { PhoneLinks } from '../components/distributors/ContactBand.jsx';
 import WaysToWork from '../components/distributors/WaysToWork.jsx';
+import WholesaleForm from '../components/distributors/WholesaleForm.jsx';
 import { flavors } from '../data/flavors.js';
 import { PUBLIC_CONTACT } from '../data/site.js';
 import { telHref } from '../lib/phone.js';
@@ -77,6 +78,7 @@ export default function Distributors() {
 
       <ContactBand />
       <WaysToWork />
+      <WholesaleForm />
 
       <section id="closing" className="bg-paper text-ink">
         <div className="hero-frame-wrap">

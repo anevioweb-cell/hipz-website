@@ -45,3 +45,14 @@ Photos, videos, logo and bottle images (`docs/inputs/`, `sourse of Kada and Milo
 ## Images
 
 Masters (`docs/inputs/*.jpeg|png|jpg`) are gitignored. `npm run images` creates the optimized set. The logo is derived from `public/logo.jpg` (150×150 — request a vector/large PNG), see `docs/ASSET_REPORT.md`.
+
+## Forms: `src/lib/submit.js`
+
+The wholesale request form on `/distributors` sends through ONE function, `submitWholesaleRequest()`:
+
+- `DEMO_MODE = true` (current): waits ~0.9 s and shows a normal success state. **No network request is made and the entered data is not stored** (no localStorage, cookies or logging); it is dropped from memory after success. Tests fail if `fetch`, `XMLHttpRequest` or `sendBeacon` is called.
+- `DEMO_MODE = false` and `FORM_ENDPOINT = null` (`src/config.js`): the form shows a visible "Not available yet" state — it never fakes success.
+- `DEMO_MODE = false` with `FORM_ENDPOINT` set: POSTs JSON to the endpoint.
+- A hidden honeypot field (`website`) makes bot submissions resolve silently without sending anything.
+
+**Before any public launch, DEMO_MODE must be replaced by a real backend (or consciously kept).**

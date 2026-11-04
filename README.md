@@ -11,7 +11,14 @@ npm run check        # lint (0 warnings) + prettier check + build + tests; stops
 npm run build && npm run preview
 npm run images       # masters in docs/inputs → AVIF/WebP/JPG|PNG in public/images + src/data/images.generated.js
 npm run measure:reference   # Playwright motion measurement of the reference (writes docs/reference-shots/)
+npm run copy:review  # docs/COPY_REVIEW.md: all copy by page/section, draft list, banned-claims scan
+node scripts/measure-motion.mjs   # frame-by-frame motion measurement of the reference (docs/MOTION_SPEC.md)
+node scripts/compare-motion.mjs   # our curves vs the reference (needs a served build on :4174)
 ```
+
+## Copy review
+
+All copy lives in `src/data/copy.js`; story facts in `src/data/story.js`. Run `npm run copy:review` and send `docs/COPY_REVIEW.md` to the owner before the site is shown to Kada and Miloud: it lists every string (English, Arabic accents, status, length), everything still `draft: true`, and the banned-claims scan. The banned list (`src/data/bannedClaims.js`) is also a unit test, so `npm run check` fails on a forbidden claim or an unapproved number.
 
 ## Structure
 
@@ -40,7 +47,7 @@ Photos, videos, logo and bottle images (`docs/inputs/`, `sourse of Kada and Milo
 ## Config flags (`src/config.js`)
 
 - `DEMO_MODE` — see above.
-- `SMOOTH_SCROLL` — Lenis smooth scrolling, loaded after first paint, off under `prefers-reduced-motion`.
+- `SMOOTH_SCROLL` — Lenis smooth scrolling. **Off** since Phase 6 (the reference scrolls natively); when on, loaded after first paint and never under `prefers-reduced-motion`.
 
 ## Images
 

@@ -114,7 +114,7 @@ export const copy = {
         },
         {
           id: 'cold',
-          title: 'Best served ice cold.',
+          title: 'Serve it ice cold.',
           text: 'Straight from the fridge, or over ice.',
         },
       ],

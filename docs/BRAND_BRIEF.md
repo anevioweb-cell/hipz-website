@@ -150,3 +150,14 @@ Pixel sampling method: median RGB of pixels with saturation ≥ 0.5–0.6 and va
 | 35 | The hero as built is approved, including the headline **"Thirsty? Say Hipz."** and the Arabic chip **عطشان؟** (`draft: false` in `copy.js`). All other copy stays draft. | owner statement | High |
 | 36 | The only hero change requested: restore the reference's rounded inset frame. | owner statement | High |
 | 37 | No lifestyle photos exist. No invented/generated imagery of people, never likenesses of Kada or Miloud. Only supplied assets and designed graphics (flavor blocks, bottle crops, our own simple SVG icons). | owner statement | High |
+
+---
+
+# Update — Phase 5: owner decisions (all "owner statement, high confidence")
+
+| # | Decision / fact | Source | Confidence |
+|---|---|---|---|
+| 38 | The two commercial-service numbers from the Hipz Instagram bio, **05 60404339** and **07 70787889** (labelled "Service commercial"), may be shown on `/distributors` — displayed exactly like that, with `tel:` links in international form (+213 560404339, +213 770787889). They live ONLY in `PUBLIC_CONTACT` (`src/data/site.js`). | owner statement | High |
+| 39 | Distribution areas and distributor names are unknown. Never list any area, distributor, store, delivery promise, minimum order, margin, price, discount, reply-time promise or other commercial term. `/distributors` only invites contact. | owner statement | High |
+| 40 | The reference has no distributors page; ours is designed from the reference's measured design language (frame, type, spacing, reveals) with Hipz tokens. | owner statement | High |
+| 41 | Wilaya data assumes the current 69-wilaya division (Law 26-06, JO n° 25 of 5 April 2026); sources and discrepancies are listed at the top of `src/data/wilayas.js`. | research (official JO + Wikipedia) | High for names/total; Medium for codes 59–69 (numbering instrument not verified) |

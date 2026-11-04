@@ -95,3 +95,9 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 - No people imagery: Moments, Community and "Both flavors" use bottles, flavor colors, logo and our own SVG icons only; data slots are ready for real photos/posts later.
 - The reference's ingredients section (rotating cans + ingredient callouts) is **skipped on purpose**: no confirmed ingredients.
 - Home order: hero, ticker, flavors, moments, why Hipz, both flavors, community, footer.
+
+## 10. Phase 5 decisions
+
+- `/distributors`: framed hero, commercial-service band (the two bio numbers, from `PUBLIC_CONTACT` only), "Ways to work with Hipz" rows, simulated wholesale form (`src/lib/submit.js`, DEMO_MODE), store finder with an intentional empty state (`src/data/stores.js` is empty), closing band. No areas, distributors, stores, prices, margins, minimums, delivery or reply-time promises.
+- Phone numbers appear nowhere else on the site (not in the footer).
+- Wilayas: 69, verified against the official JO n° 25/2026 (French + Arabic) and Wikipedia.

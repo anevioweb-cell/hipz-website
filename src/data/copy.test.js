@@ -21,6 +21,12 @@ describe('copy.js', () => {
       /calorie|sugar|real fruit|natural|organic|vitamin|made in|award|the best|best-selling|#1|\d+\s?(ml|%|cl)|review|customers? say/i;
     expect(JSON.stringify(copy)).not.toMatch(banned);
   });
+  it('the distributors copy invites contact only (no commercial terms or promises)', () => {
+    const txt = JSON.stringify(copy.distributors);
+    expect(txt).not.toMatch(
+      /24\s?h|within|minimum|margin|price|discount|deliver|free|offer|promo|wholesale price|exclusive|guarantee/i,
+    );
+  });
   it('limits ticker items to neutral words', () => {
     const allowed = new Set([
       'Hipz',

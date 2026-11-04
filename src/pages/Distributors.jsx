@@ -12,6 +12,8 @@ import { flavors } from '../data/flavors.js';
 import { PUBLIC_CONTACT } from '../data/site.js';
 import { telHref } from '../lib/phone.js';
 import { copy } from '../data/copy.js';
+import { DIST_BOTTLES } from '../lib/distHeroClasses.js';
+import { hideHeroShell } from '../lib/heroShell.js';
 import { useNavTone } from '../hooks/useNavTone.js';
 import { usePageTitle } from '../hooks/usePageTitle.js';
 
@@ -31,23 +33,21 @@ export default function Distributors() {
           className="detail-frame relative overflow-hidden bg-brand-lime text-ink"
           aria-label={h.eyebrow}
         >
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute right-[6%] bottom-[-12%] flex items-end gap-1 opacity-95 max-lg:right-[-18%] max-lg:bottom-[-22%] max-lg:opacity-40"
-          >
+          <div aria-hidden="true" className={DIST_BOTTLES.wrap}>
             <Picture
               name={lemon.images.bottle}
               alt=""
-              sizes="220px"
+              sizes={DIST_BOTTLES.lemonSizes}
               priority
-              imgClassName="h-[440px] w-auto -rotate-6 drop-shadow-2xl lg:h-[600px]"
+              onLoad={hideHeroShell}
+              imgClassName={DIST_BOTTLES.lemonReact}
             />
             <Picture
               name={peach.images.bottle}
               alt=""
-              sizes="180px"
+              sizes={DIST_BOTTLES.peachSizes}
               priority
-              imgClassName="h-[420px] w-auto rotate-6 drop-shadow-2xl lg:h-[580px]"
+              imgClassName={DIST_BOTTLES.peachReact}
             />
           </div>
           <div className="detail-frame-content relative z-10 mx-auto flex max-w-site flex-col justify-end gap-5 px-gutter pt-28 pb-10 lg:px-gutter-lg lg:pb-16">
@@ -68,7 +68,7 @@ export default function Distributors() {
                 href={telHref(first)}
                 variant="ghost"
                 arrow={false}
-                aria-label={`${copy.distributors.contact.callPrefix} ${first}`}
+                aria-label={`${h.secondary} · ${first} — ${copy.distributors.contact.callPrefix} ${first}`}
               >
                 {h.secondary} · <span dir="ltr">{first}</span>
               </Button>
@@ -77,41 +77,44 @@ export default function Distributors() {
         </section>
       </div>
 
-      <ContactBand />
-      <WaysToWork />
-      <WholesaleForm />
-      <StoreFinder />
+      {/* z-10: the sections slide over the static pre-JS frame (see .hero-shell--dist) */}
+      <div className="relative z-10 bg-paper">
+        <ContactBand />
+        <WaysToWork />
+        <WholesaleForm />
+        <StoreFinder />
 
-      <section id="closing" className="bg-paper text-ink">
-        <div className="hero-frame-wrap">
-          <div className="relative grid items-center gap-8 overflow-hidden rounded-[var(--frame-r)] bg-[linear-gradient(100deg,var(--color-lemon)_0%,var(--color-lemon)_50%,var(--color-peach)_50%,var(--color-peach)_100%)] px-5 py-14 lg:grid-cols-2 lg:px-14">
-            <Reveal className="flex flex-col items-start gap-6">
-              <SectionHeader lines={copy.distributors.closing.lines} />
-              <Button to="/flavors" variant="primary">
-                {copy.distributors.closing.cta}
-              </Button>
-              <div>
-                <p className="font-mono text-label uppercase">{PUBLIC_CONTACT.label}</p>
-                <PhoneLinks size="sm" className="mt-2" />
+        <section id="closing" className="bg-paper text-ink">
+          <div className="hero-frame-wrap">
+            <div className="relative grid items-center gap-8 overflow-hidden rounded-[var(--frame-r)] bg-[linear-gradient(100deg,var(--color-lemon)_0%,var(--color-lemon)_50%,var(--color-peach)_50%,var(--color-peach)_100%)] px-5 py-14 lg:grid-cols-2 lg:px-14">
+              <Reveal className="flex flex-col items-start gap-6">
+                <SectionHeader lines={copy.distributors.closing.lines} />
+                <Button to="/flavors" variant="primary">
+                  {copy.distributors.closing.cta}
+                </Button>
+                <div>
+                  <p className="font-mono text-label uppercase">{PUBLIC_CONTACT.label}</p>
+                  <PhoneLinks size="sm" className="mt-2" />
+                </div>
+              </Reveal>
+              <div aria-hidden="true" className="flex items-end justify-center gap-2">
+                <Picture
+                  name={lemon.images.bottle}
+                  alt=""
+                  sizes="160px"
+                  imgClassName="h-[340px] w-auto -rotate-6 drop-shadow-2xl lg:h-[440px]"
+                />
+                <Picture
+                  name={peach.images.bottle}
+                  alt=""
+                  sizes="130px"
+                  imgClassName="h-[330px] w-auto rotate-6 drop-shadow-2xl lg:h-[430px]"
+                />
               </div>
-            </Reveal>
-            <div aria-hidden="true" className="flex items-end justify-center gap-2">
-              <Picture
-                name={lemon.images.bottle}
-                alt=""
-                sizes="160px"
-                imgClassName="h-[340px] w-auto -rotate-6 drop-shadow-2xl lg:h-[440px]"
-              />
-              <Picture
-                name={peach.images.bottle}
-                alt=""
-                sizes="130px"
-                imgClassName="h-[330px] w-auto rotate-6 drop-shadow-2xl lg:h-[430px]"
-              />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 }

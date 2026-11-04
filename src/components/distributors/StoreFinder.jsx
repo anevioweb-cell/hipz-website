@@ -8,7 +8,7 @@ import { normalizeDZ, telHref } from '../../lib/phone.js';
 import { copy } from '../../data/copy.js';
 
 const inputCls =
-  'mt-2 block min-h-12 w-full rounded-2xl border-2 border-ink/20 bg-white px-4 py-3 text-body text-ink outline-none focus:border-ink';
+  'mt-2 block min-h-12 w-full rounded-2xl border-2 border-ink/20 bg-white px-4 py-3 text-body text-ink outline-none focus:border-ink focus:ring-4 focus:ring-brand-lime';
 
 // Store finder. Results come from src/data/stores.js, which is EMPTY (no stockists are known): choosing a
 // wilaya then shows a designed empty state that points to the commercial service or the request form.
@@ -74,7 +74,7 @@ export default function StoreFinder({ stores = realStores }) {
                     href={telHref(first)}
                     variant="primary"
                     arrow={false}
-                    aria-label={`${copy.distributors.contact.callPrefix} ${first}`}
+                    aria-label={`${t.empty.call} · ${first} — ${copy.distributors.contact.callPrefix} ${first}`}
                   >
                     {t.empty.call} · <span dir="ltr">{first}</span>
                   </Button>

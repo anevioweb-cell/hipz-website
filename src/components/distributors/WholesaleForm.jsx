@@ -19,7 +19,7 @@ const EMPTY = {
 const ORDER = ['business', 'contact', 'phone', 'email', 'wilaya', 'type', 'message'];
 
 const inputCls =
-  'mt-2 block min-h-12 w-full rounded-2xl border-2 border-ink/20 bg-white px-4 py-3 text-body text-ink outline-none transition-colors focus:border-ink aria-[invalid=true]:border-error';
+  'mt-2 block min-h-12 w-full rounded-2xl border-2 border-ink/20 bg-white px-4 py-3 text-body text-ink outline-none transition-colors focus:border-ink focus:ring-4 focus:ring-brand-lime aria-[invalid=true]:border-error';
 
 function Field({ id, label, required, hint, error, children }) {
   const f = copy.distributors.form;

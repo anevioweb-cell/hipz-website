@@ -202,7 +202,7 @@ export const copy = {
       business: 'Business name',
       contact: 'Contact person',
       phone: 'Phone',
-      phoneHint: 'Algerian number, e.g. 05 60 00 00 00 or +213 560 00 00 00',
+      phoneHint: 'Algerian number, e.g. 05 XX XX XX XX or +213 5XX XX XX XX',
       email: 'Email (optional)',
       wilaya: 'Wilaya',
       wilayaPlaceholder: 'Choose your wilaya',

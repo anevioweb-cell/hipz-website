@@ -62,3 +62,37 @@ describe('home page', () => {
     expect(container.textContent).not.toMatch(/330|\bml\b|medium/i);
   });
 });
+
+describe('commercial phone numbers', () => {
+  it('appear only on /distributors (never in the footer or other pages)', () => {
+    for (const path of [
+      '/',
+      '/flavors',
+      '/flavors/lemon',
+      '/flavors/peach',
+      '/our-story',
+      '/nope',
+    ]) {
+      const { container, unmount } = renderAt(path);
+      expect(container.textContent, path).not.toMatch(/60404339|70787889/);
+      expect(container.querySelector('a[href^="tel:"]'), path).toBeNull();
+      unmount();
+    }
+    const { container } = renderAt('/distributors');
+    expect(container.textContent).toMatch(/05 60404339/);
+    expect(container.textContent).toMatch(/07 70787889/);
+    const footer = screen.getByRole('contentinfo');
+    expect(footer.textContent).not.toMatch(/60404339|70787889/);
+  });
+  it('are only written in PUBLIC_CONTACT in the source', () => {
+    const files = import.meta.glob(['./**/*.{js,jsx}', '!./**/*.test.{js,jsx}'], {
+      query: '?raw',
+      import: 'default',
+      eager: true,
+    });
+    const withNumbers = Object.entries(files)
+      .filter(([, src]) => /60404339|70787889/.test(src))
+      .map(([p]) => p);
+    expect(withNumbers).toEqual(['./data/site.js']);
+  });
+});

@@ -15,6 +15,22 @@
         var m = /^\/flavors\/(lemon|peach)\/?$/.exec(p);
         var list = /^\/flavors\/?$/.test(p);
         var home = p === '/' || p === '';
+        if (/^\/distributors\/?$/.test(p)) {
+          // distributors hero: the lemon bottle cutout is the LCP element
+          var d = document.createElement('link');
+          d.rel = 'preload';
+          d.as = 'image';
+          d.type = 'image/avif';
+          d.setAttribute('fetchpriority', 'high');
+          d.imageSrcset = [160, 240, 360, 480, 640, 815]
+            .map(function (x) {
+              return '/images/bottle-lemon-' + x + '.avif ' + x + 'w';
+            })
+            .join(', ');
+          d.imageSizes = '220px';
+          document.head.appendChild(d);
+          return;
+        }
         var f = m ? m[1] : list || home ? 'lemon' : null;
         if (!f) return;
         var portrait = list || innerWidth / innerHeight <= 1;

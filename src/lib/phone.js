@@ -2,7 +2,7 @@
 // Accepted input: optional +213 / 00213 / 213 prefix (a leading 0 after the prefix is tolerated),
 // spaces, dots, dashes and brackets are ignored.
 // National forms after normalising:
-//   mobile   0 + [5|6|7] + 8 digits  (10 digits, e.g. 0560404339)
+//   mobile   0 + [5|6|7] + 8 digits  (10 digits, e.g. 05 12 34 56 78)
 //   landline 0 + [2|3|4] + 7 digits  (9 digits,  e.g. 021234567)
 // Returns { national, e164 } or null.
 export function normalizeDZ(input) {

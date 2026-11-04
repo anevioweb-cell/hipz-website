@@ -10,6 +10,9 @@ describe('creator photos data', () => {
       if (c.people) for (const p of c.people) expect(['kada', 'miloud']).toContain(p);
     }
   });
+  it('only selected photos are kept by the build', () => {
+    expect(creatorPhotos.every((c) => typeof c.selected === 'boolean')).toBe(true);
+  });
   it('is not used by any page yet', () => {
     const files = import.meta.glob(
       ['../pages/**/*.jsx', '../components/**/*.jsx', '../layout/**/*.jsx'],

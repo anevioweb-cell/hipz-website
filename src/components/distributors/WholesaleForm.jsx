@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import SectionHeader from '../SectionHeader.jsx';
 import Button from '../Button.jsx';
-import { wilayas } from '../../data/wilayas.js';
+import { wilayaLabel, wilayas } from '../../data/wilayas.js';
 import { copy } from '../../data/copy.js';
 import { BUSINESS_TYPES, MESSAGE_MAX, validateRequest } from '../../lib/validate.js';
 import { submitWholesaleRequest } from '../../lib/submit.js';
@@ -228,7 +228,7 @@ export default function WholesaleForm() {
                   <option value="">{f.wilayaPlaceholder}</option>
                   {wilayas.map((w) => (
                     <option key={w.code} value={w.code}>
-                      {`${w.code} — ${w.name} (${w.nameAr})`}
+                      {wilayaLabel(w)}
                     </option>
                   ))}
                 </select>

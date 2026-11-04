@@ -24,9 +24,13 @@ describe('<WholesaleForm>', () => {
     expect(screen.getByLabelText(/Message/)).toHaveAttribute('dir', 'auto');
     expect(screen.getByLabelText(/Business name/)).toHaveAttribute('autocomplete', 'organization');
     expect(screen.getByLabelText(/^Phone/)).toHaveAttribute('autocomplete', 'tel');
-    // 69 wilayas + placeholder, showing code + name
-    expect(screen.getByLabelText(/Wilaya/).querySelectorAll('option')).toHaveLength(70);
-    expect(screen.getByRole('option', { name: /^16 — Algiers/ })).toBeInTheDocument();
+    // 69 wilayas + placeholder, names only (no code numbers), official order
+    const options = [...screen.getByLabelText(/Wilaya/).querySelectorAll('option')];
+    expect(options).toHaveLength(70);
+    expect(screen.getByRole('option', { name: 'Algiers (الجزائر)' })).toBeInTheDocument();
+    for (const o of options) expect(o.textContent).not.toMatch(/\d/);
+    expect(options[1].textContent).toMatch(/^Adrar/);
+    expect(options[69].textContent).toMatch(/^El Abiodh Sidi Cheikh/);
   });
 
   it('shows inline errors tied with aria-describedby and focuses the first invalid field', async () => {

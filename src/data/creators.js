@@ -4,11 +4,14 @@
 // Kada is the SHORTER of the two, Miloud the TALLER. No face recognition or face matching was used.
 // `image` = generated set name (npm run images → public/images/creators/, gitignored);
 // `focal` = point to keep in view when cropping (fractions of the image, set by hand).
+// `selected` = actually shown on a page. ONLY selected photos are copied into the build (dist/); the rest
+// stay local (vite.config.js prunes them, scripts/check-dist.mjs fails the check if one slips through).
 // `people` lists who is shown, left to right; null = not determinable (e.g. both seated).
 // Written permission from Kada and Miloud is required before any public use (ROADMAP pre-launch list).
 export const creatorPhotos = [
   {
     id: 'miloud-01',
+    selected: false,
     image: 'creators/miloud-01',
     people: ['miloud'],
     confidence: 'high (his own account, solo photo)',
@@ -17,6 +20,7 @@ export const creatorPhotos = [
   },
   {
     id: 'miloud-02',
+    selected: false,
     image: 'creators/miloud-02',
     people: ['miloud'],
     confidence: 'high (his own account, solo photo)',
@@ -25,6 +29,7 @@ export const creatorPhotos = [
   },
   {
     id: 'miloud-03',
+    selected: false,
     image: 'creators/miloud-03',
     people: ['miloud'],
     confidence: 'high (his own account, solo photo)',
@@ -33,6 +38,7 @@ export const creatorPhotos = [
   },
   {
     id: 'miloud-04',
+    selected: false,
     image: 'creators/miloud-04',
     people: ['miloud'],
     confidence: 'high (his own account, solo photo)',
@@ -41,6 +47,7 @@ export const creatorPhotos = [
   },
   {
     id: 'both-01',
+    selected: false,
     image: 'creators/both-01',
     people: ['kada', 'miloud'],
     confidence:
@@ -50,6 +57,7 @@ export const creatorPhotos = [
   },
   {
     id: 'both-02',
+    selected: false,
     image: 'creators/both-02',
     people: ['kada', 'miloud'],
     confidence: 'medium (same scene and rule as both-01)',
@@ -58,6 +66,7 @@ export const creatorPhotos = [
   },
   {
     id: 'both-03',
+    selected: false,
     image: 'creators/both-03',
     people: null,
     confidence: 'both confirmed by the channel; who is left/right not determinable (seated)',
@@ -65,3 +74,6 @@ export const creatorPhotos = [
     focal: { x: 0.5, y: 0.45 },
   },
 ];
+
+// Image set names of the photos that a page may use (and that the build keeps).
+export const usedCreatorImages = () => creatorPhotos.filter((c) => c.selected).map((c) => c.image);

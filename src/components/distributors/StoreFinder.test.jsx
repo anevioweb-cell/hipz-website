@@ -15,7 +15,10 @@ describe('<StoreFinder>', () => {
     const region = screen.getByTestId('finder-results');
     expect(region).toHaveAttribute('aria-live', 'polite');
     expect(region).toHaveTextContent('No stockists listed here yet');
-    expect(region).toHaveTextContent('09 — Blida');
+    expect(region).toHaveTextContent('Blida.');
+    expect(region).not.toHaveTextContent('09');
+    for (const o of screen.getByLabelText('Your wilaya').querySelectorAll('option'))
+      expect(o.textContent).not.toMatch(/\d/);
     expect(
       within(region).getByRole('link', { name: /Call the Hipz commercial service on 05 60404339/ }),
     ).toHaveAttribute('href', 'tel:+213560404339');

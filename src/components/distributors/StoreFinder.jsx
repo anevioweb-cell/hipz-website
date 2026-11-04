@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import SectionHeader from '../SectionHeader.jsx';
 import Button from '../Button.jsx';
-import { wilayas } from '../../data/wilayas.js';
+import { wilayaLabel, wilayas } from '../../data/wilayas.js';
 import { stores as realStores } from '../../data/stores.js';
 import { PUBLIC_CONTACT } from '../../data/site.js';
 import { normalizeDZ, telHref } from '../../lib/phone.js';
@@ -46,7 +46,7 @@ export default function StoreFinder({ stores = realStores }) {
                 <option value="">{t.placeholder}</option>
                 {wilayas.map((w) => (
                   <option key={w.code} value={w.code}>
-                    {`${w.code} — ${w.name} (${w.nameAr})`}
+                    {wilayaLabel(w)}
                   </option>
                 ))}
               </select>
@@ -67,7 +67,7 @@ export default function StoreFinder({ stores = realStores }) {
               <div className="rounded-card border-2 border-dashed border-ink/25 p-8">
                 <p className="font-display text-h3 font-bold">{t.empty.title}</p>
                 <p className="mt-2 max-w-[52ch] opacity-80">
-                  {wilaya.code} — {wilaya.name}. {t.empty.text}
+                  {wilaya.name}. {t.empty.text}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Button

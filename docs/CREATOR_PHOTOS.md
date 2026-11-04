@@ -44,4 +44,6 @@ Contact sheet of the selected images: `docs/shots/creators-sheet.png`.
 Please save any picks as `docs/inputs/creators/kada-01.jpg …` and tell me which post each came from.
 
 ## Data
+Only entries with `selected: true` (= actually shown on a page) are kept in the production build: `vite.config.js` prunes the rest from `dist/images/creators/`, and `npm run check` runs `scripts/check-dist.mjs`, which fails if an unused creator image is in `dist/`.
+
 `src/data/creators.js` lists every selected image with who is shown, confidence and a hand-set focal point; `npm run images` builds AVIF/WebP/JPG at 480/768/1080/1440/2048 w into `public/images/creators/` with exact sizes in `src/data/images.generated.js`.

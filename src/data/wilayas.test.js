@@ -19,11 +19,15 @@ describe('wilayas', () => {
       expect(w.nameAr).toMatch(/^[؀-ۿ\s]+$/);
     }
   });
+  it('marks every code as verified (59–69 by decree 26-206, JO n° 40/2026)', () => {
+    for (const w of wilayas) expect(typeof w.codeVerified, w.code).toBe('boolean');
+    expect(wilayas.filter((w) => w.codeVerified)).toHaveLength(69);
+  });
   it('carries the verified spellings of the official text', () => {
     const by = Object.fromEntries(wilayas.map((w) => [w.code, w]));
-    expect(by['59'].nameAr).toBe('آفلو');
+    expect(by['59'].nameAr).toBe('أفلو');
     expect(by['65'].name).toBe('Aïn Ouessara');
-    expect(by['68'].name).toBe('Bou Saada');
+    expect(by['68'].name).toBe('Bou Saâda');
     expect(by['16'].nameAr).toBe('الجزائر');
   });
 });

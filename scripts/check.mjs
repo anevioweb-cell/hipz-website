@@ -6,6 +6,7 @@ const steps = [
   ['Lint (0 warnings allowed)', 'npm', ['run', '--silent', 'lint']],
   ['Prettier format check', 'npm', ['run', '--silent', 'format:check']],
   ['Production build', 'npm', ['run', '--silent', 'build']],
+  ['dist/ creator image check', 'node', ['scripts/check-dist.mjs']],
   ['Unit tests', 'npm', ['run', '--silent', 'test']],
 ];
 const TIMEOUT_MS = 180_000;

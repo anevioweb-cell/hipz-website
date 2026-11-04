@@ -102,3 +102,8 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 - `/distributors`: framed hero, commercial-service band (the two bio numbers, from `PUBLIC_CONTACT` only), "Ways to work with Hipz" rows, simulated wholesale form (`src/lib/submit.js`, DEMO_MODE), store finder with an intentional empty state (`src/data/stores.js` is empty), closing band. No areas, distributors, stores, prices, margins, minimums, delivery or reply-time promises.
 - Phone numbers appear nowhere else on the site (not in the footer).
 - Wilayas: 69, verified against the official JO n° 25/2026 (French + Arabic) and Wikipedia.
+
+## 11. Phase 6 decisions
+
+- Part 0: wilaya selects (form, store finder) show **names only**, never code numbers; codes stay internal with a `codeVerified` flag. Codes 59–69 were verified on 2026-11-04 against presidential decree n° 26-206 (JO n° 40 of 3 June 2026, French + Arabic), which also fixes the spellings أفلو and "Bou Saâda" now used.
+- Part 0: only creator photos with `selected: true` in `src/data/creators.js` are kept in `dist/` (pruned at build; `npm run check` fails otherwise).

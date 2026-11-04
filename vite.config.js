@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { images } from './src/data/images.generated.js';
 import { DIST_BOTTLES } from './src/lib/distHeroClasses.js';
+import { pruneCreatorImages } from './scripts/creator-images.mjs';
 
 // Build-only HTML tweaks for the first paint (measured with Lighthouse mobile, see the Phase 4 report):
 // 1. preload the display font (headline) so it does not reflow when it arrives (CLS 0);
@@ -72,8 +73,17 @@ const heroShell = () => ({
   },
 });
 
+// public/ is copied whole by Vite; drop creator photos that no page uses (selected: false) from dist/.
+const creatorImages = () => ({
+  name: 'creator-images',
+  apply: 'build',
+  closeBundle() {
+    pruneCreatorImages('dist');
+  },
+});
+
 export default defineConfig({
-  plugins: [react(), tailwindcss(), firstPaintTweaks(), heroShell()],
+  plugins: [react(), tailwindcss(), firstPaintTweaks(), heroShell(), creatorImages()],
   test: {
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.js'],

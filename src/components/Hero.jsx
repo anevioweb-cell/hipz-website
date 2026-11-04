@@ -11,6 +11,7 @@ import { flavors } from '../data/flavors.js';
 import { SITE } from '../data/site.js';
 import { copy } from '../data/copy.js';
 import { duration, ease } from '../motion.js';
+import { hideHeroShell } from '../lib/heroShell.js';
 
 const ADVANCE_MS = 7000;
 const CROSSFADE = 0.6; // s, opacity only (≤ 600 ms)
@@ -56,14 +57,8 @@ export default function Hero() {
     };
   }, []);
 
-  // Hide the static first frame (index.html) once the React hero image has loaded; fallback timer.
-  // It is hidden, not removed: removing an LCP element makes Chrome's trace (used by Lighthouse)
-  // invalidate it and re-pick the React copy, which could only paint after the JS bundle.
-  const removeShell = () => document.getElementById('hero-shell')?.classList.add('is-hidden');
-  useEffect(() => {
-    const t = setTimeout(removeShell, 4000);
-    return () => clearTimeout(t);
-  }, []);
+  // Hide the static first frame (index.html) once the React hero image has loaded (src/lib/heroShell.js).
+  const removeShell = hideHeroShell;
 
   useEffect(() => {
     const ric = window.requestIdleCallback ?? ((cb) => setTimeout(cb, 1200));

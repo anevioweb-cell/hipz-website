@@ -18,6 +18,7 @@ import { useNavTone } from '../hooks/useNavTone.js';
 import { usePageTitle } from '../hooks/usePageTitle.js';
 import { duration, ease } from '../motion.js';
 import NotFound from './NotFound.jsx';
+import { hideHeroShell } from '../lib/heroShell.js';
 
 // Only verified attributes are shown (format, cap color, serving suggestion); unknown ones are hidden.
 const ATTRS = ['format', 'cap', 'serve'];
@@ -51,10 +52,7 @@ function FlavorPage({ flavor }) {
       {/* same measured inset frame as the home hero (the reference detail page also uses 14 px / 32 px
           rounded inset blocks); min-height instead of a fixed height so the text never clips */}
       <div className="hero-frame-wrap">
-        <section
-          className="detail-frame relative overflow-hidden bg-flavor"
-          aria-label={flavor.name}
-        >
+        <section className="detail-frame relative overflow-hidden" aria-label={flavor.name}>
           <m.div
             key={flavor.slug}
             className="absolute inset-0"
@@ -62,7 +60,7 @@ function FlavorPage({ flavor }) {
             animate={{ opacity: 1 }}
             transition={{ duration: duration.base, ease }}
           >
-            <FlavorScene flavor={flavor} effects="low" priority />
+            <FlavorScene flavor={flavor} effects="low" priority onImageLoad={hideHeroShell} />
           </m.div>
           <div
             aria-hidden="true"

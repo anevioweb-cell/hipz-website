@@ -21,7 +21,7 @@ export const SOCIAL_LINKS = [
   {
     id: 'kada-miloud-instagram',
     label: 'Kada & Miloud on Instagram',
-    short: 'Kada & Miloud',
+    short: 'Kada & Miloud · Instagram',
     href: 'https://www.instagram.com/kadawmiloud/',
   },
 ];

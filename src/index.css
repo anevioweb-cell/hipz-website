@@ -1,7 +1,7 @@
 @import '@fontsource/dm-mono/latin-400.css';
 @import '@fontsource/dm-mono/latin-500.css';
-@import '@fontsource/lalezar/latin-400.css';
-@import '@fontsource/lalezar/arabic-400.css';
+/* display Arabic: Baloo Bhaijaan 2 ExtraBold, Arabic subset only (Phase 5 glyph review, docs/FONT_LICENSES.md) */
+@import '@fontsource/baloo-bhaijaan-2/arabic-800.css';
 @import 'tailwindcss';
 
 /* Variable fonts: only the latin (+ arabic for Cairo) subsets are shipped. */
@@ -77,7 +77,7 @@
   --font-sans: 'Inter Variable', system-ui, sans-serif;
   --font-mono: 'DM Mono', ui-monospace, monospace;
   --font-arabic: 'Cairo Variable', system-ui, sans-serif;
-  --font-arabic-display: 'Lalezar', 'Cairo Variable', system-ui, sans-serif;
+  --font-arabic-display: 'Baloo Bhaijaan 2', 'Cairo Variable', system-ui, sans-serif;
 
   /* Type scale: fluid between the measured reference endpoints (390 → 1440) */
   --text-display: clamp(3.125rem, 1.6rem + 6.5vw, 7rem);
@@ -167,6 +167,7 @@
   }
   .ar-display {
     font-family: var(--font-arabic-display);
+    font-weight: 800;
   }
   .marquee-track {
     animation: marquee var(--marquee-duration, 40s) linear infinite;
@@ -360,6 +361,12 @@
     position: absolute;
     inset: 0 0 -6% 0;
     overflow: hidden;
+  }
+  .hero-shell--detail .hero-shell-scene {
+    inset: 0; /* flavor pages have no parallax extension */
+  }
+  .hero-shell--detail .hero-shell-scene img {
+    transform: none; /* and no intro scale */
   }
   .hero-shell-scene picture {
     display: block;

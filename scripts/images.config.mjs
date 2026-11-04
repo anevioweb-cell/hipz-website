@@ -1,3 +1,4 @@
+import { creatorPhotos } from '../src/data/creators.js';
 // Image masters → optimized outputs. Masters live in docs/inputs (gitignored, never committed).
 // `crop` is a pure crop (left/top/width/height in master pixels); nothing is ever repainted.
 // `box` = bottle bounding box as fractions of the MASTER (hand-measured, ±1 %); the script converts it
@@ -64,12 +65,12 @@ export const specs = [
   },
   // Creator photos for /our-story (Phase 6). Masters in docs/inputs/creators/ (gitignored); derivatives in
   // public/images/creators/ (also gitignored: private photos, rebuild locally with `npm run images`).
-  ...['miloud-01', 'miloud-02', 'miloud-03', 'miloud-04', 'both-01', 'both-02', 'both-03'].map(
-    (n) => ({
+  ...creatorPhotos
+    .map((c) => c.id)
+    .map((n) => ({
       name: `creators/${n}`,
       src: `docs/inputs/creators/${n}.jpg`,
       kind: 'scene',
       widths: [480, 768, 1080, 1440, 2048],
-    }),
-  ),
+    })),
 ];

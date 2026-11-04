@@ -12,7 +12,7 @@ Collected for the upcoming `/our-story` page (Phase 6), at the owner's explicit 
 ## Identification (context only — no face recognition or face matching)
 - **Miloud**: solo photos on his own account `@miloud.kwm` (display name "Bessaïh Miloud | بسايح ميلود", bio links `@kadawmiloud`).
 - **Both**: the duo's own posts/channel. In standing photos of both, the owner's rule applies: **Kada = the shorter, Miloud = the taller**.
-- **Kada alone: none found.** Neither the duo's Instagram bio nor Miloud's links to a personal Kada account, and every public duo post shows both of them. No solo Kada image was taken from anywhere else (no fan pages, news, wallpapers or reposts).
+- **Kada**: his own account **`@kada.kwm`** (owner-supplied, official; display name "Kada 🇩🇿", bio "Créateur de contenu youtube @kadawmiloud") is a valid source — identity by account context. See the Phase 6 Part A section below: it currently holds **no usable solo photo**. No solo Kada image was taken from anywhere else (no fan pages, news, wallpapers or reposts).
 - Useful public fact found on the way: the duo's Instagram bio says **"Owners of @hipzdrink 🍋🍑"** (also recorded in BRAND_BRIEF).
 
 ## Images
@@ -37,8 +37,22 @@ Contact sheet of the selected images: `docs/shots/creators-sheet.png`.
 
 **Final selection:** Miloud 4, both 3, **Kada 0** (the brief asked for 4–6 per person). Missing: solo photos of Kada.
 
+## Phase 6 Part A — Kada (`@kada.kwm`), checked 2026-11-04
+
+What the public, logged-out account shows (Playwright, one profile visit, no login, nothing dismissed):
+- **1 post** in total (the profile header says "1 Posts"): a reel that is a **collaboration post owned by another account**, https://www.instagram.com/kasstay.podcast/reel/DF-9fbdIi6a/ ("Video by Kasstay | كاس تاي", 12 Feb 2025). It is a podcast-studio video frame (another brand's show, microphone, a patterned scarf), the cover is 361×640, and it is a video, not a photo → **rejected** (other brand, low resolution, video frame).
+- **Profile picture**: a mirror selfie in a tiled room, phone in hand. Logged out it is served at **150×150 px only** → too small; also a bathroom mirror selfie is weak for a brand page → **not taken**.
+- One story highlight ("ذكر", a calligraphy image, not a photo of Kada) → not relevant.
+
+Methods tried, in the required order:
+1. Playwright on the public profile: worked, but there is nothing usable to save (above).
+2. `gallery-dl` (logged out) on the profile/avatar: **failed**, "Requested user could not be found" (same as Phase 5).
+3. A public downloader website: **not used**. It could only fetch the same single collab reel or a larger copy of the mirror-selfie avatar; neither meets the criteria, so visiting ad-heavy third-party sites was not justified.
+
+Result: **Kada solo photos: 0.** The contact sheet is unchanged. `src/data/creators.js` and the `/our-story` page pick up any `kada-*` entry automatically once it exists (see "Adding photos later").
+
 ## What the owner could add manually (for Kada)
-- Kada's personal Instagram handle (it is not linked from the duo or Miloud pages that are visible logged-out).
+- Kada's account `@kada.kwm` has only one public post (a collab reel); 3–5 good solo photos sent by Kada himself (or from older posts he archived) are the best route. The HD version of his profile picture can be saved from the app if he wants it used.
 - Older duo posts are hidden from logged-out visitors; https://www.instagram.com/kadawmiloud/ logged in may show solo photos of Kada in the duo's own feed.
 - The second official channel linked in the duo bio: https://www.youtube.com/@kadawmiloud_plus
 Please save any picks as `docs/inputs/creators/kada-01.jpg …` and tell me which post each came from.
@@ -47,3 +61,6 @@ Please save any picks as `docs/inputs/creators/kada-01.jpg …` and tell me whic
 Only entries with `selected: true` (= actually shown on a page) are kept in the production build: `vite.config.js` prunes the rest from `dist/images/creators/`, and `npm run check` runs `scripts/check-dist.mjs`, which fails if an unused creator image is in `dist/`.
 
 `src/data/creators.js` lists every selected image with who is shown, confidence and a hand-set focal point; `npm run images` builds AVIF/WebP/JPG at 480/768/1080/1440/2048 w into `public/images/creators/` with exact sizes in `src/data/images.generated.js`.
+
+## Adding photos later
+Save the master as `docs/inputs/creators/kada-01.jpg` (etc.), add an entry to `src/data/creators.js` (`id: 'kada-01'`, `image: 'creators/kada-01'`, `people: ['kada']`, a focal point, `selected: true`), then run `npm run images` (the image list is read from that file). The story page reads solo photos per person from that file, so no page code changes are needed.

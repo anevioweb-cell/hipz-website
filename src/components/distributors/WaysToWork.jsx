@@ -1,5 +1,5 @@
 import SectionHeader from '../SectionHeader.jsx';
-import Reveal from '../Reveal.jsx';
+import PopBlock from '../PopBlock.jsx';
 import { setRequestType } from '../../lib/requestType.js';
 import { copy } from '../../data/copy.js';
 
@@ -13,7 +13,7 @@ export default function WaysToWork() {
         <SectionHeader eyebrow={w.eyebrow} lines={w.lines} />
         <ul className="flex flex-col">
           {w.items.map((item, i) => (
-            <Reveal
+            <PopBlock
               as="li"
               key={item.id}
               y={50}
@@ -40,7 +40,7 @@ export default function WaysToWork() {
                   ↓
                 </span>
               </a>
-            </Reveal>
+            </PopBlock>
           ))}
         </ul>
       </div>

@@ -1,6 +1,6 @@
 import Ar from './Ar.jsx';
 import Picture from './Picture.jsx';
-import Reveal from './Reveal.jsx';
+import PopBlock from './PopBlock.jsx';
 import SectionHeader from './SectionHeader.jsx';
 import FlavorTheme from './FlavorTheme.jsx';
 import MomentIcon from './icons/MomentIcon.jsx';
@@ -73,7 +73,7 @@ export default function MomentsSection() {
         >
           {h.text}
         </SectionHeader>
-        <Reveal y={80} className="mt-12 lg:mt-14">
+        <PopBlock y={80} className="mt-12 lg:mt-14">
           <ul className="grid gap-[2px] overflow-hidden rounded-[30px] bg-brand-lime sm:grid-cols-2 lg:grid-cols-4">
             {moments.map((m) => (
               <li key={m.id} className="flex">
@@ -81,7 +81,7 @@ export default function MomentsSection() {
               </li>
             ))}
           </ul>
-        </Reveal>
+        </PopBlock>
       </div>
     </section>
   );

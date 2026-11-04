@@ -67,6 +67,8 @@ Pattern worth keeping: **alternating dark/light/accent bands** (plum → cream �
 
 ## 6. Animations (MEASURED unless marked PROPOSAL)
 
+> **Superseded in Phase 6 by `docs/MOTION_SPEC.md`** (frame-by-frame re-measurement). Notably the hero headline and every section heading now pop character by character on the reference, and the ticker runs at 60 px/s. The table below is kept for history.
+
 All values at 1440 wide unless stated. `motion` = `motion/react`; "ease-out" ≈ `[0.22, 1, 0.36, 1]`.
 
 | Animation | Status | What was measured | Trigger | Implementation with `motion` / CSS |

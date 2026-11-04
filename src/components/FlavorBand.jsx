@@ -1,6 +1,8 @@
 import Button from './Button.jsx';
 import Ar from './Ar.jsx';
-import Reveal from './Reveal.jsx';
+import PopBlock from './PopBlock.jsx';
+import PopText from './PopText.jsx';
+import { heroText } from '../motion.js';
 import FlavorScene from './FlavorScene.jsx';
 import FlavorTheme from './FlavorTheme.jsx';
 import { copy } from '../data/copy.js';
@@ -10,7 +12,7 @@ import { copy } from '../data/copy.js';
 // offscreen.
 export default function FlavorBand({ flavor, flip = false, first = false }) {
   // the first band paints immediately (no reveal): its heading is the page's LCP candidate
-  const Wrap = first ? 'div' : Reveal;
+  const Wrap = first ? 'div' : PopBlock;
   return (
     <FlavorTheme flavor={flavor} className="contents">
       <section className="bg-flavor text-ink" aria-labelledby={`band-${flavor.slug}`}>
@@ -34,9 +36,14 @@ export default function FlavorBand({ flavor, flip = false, first = false }) {
             {...(first ? {} : { delay: 0.1, y: 60 })}
             className="flex flex-col items-start gap-5"
           >
-            <h2 id={`band-${flavor.slug}`} className="font-display text-display font-extrabold">
-              {flavor.name}
-            </h2>
+            <PopText
+              as="h2"
+              id={`band-${flavor.slug}`}
+              text={flavor.name}
+              trigger={first ? 'load' : 'view'}
+              delay={first ? heroText.delay : 0}
+              className="font-display text-display font-extrabold"
+            />
             <Ar display className="self-start text-h2">
               {flavor.nameAr}
             </Ar>

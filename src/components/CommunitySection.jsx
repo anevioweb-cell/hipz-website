@@ -2,7 +2,7 @@ import Ar from './Ar.jsx';
 import Button from './Button.jsx';
 import Marquee from './Marquee.jsx';
 import Picture from './Picture.jsx';
-import Reveal from './Reveal.jsx';
+import PopBlock from './PopBlock.jsx';
 import SectionHeader from './SectionHeader.jsx';
 import FlavorTheme from './FlavorTheme.jsx';
 import { communityPosts, fallbackTiles } from '../data/community.js';
@@ -151,9 +151,9 @@ export default function CommunitySection() {
           {h.cta}
         </Button>
       </div>
-      <Reveal y={60} className="pt-10 pb-[72px] lg:pt-14 lg:pb-[110px]">
+      <PopBlock y={60} className="pt-10 pb-[72px] lg:pt-14 lg:pb-[110px]">
         <CommunityRows />
-      </Reveal>
+      </PopBlock>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import SectionHeader from '../SectionHeader.jsx';
-import Reveal from '../Reveal.jsx';
+import PopBlock from '../PopBlock.jsx';
 import { PUBLIC_CONTACT, SOCIAL_LINKS } from '../../data/site.js';
 import { telHref } from '../../lib/phone.js';
 import { copy } from '../../data/copy.js';
@@ -38,7 +38,7 @@ export default function ContactBand() {
         <SectionHeader eyebrow={c.eyebrow} lines={c.lines}>
           {c.text}
         </SectionHeader>
-        <Reveal y={50} className="flex flex-col gap-6 lg:items-end">
+        <PopBlock y={50} className="flex flex-col gap-6 lg:items-end">
           <PhoneLinks className="lg:items-end" />
           <a
             href={INSTAGRAM.href}
@@ -57,7 +57,7 @@ export default function ContactBand() {
               />
             </svg>
           </a>
-        </Reveal>
+        </PopBlock>
       </div>
     </section>
   );

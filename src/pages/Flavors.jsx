@@ -1,6 +1,6 @@
 import Section from '../components/Section.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
-import Reveal from '../components/Reveal.jsx';
+import PopBlock from '../components/PopBlock.jsx';
 import Button from '../components/Button.jsx';
 import FlavorBand from '../components/FlavorBand.jsx';
 import BothFlavorsCard from '../components/BothFlavorsCard.jsx';
@@ -22,28 +22,28 @@ export default function Flavors() {
       ))}
       <Section tone="paper">
         <div className="grid items-center gap-10 lg:grid-cols-2">
-          <Reveal>
+          <PopBlock>
             <SectionHeader
               as="h2"
               eyebrow={copy.flavors.pageTitle.subtitle}
               title={copy.flavors.both.name}
             />
             <p className="mt-4 max-w-[34ch] text-lead">{copy.flavors.both.blurb}</p>
-          </Reveal>
-          <Reveal delay={0.1} y={70} className="flex justify-center">
+          </PopBlock>
+          <PopBlock delay={0.1} y={70} className="flex justify-center">
             <BothFlavorsCard />
-          </Reveal>
+          </PopBlock>
         </div>
       </Section>
       <Section tone="ink">
-        <Reveal className="flex flex-col items-start gap-6">
+        <PopBlock className="flex flex-col items-start gap-6">
           <SectionHeader as="h2" title={copy.flavors.closing.title}>
             {copy.flavors.closing.text}
           </SectionHeader>
           <Button to="/distributors" variant="lime">
             {copy.flavors.findIt.text}
           </Button>
-        </Reveal>
+        </PopBlock>
       </Section>
     </>
   );

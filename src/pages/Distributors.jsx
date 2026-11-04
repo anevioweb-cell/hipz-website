@@ -1,9 +1,10 @@
 import Ar from '../components/Ar.jsx';
 import Button from '../components/Button.jsx';
 import Picture from '../components/Picture.jsx';
-import Reveal from '../components/Reveal.jsx';
+import PopBlock from '../components/PopBlock.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
-import SplitLines from '../components/SplitLines.jsx';
+import PopText from '../components/PopText.jsx';
+import { heroText } from '../motion.js';
 import ContactBand, { PhoneLinks } from '../components/distributors/ContactBand.jsx';
 import WaysToWork from '../components/distributors/WaysToWork.jsx';
 import WholesaleForm from '../components/distributors/WholesaleForm.jsx';
@@ -54,13 +55,22 @@ export default function Distributors() {
             <p className="font-mono text-label uppercase">
               {h.eyebrow} · <Ar>{h.ar}</Ar>
             </p>
-            <SplitLines
-              immediate
+            <PopText
+              as="h1"
+              trigger="load"
+              delay={heroText.delay}
               lines={h.lines}
               className="max-w-[12ch] font-display text-display font-extrabold landscape:text-[clamp(3rem,6.2vw,6.5rem)]"
             />
-            <p className="max-w-[40ch] text-lead">{h.text}</p>
-            <div className="flex flex-wrap gap-3">
+            <PopText
+              as="p"
+              variant="soft"
+              trigger="load"
+              delay={heroText.leadDelay}
+              text={h.text}
+              className="max-w-[40ch] text-lead"
+            />
+            <PopBlock y={10} delay={heroText.buttonDelay} className="flex flex-wrap gap-3">
               <Button href="#request" variant="primary">
                 {h.primary}
               </Button>
@@ -72,7 +82,7 @@ export default function Distributors() {
               >
                 {h.secondary} · <span dir="ltr">{first}</span>
               </Button>
-            </div>
+            </PopBlock>
           </div>
         </section>
       </div>
@@ -87,7 +97,7 @@ export default function Distributors() {
         <section id="closing" className="bg-paper text-ink">
           <div className="hero-frame-wrap">
             <div className="relative grid items-center gap-8 overflow-hidden rounded-[var(--frame-r)] bg-[linear-gradient(100deg,var(--color-lemon)_0%,var(--color-lemon)_50%,var(--color-peach)_50%,var(--color-peach)_100%)] px-5 py-14 lg:grid-cols-2 lg:px-14">
-              <Reveal className="flex flex-col items-start gap-6">
+              <PopBlock className="flex flex-col items-start gap-6">
                 <SectionHeader lines={copy.distributors.closing.lines} />
                 <Button to="/flavors" variant="primary">
                   {copy.distributors.closing.cta}
@@ -96,7 +106,7 @@ export default function Distributors() {
                   <p className="font-mono text-label uppercase">{PUBLIC_CONTACT.label}</p>
                   <PhoneLinks size="sm" className="mt-2" />
                 </div>
-              </Reveal>
+              </PopBlock>
               <div aria-hidden="true" className="flex items-end justify-center gap-2">
                 <Picture
                   name={lemon.images.bottle}

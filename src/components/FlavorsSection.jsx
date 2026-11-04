@@ -1,5 +1,5 @@
 import SectionHeader from './SectionHeader.jsx';
-import Reveal from './Reveal.jsx';
+import PopBlock from './PopBlock.jsx';
 import FlavorCard from './FlavorCard.jsx';
 import BothFlavorsCard from './BothFlavorsCard.jsx';
 import FlavorCarousel from './FlavorCarousel.jsx';
@@ -12,24 +12,24 @@ export default function FlavorsSection() {
   return (
     <section id="flavors" className="bg-paper text-ink">
       <div className="mx-auto max-w-site px-gutter pt-section lg:px-gutter-lg lg:pt-section-lg">
-        <Reveal>
+        <PopBlock>
           <SectionHeader
             as="h2"
             eyebrow={copy.sections.flavors.eyebrow}
             title={copy.sections.flavors.title}
           />
-        </Reveal>
+        </PopBlock>
       </div>
       <div className="pt-10 lg:pb-8">
         <FlavorCarousel>
           {flavors.map((f, i) => (
-            <Reveal key={f.slug} y={70} delay={i * 0.1}>
+            <PopBlock key={f.slug} y={70} delay={i * 0.1}>
               <FlavorCard flavor={f} tilt={i % 2 ? -13 : 13} />
-            </Reveal>
+            </PopBlock>
           ))}
-          <Reveal key="both" y={70} delay={0.2}>
+          <PopBlock key="both" y={70} delay={0.2}>
             <BothFlavorsCard />
-          </Reveal>
+          </PopBlock>
         </FlavorCarousel>
       </div>
     </section>

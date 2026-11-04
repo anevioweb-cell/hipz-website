@@ -1,7 +1,7 @@
 import Button from './Button.jsx';
 import Parallax from './Parallax.jsx';
 import Picture from './Picture.jsx';
-import Reveal from './Reveal.jsx';
+import PopBlock from './PopBlock.jsx';
 import SectionHeader from './SectionHeader.jsx';
 import { flavors } from '../data/flavors.js';
 import { copy } from '../data/copy.js';
@@ -18,14 +18,14 @@ export default function BothFlavorsFeature() {
     <section id="both" className="bg-paper">
       <div className="hero-frame-wrap">
         <div className="group relative grid min-h-[600px] items-center overflow-hidden rounded-[var(--frame-r)] bg-[linear-gradient(172deg,var(--color-lemon)_0%,var(--color-lemon)_52%,var(--color-peach)_52%,var(--color-peach)_100%)] lg:bg-[linear-gradient(100deg,var(--color-lemon)_0%,var(--color-lemon)_52%,var(--color-peach)_52%,var(--color-peach)_100%)] px-5 pt-14 text-ink lg:min-h-[643px] lg:grid-cols-[minmax(0,653px)_1fr] lg:px-14 lg:pt-0">
-          <Reveal className="relative z-10 flex flex-col items-start gap-6 lg:py-16">
+          <PopBlock className="relative z-10 flex flex-col items-start gap-6 lg:py-16">
             <SectionHeader eyebrow={f.eyebrow} lines={f.lines}>
               {f.text}
             </SectionHeader>
             <Button to="/distributors" variant="primary">
               {f.cta}
             </Button>
-          </Reveal>
+          </PopBlock>
           <div
             aria-hidden="true"
             className="relative mt-8 flex h-[420px] items-end justify-center gap-2 lg:mt-0 lg:h-full lg:min-h-[643px] lg:items-center"

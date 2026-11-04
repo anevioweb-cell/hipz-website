@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { AnimatePresence, m, useReducedMotion } from 'motion/react';
+import { AnimatePresence, m, useAnimationControls, useReducedMotion } from 'motion/react';
 import Logo from '../components/Logo.jsx';
 import Button from '../components/Button.jsx';
 import { navLinks } from './navLinks.js';
 import { useNavToneValue } from '../hooks/useNavTone.js';
 import { copy } from '../data/copy.js';
-import { ease, duration, navDelay, stagger } from '../motion.js';
+import { ease, duration, navDelay, navEase, stagger } from '../motion.js';
 
 const FOCUSABLE = 'a[href], button:not([disabled])';
 
@@ -17,6 +17,17 @@ const FOCUSABLE = 'a[href], button:not([disabled])';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
+  const entrance = useAnimationControls();
+  const [navShown, setNavShown] = useState(false); // !important final state once focused
+  const navTimer = useRef(0);
+  useEffect(() => {
+    if (reduce) return undefined;
+    navTimer.current = setTimeout(
+      () => entrance.start({ y: 0, opacity: 1 }, { duration: duration.nav, ease: navEase }),
+      navDelay * 1000,
+    );
+    return () => clearTimeout(navTimer.current);
+  }, [reduce, entrance]);
   const tone = useNavToneValue();
   const dark = tone === 'dark'; // bright area behind the navbar → ink text/logo
   const toggleRef = useRef(null);
@@ -63,10 +74,15 @@ export default function Navbar() {
   return (
     <m.header
       // offsets measured inside the reference frame: frame margin + 16/32/38 px sides, + 14/24/29 px top
-      className={`absolute inset-x-0 top-0 z-40 px-6 pt-[22px] lg:px-11 lg:pt-9 min-[1200px]:px-[52px] min-[1200px]:pt-[43px] ${dark ? 'text-ink' : 'text-paper'}`}
+      className={`absolute inset-x-0 top-0 z-40 px-6 pt-[22px] lg:px-11 lg:pt-9 min-[1200px]:px-[52px] min-[1200px]:pt-[43px] ${dark ? 'text-ink' : 'text-paper'}${navShown ? ' opacity-100! transform-none!' : ''}`}
       initial={reduce ? false : { y: -24, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: duration.nav, ease, delay: navDelay }}
+      animate={entrance}
+      // keyboard focus during the entrance jumps to the final state (never focus an invisible link)
+      onFocusCapture={() => {
+        clearTimeout(navTimer.current);
+        entrance.stop();
+        setNavShown(true);
+      }}
     >
       <nav aria-label="Main" className="mx-auto flex max-w-site items-center justify-between">
         <Logo tone={dark ? 'dark' : 'light'} />

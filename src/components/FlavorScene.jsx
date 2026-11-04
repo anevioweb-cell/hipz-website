@@ -4,7 +4,7 @@ import Picture from './Picture.jsx';
 import ThirstEffects from './ThirstEffects.jsx';
 import { images } from '../data/images.generated.js';
 import { coverBox } from '../lib/cover.js';
-import { duration, ease, heroScaleFrom } from '../motion.js';
+import { duration, ease, heroEase, heroScaleFrom } from '../motion.js';
 
 const POINTER_PX = 8; // very small pointer parallax (proposal)
 
@@ -100,7 +100,7 @@ export default function FlavorScene({
             style={{ transformOrigin: origin }}
             initial={intro && !reduce ? { scale: heroScaleFrom } : false}
             animate={{ scale: 1 }}
-            transition={{ duration: duration.hero, ease }}
+            transition={{ duration: duration.hero, ease: heroEase }}
           >
             <Picture
               name={crop === 'portrait' ? flavor.images.heroPortrait : flavor.images.heroWide}

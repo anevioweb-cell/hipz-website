@@ -1,6 +1,6 @@
 import Ar from './Ar.jsx';
 import Button from './Button.jsx';
-import Reveal from './Reveal.jsx';
+import PopBlock from './PopBlock.jsx';
 import SectionHeader from './SectionHeader.jsx';
 import { copy } from '../data/copy.js';
 
@@ -23,7 +23,7 @@ export default function WhySection() {
         </div>
         <ol className="flex flex-col">
           {pillars.map((p, i) => (
-            <Reveal
+            <PopBlock
               as="li"
               key={p.id}
               y={50}
@@ -48,7 +48,7 @@ export default function WhySection() {
                   )}
                 </p>
               </div>
-            </Reveal>
+            </PopBlock>
           ))}
         </ol>
       </div>

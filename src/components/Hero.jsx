@@ -4,13 +4,14 @@ import Button from './Button.jsx';
 import Chip from './Chip.jsx';
 import Ar from './Ar.jsx';
 import Parallax from './Parallax.jsx';
-import SplitLines from './SplitLines.jsx';
+import PopText from './PopText.jsx';
+import PopBlock from './PopBlock.jsx';
 import FlavorTheme from './FlavorTheme.jsx';
 import FlavorScene from './FlavorScene.jsx';
 import { flavors } from '../data/flavors.js';
 import { SITE } from '../data/site.js';
 import { copy } from '../data/copy.js';
-import { duration, ease } from '../motion.js';
+import { ease, heroText } from '../motion.js';
 import { hideHeroShell } from '../lib/heroShell.js';
 
 const ADVANCE_MS = 7000;
@@ -130,26 +131,30 @@ export default function Hero() {
 
         <FlavorTheme flavor={active} className="contents">
           <div className="relative z-10 flex h-full flex-col justify-end gap-5 px-gutter pt-28 pb-8 text-ink portrait:text-paper lg:px-12 lg:pb-14 landscape:max-w-[min(46rem,48vw)]">
-            <m.div initial={false}>
+            {/* measured entrance: content group rises 30 px from +0.70 s, headline characters pop from
+                +0.42 s, lead characters from +0.40 s, buttons rise 10 px from +1.55 s (transform/opacity
+                only, so no layout shift; the LCP element on this page is the hero image) */}
+            <PopBlock y={30} delay={heroText.groupDelay} className="flex flex-col gap-5">
               <Chip tone="outline" className="self-start">
                 {SITE.name} <Ar className="ml-2">{copy.hero.eyebrow.ar}</Ar>
               </Chip>
-            </m.div>
-            <SplitLines
-              immediate
-              lines={copy.hero.headline.lines}
-              delay={0.05}
-              className="font-display text-display font-extrabold landscape:text-[clamp(3rem,6.2vw,6.5rem)]"
-            />
-            {/* the subtitle stays static: it is the largest text, i.e. Chrome's LCP candidate (a full-viewport
-                image is ignored as LCP), so it must paint immediately */}
-            <p className="max-w-[34ch] text-lead">{copy.hero.subtitle.text}</p>
-            <m.div
-              className="flex flex-col gap-5"
-              initial={false}
-              animate={{ y: 0 }}
-              transition={{ duration: duration.reveal, ease, delay: 0.6 }}
-            >
+              <PopText
+                as="h1"
+                trigger="load"
+                lines={copy.hero.headline.lines}
+                delay={heroText.delay}
+                className="font-display text-display font-extrabold landscape:text-[clamp(3rem,6.2vw,6.5rem)]"
+              />
+              <PopText
+                as="p"
+                variant="soft"
+                trigger="load"
+                text={copy.hero.subtitle.text}
+                delay={heroText.leadDelay}
+                className="max-w-[34ch] text-lead"
+              />
+            </PopBlock>
+            <PopBlock className="flex flex-col gap-5" y={10} delay={heroText.buttonDelay}>
               <div className="flex flex-wrap gap-3">
                 <Button href="#flavors" variant="flavor">
                   {copy.hero.primaryCta.text}
@@ -192,7 +197,7 @@ export default function Hero() {
                   </button>
                 )}
               </div>
-            </m.div>
+            </PopBlock>
           </div>
         </FlavorTheme>
         <p className="sr-only" role="status" aria-live={auto ? 'off' : 'polite'}>

@@ -5,11 +5,11 @@ import EmptyState from '../components/EmptyState.jsx';
 import FlavorTheme from '../components/FlavorTheme.jsx';
 import InsetCard from '../components/InsetCard.jsx';
 import Marquee from '../components/Marquee.jsx';
-import Reveal from '../components/Reveal.jsx';
+import PopBlock from '../components/PopBlock.jsx';
 import Section from '../components/Section.jsx';
 import Bottle from '../components/Bottle.jsx';
 import Ticker from '../components/Ticker.jsx';
-import SplitLines from '../components/SplitLines.jsx';
+import PopText from '../components/PopText.jsx';
 import Parallax from '../components/Parallax.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
 import { useToast } from '../components/toast-context.js';
@@ -98,7 +98,7 @@ export default function Kit() {
         </div>
       </Section>
       <Section tone="paper">
-        <h2 className="font-display text-h3 font-bold">Bottles (cutouts), SplitLines, Parallax</h2>
+        <h2 className="font-display text-h3 font-bold">Bottles (cutouts), PopText, Parallax</h2>
         <div className="mt-6 flex flex-wrap items-end gap-8">
           {flavors.map((f) => (
             <div key={f.slug} className="w-44">
@@ -106,10 +106,9 @@ export default function Kit() {
             </div>
           ))}
           <Parallax mode="element" distance={30}>
-            <SplitLines
+            <PopText
               as="p"
-              inView
-              lines={['Line by line', 'reveal.']}
+              lines={['Character by', 'character.']}
               className="font-display text-h2 font-extrabold"
             />
           </Parallax>
@@ -124,9 +123,9 @@ export default function Kit() {
         ))}
       </Marquee>
       <Section tone="ink">
-        <Reveal>
-          <p className="font-display text-h2 font-extrabold">Reveal on scroll</p>
-        </Reveal>
+        <PopBlock>
+          <p className="font-display text-h2 font-extrabold">PopBlock on scroll</p>
+        </PopBlock>
         <InsetCard tone="lemon" className="mt-8 p-10">
           <p className="font-display text-h3 font-bold">InsetCard</p>
         </InsetCard>

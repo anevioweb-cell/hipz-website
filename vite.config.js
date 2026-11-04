@@ -70,7 +70,7 @@ const heroShell = () => ({
             const n = storyPhoto.image;
             const big = images[n].variants.at(-1);
             const op = `${Math.round(storyPhoto.focal.x * 100)}% ${Math.round(storyPhoto.focal.y * 100)}%`;
-            return `<template id="shell-story"><div id="hero-shell" class="hero-shell hero-shell--story hero-frame-wrap" aria-hidden="true"><div class="hero-frame bg-peach-soft"><div class="${STORY_HERO.photo}"><picture><source type="image/avif" srcset="${set(n, 'avif')}" sizes="${STORY_HERO.sizes}" /><source type="image/webp" srcset="${set(n, 'webp')}" sizes="${STORY_HERO.sizes}" /><img src="/images/${n}-${big.width}.jpg" srcset="${set(n, 'jpg')}" sizes="${STORY_HERO.sizes}" width="${big.width}" height="${big.height}" alt="" fetchpriority="high" class="${STORY_HERO.img}" style="object-position:${op}" /></picture></div></div></div></template>`;
+            return `<template id="shell-story"><div id="hero-shell" class="hero-shell hero-shell--story hero-frame-wrap" aria-hidden="true"><div class="hero-frame bg-peach-soft portrait:bg-ink"><div class="${STORY_HERO.photo}"><picture><source type="image/avif" srcset="${set(n, 'avif')}" sizes="${STORY_HERO.sizes}" /><source type="image/webp" srcset="${set(n, 'webp')}" sizes="${STORY_HERO.sizes}" /><img src="/images/${n}-${big.width}.jpg" srcset="${set(n, 'jpg')}" sizes="${STORY_HERO.sizes}" width="${big.width}" height="${big.height}" alt="" fetchpriority="high" class="${STORY_HERO.img}" style="object-position:${op}" /></picture></div><div class="${STORY_HERO.blend}"></div><div class="${STORY_HERO.scrim}"></div></div></div></template>`;
           })()
         : '';
     const templates =

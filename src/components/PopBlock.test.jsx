@@ -27,7 +27,9 @@ describe('<PopBlock>', () => {
     const link = screen.getByRole('link', { name: 'Go' });
     link.focus();
     await new Promise((r) => setTimeout(r, 50));
-    expect(link.parentElement.style.opacity).not.toBe('0');
+    // the !important final-state classes win over the inline entrance style
+    expect(link.parentElement.className).toMatch(/opacity-100!/);
+    expect(link.parentElement.className).toMatch(/transform-none!/);
   });
   it('is shown immediately when IntersectionObserver is missing (fail-safe)', () => {
     const IO = window.IntersectionObserver;

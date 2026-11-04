@@ -27,6 +27,7 @@ export default function PopBlock({
   // heroes: play on load (after `delay`), whatever the scroll trigger says
   const seen = useInViewOnce(ref, revealMargin);
   const inView = immediate || seen;
+  const noObserver = typeof window !== 'undefined' && !('IntersectionObserver' in window);
   const [forced, setForced] = useState(false);
   const controls = useAnimationControls();
   const Tag = m[as];
@@ -54,18 +55,17 @@ export default function PopBlock({
   // the delay is a timer (not motion's own delay) so that focus can cancel it cleanly
   const timer = useRef(0);
   const settled = useRef(false);
-  const [focusShown, setFocusShown] = useState(false);
+  // fail-safe / keyboard focus: the final state via !important classes, which win over any inline
+  // motion style (motion's controls.set() does not reliably override a pending entrance)
+  const [instant, setInstant] = useState(false);
   const showNow = () => {
     settled.current = true;
     clearTimeout(timer.current);
     controls.stop();
-    controls.set(shown);
+    setInstant(true);
   };
-  // keyboard focus: final state via !important classes, which win over any inline motion style
   const onFocus = () => {
-    if (settled.current && focusShown) return;
-    showNow();
-    setFocusShown(true);
+    if (!instant) showNow();
   };
   useEffect(() => {
     if (reduce || settled.current) return undefined;
@@ -73,7 +73,7 @@ export default function PopBlock({
       timer.current = setTimeout(() => {
         if (!settled.current) controls.start(shown, badge ? popBadge : riseFor(y));
       }, delay * 1000);
-    } else if (forced) showNow();
+    } else if (forced) showNow(); // eslint-disable-line react-hooks/set-state-in-effect
     return () => clearTimeout(timer.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reduce, inView, forced]);
@@ -91,8 +91,9 @@ export default function PopBlock({
       data-mm={badge ? 'badge' : `rise-${y}`}
       // keyboard users never land on a still-hidden control: focus jumps to the final state
       onFocusCapture={onFocus}
-      className={`${className}${focusShown ? ' opacity-100! transform-none!' : ''}`}
-      initial={inView ? false : hiddenState}
+      className={`${className}${instant ? ' opacity-100! transform-none!' : ''}`}
+      // start hidden, except when there is no IntersectionObserver (fail-safe: shown at once)
+      initial={noObserver ? false : hiddenState}
       animate={controls}
       {...rest}
     >

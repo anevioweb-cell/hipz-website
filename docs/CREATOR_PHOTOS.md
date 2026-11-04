@@ -1,6 +1,6 @@
-# Creator photos (Phase 5, Part 6)
+# Creator photos (Phase 5 Part 6, used from Phase 6)
 
-Collected for the upcoming `/our-story` page (Phase 6), at the owner's explicit request. **Private pitch use only**: the photos come from Kada & Miloud's own public accounts and the official channel, are kept out of git (masters in `docs/inputs/creators/`, derivatives in `public/images/creators/`, both gitignored), are not shown on any page yet, and need the creators' **written permission before any public launch**.
+Collected for the upcoming `/our-story` page (Phase 6), at the owner's explicit request. **Private pitch use only**: the photos come from Kada & Miloud's own public accounts and the official channel, are kept out of git (masters in `docs/inputs/creators/`, derivatives in `public/images/creators/`, both gitignored), are shown only on `/our-story` (Phase 6, see "Use on /our-story" below), and need the creators' **written permission before any public launch**.
 
 ## How they were obtained
 - No login, no cookies or credentials, no browser extensions, no third-party downloader sites.
@@ -64,3 +64,15 @@ Only entries with `selected: true` (= actually shown on a page) are kept in the 
 
 ## Adding photos later
 Save the master as `docs/inputs/creators/kada-01.jpg` (etc.), add an entry to `src/data/creators.js` (`id: 'kada-01'`, `image: 'creators/kada-01'`, `people: ['kada']`, a focal point, `selected: true`), then run `npm run images` (the image list is read from that file). The story page reads solo photos per person from that file, so no page code changes are needed.
+
+## Use on /our-story (Phase 6)
+
+| File | `selected` | Where | Caption shown |
+|---|---|---|---|
+| `both-03.jpg` | yes | hero (art-directed: right 62 % of the frame on landscape, top half on portrait) | "Kada & Miloud" (no left/right: seated, unverified) |
+| `miloud-01.jpg`, `miloud-02.jpg`, `miloud-04.jpg` | yes | duo-band collage | "Miloud" (his own account) |
+| `both-01.jpg` | yes | "At the bottling line" gallery | "Kada (left) and Miloud (right) at the bottling line, next to a pallet of Hipz Lemon." (owner height rule) |
+| `both-02.jpg` | yes | "At the bottling line" gallery | "Kada holds up a Hipz Lemon; Miloud stands on the right." (owner height rule) |
+| `miloud-03.jpg` | **no** | not used (near-duplicate of miloud-04) — pruned from `dist/` | — |
+
+Alt texts describe only what is visible and contain no names; they are in `src/data/creators.js`.

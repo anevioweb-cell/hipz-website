@@ -113,14 +113,8 @@ export default function OurStory({ data = realStory, photos = realPhotos }) {
                 />
               </div>
               {/* landscape: blend the photo edge into the peach ground; portrait: dark scrim for the text */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-y-0 left-[38%] hidden w-[22%] bg-linear-to-r from-peach-soft to-transparent landscape:block"
-              />
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-[50%] hidden h-[32%] bg-linear-to-t from-ink from-10% via-ink/70 to-transparent portrait:block"
-              />
+              <div aria-hidden="true" className={STORY_HERO.blend} />
+              <div aria-hidden="true" className={STORY_HERO.scrim} />
             </>
           )}
           <div className="detail-frame-content relative z-10 mx-auto flex max-w-site flex-col justify-end gap-5 px-gutter pt-28 pb-10 portrait:text-paper lg:px-gutter-lg lg:pb-16 landscape:[&>*]:max-w-[min(30rem,34vw)]">

@@ -70,7 +70,12 @@ export default function Distributors() {
               text={h.text}
               className="max-w-[40ch] text-lead"
             />
-            <PopBlock y={10} delay={heroText.buttonDelay} className="flex flex-wrap gap-3">
+            <PopBlock
+              y={10}
+              immediate
+              delay={heroText.buttonDelay}
+              className="flex flex-wrap gap-3"
+            >
               <Button href="#request" variant="primary">
                 {h.primary}
               </Button>

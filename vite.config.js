@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { images } from './src/data/images.generated.js';
 import { DIST_BOTTLES } from './src/lib/distHeroClasses.js';
+import { STORY_HERO } from './src/lib/storyHeroClasses.js';
+import { creatorPhotos } from './src/data/creators.js';
 import { pruneCreatorImages } from './scripts/creator-images.mjs';
 
 // Build-only HTML tweaks for the first paint (measured with Lighthouse mobile, see the Phase 4 report):
@@ -60,12 +62,24 @@ const heroShell = () => ({
     const distShell = images['bottle-lemon']
       ? `<template id="shell-dist"><div id="hero-shell" class="hero-shell hero-shell--dist hero-frame-wrap" aria-hidden="true"><div class="hero-frame bg-brand-lime"><div class="${DIST_BOTTLES.wrap}">${cutout('bottle-lemon', DIST_BOTTLES.lemonSizes, DIST_BOTTLES.lemon)}${cutout('bottle-peach', DIST_BOTTLES.peachSizes, DIST_BOTTLES.peach)}</div></div></div></template>`
       : '';
+    // /our-story: the selected duo photo (only if its derivatives exist locally — they are gitignored)
+    const storyPhoto = creatorPhotos.find((c) => c.selected && c.use === 'hero');
+    const storyShell =
+      storyPhoto && images[storyPhoto.image]
+        ? (() => {
+            const n = storyPhoto.image;
+            const big = images[n].variants.at(-1);
+            const op = `${Math.round(storyPhoto.focal.x * 100)}% ${Math.round(storyPhoto.focal.y * 100)}%`;
+            return `<template id="shell-story"><div id="hero-shell" class="hero-shell hero-shell--story hero-frame-wrap" aria-hidden="true"><div class="hero-frame bg-peach-soft"><div class="${STORY_HERO.photo}"><picture><source type="image/avif" srcset="${set(n, 'avif')}" sizes="${STORY_HERO.sizes}" /><source type="image/webp" srcset="${set(n, 'webp')}" sizes="${STORY_HERO.sizes}" /><img src="/images/${n}-${big.width}.jpg" srcset="${set(n, 'jpg')}" sizes="${STORY_HERO.sizes}" width="${big.width}" height="${big.height}" alt="" fetchpriority="high" class="${STORY_HERO.img}" style="object-position:${op}" /></picture></div></div></div></template>`;
+          })()
+        : '';
     const templates =
+      storyShell +
       distShell +
       shellFor('shell-home', 'lemon', 'home') +
       shellFor('shell-lemon', 'lemon', 'detail') +
       shellFor('shell-peach', 'peach', 'detail');
-    const pick = `<script>(function(){var p=location.pathname.replace(/\\/$/,'')||'/';var id=p==='/'?'shell-home':p==='/flavors/lemon'?'shell-lemon':p==='/flavors/peach'?'shell-peach':p==='/distributors'?'shell-dist':null;var t=id&&document.getElementById(id);if(t)document.body.appendChild(t.content.cloneNode(true));})();</script>`;
+    const pick = `<script>(function(){var p=location.pathname.replace(/\\/$/,'')||'/';var id=p==='/'?'shell-home':p==='/flavors/lemon'?'shell-lemon':p==='/flavors/peach'?'shell-peach':p==='/distributors'?'shell-dist':p==='/our-story'?'shell-story':null;var t=id&&document.getElementById(id);if(t)document.body.appendChild(t.content.cloneNode(true));})();</script>`;
     return html.replace(
       '<div id="root"></div>',
       `${templates}\n    ${pick}\n    <div id="root"></div>`,

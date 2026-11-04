@@ -134,7 +134,7 @@ export default function Hero() {
             {/* measured entrance: content group rises 30 px from +0.70 s, headline characters pop from
                 +0.42 s, lead characters from +0.40 s, buttons rise 10 px from +1.55 s (transform/opacity
                 only, so no layout shift; the LCP element on this page is the hero image) */}
-            <PopBlock y={30} delay={heroText.groupDelay} className="flex flex-col gap-5">
+            <PopBlock y={30} immediate delay={heroText.groupDelay} className="flex flex-col gap-5">
               <Chip tone="outline" className="self-start">
                 {SITE.name} <Ar className="ml-2">{copy.hero.eyebrow.ar}</Ar>
               </Chip>
@@ -154,7 +154,7 @@ export default function Hero() {
                 className="max-w-[34ch] text-lead"
               />
             </PopBlock>
-            <PopBlock className="flex flex-col gap-5" y={10} delay={heroText.buttonDelay}>
+            <PopBlock className="flex flex-col gap-5" y={10} immediate delay={heroText.buttonDelay}>
               <div className="flex flex-wrap gap-3">
                 <Button href="#flavors" variant="flavor">
                   {copy.hero.primaryCta.text}

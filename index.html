@@ -8,13 +8,30 @@
     <meta name="description" content="Hipz — lemon and peach drinks." />
     <link rel="icon" href="/logo-badge.png" type="image/png" />
     <script>
-      // Route-aware LCP preload for the hero image of the page being opened (home, /flavors, flavor pages).
+      // Route-aware LCP preload for the hero image of the page being opened (home, /flavors, flavor pages,
+      // /distributors, /our-story).
       // Names/widths mirror scripts/images.config.mjs.
       (function () {
         var p = location.pathname;
         var m = /^\/flavors\/(lemon|peach)\/?$/.exec(p);
         var list = /^\/flavors\/?$/.test(p);
         var home = p === '/' || p === '';
+        if (/^\/our-story\/?$/.test(p)) {
+          // story hero: the duo photo (creators/both-03) is the LCP element
+          var st = document.createElement('link');
+          st.rel = 'preload';
+          st.as = 'image';
+          st.type = 'image/avif';
+          st.setAttribute('fetchpriority', 'high');
+          st.imageSrcset = [480, 768, 1080, 1440, 2048]
+            .map(function (x) {
+              return '/images/creators/both-03-' + x + '.avif ' + x + 'w';
+            })
+            .join(', ');
+          st.imageSizes = '(max-aspect-ratio: 1/1) 100vw, 62vw';
+          document.head.appendChild(st);
+          return;
+        }
         if (/^\/distributors\/?$/.test(p)) {
           // distributors hero: the lemon bottle cutout is the LCP element
           var d = document.createElement('link');

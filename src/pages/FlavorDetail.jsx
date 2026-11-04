@@ -74,28 +74,39 @@ function FlavorPage({ flavor }) {
                 heading +0.16 s (y 40), then text blocks +0.26…0.47 s (y 30), chips pop +0.63 s */}
             <ul className="flex flex-wrap gap-2" aria-label="Facts">
               {attrs.map((k, i) => (
-                <PopBlock as="li" key={k} variant="badge" delay={detailHero.chips + i * 0.15}>
+                <PopBlock
+                  as="li"
+                  key={k}
+                  variant="badge"
+                  immediate
+                  delay={detailHero.chips + i * 0.15}
+                >
                   <Chip tone="paper">{flavor.attributes[k]}</Chip>
                 </PopBlock>
               ))}
             </ul>
-            <PopBlock y={40} delay={detailHero.heading}>
+            <PopBlock y={40} immediate delay={detailHero.heading}>
               <h1 className="font-display text-display font-extrabold landscape:text-[clamp(3rem,6.2vw,6.5rem)]">
                 {flavor.name}
               </h1>
             </PopBlock>
-            <PopBlock y={30} delay={detailHero.blocks[0]} className="self-start">
+            <PopBlock y={30} immediate delay={detailHero.blocks[0]} className="self-start">
               <Ar display className="text-h2">
                 {flavor.nameAr}
               </Ar>
             </PopBlock>
-            <PopBlock y={30} delay={detailHero.blocks[1]}>
+            <PopBlock y={30} immediate delay={detailHero.blocks[1]}>
               <p className="font-display text-h3 font-bold">{copy.flavors[flavor.slug].tagline}</p>
             </PopBlock>
-            <PopBlock y={30} delay={detailHero.blocks[2]}>
+            <PopBlock y={30} immediate delay={detailHero.blocks[2]}>
               <p className="max-w-[36ch] text-lead">{copy.flavors[flavor.slug].blurb}</p>
             </PopBlock>
-            <PopBlock y={30} delay={detailHero.blocks[3]} className="flex flex-wrap gap-3">
+            <PopBlock
+              y={30}
+              immediate
+              delay={detailHero.blocks[3]}
+              className="flex flex-wrap gap-3"
+            >
               <Button to="/distributors" variant="primary">
                 {copy.flavors.findIt.text}
               </Button>

@@ -8,7 +8,8 @@ import { popBadge, revealMargin, revealFailSafeMs, riseFor } from '../motion.js'
 // (optional start `scale`, e.g. .85 for a stage, and `rotate`); variant "badge": scale 0 → 1 with
 // opacity on an under-damped spring (labels, chips, stickers).
 // Fail-safe: shown without motion if IntersectionObserver is missing, if focus enters it, or if it is
-// still hidden `revealFailSafeMs` after being in view. Reduced motion: rendered static.
+// still hidden `revealFailSafeMs` after being in view. `immediate` (heroes): plays on load after `delay`.
+// Reduced motion: rendered static.
 export default function PopBlock({
   children,
   variant = 'rise',
@@ -16,13 +17,16 @@ export default function PopBlock({
   scale,
   rotate,
   delay = 0,
+  immediate = false,
   className = '',
   as = 'div',
   ...rest
 }) {
   const reduce = useReducedMotion();
   const ref = useRef(null);
-  const inView = useInViewOnce(ref, revealMargin);
+  // heroes: play on load (after `delay`), whatever the scroll trigger says
+  const seen = useInViewOnce(ref, revealMargin);
+  const inView = immediate || seen;
   const [forced, setForced] = useState(false);
   const controls = useAnimationControls();
   const Tag = m[as];

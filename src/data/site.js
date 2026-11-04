@@ -26,13 +26,10 @@ export const SOCIAL_LINKS = [
   },
 ];
 
-// Commercial-service numbers from the Instagram bio. The owner allowed them on the distributors
-// page ONLY. Keep them here so they can be removed in one place. `tel` is the international form
-// of the same number (Algeria +213, leading 0 dropped).
+// Commercial-service numbers from the Instagram bio. The owner allowed them on /distributors ONLY.
+// Keep them here so they can be removed in one place. `display` is shown exactly as in the bio; the
+// tel: link is built by normalising it (src/lib/phone.js → +213560404339 / +213770787889).
 export const PUBLIC_CONTACT = {
   label: 'Service commercial', // as written in the Instagram bio
-  phones: [
-    { display: '05 60404339', tel: '+213560404339' },
-    { display: '07 70787889', tel: '+213770787889' },
-  ],
+  phones: [{ display: '05 60404339' }, { display: '07 70787889' }],
 };

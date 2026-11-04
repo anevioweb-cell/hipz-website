@@ -16,7 +16,7 @@ describe('routes', () => {
     ['/flavors', 'Flavors'],
     ['/flavors/peach', 'Peach'],
     ['/flavors/lemon', 'Lemon'],
-    ['/distributors', 'Distributors'],
+    ['/distributors', 'Bring Hipz to your shelves.'],
     ['/our-story', 'Our story'],
     ['/nope', 'Page not found'],
     ['/flavors/mango', 'Page not found'],

@@ -2,7 +2,7 @@
 // Only verified facts live here. `volume`: 330 ml, one single size (owner statement, BRAND_BRIEF row 34).
 // It is shown only as an attribute in "The basics" on flavor pages — never on images, never as "medium".
 // Colors reference tokens in src/index.css; hex values live ONLY there.
-// Mood copy for each flavor is in src/data/copy.js (copy.flavors[slug]), all draft.
+// Mood copy for each flavor is in src/data/copy.js (copy.flavors[slug]).
 export const flavors = [
   {
     slug: 'lemon',

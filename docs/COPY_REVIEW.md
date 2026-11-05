@@ -10,97 +10,97 @@ Status: **approved** = owner-approved (`draft: false`), **draft** = waiting for 
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `meta./.title` | Hipz |  | draft | 4 |
-| `meta./.description` | Hipz: lemon and peach soda from Kada & Miloud. |  | draft | 46 |
+| `meta./.title` | Hipz |  | **approved** | 4 |
+| `meta./.description` | Hipz: lemon and peach soda from Kada & Miloud. |  | **approved** | 46 |
 
 ### `meta./flavors`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `meta./flavors.title` | Flavors — Hipz |  | draft | 14 |
-| `meta./flavors.description` | Two flavors, one smile: Hipz Lemon and Hipz Peach. |  | draft | 50 |
+| `meta./flavors.title` | Flavors — Hipz |  | **approved** | 14 |
+| `meta./flavors.description` | Two flavors, one smile: Hipz Lemon and Hipz Peach. |  | **approved** | 50 |
 
 ### `meta./flavors/lemon`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `meta./flavors/lemon.title` | Lemon — Hipz |  | draft | 12 |
-| `meta./flavors/lemon.description` | Hipz Lemon. Serve it ice cold. |  | draft | 30 |
+| `meta./flavors/lemon.title` | Lemon — Hipz |  | **approved** | 12 |
+| `meta./flavors/lemon.description` | Hipz Lemon. Serve it ice cold. |  | **approved** | 30 |
 
 ### `meta./flavors/peach`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `meta./flavors/peach.title` | Peach — Hipz |  | draft | 12 |
-| `meta./flavors/peach.description` | Hipz Peach. Serve it ice cold. |  | draft | 30 |
+| `meta./flavors/peach.title` | Peach — Hipz |  | **approved** | 12 |
+| `meta./flavors/peach.description` | Hipz Peach. Serve it ice cold. |  | **approved** | 30 |
 
 ### `meta./distributors`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `meta./distributors.title` | Distributors — Hipz |  | draft | 19 |
-| `meta./distributors.description` | Shops, wholesalers, cafés and events: get in touch with the Hipz team. |  | draft | 70 |
+| `meta./distributors.title` | Distributors — Hipz |  | **approved** | 19 |
+| `meta./distributors.description` | Shops, wholesalers, cafés and events: get in touch with the Hipz team. |  | **approved** | 70 |
 
 ### `meta./our-story`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `meta./our-story.title` | Our story — Hipz |  | draft | 16 |
-| `meta./our-story.description` | Kada & Miloud and Hipz: two friends, two flavors, one smile. |  | draft | 60 |
+| `meta./our-story.title` | Our story — Hipz |  | **approved** | 16 |
+| `meta./our-story.description` | Kada & Miloud and Hipz: two friends, two flavors, one smile. |  | **approved** | 60 |
 
 ### `meta.imageAlt`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `meta.imageAlt.text` | A bottle of Hipz Lemon with lemon slices and splashes, and the Hipz logo. |  | draft | 73 |
+| `meta.imageAlt.text` | A bottle of Hipz Lemon with lemon slices and splashes, and the Hipz logo. |  | **approved** | 73 |
 
 ### `nav.flavors`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `nav.flavors.text` | Flavors |  | draft | 7 |
+| `nav.flavors.text` | Flavors |  | **approved** | 7 |
 
 ### `nav.distributors`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `nav.distributors.text` | Distributors |  | draft | 12 |
+| `nav.distributors.text` | Distributors |  | **approved** | 12 |
 
 ### `nav.story`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `nav.story.text` | Our story |  | draft | 9 |
+| `nav.story.text` | Our story |  | **approved** | 9 |
 
 ### `nav.buy`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `nav.buy.text` | Where to buy |  | draft | 12 |
+| `nav.buy.text` | Where to buy |  | **approved** | 12 |
 
 ### `nav.menuOpen`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `nav.menuOpen.text` | Open menu |  | draft | 9 |
+| `nav.menuOpen.text` | Open menu |  | **approved** | 9 |
 
 ### `nav.menuClose`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `nav.menuClose.text` | Close menu |  | draft | 10 |
+| `nav.menuClose.text` | Close menu |  | **approved** | 10 |
 
 ### `footer.tagline`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `footer.tagline.text` | Smile in a bottle. |  | draft | 18 |
+| `footer.tagline.text` | Smile in a bottle. |  | **approved** | 18 |
 
 ### `footer.follow`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `footer.follow.text` | Follow along |  | draft | 12 |
+| `footer.follow.text` | Follow along |  | **approved** | 12 |
 
 ## Home (/)
 
@@ -120,125 +120,125 @@ Status: **approved** = owner-approved (`draft: false`), **draft** = waiting for 
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `hero.subtitle.text` | Lemon or peach. Ice cold. Fizz on. |  | draft | 34 |
+| `hero.subtitle.text` | Lemon or peach. Ice cold. Fizz on. |  | **approved** | 34 |
 
 ### `hero.primaryCta`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `hero.primaryCta.text` | Meet the flavors |  | draft | 16 |
+| `hero.primaryCta.text` | Meet the flavors |  | **approved** | 16 |
 
 ### `hero.secondaryCta`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `hero.secondaryCta.text` | Find it |  | draft | 7 |
+| `hero.secondaryCta.text` | Find it |  | **approved** | 7 |
 
 ### `hero.pause`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `hero.pause.text` | Pause |  | draft | 5 |
+| `hero.pause.text` | Pause |  | **approved** | 5 |
 
 ### `hero.play`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `hero.play.text` | Play |  | draft | 4 |
+| `hero.play.text` | Play |  | **approved** | 4 |
 
 ### `hero.switchLabel`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `hero.switchLabel.text` | Choose a flavor |  | draft | 15 |
+| `hero.switchLabel.text` | Choose a flavor |  | **approved** | 15 |
 
 ### `ticker.items`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `ticker.items.items` | Hipz / Lemon / هايبز / Ice cold / Peach / خوخ / Pop it / ليمون / Share it |  | draft | 73 |
+| `ticker.items.items` | Hipz / Lemon / هايبز / Ice cold / Peach / خوخ / Pop it / ليمون / Share it |  | **approved** | 73 |
 
 ### `sections.flavors`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `sections.flavors.title` | A flavor for every mood. |  | draft | 24 |
-| `sections.flavors.eyebrow` | Lemon · Peach |  | draft | 13 |
+| `sections.flavors.title` | A flavor for every mood. |  | **approved** | 24 |
+| `sections.flavors.eyebrow` | Lemon · Peach |  | **approved** | 13 |
 
 ### `moments.header`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `moments.header.eyebrow` | Moments |  | draft | 7 |
-| `moments.header.lines` | A Hipz for / every moment. |  | draft | 26 |
-| `moments.header.text` | Cold, fizzy and made to pass around, wherever the day takes you. |  | draft | 64 |
+| `moments.header.eyebrow` | Moments |  | **approved** | 7 |
+| `moments.header.lines` | A Hipz for / every moment. |  | **approved** | 26 |
+| `moments.header.text` | Cold, fizzy and made to pass around, wherever the day takes you. |  | **approved** | 64 |
 
 ### `moments.match`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `moments.match.title` | Match night | ماتش | draft | 11 |
-| `moments.match.text` | Kick-off in five. Grab a cold one before the first whistle. |  | draft | 59 |
+| `moments.match.title` | Match night | ماتش | **approved** | 11 |
+| `moments.match.text` | Kick-off in five. Grab a cold one before the first whistle. |  | **approved** | 59 |
 
 ### `moments.road`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `moments.road.title` | Road trip | طريق | draft | 9 |
-| `moments.road.text` | Windows down, playlist up, a bottle in the door. |  | draft | 48 |
+| `moments.road.title` | Road trip | طريق | **approved** | 9 |
+| `moments.road.text` | Windows down, playlist up, a bottle in the door. |  | **approved** | 48 |
 
 ### `moments.friends`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `moments.friends.title` | Friends over | لمّة | draft | 12 |
-| `moments.friends.text` | Someone brings the snacks. Someone brings the Hipz. |  | draft | 51 |
+| `moments.friends.title` | Friends over | لمّة | **approved** | 12 |
+| `moments.friends.text` | Someone brings the snacks. Someone brings the Hipz. |  | **approved** | 51 |
 
 ### `moments.study`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `moments.study.title` | Study break | راحة | draft | 11 |
-| `moments.study.text` | Ten minutes off the books. Pop, sip, back to it. |  | draft | 48 |
+| `moments.study.title` | Study break | راحة | **approved** | 11 |
+| `moments.study.text` | Ten minutes off the books. Pop, sip, back to it. |  | **approved** | 48 |
 
 ### `why.header`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `why.header.eyebrow` | Why Hipz |  | draft | 8 |
-| `why.header.lines` | Simple. / Cold. Ours. |  | draft | 21 |
-| `why.header.cta` | Our story |  | draft | 9 |
+| `why.header.eyebrow` | Why Hipz |  | **approved** | 8 |
+| `why.header.lines` | Simple. / Cold. Ours. |  | **approved** | 21 |
+| `why.header.cta` | Our story |  | **approved** | 9 |
 
 ### `why.pillars`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `why.pillars.items` | two — Two flavors. That’s it. — Lemon or peach. Pick a side, or have both. — ليمون أو خوخ / creators — Kada & Miloud’s own soda. — Hipz is the soda brand of Kada & Miloud. / cold — Serve it ice cold. — Straight from the fridge, or over ice. |  | draft | 240 |
+| `why.pillars.items` | two — Two flavors. That’s it. — Lemon or peach. Pick a side, or have both. — ليمون أو خوخ / creators — Kada & Miloud’s own soda. — Hipz is the soda brand of Kada & Miloud. / cold — Serve it ice cold. — Straight from the fridge, or over ice. |  | **approved** | 240 |
 
 ### `both.feature`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `both.feature.eyebrow` | Both flavors |  | draft | 12 |
-| `both.feature.lines` | Can’t pick? / Don’t. |  | draft | 20 |
-| `both.feature.text` | Lemon and peach, side by side. |  | draft | 30 |
-| `both.feature.cta` | Find it |  | draft | 7 |
+| `both.feature.eyebrow` | Both flavors |  | **approved** | 12 |
+| `both.feature.lines` | Can’t pick? / Don’t. |  | **approved** | 20 |
+| `both.feature.text` | Lemon and peach, side by side. |  | **approved** | 30 |
+| `both.feature.cta` | Find it |  | **approved** | 7 |
 
 ### `community.header`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `community.header.eyebrow` | Community |  | draft | 9 |
-| `community.header.lines` | Share your / Hipz moment. |  | draft | 25 |
-| `community.header.text` | Snap it, tag @hipzdrink and use #hipz. |  | draft | 38 |
-| `community.header.cta` | Tag @hipzdrink |  | draft | 14 |
-| `community.header.label` | Hipz on Instagram |  | draft | 17 |
+| `community.header.eyebrow` | Community |  | **approved** | 9 |
+| `community.header.lines` | Share your / Hipz moment. |  | **approved** | 25 |
+| `community.header.text` | Snap it, tag @hipzdrink and use #hipz. |  | **approved** | 38 |
+| `community.header.cta` | Tag @hipzdrink |  | **approved** | 14 |
+| `community.header.label` | Hipz on Instagram |  | **approved** | 17 |
 
 ### `community.words`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `community.words.items` | #hipz / هايبز / Lemon / Peach / ليمون / خوخ / Ice cold |  | draft | 54 |
+| `community.words.items` | #hipz / هايبز / Lemon / Peach / ليمون / خوخ / Ice cold |  | **approved** | 54 |
 
 ## Flavors (/flavors and /flavors/:slug)
 
@@ -246,88 +246,88 @@ Status: **approved** = owner-approved (`draft: false`), **draft** = waiting for 
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.lemon.tagline` | Bright. Loud. Cold. |  | draft | 19 |
-| `flavors.lemon.blurb` | A sunny-day mood in a bottle. Pop it open, pass it around. |  | draft | 58 |
+| `flavors.lemon.tagline` | Bright. Loud. Cold. |  | **approved** | 19 |
+| `flavors.lemon.blurb` | A sunny-day mood in a bottle. Pop it open, pass it around. |  | **approved** | 58 |
 
 ### `flavors.peach`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.peach.tagline` | Golden hour. Ice cold. |  | draft | 22 |
-| `flavors.peach.blurb` | A golden-hour mood in a bottle. Pop it open, say cheers. |  | draft | 56 |
+| `flavors.peach.tagline` | Golden hour. Ice cold. |  | **approved** | 22 |
+| `flavors.peach.blurb` | A golden-hour mood in a bottle. Pop it open, say cheers. |  | **approved** | 56 |
 
 ### `flavors.both`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.both.name` | Both flavors |  | draft | 12 |
-| `flavors.both.tagline` | Can’t pick? Don’t. |  | draft | 18 |
-| `flavors.both.blurb` | Lemon and peach, side by side. |  | draft | 30 |
+| `flavors.both.name` | Both flavors |  | **approved** | 12 |
+| `flavors.both.tagline` | Can’t pick? Don’t. |  | **approved** | 18 |
+| `flavors.both.blurb` | Lemon and peach, side by side. |  | **approved** | 30 |
 
 ### `flavors.findIt`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.findIt.text` | Find it |  | draft | 7 |
+| `flavors.findIt.text` | Find it |  | **approved** | 7 |
 
 ### `flavors.meet`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.meet.text` | Meet |  | draft | 4 |
+| `flavors.meet.text` | Meet |  | **approved** | 4 |
 
 ### `flavors.more`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.more.title` | More to sip. |  | draft | 12 |
+| `flavors.more.title` | More to sip. |  | **approved** | 12 |
 
 ### `flavors.attributesTitle`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.attributesTitle.title` | The basics |  | draft | 10 |
+| `flavors.attributesTitle.title` | The basics |  | **approved** | 10 |
 
 ### `flavors.attrLabels`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.attrLabels.format` | Format |  | draft | 6 |
-| `flavors.attrLabels.cap` | Cap |  | draft | 3 |
-| `flavors.attrLabels.serve` | Serve |  | draft | 5 |
-| `flavors.attrLabels.size` | Size |  | draft | 4 |
+| `flavors.attrLabels.format` | Format |  | **approved** | 6 |
+| `flavors.attrLabels.cap` | Cap |  | **approved** | 3 |
+| `flavors.attrLabels.serve` | Serve |  | **approved** | 5 |
+| `flavors.attrLabels.size` | Size |  | **approved** | 4 |
 
 ### `flavors.closing`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.closing.title` | Cold one, please. |  | draft | 17 |
-| `flavors.closing.text` | Find your Hipz near you. |  | draft | 24 |
+| `flavors.closing.title` | Cold one, please. |  | **approved** | 17 |
+| `flavors.closing.text` | Find your Hipz near you. |  | **approved** | 24 |
 
 ### `flavors.pageTitle`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.pageTitle.title` | Flavors |  | draft | 7 |
-| `flavors.pageTitle.subtitle` | Two flavors. One smile. |  | draft | 23 |
+| `flavors.pageTitle.title` | Flavors |  | **approved** | 7 |
+| `flavors.pageTitle.subtitle` | Two flavors. One smile. |  | **approved** | 23 |
 
 ### `flavors.prev`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.prev.text` | Previous flavor |  | draft | 15 |
+| `flavors.prev.text` | Previous flavor |  | **approved** | 15 |
 
 ### `flavors.next`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.next.text` | Next flavor |  | draft | 11 |
+| `flavors.next.text` | Next flavor |  | **approved** | 11 |
 
 ### `flavors.carouselLabel`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `flavors.carouselLabel.text` | Flavors |  | draft | 7 |
+| `flavors.carouselLabel.text` | Flavors |  | **approved** | 7 |
 
 ## Distributors (/distributors)
 
@@ -335,93 +335,93 @@ Status: **approved** = owner-approved (`draft: false`), **draft** = waiting for 
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `distributors.pageTitle.text` | Distributors — Hipz |  | draft | 19 |
+| `distributors.pageTitle.text` | Distributors — Hipz |  | **approved** | 19 |
 
 ### `distributors.hero`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `distributors.hero.eyebrow` | Distributors | هايبز عندك | draft | 12 |
-| `distributors.hero.lines` | Bring Hipz / to your shelves. |  | draft | 29 |
-| `distributors.hero.text` | Shops, wholesalers, cafés and events: tell us about your business and the Hipz team will get in touch. |  | draft | 102 |
-| `distributors.hero.primary` | Send a request |  | draft | 14 |
-| `distributors.hero.secondary` | Call us |  | draft | 7 |
+| `distributors.hero.eyebrow` | Distributors | هايبز عندك | **approved** | 12 |
+| `distributors.hero.lines` | Bring Hipz / to your shelves. |  | **approved** | 29 |
+| `distributors.hero.text` | Shops, wholesalers, cafés and events: tell us about your business and the Hipz team will get in touch. |  | **approved** | 102 |
+| `distributors.hero.primary` | Send a request |  | **approved** | 14 |
+| `distributors.hero.secondary` | Call us |  | **approved** | 7 |
 
 ### `distributors.contact`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `distributors.contact.eyebrow` | Service commercial |  | draft | 18 |
-| `distributors.contact.lines` | Talk to / the Hipz team. |  | draft | 24 |
-| `distributors.contact.text` | Call the commercial service, or send Hipz a message on Instagram. |  | draft | 65 |
-| `distributors.contact.callPrefix` | Call the Hipz commercial service on |  | draft | 35 |
-| `distributors.contact.instagram` | Message Hipz on Instagram |  | draft | 25 |
+| `distributors.contact.eyebrow` | Service commercial |  | **approved** | 18 |
+| `distributors.contact.lines` | Talk to / the Hipz team. |  | **approved** | 24 |
+| `distributors.contact.text` | Call the commercial service, or send Hipz a message on Instagram. |  | **approved** | 65 |
+| `distributors.contact.callPrefix` | Call the Hipz commercial service on |  | **approved** | 35 |
+| `distributors.contact.instagram` | Message Hipz on Instagram |  | **approved** | 25 |
 
 ### `distributors.ways`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `distributors.ways.eyebrow` | Ways to work with Hipz |  | draft | 22 |
-| `distributors.ways.lines` | Who can / reach out? |  | draft | 20 |
-| `distributors.ways.cta` | Get in touch |  | draft | 12 |
-| `distributors.ways.items` | shop — Shops & supermarkets — Grocers, mini-markets and supermarkets that want Hipz in their fridges. / wholesale — Wholesalers & distributors — Wholesalers and distributors who supply shops in their area. / horeca — Cafés & restaurants — Cafés, restaurants, snack bars and food trucks. / events — Events & partnerships — Events, clubs, venues and brand partnerships. |  | draft | 367 |
+| `distributors.ways.eyebrow` | Ways to work with Hipz |  | **approved** | 22 |
+| `distributors.ways.lines` | Who can / reach out? |  | **approved** | 20 |
+| `distributors.ways.cta` | Get in touch |  | **approved** | 12 |
+| `distributors.ways.items` | shop — Shops & supermarkets — Grocers, mini-markets and supermarkets that want Hipz in their fridges. / wholesale — Wholesalers & distributors — Wholesalers and distributors who supply shops in their area. / horeca — Cafés & restaurants — Cafés, restaurants, snack bars and food trucks. / events — Events & partnerships — Events, clubs, venues and brand partnerships. |  | **approved** | 367 |
 
 ### `distributors.form`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `distributors.form.eyebrow` | Wholesale request |  | draft | 17 |
-| `distributors.form.lines` | Send a / request. |  | draft | 17 |
-| `distributors.form.text` | Fields marked * are required. |  | draft | 29 |
-| `distributors.form.business` | Business name |  | draft | 13 |
-| `distributors.form.contact` | Contact person |  | draft | 14 |
-| `distributors.form.phone` | Phone |  | draft | 5 |
-| `distributors.form.phoneHint` | Algerian number, e.g. 05 XX XX XX XX or +213 5XX XX XX XX |  | draft | 57 |
-| `distributors.form.email` | Email (optional) |  | draft | 16 |
-| `distributors.form.wilaya` | Wilaya |  | draft | 6 |
-| `distributors.form.wilayaPlaceholder` | Choose your wilaya |  | draft | 18 |
-| `distributors.form.type` | Business type |  | draft | 13 |
-| `distributors.form.typePlaceholder` | Choose a type |  | draft | 13 |
-| `distributors.form.other` | Other |  | draft | 5 |
-| `distributors.form.message` | Message (optional) |  | draft | 18 |
-| `distributors.form.messageHint` | Up to 1000 characters. |  | draft | 22 |
-| `distributors.form.honeypot` | Leave this field empty |  | draft | 22 |
-| `distributors.form.submit` | Send request |  | draft | 12 |
-| `distributors.form.sending` | Sending… |  | draft | 8 |
-| `distributors.form.errors.required` | This field is required. |  | draft | 23 |
-| `distributors.form.errors.phone` | Enter an Algerian phone number (mobile 05/06/07 or a landline). |  | draft | 63 |
-| `distributors.form.errors.email` | Enter a valid email address, or leave it empty. |  | draft | 47 |
-| `distributors.form.errors.tooLong` | Please keep it under 1000 characters. |  | draft | 37 |
-| `distributors.form.errors.summary` | Please check the highlighted fields. |  | draft | 36 |
-| `distributors.form.success.title` | Thanks! |  | draft | 7 |
-| `distributors.form.success.text` | The Hipz team will get back to you. |  | draft | 35 |
-| `distributors.form.success.again` | Send another request |  | draft | 20 |
-| `distributors.form.unavailable.title` | Not available yet |  | draft | 17 |
-| `distributors.form.unavailable.text` | Requests can’t be sent from this page yet. Please call the commercial service instead. |  | draft | 86 |
+| `distributors.form.eyebrow` | Wholesale request |  | **approved** | 17 |
+| `distributors.form.lines` | Send a / request. |  | **approved** | 17 |
+| `distributors.form.text` | Fields marked * are required. |  | **approved** | 29 |
+| `distributors.form.business` | Business name |  | **approved** | 13 |
+| `distributors.form.contact` | Contact person |  | **approved** | 14 |
+| `distributors.form.phone` | Phone |  | **approved** | 5 |
+| `distributors.form.phoneHint` | Algerian number, e.g. 05 XX XX XX XX or +213 5XX XX XX XX |  | **approved** | 57 |
+| `distributors.form.email` | Email (optional) |  | **approved** | 16 |
+| `distributors.form.wilaya` | Wilaya |  | **approved** | 6 |
+| `distributors.form.wilayaPlaceholder` | Choose your wilaya |  | **approved** | 18 |
+| `distributors.form.type` | Business type |  | **approved** | 13 |
+| `distributors.form.typePlaceholder` | Choose a type |  | **approved** | 13 |
+| `distributors.form.other` | Other |  | **approved** | 5 |
+| `distributors.form.message` | Message (optional) |  | **approved** | 18 |
+| `distributors.form.messageHint` | Up to 1000 characters. |  | **approved** | 22 |
+| `distributors.form.honeypot` | Leave this field empty |  | **approved** | 22 |
+| `distributors.form.submit` | Send request |  | **approved** | 12 |
+| `distributors.form.sending` | Sending… |  | **approved** | 8 |
+| `distributors.form.errors.required` | This field is required. |  | **approved** | 23 |
+| `distributors.form.errors.phone` | Enter an Algerian phone number (mobile 05/06/07 or a landline). |  | **approved** | 63 |
+| `distributors.form.errors.email` | Enter a valid email address, or leave it empty. |  | **approved** | 47 |
+| `distributors.form.errors.tooLong` | Please keep it under 1000 characters. |  | **approved** | 37 |
+| `distributors.form.errors.summary` | Please check the highlighted fields. |  | **approved** | 36 |
+| `distributors.form.success.title` | Thanks! |  | **approved** | 7 |
+| `distributors.form.success.text` | The Hipz team will get back to you. |  | **approved** | 35 |
+| `distributors.form.success.again` | Send another request |  | **approved** | 20 |
+| `distributors.form.unavailable.title` | Not available yet |  | **approved** | 17 |
+| `distributors.form.unavailable.text` | Requests can’t be sent from this page yet. Please call the commercial service instead. |  | **approved** | 86 |
 
 ### `distributors.finder`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `distributors.finder.eyebrow` | Store finder |  | draft | 12 |
-| `distributors.finder.lines` | Find Hipz / near you. |  | draft | 21 |
-| `distributors.finder.select` | Your wilaya |  | draft | 11 |
-| `distributors.finder.placeholder` | Choose a wilaya |  | draft | 15 |
-| `distributors.finder.button` | Show stockists |  | draft | 14 |
-| `distributors.finder.empty.title` | No stockists listed here yet |  | draft | 28 |
-| `distributors.finder.empty.text` | No Hipz stockists are listed on this page for this wilaya. Want to stock Hipz? Call the commercial service or send a request. |  | draft | 125 |
-| `distributors.finder.empty.call` | Call us |  | draft | 7 |
-| `distributors.finder.empty.form` | Send a request |  | draft | 14 |
-| `distributors.finder.one` | stockist in |  | draft | 11 |
-| `distributors.finder.many` | stockists in |  | draft | 12 |
-| `distributors.finder.map` | Map |  | draft | 3 |
+| `distributors.finder.eyebrow` | Store finder |  | **approved** | 12 |
+| `distributors.finder.lines` | Find Hipz / near you. |  | **approved** | 21 |
+| `distributors.finder.select` | Your wilaya |  | **approved** | 11 |
+| `distributors.finder.placeholder` | Choose a wilaya |  | **approved** | 15 |
+| `distributors.finder.button` | Show stockists |  | **approved** | 14 |
+| `distributors.finder.empty.title` | No stockists listed here yet |  | **approved** | 28 |
+| `distributors.finder.empty.text` | No Hipz stockists are listed on this page for this wilaya. Want to stock Hipz? Call the commercial service or send a request. |  | **approved** | 125 |
+| `distributors.finder.empty.call` | Call us |  | **approved** | 7 |
+| `distributors.finder.empty.form` | Send a request |  | **approved** | 14 |
+| `distributors.finder.one` | stockist in |  | **approved** | 11 |
+| `distributors.finder.many` | stockists in |  | **approved** | 12 |
+| `distributors.finder.map` | Map |  | **approved** | 3 |
 
 ### `distributors.closing`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `distributors.closing.lines` | Lemon or peach? / Both. |  | draft | 23 |
-| `distributors.closing.cta` | See the flavors |  | draft | 15 |
+| `distributors.closing.lines` | Lemon or peach? / Both. |  | **approved** | 23 |
+| `distributors.closing.cta` | See the flavors |  | **approved** | 15 |
 
 ## Our story (/our-story)
 
@@ -429,144 +429,82 @@ Status: **approved** = owner-approved (`draft: false`), **draft** = waiting for 
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `story.pageTitle.title` | Our story |  | draft | 9 |
+| `story.pageTitle.title` | Our story |  | **approved** | 9 |
 
 ### `story.hero`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `story.hero.eyebrow` | Our story | قصتنا | draft | 9 |
-| `story.hero.lines` | Two friends. / One smile. |  | draft | 25 |
-| `story.hero.text` | Kada & Miloud, and the soda that’s theirs. |  | draft | 42 |
-| `story.hero.cta` | Meet the duo |  | draft | 12 |
+| `story.hero.eyebrow` | Our story | قصتنا | **approved** | 9 |
+| `story.hero.lines` | Two friends. / One smile. |  | **approved** | 25 |
+| `story.hero.text` | Kada & Miloud, and the soda that’s theirs. |  | **approved** | 42 |
+| `story.hero.cta` | Meet the duo |  | **approved** | 12 |
 
 ### `story.duo`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `story.duo.eyebrow` | The duo | قادة و ميلود | draft | 7 |
-| `story.duo.lines` | Kada & Miloud. / The owners of Hipz. |  | draft | 36 |
-| `story.duo.text` | Two friends, two flavors, one smile. Follow them, and Hipz, where they post. |  | draft | 76 |
-| `story.duo.follow` | Follow |  | draft | 6 |
+| `story.duo.eyebrow` | The duo | قادة و ميلود | **approved** | 7 |
+| `story.duo.lines` | Kada & Miloud. / The owners of Hipz. |  | **approved** | 36 |
+| `story.duo.text` | Two friends, two flavors, one smile. Follow them, and Hipz, where they post. |  | **approved** | 76 |
+| `story.duo.follow` | Follow |  | **approved** | 6 |
 
 ### `story.bottling`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `story.bottling.eyebrow` | Behind the bottles |  | draft | 18 |
-| `story.bottling.lines` | At the / bottling line. |  | draft | 23 |
-| `story.bottling.text` | The duo with Hipz bottles, from the brand’s own posts. |  | draft | 54 |
+| `story.bottling.eyebrow` | Behind the bottles |  | **approved** | 18 |
+| `story.bottling.lines` | At the / bottling line. |  | **approved** | 23 |
+| `story.bottling.text` | The duo with Hipz bottles, from the brand’s own posts. |  | **approved** | 54 |
 
 ### `story.flavors`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `story.flavors.eyebrow` | Two flavors, one smile | ليمون · خوخ | draft | 22 |
-| `story.flavors.lines` | Lemon. / Peach. / One smile. |  | draft | 28 |
-| `story.flavors.cta` | See the flavors |  | draft | 15 |
+| `story.flavors.eyebrow` | Two flavors, one smile | ليمون · خوخ | **approved** | 22 |
+| `story.flavors.lines` | Lemon. / Peach. / One smile. |  | **approved** | 28 |
+| `story.flavors.cta` | See the flavors |  | **approved** | 15 |
 
 ### `story.origin`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `story.origin.eyebrow` | How it started |  | draft | 14 |
-| `story.origin.foundedLabel` | Since |  | draft | 5 |
+| `story.origin.eyebrow` | How it started |  | **approved** | 14 |
+| `story.origin.foundedLabel` | Since |  | **approved** | 5 |
 
 ### `story.milestones`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `story.milestones.eyebrow` | Milestones |  | draft | 10 |
-| `story.milestones.lines` | Along / the way. |  | draft | 16 |
+| `story.milestones.eyebrow` | Milestones |  | **approved** | 10 |
+| `story.milestones.lines` | Along / the way. |  | **approved** | 16 |
 
 ### `story.quotes`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `story.quotes.eyebrow` | In their words |  | draft | 14 |
-| `story.quotes.translation` | Translation |  | draft | 11 |
+| `story.quotes.eyebrow` | In their words |  | **approved** | 14 |
+| `story.quotes.translation` | Translation |  | **approved** | 11 |
 
 ### `story.plant`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `story.plant.eyebrow` | Where it’s made |  | draft | 15 |
+| `story.plant.eyebrow` | Where it’s made |  | **approved** | 15 |
 
 ### `story.closing`
 
 | Key | English | Arabic accents | Status | Chars |
 |---|---|---|---|---|
-| `story.closing.lines` | Want Hipz / on your shelves? |  | draft | 28 |
-| `story.closing.cta` | Become a distributor |  | draft | 20 |
-| `story.closing.follow` | Follow the duo and Hipz |  | draft | 23 |
+| `story.closing.lines` | Want Hipz / on your shelves? |  | **approved** | 28 |
+| `story.closing.cta` | Become a distributor |  | **approved** | 20 |
+| `story.closing.follow` | Follow the duo and Hipz |  | **approved** | 23 |
 
-## Still draft (63 of 65 entries)
+## Still draft (0 of 65 entries)
 
 Everything below needs the owner's approval before the site is shown to Kada and Miloud:
 
-- `meta./`
-- `meta./flavors`
-- `meta./flavors/lemon`
-- `meta./flavors/peach`
-- `meta./distributors`
-- `meta./our-story`
-- `meta.imageAlt`
-- `nav.flavors`
-- `nav.distributors`
-- `nav.story`
-- `nav.buy`
-- `nav.menuOpen`
-- `nav.menuClose`
-- `footer.tagline`
-- `footer.follow`
-- `hero.subtitle`
-- `hero.primaryCta`
-- `hero.secondaryCta`
-- `hero.pause`
-- `hero.play`
-- `hero.switchLabel`
-- `ticker.items`
-- `sections.flavors`
-- `moments.header`
-- `moments.match`
-- `moments.road`
-- `moments.friends`
-- `moments.study`
-- `why.header`
-- `why.pillars`
-- `both.feature`
-- `community.header`
-- `community.words`
-- `flavors.lemon`
-- `flavors.peach`
-- `flavors.both`
-- `flavors.findIt`
-- `flavors.meet`
-- `flavors.more`
-- `flavors.attributesTitle`
-- `flavors.attrLabels`
-- `flavors.closing`
-- `flavors.pageTitle`
-- `flavors.prev`
-- `flavors.next`
-- `flavors.carouselLabel`
-- `distributors.pageTitle`
-- `distributors.hero`
-- `distributors.contact`
-- `distributors.ways`
-- `distributors.form`
-- `distributors.finder`
-- `distributors.closing`
-- `story.pageTitle`
-- `story.hero`
-- `story.duo`
-- `story.bottling`
-- `story.flavors`
-- `story.origin`
-- `story.milestones`
-- `story.quotes`
-- `story.plant`
-- `story.closing`
+
 
 ## Banned-claims scan (copy.js + story.js, 227 strings)
 

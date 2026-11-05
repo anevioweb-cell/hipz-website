@@ -8,7 +8,7 @@ import FlavorTheme from './FlavorTheme.jsx';
 import { copy } from '../data/copy.js';
 import { hideHeroShell } from '../lib/heroShell.js';
 
-// Big band in a flavor's color: name, one line of draft copy, links, and the 4:5 portrait scene.
+// Big band in a flavor's color: name, one line of copy, links, and the 4:5 portrait scene.
 // `flip` swaps the sides (alternating bands on /flavors). Effects run at low intensity and pause
 // offscreen.
 export default function FlavorBand({ flavor, flip = false, first = false }) {

@@ -12,9 +12,8 @@ describe('copy.js', () => {
   it('has copy entries', () => {
     expect(leaves.length).toBeGreaterThan(25);
   });
-  it('marks every entry draft: true except the owner-approved hero headline and chip', () => {
-    const approvedPaths = ['copy.hero.eyebrow', 'copy.hero.headline'];
-    for (const [path, leaf] of leaves) expect(leaf.draft, path).toBe(!approvedPaths.includes(path));
+  it('has a draft flag on every entry; all approved by the owner (Phase 8)', () => {
+    for (const [path, leaf] of leaves) expect(leaf.draft, path).toBe(false);
   });
   it('contains no forbidden claims', () => {
     const banned =

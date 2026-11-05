@@ -18,10 +18,10 @@ export default function Footer() {
           </PopBlock>
           <PopBlock y={40} delay={0.12} className="flex flex-wrap gap-16">
             <nav aria-label="Footer">
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col">
                 {navLinks.map((l) => (
                   <li key={l.to}>
-                    <Link className="hover:underline" to={l.to}>
+                    <Link className="inline-flex min-h-11 items-center hover:underline" to={l.to}>
                       {l.label}
                     </Link>
                   </li>
@@ -32,11 +32,11 @@ export default function Footer() {
               <p className="mb-3 font-mono text-label uppercase opacity-70">
                 {copy.footer.follow.text}
               </p>
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col">
                 {SOCIAL_LINKS.map((s) => (
                   <li key={s.id}>
                     <a
-                      className="inline-flex items-center gap-2 hover:underline"
+                      className="inline-flex min-h-11 items-center gap-2 hover:underline"
                       href={s.href}
                       target="_blank"
                       rel="noopener noreferrer"

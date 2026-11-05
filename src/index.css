@@ -163,6 +163,13 @@
     html {
       scroll-behavior: auto;
     }
+    /* safety net: any remaining CSS transition (hover tilts, colour fades) becomes instant */
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
   }
 }
 
@@ -191,7 +198,8 @@
     will-change: transform;
   }
   .marquee:hover .marquee-track,
-  .marquee:focus-within .marquee-track {
+  .marquee:focus-within .marquee-track,
+  .marquee.is-paused .marquee-track {
     animation-play-state: paused;
   }
   @media (prefers-reduced-motion: reduce) {

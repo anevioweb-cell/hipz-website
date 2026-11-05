@@ -33,7 +33,7 @@ export function PhoneLinks({ className = '', size = 'lg' }) {
 export default function ContactBand() {
   const c = copy.distributors.contact;
   return (
-    <section id="contact" className="bg-ink text-paper">
+    <section id="commercial-service" className="bg-ink text-paper">
       <div className="mx-auto grid max-w-site gap-10 px-gutter py-[72px] lg:grid-cols-2 lg:items-end lg:px-gutter-lg lg:py-[110px]">
         <SectionHeader eyebrow={c.eyebrow} lines={c.lines}>
           {c.text}

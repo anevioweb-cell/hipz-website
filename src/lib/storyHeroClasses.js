@@ -13,6 +13,9 @@ export const STORY_HERO = {
   // landscape: blends the photo edge into the peach ground; portrait: dark scrim above the text
   blend:
     'pointer-events-none absolute inset-y-0 left-[38%] hidden w-[22%] bg-linear-to-r from-peach-soft to-transparent landscape:block',
+  // landscape: light fade under the navbar so its ink links stay readable over the photo
+  topFade:
+    'pointer-events-none absolute inset-x-0 top-0 hidden h-[24%] bg-linear-to-b from-peach-soft via-peach-soft/70 to-transparent landscape:block',
   scrim:
     'pointer-events-none absolute inset-x-0 bottom-[50%] hidden h-[32%] bg-linear-to-t from-ink from-10% via-ink/70 to-transparent portrait:block',
 };

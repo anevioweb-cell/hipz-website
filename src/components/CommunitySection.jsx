@@ -1,6 +1,8 @@
 import Ar from './Ar.jsx';
 import Button from './Button.jsx';
-import Marquee from './Marquee.jsx';
+import { useState } from 'react';
+import { useReducedMotion } from 'motion/react';
+import Marquee, { MotionToggle } from './Marquee.jsx';
 import Picture from './Picture.jsx';
 import PopBlock from './PopBlock.jsx';
 import SectionHeader from './SectionHeader.jsx';
@@ -105,30 +107,44 @@ function PostTile({ post }) {
 
 export function CommunityRows({ posts = communityPosts }) {
   const hasPosts = posts.length > 0;
+  const reduce = useReducedMotion();
+  const [paused, setPaused] = useState(false);
   const half = Math.ceil(fallbackTiles.length / 2);
   const rows = hasPosts
     ? [posts.filter((_, i) => i % 2 === 0), posts.filter((_, i) => i % 2 === 1)]
     : [fallbackTiles.slice(0, half), fallbackTiles.slice(half)];
   return (
-    <div
-      className="flex flex-col gap-5"
-      aria-hidden={hasPosts ? undefined : 'true'}
-      data-testid="community-rows"
-    >
-      {rows.map((row, r) => (
-        <Marquee
-          key={r}
-          speed={speeds.reviewRows}
-          reverse={r === 1}
-          label={hasPosts ? 'Community posts' : undefined}
-        >
-          {row.map((item, i) => (
-            <div key={i} className="pr-5">
-              {hasPosts ? <PostTile post={item} /> : <Tile tile={item} />}
-            </div>
-          ))}
-        </Marquee>
-      ))}
+    <div className="relative">
+      <div
+        className="flex flex-col gap-5"
+        aria-hidden={hasPosts ? undefined : 'true'}
+        data-testid="community-rows"
+      >
+        {rows.map((row, r) => (
+          <Marquee
+            key={r}
+            speed={speeds.reviewRows}
+            reverse={r === 1}
+            label={hasPosts ? 'Community posts' : undefined}
+            paused={paused}
+            control={false}
+          >
+            {row.map((item, i) => (
+              <div key={i} className="pr-5">
+                {hasPosts ? <PostTile post={item} /> : <Tile tile={item} />}
+              </div>
+            ))}
+          </Marquee>
+        ))}
+      </div>
+      {/* one control for both rows, outside the aria-hidden wrapper (WCAG 2.2.2) */}
+      {!reduce && (
+        <MotionToggle
+          paused={paused}
+          onToggle={() => setPaused((p) => !p)}
+          className="absolute right-[max(1rem,env(safe-area-inset-right))] -bottom-14"
+        />
+      )}
     </div>
   );
 }

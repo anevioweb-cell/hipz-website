@@ -3,7 +3,8 @@ import Ar from './Ar.jsx';
 import { copy } from '../data/copy.js';
 import { speeds } from '../motion.js';
 
-// Band under the hero: neutral words only (copy.ticker). Leftward at the measured 72 px/s.
+// Band under the hero: neutral words only (copy.ticker). Leftward at the measured 60 px/s, with a
+// pause button (it moves longer than 5 s).
 export default function Ticker({ className = '' }) {
   const items = copy.ticker.items.items;
   return (

@@ -1,0 +1,2674 @@
+[
+ {
+  "path": "/",
+  "state": "default",
+  "width": 1440,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".hover\\:bg-ink\\/10.px-4[href$=\"flavors\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "li:nth-child(2) > .hover\\:bg-ink\\/10.px-4.py-2",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".hover\\:bg-ink\\/10.px-4[href$=\"our-story\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-3\\.5",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".ml-2.ar[lang=\"ar\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(6)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(7)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(7) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(7) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".pr-5\\.5 > span",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.hover\\:bg-paper",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.hover\\:bg-paper > .ar[lang=\"ar\"][dir=\"rtl\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".bg-paper\\/70.hover\\:bg-paper.sm\\:text-base",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(1) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(2) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(3) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(4) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".bg-linear-to-br > .mt-6.text-center.flex-1 > .leading-none > .after\\:absolute.after\\:inset-0.after\\:content-\\[\\'\\'\\]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".opacity-90",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "li:nth-child(4) > .flex-1.flex > .min-h-\\[220px\\].p-6.lg\\:min-h-\\[340px\\] > .max-w-\\[70\\%\\].pt-6.mt-auto > .mt-3.text-\\[0\\.9375rem\\].leading-snug",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .origin-left.self-start[data-mm=\"badge\"] > p",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     }
+    ]
+   }
+  ],
+  "passes": 43
+ },
+ {
+  "path": "/",
+  "state": "default",
+  "width": 390,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".text-xl",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".px-3\\.5",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".ml-2.ar[lang=\"ar\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(6)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(7)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(7) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(7) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".pr-5\\.5 > span",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.hover\\:bg-paper",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.hover\\:bg-paper > .ar[lang=\"ar\"][dir=\"rtl\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".bg-paper\\/70.hover\\:bg-paper.sm\\:text-base",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(2) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(3) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": "button[aria-label=\"Next flavor\"] > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".bg-linear-to-br > .mt-6.text-center.flex-1 > .leading-none > .after\\:absolute.after\\:inset-0.after\\:content-\\[\\'\\'\\]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".opacity-90",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .origin-left.self-start[data-mm=\"badge\"] > p",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     }
+    ]
+   },
+   {
+    "id": "label-content-name-mismatch",
+    "impact": "serious",
+    "help": "Elements must have their visible text as part of their accessible name",
+    "nodes": [
+     {
+      "target": ".md\\:hidden",
+      "summary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+     },
+     {
+      "target": "button[aria-label=\"Previous flavor\"]",
+      "summary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+     },
+     {
+      "target": "button[aria-label=\"Next flavor\"]",
+      "summary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+     }
+    ]
+   }
+  ],
+  "passes": 44
+ },
+ {
+  "path": "/flavors",
+  "state": "default",
+  "width": 1440,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".after\\:absolute",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".mt-1",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     }
+    ]
+   }
+  ],
+  "passes": 42
+ },
+ {
+  "path": "/flavors/lemon",
+  "state": "default",
+  "width": 1440,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": "a[aria-current=\"page\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "li:nth-child(2) > .px-4.py-2.hover\\:bg-ink\\/10",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-4.py-2[href$=\"our-story\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h1",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "div[data-mm=\"rise-30\"]:nth-child(4) > .font-bold.text-h3",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".max-w-\\[36ch\\]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".pr-5\\.5 > span",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".bg-linear-to-br > .mt-6.flex-1.text-center > h3 > .after\\:absolute.after\\:inset-0.after\\:content-\\[\\'\\'\\]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".opacity-90",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     }
+    ]
+   }
+  ],
+  "passes": 43
+ },
+ {
+  "path": "/flavors/peach",
+  "state": "default",
+  "width": 390,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".text-xl",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": "h1",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".self-start > .ar.ar-display[lang=\"ar\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "div[data-mm=\"rise-30\"]:nth-child(4) > .font-bold.text-h3",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".max-w-\\[36ch\\]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".pr-5\\.5 > span",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".bg-linear-to-br > .mt-6.flex-1.text-center > h3 > .after\\:absolute.after\\:inset-0.after\\:content-\\[\\'\\'\\]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".opacity-90",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     }
+    ]
+   },
+   {
+    "id": "label-content-name-mismatch",
+    "impact": "serious",
+    "help": "Elements must have their visible text as part of their accessible name",
+    "nodes": [
+     {
+      "target": "button",
+      "summary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+     }
+    ]
+   }
+  ],
+  "passes": 44
+ },
+ {
+  "path": "/distributors",
+  "state": "default",
+  "width": 1440,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(1) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(2) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(3) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(4) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": "#wilaya",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+     },
+     {
+      "target": "#type",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Find Hipz near you.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "#finder-wilaya",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+     }
+    ]
+   }
+  ],
+  "passes": 48
+ },
+ {
+  "path": "/our-story",
+  "state": "default",
+  "width": 1440,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".px-4.hover\\:bg-ink\\/10[href$=\"flavors\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-4.hover\\:bg-ink\\/10[href$=\"distributors\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "a[aria-current=\"page\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".aspect-\\[16\\/11\\] > .bottom-3.left-3.px-3",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(6)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(7)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     }
+    ]
+   }
+  ],
+  "passes": 44
+ },
+ {
+  "path": "/our-story",
+  "state": "default",
+  "width": 390,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".text-xl",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".gap-5.flex-col[data-mm=\"rise-30\"] > .font-mono.text-label.uppercase",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".aspect-\\[16\\/11\\] > .bottom-3.left-3.px-3",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": ".w-\\[82\\%\\].shrink-0.snap-start:nth-child(2) > figure > .mt-4.max-w-\\[46ch\\].text-body",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+     },
+     {
+      "target": "#flavors-title > header > .origin-left.self-start[data-mm=\"badge\"] > p",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Lemon. Peach. One smile.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(3) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".gap-6.items-start[data-mm=\"rise-30\"] > .ar-display.text-h3.ar",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Want Hipz on your shelves?\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(6)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(7)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     }
+    ]
+   },
+   {
+    "id": "label-content-name-mismatch",
+    "impact": "serious",
+    "help": "Elements must have their visible text as part of their accessible name",
+    "nodes": [
+     {
+      "target": "button",
+      "summary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+     }
+    ]
+   }
+  ],
+  "passes": 46
+ },
+ {
+  "path": "/no-such-page",
+  "state": "404",
+  "width": 1440,
+  "violations": [],
+  "incomplete": [],
+  "passes": 40
+ },
+ {
+  "path": "/",
+  "state": "mobile menu open",
+  "width": 390,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".text-xl",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".bg-white\\/15 > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".px-3\\.5",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".ml-2.ar[lang=\"ar\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(6)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(7)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(7) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(7) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".pr-5\\.5 > span",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.hover\\:bg-paper",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.hover\\:bg-paper > .ar[lang=\"ar\"][dir=\"rtl\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".bg-paper\\/70.hover\\:bg-paper.sm\\:text-base",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(2) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(3) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": "button[aria-label=\"Next flavor\"] > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .origin-left.self-start[data-mm=\"badge\"] > p",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     }
+    ]
+   },
+   {
+    "id": "label-content-name-mismatch",
+    "impact": "serious",
+    "help": "Elements must have their visible text as part of their accessible name",
+    "nodes": [
+     {
+      "target": ".md\\:hidden",
+      "summary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+     },
+     {
+      "target": ".bg-white\\/15",
+      "summary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+     },
+     {
+      "target": "button[aria-label=\"Previous flavor\"]",
+      "summary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+     },
+     {
+      "target": "button[aria-label=\"Next flavor\"]",
+      "summary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+     }
+    ]
+   }
+  ],
+  "passes": 46
+ },
+ {
+  "path": "/",
+  "state": "hero switcher paused",
+  "width": 1440,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".hover\\:bg-ink\\/10.px-4[href$=\"flavors\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "li:nth-child(2) > .hover\\:bg-ink\\/10.px-4.py-2",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".hover\\:bg-ink\\/10.px-4[href$=\"our-story\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-3\\.5",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".ml-2.ar[lang=\"ar\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(6)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(7)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(7) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(7) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".pr-5\\.5 > span",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.hover\\:bg-paper",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.hover\\:bg-paper > .ar[lang=\"ar\"][dir=\"rtl\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(1) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(2) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(3) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(4) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".bg-linear-to-br > .mt-6.text-center.flex-1 > .leading-none > .after\\:absolute.after\\:inset-0.after\\:content-\\[\\'\\'\\]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".opacity-90",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "li:nth-child(4) > .flex-1.flex > .min-h-\\[220px\\].p-6.lg\\:min-h-\\[340px\\] > .max-w-\\[70\\%\\].pt-6.mt-auto > .mt-3.text-\\[0\\.9375rem\\].leading-snug",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .origin-left.self-start[data-mm=\"badge\"] > p",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     }
+    ]
+   }
+  ],
+  "passes": 43
+ },
+ {
+  "path": "/",
+  "state": "carousel focused",
+  "width": 1440,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".px-3\\.5",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": ".ml-2.ar[lang=\"ar\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(6)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(7)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h1 > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(7) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-\\[34ch\\] > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(7) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".hover\\:brightness-95 > span:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": ".pr-5\\.5 > span",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.sm\\:text-base:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.sm\\:text-base:nth-child(1) > .ar[lang=\"ar\"][dir=\"rtl\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.hover\\:bg-paper",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": ".px-3.sm\\:px-4.hover\\:bg-paper > .ar[lang=\"ar\"][dir=\"rtl\"]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": ".bg-paper\\/70.hover\\:bg-paper.sm\\:text-base",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(1) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(2) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(3) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".shrink-0.items-center.flex:nth-child(1) > .gap-8.pr-8.text-h2:nth-child(4) > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".bg-linear-to-br > .mt-6.text-center.flex-1 > .leading-none > .after\\:absolute.after\\:inset-0.after\\:content-\\[\\'\\'\\]",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": ".opacity-90",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "li:nth-child(4) > .flex-1.flex > .min-h-\\[220px\\].p-6.lg\\:min-h-\\[340px\\] > .max-w-\\[70\\%\\].pt-6.mt-auto > .mt-3.text-\\[0\\.9375rem\\].leading-snug",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .origin-left.self-start[data-mm=\"badge\"] > p",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(1) > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": "h2[aria-label=\"Can’t pick? Don’t.\"] > span[aria-hidden=\"true\"] > .block:nth-child(2) > .whitespace-nowrap.inline-block > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(1) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(2) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(3) > .inline-block[data-pop=\"\"]:nth-child(5)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(4) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(5) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(1)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(3)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     },
+     {
+      "target": ".lg\\:py-16 > header > .max-w-prose.text-lead > span[aria-hidden=\"true\"] > span > .whitespace-nowrap.inline-block:nth-child(6) > .inline-block[data-pop=\"\"]:nth-child(4)",
+      "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+     }
+    ]
+   }
+  ],
+  "passes": 43
+ },
+ {
+  "path": "/distributors",
+  "state": "form with errors",
+  "width": 1440,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(1) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(2) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(3) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(4) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": "#wilaya",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+     },
+     {
+      "target": "#type",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+     },
+     {
+      "target": "#finder-wilaya",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+     }
+    ]
+   }
+  ],
+  "passes": 48
+ },
+ {
+  "path": "/distributors",
+  "state": "form success",
+  "width": 1440,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(1) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(2) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(3) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(4) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": "#finder-wilaya",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+     }
+    ]
+   }
+  ],
+  "passes": 47
+ },
+ {
+  "path": "/distributors",
+  "state": "store finder empty state",
+  "width": 1440,
+  "violations": [],
+  "incomplete": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": [
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(1) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(2) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(3) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": ".border-ink\\/15.py-7.last\\:border-b:nth-child(4) > .shrink-0.pl-5.sm\\:self-auto > .size-9.place-items-center.rounded-full",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+     },
+     {
+      "target": "#wilaya",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+     },
+     {
+      "target": "#type",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+     },
+     {
+      "target": "#finder-wilaya",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+     }
+    ]
+   }
+  ],
+  "passes": 48
+ }
+]

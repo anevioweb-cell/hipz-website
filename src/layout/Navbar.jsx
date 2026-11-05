@@ -65,7 +65,7 @@ export default function Navbar() {
   }, [open]);
 
   const linkCls = ({ isActive }) =>
-    `rounded-pill px-4 py-2 font-medium transition-colors ${
+    `inline-flex min-h-11 items-center rounded-pill px-4 py-2 font-medium transition-colors ${
       dark
         ? `hover:bg-ink/10 ${isActive ? 'bg-ink/10' : ''}`
         : `hover:bg-white/20 ${isActive ? 'bg-white/20' : ''}`

@@ -46,7 +46,8 @@ function SocialLinks({ tone = 'paper', className = '' }) {
             href={s.href}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`${s.label} (opens in a new tab)`}
+            // the accessible name starts with the visible text (WCAG 2.5.3)
+            aria-label={`${s.short} (opens in a new tab)`}
             className={`inline-flex min-h-11 items-center gap-2 rounded-pill border-2 px-5 py-2 font-medium transition-colors ${cls}`}
           >
             {s.short}
@@ -147,6 +148,7 @@ export default function OurStory({ data = realStory, photos = realPhotos }) {
               {/* landscape: blend the photo edge into the peach ground; portrait: dark scrim for the text */}
               <div aria-hidden="true" className={STORY_HERO.blend} />
               <div aria-hidden="true" className={STORY_HERO.scrim} />
+              <div aria-hidden="true" className={STORY_HERO.topFade} />
             </>
           )}
           <div className="detail-frame-content relative z-10 mx-auto flex max-w-site flex-col justify-end gap-5 px-gutter pt-28 pb-10 portrait:text-paper lg:px-gutter-lg lg:pb-16 landscape:[&>*]:max-w-[min(30rem,34vw)]">
@@ -289,32 +291,42 @@ export default function OurStory({ data = realStory, photos = realPhotos }) {
                   {t.bottling.text}
                 </SectionHeader>
               </div>
-              <ul className="-mx-gutter mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto px-gutter pb-4 lg:mx-0 lg:grid lg:grid-cols-2 lg:gap-8 lg:overflow-visible lg:px-0">
-                {bottling.map((p, i) => (
-                  <PopBlock
-                    as="li"
-                    key={p.id}
-                    y={70}
-                    delay={i * cardStagger}
-                    className="w-[82%] shrink-0 snap-start sm:w-[60%] lg:w-auto"
-                  >
-                    <figure>
-                      <div className="overflow-hidden rounded-inset-sm lg:rounded-inset">
-                        <Picture
-                          name={p.image}
-                          alt={p.alt}
-                          sizes="(min-width: 1024px) 44vw, 82vw"
-                          imgClassName="aspect-[4/5] h-auto w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.04]"
-                          style={{ objectPosition: pos(p) }}
-                        />
-                      </div>
-                      <figcaption className="mt-4 max-w-[46ch] text-body opacity-80">
-                        {p.caption}
-                      </figcaption>
-                    </figure>
-                  </PopBlock>
-                ))}
-              </ul>
+              {/* on phones a horizontal scroller: a focusable region so it can be scrolled by keyboard
+                  (axe scrollable-region-focusable; same pattern as the flavor carousel) */}
+              <div
+                role="region"
+                // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+                tabIndex={0}
+                aria-label={t.bottling.eyebrow}
+                className="-mx-gutter mt-12 snap-x snap-mandatory overflow-x-auto px-gutter pb-4 lg:mx-0 lg:overflow-visible lg:px-0"
+              >
+                <ul className="flex gap-5 lg:grid lg:grid-cols-2 lg:gap-8">
+                  {bottling.map((p, i) => (
+                    <PopBlock
+                      as="li"
+                      key={p.id}
+                      y={70}
+                      delay={i * cardStagger}
+                      className="w-[82%] shrink-0 snap-start sm:w-[60%] lg:w-auto"
+                    >
+                      <figure>
+                        <div className="overflow-hidden rounded-inset-sm lg:rounded-inset">
+                          <Picture
+                            name={p.image}
+                            alt={p.alt}
+                            sizes="(min-width: 1024px) 44vw, 82vw"
+                            imgClassName="aspect-[4/5] h-auto w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.04]"
+                            style={{ objectPosition: pos(p) }}
+                          />
+                        </div>
+                        <figcaption className="mt-4 max-w-[46ch] text-body opacity-80">
+                          {p.caption}
+                        </figcaption>
+                      </figure>
+                    </PopBlock>
+                  ))}
+                </ul>
+              </div>
             </div>
           </section>
         )}

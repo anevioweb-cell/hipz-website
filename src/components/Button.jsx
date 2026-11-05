@@ -31,7 +31,7 @@ export default function Button({
   className = '',
   ...rest
 }) {
-  const cls = `group inline-flex items-center gap-4 rounded-pill py-1.5 pr-1.5 pl-5.5 font-medium transition-colors duration-(--duration-fast) ${
+  const cls = `group inline-flex min-h-11 items-center gap-4 rounded-pill py-1.5 pr-1.5 pl-5.5 font-medium transition-colors duration-(--duration-fast) ${
     arrow ? '' : 'pr-5.5'
   } ${variants[variant]} ${className}`;
   const inner = (

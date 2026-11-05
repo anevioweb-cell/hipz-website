@@ -175,7 +175,7 @@ export default function Hero() {
                       type="button"
                       aria-pressed={i === index}
                       onClick={() => setIndex(i)}
-                      className={`inline-flex items-center gap-2 rounded-pill px-3 py-2 text-sm font-medium text-ink transition-colors sm:px-4 sm:text-base ${
+                      className={`inline-flex min-h-11 items-center gap-2 rounded-pill px-3 py-2 text-sm font-medium text-ink transition-colors sm:px-4 sm:text-base ${
                         i === index ? 'bg-ink text-paper' : 'hover:bg-paper'
                       }`}
                     >

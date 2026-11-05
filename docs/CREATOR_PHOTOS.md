@@ -65,14 +65,15 @@ Only entries with `selected: true` (= actually shown on a page) are kept in the 
 ## Adding photos later
 Save the master as `docs/inputs/creators/kada-01.jpg` (etc.), add an entry to `src/data/creators.js` (`id: 'kada-01'`, `image: 'creators/kada-01'`, `people: ['kada']`, a focal point, `selected: true`), then run `npm run images` (the image list is read from that file). The story page reads solo photos per person from that file, so no page code changes are needed.
 
-## Use on /our-story (Phase 6)
+## Use on /our-story (Phase 7: duo photos only)
 
-| File | `selected` | Where | Caption shown |
+The owner decided (BRAND_BRIEF row 51) to use ONLY photos of Kada and Miloud together; sourcing is closed.
+
+| File | `selected` | Where (crop) | Caption shown |
 |---|---|---|---|
-| `both-03.jpg` | yes | hero (art-directed: right 62 % of the frame on landscape, top half on portrait) | "Kada & Miloud" (no left/right: seated, unverified) |
-| `miloud-01.jpg`, `miloud-02.jpg`, `miloud-04.jpg` | yes | duo-band collage | "Miloud" (his own account) |
-| `both-01.jpg` | yes | "At the bottling line" gallery | "Kada (left) and Miloud (right) at the bottling line, next to a pallet of Hipz Lemon." (owner height rule) |
-| `both-02.jpg` | yes | "At the bottling line" gallery | "Kada holds up a Hipz Lemon; Miloud stands on the right." (owner height rule) |
-| `miloud-03.jpg` | **no** | not used (near-duplicate of miloud-04) — pruned from `dist/` | — |
+| `both-03.jpg` | yes | hero (whole square: right 62 % of the frame on landscape, top half on portrait) | "Kada & Miloud" (no left/right: seated, unverified) |
+| `both-02.jpg` | yes | gallery (full frame, 4:5) **and** duo collage (wide 16:11 crop, zoom 1.3, both upper bodies) | gallery: "Kada holds up a Hipz Lemon; Miloud stands on the right."; collage: "Kada (left) & Miloud (right)" (owner height rule) |
+| `both-01.jpg` | yes | gallery (full frame, 4:5) **and** duo collage (zoom 2.3 on the pallet of bottles, no faces) | gallery: "Kada (left) and Miloud (right) at the bottling line…"; collage: "Hipz Lemon, stacked at the bottling line" |
+| `miloud-01/02/03/04.jpg` | **no** | not used; pruned from `dist/` | — |
 
-Alt texts describe only what is visible and contain no names; they are in `src/data/creators.js`.
+The collage's third tile is designed (lime, «هايبز» and the smile arc), not a photo. No crop is used twice; crops are data in `src/data/creators.js` (`crops`). Alt texts describe only what is visible and contain no names.

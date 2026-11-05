@@ -111,3 +111,10 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 - Owner decisions for the story page (BRAND_BRIEF rows 43–48): only four confirmed facts; everything optional lives in `src/data/story.js` as null/empty with sources and is not rendered while empty; launch-video facts need `verified: true`; photos only when selected, names only where verified.
 - `/our-story` (Part 2): the reference has no About/Story page, so it is designed from its measured language. Sections: framed duo hero (pre-JS first frame), duo band (social links + collage), "At the bottling line" gallery, "Two flavors, one smile" band, optional blocks (hidden while `story.js` is empty), closing band. No phone numbers, no volume, no numbers.
 - Part 3: `npm run copy:review` → `docs/COPY_REVIEW.md`; banned-claims list (`src/data/bannedClaims.js`) runs as a test.
+
+## 12. Phase 7 decisions
+
+- `/our-story` uses only duo photos (BRAND_BRIEF row 51), art-directed: hero = avatar; duo collage = two zoomed crops of the factory photos + a designed tile; gallery = the factory photos in full. A solo block renders only when both creators have a solo photo.
+- Ticker re-measured per frame at 1440 and 390: the reference runs at 60.0 px/s (ours 60.3–60.5). Phase 1 recorded 72 px/s from item positions sampled every 250 ms; the current reference no longer runs at that speed (not scroll-dependent) — kept at the current measurement.
+- Hero photo "lag" (Phase 6 comparison) is start-up timing: every sample sits on the measured curve (implied start times within 22 ms); no change needed.
+

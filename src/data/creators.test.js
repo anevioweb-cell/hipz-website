@@ -25,6 +25,18 @@ describe('creator photos data', () => {
       if (c.people?.length === 1) expect(c.caption).toMatch(/^(Kada|Miloud)$/);
     }
   });
+  it('selects only duo photos (owner, Phase 7) and gives every crop alt text and a safe caption', () => {
+    for (const c of creatorPhotos.filter((x) => x.selected)) {
+      expect(c.people === null || c.people.length === 2, c.id).toBe(true);
+      for (const cr of c.crops || []) {
+        expect(cr.zoom).toBeGreaterThanOrEqual(1);
+        expect(cr.alt.length).toBeGreaterThan(20);
+        expect(cr.alt).not.toMatch(/Kada|Miloud/);
+        // a crop names people only with the verified left/right order of the factory photos
+        if (/Kada|Miloud/.test(cr.caption)) expect(cr.caption).toBe('Kada (left) & Miloud (right)');
+      }
+    }
+  });
   it('pages reference creator photos only through creators.js (never a file name)', () => {
     const files = import.meta.glob(
       ['../pages/**/*.jsx', '../components/**/*.jsx', '../layout/**/*.jsx'],

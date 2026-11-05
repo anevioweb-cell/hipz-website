@@ -75,16 +75,44 @@ describe('/our-story', () => {
     expect(screen.getByTestId('hero-caption')).toHaveTextContent(/^Kada & Miloud$/);
   });
 
-  it('picks up solo photos of Kada without code changes', () => {
-    const kada = {
-      ...selected.find((c) => c.id === 'miloud-01'),
-      id: 'kada-01',
-      people: ['kada'],
-      caption: 'Kada',
-    };
-    view({ photos: [...selected, kada] });
+  it('never shows a one-sided solo block; shows it only when both have solo photos', () => {
+    const solo = (id, who) => ({
+      ...creatorPhotos.find((c) => c.id === 'miloud-01'),
+      id,
+      selected: true,
+      people: [who],
+      caption: who === 'kada' ? 'Kada' : 'Miloud',
+    });
+    // today: no solo photos at all
+    const a = view();
+    expect(screen.queryByTestId('solo')).toBeNull();
+    a.unmount();
+    // only Miloud (or only Kada): still no solo block
+    const b = view({ photos: [...selected, solo('m1', 'miloud'), solo('m2', 'miloud')] });
+    expect(screen.queryByTestId('solo')).toBeNull();
+    b.unmount();
+    const c = view({ photos: [...selected, solo('k1', 'kada')] });
+    expect(screen.queryByTestId('solo')).toBeNull();
+    c.unmount();
+    // both: the block appears, interleaved
+    view({ photos: [...selected, solo('k1', 'kada'), solo('m1', 'miloud')] });
+    const block = screen.getByTestId('solo');
+    expect(within(block).getByText('Kada')).toBeInTheDocument();
+    expect(within(block).getByText('Miloud')).toBeInTheDocument();
+  });
+
+  it('uses only duo photos and never the same crop twice', () => {
+    const { container } = view();
+    expect(selected.every((c) => c.people === null || c.people.length === 2)).toBe(true);
     const collage = screen.getByTestId('collage');
-    expect(within(collage).getByText('Kada')).toBeInTheDocument();
+    expect(within(collage).getAllByRole('img').length).toBeGreaterThanOrEqual(2);
+    const crops = [...container.querySelectorAll('img')]
+      .filter((i) => i.getAttribute('src').includes('/creators/'))
+      .map(
+        (i) =>
+          `${i.getAttribute('src').match(/creators\/([a-z]+-\d+)/)[1]} ${i.style.objectPosition} ${i.closest('[style*="scale"]')?.getAttribute('style') ?? ''} ${i.alt}`,
+      );
+    expect(new Set(crops).size).toBe(crops.length);
   });
 
   it('external links open safely with accessible names; no TikTok, no phone numbers', () => {

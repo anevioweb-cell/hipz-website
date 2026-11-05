@@ -11,12 +11,16 @@
 // `alt` describes only what is visible; `caption` names people ONLY where identity is verified (own
 // account, or the owner's height rule in the factory photos: Kada the shorter, Miloud the taller); the
 // seated avatar is captioned "Kada & Miloud" without left/right.
+// Phase 7 (owner): only photos of Kada AND Miloud together are used; solo photos stay unselected and the
+// owner will not source more. A solo block can only ever render when BOTH have a selected solo photo.
+// `crops` = extra art-directed crops of the same photo for other sections (never the same crop twice):
+// { use, order, zoom (≥ 1), focal (zoom origin, fractions), alt (visible only), caption (names only if verified) }.
 // `people` lists who is shown, left to right; null = not determinable (e.g. both seated).
 // Written permission from Kada and Miloud is required before any public use (ROADMAP pre-launch list).
 export const creatorPhotos = [
   {
     id: 'miloud-01',
-    selected: true,
+    selected: false,
     use: 'solo',
     alt: 'Close-up portrait of a man with dark hair and a beard in a black hoodie, in a room with a lamp and plants.',
     caption: 'Miloud',
@@ -28,7 +32,7 @@ export const creatorPhotos = [
   },
   {
     id: 'miloud-02',
-    selected: true,
+    selected: false,
     use: 'solo',
     alt: 'A man in a knitted beanie and a brown overshirt outdoors in warm evening light.',
     caption: 'Miloud',
@@ -52,7 +56,7 @@ export const creatorPhotos = [
   },
   {
     id: 'miloud-04',
-    selected: true,
+    selected: false,
     use: 'solo',
     alt: 'Studio portrait of a man in a navy suit and red tie against a lilac background.',
     caption: 'Miloud',
@@ -73,6 +77,16 @@ export const creatorPhotos = [
     confidence:
       'medium (left/right from the owner height rule: shorter left = Kada, taller right = Miloud)',
     shot: 'both in the bottling plant with Hipz Lemon bottles',
+    crops: [
+      {
+        use: 'collage',
+        order: 2,
+        zoom: 2.3,
+        focal: { x: 0.5, y: 0.64 },
+        alt: 'Close-up of a pallet stacked high with yellow Hipz Lemon bottles.',
+        caption: 'Hipz Lemon, stacked at the bottling line',
+      },
+    ],
     focal: { x: 0.5, y: 0.32 },
   },
   {
@@ -85,6 +99,17 @@ export const creatorPhotos = [
     people: ['kada', 'miloud'],
     confidence: 'medium (same scene and rule as both-01)',
     shot: 'both in the bottling plant with Hipz Lemon bottles (same as the supplied source-photo.jpg)',
+    crops: [
+      {
+        use: 'collage',
+        order: 1,
+        zoom: 1.3,
+
+        focal: { x: 0.5, y: 0.34 },
+        alt: 'Close crop of two smiling men in white protective coats in a bright bottling hall, one holding a Hipz Lemon bottle forward.',
+        caption: 'Kada (left) & Miloud (right)',
+      },
+    ],
     focal: { x: 0.5, y: 0.32 },
   },
   {

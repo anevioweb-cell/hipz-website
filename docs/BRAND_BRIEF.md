@@ -177,3 +177,16 @@ Pixel sampling method: median RGB of pixels with saturation ≥ 0.5–0.6 and va
 | 48 | Launch video **https://www.instagram.com/p/De2O1q4slGM/** (owner-supplied; co-posted by @kadawmiloud and @hipzdrink on 23 Oct 2026). Research only (`docs/LAUNCH_VIDEO_NOTES.md`, `docs/STORY_PROPOSALS.md`); nothing from it is shown until the owner confirms it. Video-derived story entries carry `verified: false` and render only when `true`; quotes need the exact original text + a labelled English translation. The post date may be recorded only as the "launch post date". | owner statement | High |
 | 49 | Motion parity with the reference is a top priority: the reference's text "pop-up" must appear everywhere, including on scroll (measured and rebuilt in Phase 6 Part C, `docs/MOTION_SPEC.md`). | owner statement | High |
 | 50 | Wilaya codes 59–69 are fixed by presidential decree n° 26-206 of 25 May 2026 (JO n° 40 of 3 June 2026, French p. 5 and Arabic p. 6), in the order used in `src/data/wilayas.js`; the same decree spells the names أفلو and "Bou Saâda". The UI shows wilaya names only. | official text | High |
+
+---
+
+# Update — Phase 7: owner decisions
+
+| # | Decision / fact | Source | Confidence |
+|---|---|---|---|
+| 51 | No solo photos of Kada exist and the owner will not look for more. `/our-story` uses ONLY photos showing Kada and Miloud together (the official avatar and the two factory photos); all Miloud solo photos are `selected: false`. A solo block can only render if BOTH have a selected solo photo. Photo sourcing is closed. | owner statement | High |
+| 52 | The Hipz logo stays the current small file (150 px; no vector available). Never redraw it or imitate it with a font; never display it larger than its pixels allow. | owner statement | High |
+| 53 | The link will be sent to Kada and Miloud in a private message (WhatsApp / Instagram DM): the link preview (title, description, image) matters. `noindex` stays. | owner statement | High |
+| 54 | The launch-ad slogan «مع هايبز، ديما صحاب» / "HIPZ, Always Friends" is NOT used (only a low-confidence machine transcription + caption); it goes into `copy.js` only if the owner confirms it. | owner statement | High |
+| 55 | The hero and flavor scene images are AI-generated concept art based on real bottle photos; the owner must tell the brand, and real photography should replace them if the brand wants. | owner statement | High |
+

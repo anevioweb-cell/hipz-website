@@ -6,10 +6,10 @@ import Picture from '../components/Picture.jsx';
 import PopBlock from '../components/PopBlock.jsx';
 import PopText from '../components/PopText.jsx';
 import SectionHeader from '../components/SectionHeader.jsx';
-import { story as realStory, storySections, visibleOptional } from '../data/story.js';
+import { soloPhotos, story as realStory, storySections, visibleOptional } from '../data/story.js';
 import { creatorPhotos } from '../data/creators.js';
 import { flavors } from '../data/flavors.js';
-import { SOCIAL_LINKS } from '../data/site.js';
+import { SITE, SOCIAL_LINKS } from '../data/site.js';
 import { copy } from '../data/copy.js';
 import { cardStagger, heroText } from '../motion.js';
 import { STORY_HERO } from '../lib/storyHeroClasses.js';
@@ -72,7 +72,35 @@ function Smile({ className = '' }) {
   );
 }
 
-const TILTS = [-3, 2.5, -1.5, 3, -2];
+const TILTS = [-2, 3, -1.5, 2.5, -3];
+const pct = (f) => `${Math.round(f.x * 100)}% ${Math.round(f.y * 100)}%`;
+
+// A zoomed, art-directed crop of a photo: scaled around its focal point inside the tile (transform only),
+// with a higher-resolution source chosen through `sizes`.
+function CropImage({ photo, crop, base }) {
+  const zoom = Math.max(1, crop.zoom);
+  const sizes = base
+    .split(', ')
+    .map((part) => part.replace(/(\d+vw)$/, (vw) => `calc(${vw} * ${zoom})`))
+    .join(', ');
+  return (
+    <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-105">
+      <div
+        className="h-full w-full"
+        style={{ transform: `scale(${zoom})`, transformOrigin: pct(crop.focal) }}
+      >
+        <Picture
+          name={photo.image}
+          alt={crop.alt}
+          sizes={sizes}
+          className="block h-full w-full"
+          imgClassName="h-full w-full object-cover"
+          style={{ objectPosition: pct(crop.focal) }}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function OurStory({ data = realStory, photos = realPhotos }) {
   useNavTone('dark');
@@ -81,13 +109,17 @@ export default function OurStory({ data = realStory, photos = realPhotos }) {
   const sections = new Set(storySections(data, photos));
   const opt = visibleOptional(data);
   const hero = photos.find((p) => p.use === 'hero');
-  // solo photos interleaved person by person (Kada, Miloud, Kada, …), at most 4
-  const byPerson = ['kada', 'miloud'].map((who) =>
-    photos.filter((p) => p.use === 'solo' && p.people?.length === 1 && p.people[0] === who),
-  );
+  // solo photos interleaved person by person (Kada, Miloud, …), at most 4 — used only when balanced
+  const byPerson = ['kada', 'miloud'].map((who) => soloPhotos(photos, who));
   const solos = [];
   for (let i = 0; solos.length < 4 && i < 4; i++)
     for (const list of byPerson) if (list[i] && solos.length < 4) solos.push(list[i]);
+  // collage = art-directed crops of the duo photos (different from the hero and gallery crops)
+  const collage = photos
+    .flatMap((photo) =>
+      (photo.crops || []).filter((c) => c.use === 'collage').map((crop) => ({ photo, crop })),
+    )
+    .sort((a, b) => (a.crop.order ?? 9) - (b.crop.order ?? 9));
   const bottling = photos.filter((p) => p.use === 'bottling');
   const [lemon, peach] = flavors;
 
@@ -171,38 +203,82 @@ export default function OurStory({ data = realStory, photos = realPhotos }) {
               </PopBlock>
             </div>
             {sections.has('collage') && (
-              <ul className="relative grid grid-cols-2 gap-4 sm:gap-6" data-testid="collage">
-                {solos.map((p, i) => (
+              <ul
+                className="relative grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 sm:gap-y-10"
+                data-testid="collage"
+                aria-label={t.duo.eyebrow}
+              >
+                {collage.map(({ photo, crop }, i) => (
                   <PopBlock
                     as="li"
-                    key={p.id}
+                    key={`${photo.id}-${i}`}
                     y={70}
                     delay={i * cardStagger}
-                    className={i % 2 ? 'mt-10 sm:mt-16' : ''}
+                    className={i === 0 ? 'col-span-2' : i === 2 ? 'mt-10 sm:mt-16' : ''}
                   >
-                    <Parallax mode="element" distance={i % 2 ? 24 : 12}>
+                    <Parallax mode="element" distance={[10, 22, 30][i % 3]}>
                       <figure
-                        className="group relative rotate-(--tilt) overflow-hidden rounded-inset-sm bg-ink-soft shadow-pop transition-transform duration-300 ease-out hover:scale-[1.03] hover:rotate-0"
+                        className={`group relative rotate-(--tilt) overflow-hidden rounded-inset-sm bg-ink-soft shadow-pop transition-transform duration-300 ease-out hover:scale-[1.03] hover:rotate-0 ${i === 0 ? 'aspect-[16/11]' : 'aspect-[4/5]'}`}
                         style={{ '--tilt': `${TILTS[i % TILTS.length]}deg` }}
                       >
-                        <Picture
-                          name={p.image}
-                          alt={p.alt}
-                          sizes="(min-width: 1024px) 26vw, 46vw"
-                          imgClassName="aspect-[4/5] h-auto w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                          style={{ objectPosition: pos(p) }}
+                        <CropImage
+                          photo={photo}
+                          crop={crop}
+                          base={
+                            i === 0
+                              ? '(min-width: 1024px) 52vw, 92vw'
+                              : '(min-width: 1024px) 26vw, 46vw'
+                          }
                         />
                         <figcaption className="absolute bottom-3 left-3 rounded-pill bg-paper px-3 py-1 text-sm font-medium text-ink">
-                          {p.caption}
+                          {crop.caption}
                         </figcaption>
                       </figure>
                     </Parallax>
                   </PopBlock>
                 ))}
+                {/* designed tile (no photo): keeps the collage complete without solo photos */}
+                <PopBlock as="li" y={70} delay={collage.length * cardStagger} aria-hidden="true">
+                  <Parallax mode="element" distance={30}>
+                    <div
+                      className="flex aspect-[4/5] rotate-(--tilt) flex-col items-center justify-center gap-2 rounded-inset-sm bg-brand-lime text-ink shadow-pop transition-transform duration-300 ease-out hover:scale-[1.03] hover:rotate-0"
+                      style={{ '--tilt': `${TILTS[(collage.length + 1) % TILTS.length]}deg` }}
+                    >
+                      <Ar display className="text-h2">
+                        {SITE.nameAr}
+                      </Ar>
+                      <Smile className="w-28 text-ink" />
+                    </div>
+                  </Parallax>
+                </PopBlock>
               </ul>
             )}
           </div>
         </section>
+
+        {/* solo photos: only when BOTH creators have one (never one-sided; none exist today) */}
+        {sections.has('solo') && (
+          <section className="bg-ink pb-section text-paper" data-testid="solo">
+            <ul className="mx-auto grid max-w-site grid-cols-2 gap-4 px-gutter sm:gap-6 lg:grid-cols-4 lg:px-gutter-lg">
+              {solos.map((p, i) => (
+                <PopBlock as="li" key={p.id} y={70} delay={i * cardStagger}>
+                  <figure className="relative overflow-hidden rounded-inset-sm">
+                    <Picture
+                      name={p.image}
+                      alt={p.alt}
+                      sizes="(min-width: 1024px) 22vw, 46vw"
+                      imgClassName="aspect-[4/5] h-auto w-full object-cover"
+                      style={{ objectPosition: pos(p) }}
+                    />
+                    <figcaption className="absolute bottom-3 left-3 rounded-pill bg-paper px-3 py-1 text-sm font-medium text-ink">
+                      {p.caption}
+                    </figcaption>
+                  </figure>
+                </PopBlock>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* 3. at the bottling line */}
         {sections.has('bottling') && (

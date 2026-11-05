@@ -78,6 +78,13 @@ export function visibleOptional(s = story) {
   };
 }
 
+/** Solo photos per person (selected, exactly one person shown). */
+export const soloPhotos = (photos, who) =>
+  photos.filter((p) => p.use === 'solo' && p.people?.length === 1 && p.people[0] === who);
+/** A solo block may only appear when BOTH creators have at least one solo photo (never one-sided). */
+export const soloBalanced = (photos) =>
+  soloPhotos(photos, 'kada').length > 0 && soloPhotos(photos, 'miloud').length > 0;
+
 /**
  * Section keys of /our-story, in page order, that have data to show.
  * `photos` = the selected creator photos (src/data/creators.js).
@@ -85,12 +92,13 @@ export function visibleOptional(s = story) {
 export function storySections(s = story, photos = []) {
   const opt = visibleOptional(s);
   const duoPhotos = photos.filter((p) => p.use === 'hero');
-  const solo = photos.filter((p) => p.use === 'solo');
+  const collage = photos.flatMap((p) => (p.crops || []).filter((c) => c.use === 'collage'));
   const bottling = photos.filter((p) => p.use === 'bottling');
   return [
     duoPhotos.length ? 'hero' : 'hero-text',
     s.confirmed.owners ? 'duo' : null,
-    s.confirmed.owners && solo.length ? 'collage' : null,
+    s.confirmed.owners && collage.length ? 'collage' : null,
+    s.confirmed.owners && soloBalanced(photos) ? 'solo' : null,
     s.confirmed.bottlingLine && bottling.length ? 'bottling' : null,
     s.confirmed.flavors ? 'flavors' : null,
     opt.originNote || opt.foundedYear ? 'origin' : null,

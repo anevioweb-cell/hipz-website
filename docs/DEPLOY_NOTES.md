@@ -25,7 +25,7 @@ Read from the official Vercel documentation on 2026-11-05 (each page's own "last
 
 Why prebuilt: creator photos are gitignored, so a Git-connected Vercel build would not contain them; the local build does (only the three duo photos — `npm run check` verifies `dist/`).
 
-`vercel.json` pins `framework: vite`, `installCommand: npm ci`, `buildCommand: npm run build`, `outputDirectory: dist`, plus the rewrites and headers.
+`vercel.json` pins `framework: vite`, `installCommand: npm install --no-audit --no-fund` (not `npm ci`: on this machine's FUSE-mounted drive `npm ci` cannot delete `node_modules` while a dev server holds a file — it failed once with `ENOTEMPTY`), `buildCommand: npm run build`, `outputDirectory: dist`, plus the rewrites and headers.
 
 ## What happened on the first deploy (2026-11-05)
 

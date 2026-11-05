@@ -49,6 +49,8 @@ The live site is the Vercel project **hipz-website** (team "anevio", Hobby), pro
 
 **Never connect the GitHub repository to Vercel (no Git auto-deploy).** The creator photos are gitignored, so a Git build ships the site without them (this happened once on the first import). Deploy only a build made on this machine, which has the photos:
 
+Close any running dev server or preview first (on this drive an open file blocks the install step).
+
 ```bash
 npm run check                    # must be green; also proves dist/ has only the selected creator photos
 vercel build --prod              # local build into .vercel/output (needs the masters/derivatives on this machine)

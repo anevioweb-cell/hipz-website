@@ -1,83 +1,174 @@
-# Hipz
+# Hipz — Brand Website
 
-Frontend-only brand site: React + Vite + Tailwind CSS v4 + `motion` + react-router. Local only, private repository.
+A fast, mobile-first, bilingual-accent brand website for **Hipz**, the soda brand owned by the Algerian creators **Kada & Miloud** — two flavors, **Lemon** and **Peach**.
 
-## Run
+> **Status:** private pitch build (`pitch-v1`). It is shared privately as an unlisted, `noindex` preview and is **not yet approved for public launch** (see [Rights and permissions](#rights-and-permissions)).
+
+---
+
+## At a glance
+
+|                   |                                                                                                                                                       |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **What**          | A complete brand site: home, flavors, a page per flavor, a distributor / wholesale page with a request form and store finder, and the founders' story |
+| **Who it is for** | Fans on their phones, shops and distributors who want to stock Hipz, and the brand team                                                               |
+| **Languages**     | English, with Arabic accent words set right-to-left in proper Arabic display and text fonts                                                           |
+| **Built with**    | React 19, Vite, Tailwind CSS v4, `motion`, React Router — static site, no backend required                                                            |
+| **Quality**       | Lighthouse mobile 95–99 performance on every page, 100 accessibility, 100 best practices, zero layout shift, zero third-party requests                |
+
+---
+
+## For the brand and clients
+
+**What the site does**
+
+- **Home** — a framed hero that switches between Lemon and Peach, a moving ticker, the flavor carousel, moments, "Why Hipz", both flavors together and a community strip.
+- **Flavors** — a band per flavor and a dedicated page for each one with its confirmed basics.
+- **Distributors** — a clear invitation for shops, wholesalers, cafés and events: the commercial-service numbers, ways to work together, a wholesale request form with friendly validation and an all-69-wilayas store finder.
+- **Our story** — Kada & Miloud and the brand, told only with confirmed facts and their own photos.
+
+**What visitors get**
+
+- Designed for phones first (iPhone and Android), perfect on tablets and desktops.
+- Opens fast, even on mobile networks: the first screen is painted before any JavaScript runs.
+- A rich link preview (title, description, image) when the link is shared on WhatsApp or Instagram.
+- Smooth, playful motion — and a calm, static version for people who prefer reduced motion.
+- Accessible to everyone: keyboard, screen readers, large touch targets, readable contrast.
+- No tracking, no cookies, no third-party scripts.
+
+**Content is easy to change** — all text, flavors, story facts, links and photos live in small data files; see [`docs/HANDOVER.md`](docs/HANDOVER.md).
+
+---
+
+## Quality report
+
+| Page                   | Performance | Accessibility | Best practices | LCP   | CLS |
+| ---------------------- | ----------- | ------------- | -------------- | ----- | --- |
+| Home                   | 95–97       | 100           | 100            | 2.4 s | 0   |
+| Flavors                | 96          | 100           | 100            | 2.8 s | 0   |
+| Flavor (Lemon / Peach) | 97–98       | 100           | 100            | 2.4 s | 0   |
+| Distributors           | 96          | 100           | 100            | 2.7 s | 0   |
+| Our story              | 99          | 100           | 100            | 2.3 s | 0   |
+
+_Lighthouse mobile, 3 runs each, local production build. Live numbers: [`docs/RELEASE_NOTES.md`](docs/RELEASE_NOTES.md)._
+
+- **Cross-browser:** Chromium, Firefox and WebKit × 7 routes × 4 widths — 84/84 pass; emulated iPhone SE, iPhone 15 Pro Max, Pixel 7 and iPad ([`docs/QA_MATRIX.md`](docs/QA_MATRIX.md)).
+- **Accessibility:** axe-core, 0 violations on 15 routes and UI states (WCAG 2.2 AA + best practices), plus manual checks (headings, landmarks, focus, contrast over images, reduced motion).
+- **End-to-end:** 9 user flows pass on Chromium, Firefox and WebKit (`npm run e2e`).
+- **Unit tests:** 163 (Vitest + Testing Library), including content rules (no unconfirmed claims, numbers or names).
+- **Security:** no secrets in the code or history (gitleaks), `npm audit` clean, `noindex` + `X-Robots-Tag`, security headers.
+
+---
+
+## For developers and hiring teams
+
+**Engineering highlights**
+
+- **Motion system measured, not guessed.** The reference design's animations were sampled frame by frame (requestAnimationFrame, 1440 / 390 px) and rebuilt as two primitives: `PopText` (per-character pop on the Web Animations API, exact overshooting cubic-bezier) and `PopBlock` (fitted rise curves and springs). Fail-safes guarantee text is never left invisible; reduced motion renders everything static.
+- **Static first frame before JavaScript.** Each page's hero is painted from static HTML (the `/flavors` band is server-rendered at build time with `react-dom/server`) and handed over to React without a flash — this keeps LCP low and CLS at 0.
+- **Link previews in a single-page app.** The build writes a static HTML file per route with its own title, description and Open Graph / Twitter tags, so chat apps that do not run JavaScript still get the right preview.
+- **Data-driven content with guard rails.** Copy, flavors, story facts and photos are plain data files; tests enforce the content rules (a banned-claims list, no phone numbers outside one page, photos only when selected, story facts only with a source and verification).
+- **Image pipeline.** `sharp` generates AVIF / WebP / JPG (or palette PNG) sets with art-directed crops and focal points; explicit sizes everywhere, nothing shifts.
+- **Robust by default.** Error boundary with a designed fallback, lazy-route chunk retry, failed-image handling, `<noscript>` message, simulated forms that never send data (`DEMO_MODE`).
+- **Verified, repeatable QA.** Scripts for the browser/device matrix, axe audits, contrast sampling by worst pixel, network audits, motion comparison and Lighthouse runs.
+
+**Tech stack**
+
+React 19 · Vite · Tailwind CSS v4 (design tokens in `@theme`) · `motion` (LazyMotion) · React Router 7 · Vitest + Testing Library · Playwright · axe-core · sharp · ESLint (0 warnings) + Prettier.
+
+**Project structure**
+
+```
+src/
+  pages/        Home, Flavors, FlavorDetail, Distributors, OurStory, NotFound
+  components/   PopText, PopBlock, Picture, FlavorScene, Marquee, ErrorBoundary, …
+  layout/       Navbar (+ accessible mobile menu), Footer, PageTransition
+  data/         copy.js, flavors.js, story.js, creators.js, site.js, wilayas.js, stores.js
+  lib/          form submit (DEMO_MODE), validation, phone formats, page meta, chunk retry
+  ssr/          build-time render of the /flavors first frame
+  config.js     DEMO_MODE, FORM_ENDPOINT, SITE_URL, SMOOTH_SCROLL
+  index.css     all design tokens
+scripts/        images, link-preview image, QA matrix, a11y, e2e, motion measurement, notices
+docs/           handover, roadmap, QA matrix, motion spec, copy review, release notes
+```
+
+---
+
+## Getting started
+
+Requires Node.js 20+.
 
 ```bash
 npm install
-npm run dev          # http://localhost:5173  (dev-only component kit at /_kit)
-npm run check        # lint (0 warnings) + prettier check + build + tests; stops at the first failure
-npm run build && npm run preview
-npm run images       # masters in docs/inputs → AVIF/WebP/JPG|PNG in public/images + src/data/images.generated.js
-npm run measure:reference   # Playwright motion measurement of the reference (writes docs/reference-shots/)
-npm run copy:review  # docs/COPY_REVIEW.md: all copy by page/section, draft list, banned-claims scan
-node scripts/measure-motion.mjs   # frame-by-frame motion measurement of the reference (docs/MOTION_SPEC.md)
-node scripts/compare-motion.mjs   # our curves vs the reference (needs a served build on :4174)
-npm run e2e          # build + 9 end-to-end flows in Chromium (add --engine webkit|firefox via node scripts/e2e.mjs)
-node scripts/qa-matrix.mjs && node scripts/qa-devices.mjs && node scripts/qa-report.mjs   # browser/device matrix → docs/QA_MATRIX.md (needs a served build on :4174)
+npm run dev          # http://localhost:5173
+npm run check        # lint (0 warnings) + format + build + unit tests — must stay green
+npm run build        # static site in dist/
+npm run e2e          # build + 9 end-to-end flows in a real browser (~15 s)
+```
+
+More scripts:
+
+```bash
+npm run images       # rebuild optimized images, og.jpg and icons from the masters (masters are not in git)
+npm run copy:review  # docs/COPY_REVIEW.md — every string, its status and the banned-claims scan
+npm run notices      # THIRD_PARTY_NOTICES.md from the production dependency tree
+node scripts/qa-matrix.mjs && node scripts/qa-devices.mjs && node scripts/qa-report.mjs   # browser/device matrix (served build on :4174)
 node scripts/a11y-audit.mjs       # axe-core on every route and key state (served build on :4174)
-node scripts/serve-vercel.mjs dist 4190   # serve a build with the vercel.json rules (rewrites + headers)
+node scripts/serve-vercel.mjs dist 4190   # serve a build with the vercel.json rules
 ```
 
-Handover (where content lives, how to approve copy, how to deploy a private preview): **`docs/HANDOVER.md`**.
+Editing content, approving copy and deploying: **[`docs/HANDOVER.md`](docs/HANDOVER.md)**.
 
-## Copy review
+---
 
-All copy lives in `src/data/copy.js`; story facts in `src/data/story.js`. Run `npm run copy:review` and send `docs/COPY_REVIEW.md` to the owner before the site is shown to Kada and Miloud: it lists every string (English, Arabic accents, status, length), everything still `draft: true`, and the banned-claims scan. The banned list (`src/data/bannedClaims.js`) is also a unit test, so `npm run check` fails on a forbidden claim or an unapproved number.
+## Developer guide
 
-## Structure
+**Configuration (`src/config.js`)**
 
-```
-src/config.js        DEMO_MODE flag
-src/index.css        ALL design tokens (@theme): colors, type, spacing, radii, shadows, motion
-src/motion.js        easing/duration mirrors for the motion JS API
-src/components/      Button, Chip, Ar, Section, SectionHeader, InsetCard, Marquee, Reveal, EmptyState, Toast, Logo, FlavorTheme
-src/layout/          Layout, Navbar (+ mobile menu), Footer, PageTransition
-src/pages/           Home, Flavors, FlavorDetail, Distributors, OurStory, NotFound, Kit (dev only)
-src/data/            flavors.js (lemon, peach), site.js (PUBLIC_CONTACT — distributors page only), copy.js (ALL copy, draft: true), images.generated.js (build output)
-docs/                research, roadmap, reference analysis, font licenses; docs/inputs = owner material
-scripts/             check.mjs, measure-reference.mjs, images.mjs (+ config), make-logo.mjs
-```
+- `DEMO_MODE` (`true`) — the wholesale form validates and shows success, but **nothing is sent or stored** (no request, storage or cookies; tests enforce it). Replace with a real backend (`FORM_ENDPOINT`) or keep it deliberately before any public launch. With `DEMO_MODE = false` and no endpoint the form shows "not available yet".
+- `FORM_ENDPOINT` — where the form POSTs JSON when `DEMO_MODE` is off.
+- `SITE_URL` — public origin of the deployment; needed for absolute link-preview URLs (or build with `SITE_URL=https://… npm run build`).
+- `SMOOTH_SCROLL` — Lenis smooth scrolling, off (the reference scrolls natively).
 
-Color rule: hex values live only in `src/index.css`. Tokens sampled from real Hipz images are labelled REAL, others PLACEHOLDER. Per-flavor colors come from `src/data/flavors.js` through the `--flavor-accent` CSS variable (`FlavorTheme`).
+**Design tokens** — colors, type, spacing, radii and motion values live only in `src/index.css` (`@theme`) and `src/motion.js`; per-flavor colors flow through `--flavor-accent`.
 
-## DEMO_MODE
+**Images** — masters are kept out of git; `npm run images` builds `public/images/*` and `src/data/images.generated.js`. The logo source is `brand/logo.jpg` (150 px; never displayed taller than 52 px). Creator photos (`docs/inputs/creators/`, `public/images/creators/`) are gitignored; only photos marked `selected` in `src/data/creators.js` ship (the build prunes the rest and `npm run check` fails otherwise).
 
-`src/config.js` exports `DEMO_MODE = true`. While true, **nothing is sent anywhere**: forms and "quick add" only simulate success. **Before any public launch, DEMO_MODE must be replaced by a real backend (or the flag consciously kept).** The site is also marked `noindex, nofollow` (meta tag in `index.html` + `public/robots.txt` with `Disallow: /`).
+**Forms** — everything goes through `submitWholesaleRequest()` in `src/lib/submit.js` (honeypot field included).
 
-## Images stay private
+**Copy** — all text in `src/data/copy.js`, each entry flagged `draft` / `approved`; the banned-claims list (`src/data/bannedClaims.js`) runs as a unit test.
 
-Photos, videos, logo and bottle images (`docs/inputs/`, `sourse of Kada and Miloud/`) are gitignored and must never be published. The optimized product images in `public/images/` and the logo files in `public/` ARE committed (the site needs them), which is one more reason this repository must stay private; never make it public or deploy a public preview without the owners' written permission.
+**Hosting** — `vercel.json`: route rewrites + SPA fallback (deep links and refresh work), `X-Robots-Tag: noindex, nofollow`, immutable caching for hashed assets, revalidation for HTML, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`. Deploy from a local build (`vercel build` → `vercel deploy --prebuilt`), because creator photos are not in git.
 
-## Config flags (`src/config.js`)
+**Link previews and noindex** — `noindex` (robots meta, `robots.txt`, `X-Robots-Tag`) keeps the site out of search engines; it does not stop link previews, because chat apps fetch a shared page on behalf of the person sharing it.
 
-- `DEMO_MODE` — see above.
-- `SITE_URL` — public origin of the deployment (empty: TODO). Needed for link-preview images.
-- `SMOOTH_SCROLL` — Lenis smooth scrolling. **Off** since Phase 6 (the reference scrolls natively); when on, loaded after first paint and never under `prefers-reduced-motion`.
+---
 
-## Images
+## Rights and permissions
 
-Masters (`docs/inputs/*.jpeg|png|jpg`) are gitignored. `npm run images` creates the optimized set. The logo is derived from `brand/logo.jpg` (moved out of `public/` in Phase 8 so it is not deployed) (150×150 — request a vector/large PNG), see `docs/ASSET_REPORT.md`.
+- The Hipz name, logo and product, and the names, likeness and photos of Kada & Miloud belong to their owners. **Written permission is required before any public launch.**
+- The hero and flavor scenes are **AI-generated concept art** made from real bottle photos; real photography can replace them at any time.
+- Creator photos come from Kada & Miloud's own public accounts, are used privately for this pitch and are **not stored in this repository**.
+- The visual language follows a measured reference design; all code, copy and images here are original — no reference files, text, images or fonts were reused.
+- Fonts: SIL Open Font License 1.1; dependencies: see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
-## Forms: `src/lib/submit.js`
+**License:** proprietary — all rights reserved. Not open source.
 
-The wholesale request form on `/distributors` sends through ONE function, `submitWholesaleRequest()`:
+---
 
-- `DEMO_MODE = true` (current): waits ~0.9 s and shows a normal success state. **No network request is made and the entered data is not stored** (no localStorage, cookies or logging); it is dropped from memory after success. Tests fail if `fetch`, `XMLHttpRequest` or `sendBeacon` is called.
-- `DEMO_MODE = false` and `FORM_ENDPOINT = null` (`src/config.js`): the form shows a visible "Not available yet" state — it never fakes success.
-- `DEMO_MODE = false` with `FORM_ENDPOINT` set: POSTs JSON to the endpoint.
-- A hidden honeypot field (`website`) makes bot submissions resolve silently without sending anything.
+## Documentation
 
-**Before any public launch, DEMO_MODE must be replaced by a real backend (or consciously kept).**
+| Document                                         | What it covers                                            |
+| ------------------------------------------------ | --------------------------------------------------------- |
+| [`docs/HANDOVER.md`](docs/HANDOVER.md)           | Where content lives, approving copy, DEMO_MODE, deploying |
+| [`docs/RELEASE_NOTES.md`](docs/RELEASE_NOTES.md) | Live preview, version, numbers, known limitations         |
+| [`docs/ROADMAP.md`](docs/ROADMAP.md)             | Phases, decisions and the pre-launch checklist            |
+| [`docs/QA_MATRIX.md`](docs/QA_MATRIX.md)         | Browser × width × device results                          |
+| [`docs/MOTION_SPEC.md`](docs/MOTION_SPEC.md)     | Measured motion and how it was rebuilt                    |
+| [`docs/COPY_REVIEW.md`](docs/COPY_REVIEW.md)     | Every string, its status, the banned-claims scan          |
+| [`docs/BRAND_BRIEF.md`](docs/BRAND_BRIEF.md)     | Confirmed facts and owner decisions, with sources         |
+| [`docs/FONT_LICENSES.md`](docs/FONT_LICENSES.md) | Fonts and licenses                                        |
 
-## Creator photos (private)
+---
 
-`docs/inputs/creators/` (masters) and `public/images/creators/` (derivatives, `npm run images`) hold photos of Kada and Miloud taken from **their own public accounts and official channel** (see `docs/CREATOR_PHOTOS.md`). They are used **privately for the pitch only**, are gitignored, are not shown on any page yet, and **need the creators' written permission before any public launch**.
-
-## Link previews and hosting (Phase 7)
-
-- **Link previews.** Every route has its own `<title>`, meta description and Open Graph / Twitter tags (text in `copy.meta`, draft), written into static HTML at build time (`dist/<route>/index.html`), because WhatsApp and Instagram read the HTML without running JavaScript. The preview image is `public/og.jpg` (1200×630), generated by `npm run images` (`scripts/make-share.mjs`) from the approved lemon hero scene and the logo badge at its native size — no new text. Icons: `favicon-16/32/48.png` and `apple-touch-icon.png` from the same badge.
-- **Set `SITE_URL` before sharing.** Chat apps need ABSOLUTE `og:image` / `og:url`. Put the deployment URL in `SITE_URL` (`src/config.js`, TODO) and rebuild, or build once with `SITE_URL=https://… npm run build`.
-- **noindex stays, and previews still work.** `<meta name="robots" content="noindex, nofollow">`, `public/robots.txt` (`Disallow: /`) and an `X-Robots-Tag: noindex, nofollow` header (`vercel.json`) keep the site out of search engines. They do not stop link previews: a chat app fetches the page on behalf of the person who shares it and does not index it. (Some preview bots respect robots.txt; WhatsApp and Instagram fetch the shared URL regardless — check once on the real deployment.)
-- **`vercel.json`.** Rewrites for every route and an SPA fallback for any other path (deep links and refresh work; unknown paths show the 404 page), immutable caching for hashed `/assets/*`, one week for `/images/*`, revalidation for HTML, and `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`. No Content-Security-Policy (not needed for a static pitch; would need full testing). To check the rules locally: `npm run build` then `node scripts/serve-vercel.mjs dist 4190`.
+**Design & development:** [anevioweb-cell](https://github.com/anevioweb-cell).

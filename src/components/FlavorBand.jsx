@@ -6,6 +6,7 @@ import { heroText } from '../motion.js';
 import FlavorScene from './FlavorScene.jsx';
 import FlavorTheme from './FlavorTheme.jsx';
 import { copy } from '../data/copy.js';
+import { hideHeroShell } from '../lib/heroShell.js';
 
 // Big band in a flavor's color: name, one line of draft copy, links, and the 4:5 portrait scene.
 // `flip` swaps the sides (alternating bands on /flavors). Effects run at low intensity and pause
@@ -29,6 +30,7 @@ export default function FlavorBand({ flavor, flip = false, first = false }) {
                 crop="portrait"
                 sizes="(min-width: 1024px) 34rem, 100vw"
                 priority={first}
+                onImageLoad={first ? hideHeroShell : undefined}
               />
             </div>
           </Wrap>

@@ -10,6 +10,10 @@ import { META_ROUTES, metaTags, withMeta } from './src/lib/pageMeta.js';
 import { copy } from './src/data/copy.js';
 import { SITE_URL } from './src/config.js';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+
+const SSR_OUT = 'node_modules/.hipz-ssr';
 
 // Build-only HTML tweaks for the first paint (measured with Lighthouse mobile, see the Phase 4 report):
 // 1. preload the display font (headline) so it does not reflow when it arrives (CLS 0);
@@ -46,7 +50,7 @@ const firstPaintTweaks = () => ({
 // (src/lib/heroShell.js). Decorative duplicate: alt="".
 const heroShell = () => ({
   name: 'hero-shell',
-  transformIndexHtml(html) {
+  async transformIndexHtml(html) {
     const set = (n, ext) =>
       images[n].variants.map((v) => `/images/${n}-${v.width}.${ext} ${v.width}w`).join(', ');
     const pct = (x) => `${Math.round(x * 1000) / 10}%`;
@@ -77,13 +81,23 @@ const heroShell = () => ({
             return `<template id="shell-story"><div id="hero-shell" class="hero-shell hero-shell--story hero-frame-wrap" aria-hidden="true"><div class="hero-frame bg-peach-soft portrait:bg-ink"><div class="${STORY_HERO.photo}"><picture><source type="image/avif" srcset="${set(n, 'avif')}" sizes="${STORY_HERO.sizes}" /><source type="image/webp" srcset="${set(n, 'webp')}" sizes="${STORY_HERO.sizes}" /><img src="/images/${n}-${big.width}.jpg" srcset="${set(n, 'jpg')}" sizes="${STORY_HERO.sizes}" width="${big.width}" height="${big.height}" alt="" fetchpriority="high" onerror="this.style.visibility='hidden'" class="${STORY_HERO.img}" style="object-position:${op}" /></picture></div><div class="${STORY_HERO.blend}"></div><div class="${STORY_HERO.scrim}"></div><div class="${STORY_HERO.topFade}"></div></div></div></template>`;
           })()
         : '';
+    // /flavors: the first band rendered by the real component at build time (src/ssr/shells.jsx, built by
+    // `vite build --ssr` first). `inert` keeps its links out of the tab order; pointer-events none.
+    let flavorsShell = '';
+    try {
+      const ssr = await import(pathToFileURL(resolve(SSR_OUT, 'shells.js')).href);
+      flavorsShell = `<template id="shell-flavors"><div id="hero-shell" class="hero-shell hero-shell--band" aria-hidden="true" inert>${ssr.flavorsFirstBand()}</div></template>`;
+    } catch {
+      // dev server / SSR bundle not built yet: no static frame for /flavors (React paints it)
+    }
     const templates =
+      flavorsShell +
       storyShell +
       distShell +
       shellFor('shell-home', 'lemon', 'home') +
       shellFor('shell-lemon', 'lemon', 'detail') +
       shellFor('shell-peach', 'peach', 'detail');
-    const pick = `<script>(function(){var p=location.pathname.replace(/\\/$/,'')||'/';var id=p==='/'?'shell-home':p==='/flavors/lemon'?'shell-lemon':p==='/flavors/peach'?'shell-peach':p==='/distributors'?'shell-dist':p==='/our-story'?'shell-story':null;var t=id&&document.getElementById(id);if(t)document.body.appendChild(t.content.cloneNode(true));})();</script>`;
+    const pick = `<script>(function(){var p=location.pathname.replace(/\\/$/,'')||'/';var id=p==='/'?'shell-home':p==='/flavors/lemon'?'shell-lemon':p==='/flavors/peach'?'shell-peach':p==='/distributors'?'shell-dist':p==='/our-story'?'shell-story':p==='/flavors'?'shell-flavors':null;var t=id&&document.getElementById(id);if(t)document.body.appendChild(t.content.cloneNode(true));})();</script>`;
     return html.replace(
       '<div id="root"></div>',
       `${templates}\n    ${pick}\n    <div id="root"></div>`,

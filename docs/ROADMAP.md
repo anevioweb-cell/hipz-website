@@ -29,6 +29,9 @@ UI language: English with Arabic accent words through a small `<Ar>` component (
 
 ## 3. Phases
 
+
+**Status (2026-11-05):** Phases 1–7 done and committed locally (not pushed). Phase 8 (release) not started.
+
 Global acceptance for **every** phase: `npm run check` (lint + typecheck/build + tests, defined in Phase 1) passes with no errors or warnings; `prefers-reduced-motion` respected; one commit per part; no push.
 
 | Phase | Deliverables | Acceptance checks |
@@ -39,7 +42,7 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 | **4 Moments / why / community / both flavors** | Moments cards, pillars, community strip with empty state, the "Both flavors" card (replaces the pack builder; no pack/quantity/price claim) | no fabricated reviews/numbers; empty states look intentional; responsive at 390/768/1024/1440 |
 | **5 Distributors** | Ways-to-work, wholesale form, 69-wilaya select, store-finder empty state | wilaya list verified from two sources and cross-checked count = 69; form validates, success message under DEMO_MODE, no network call (verified in devtools) |
 | **6 Our story** | `/our-story` with approved copy and media | every statement traceable to BRAND_BRIEF "confirmed" |
-| **7 Performance + a11y** | image optimisation (AVIF/WebP), code-split routes, font subsetting, contrast pass, focus states, RTL checks for `<Ar>` | Lighthouse mobile ≥90 (perf), a11y 100, best-practices ≥95; reduced-motion verified; keyboard-only tour |
+| **7 QA, a11y, performance, previews** ✅ | duo-only story page, cross-browser/device matrix (`docs/QA_MATRIX.md`), axe + manual a11y pass, link previews (per-route static HTML + `og.jpg`), `vercel.json`, error boundary / chunk retry / noscript / image safety, logo audit, `npm run e2e` | Lighthouse mobile ≥ 90 everywhere (home 95–97), a11y 100, best practices 100, CLS 0; axe 0 violations; zero third-party requests; e2e 9/9 on three engines |
 | **8 Release** | final QA, pre-launch checklist review, build, private-repo handover | check passes; checklist below walked through with you |
 
 ## 4. Risks
@@ -65,6 +68,13 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 - [ ] Algerian legal items: company details, any labelling/advertising rules for beverages (check with the brand's counsel)
 - [ ] Licences for fonts and any third-party assets recorded
 - [ ] Repo stays private; no secrets committed
+- [ ] **(Phase 7)** The hero and flavor scene images are AI-generated concept art based on real bottle photos: the owner must tell the brand this; real photography should replace them if the brand wants (BRAND_BRIEF row 55)
+- [ ] **(Phase 7)** Written permission from Kada, Miloud and the brand for names, likeness and the creator photos (duo photos only on `/our-story`)
+- [ ] **(Phase 7)** Every draft copy entry approved (`npm run copy:review` → `docs/COPY_REVIEW.md`; flip `draft` to approved in `src/data/copy.js`)
+- [ ] **(Phase 7)** A real backend for the forms (replace `DEMO_MODE` / set `FORM_ENDPOINT`)
+- [ ] **(Phase 7)** Remove noindex (robots meta, `public/robots.txt`, `X-Robots-Tag` in `vercel.json`) only with owner approval
+- [ ] **(Phase 7)** The logo is a small 150 px file: get a vector or high-resolution version before any public launch (it is never shown larger than 52 px tall today)
+- [ ] Set `SITE_URL` (`src/config.js`) to the deployment URL before sending the link, so previews get an absolute image
 
 ## 6. Deviations after Phase 1 inputs
 
@@ -117,4 +127,23 @@ Global acceptance for **every** phase: `npm run check` (lint + typecheck/build +
 - `/our-story` uses only duo photos (BRAND_BRIEF row 51), art-directed: hero = avatar; duo collage = two zoomed crops of the factory photos + a designed tile; gallery = the factory photos in full. A solo block renders only when both creators have a solo photo.
 - Ticker re-measured per frame at 1440 and 390: the reference runs at 60.0 px/s (ours 60.3–60.5). Phase 1 recorded 72 px/s from item positions sampled every 250 ms; the current reference no longer runs at that speed (not scroll-dependent) — kept at the current measurement.
 - Hero photo "lag" (Phase 6 comparison) is start-up timing: every sample sits on the measured curve (implied start times within 22 ms); no change needed.
+- Part 1: Chromium / Firefox / WebKit (WebKit ≈ Safari engine, not Safari) × 7 routes × 4 widths and five emulated devices, all pass (`docs/QA_MATRIX.md`). Fixed: WebKit drops the focus ring on native selects (selects are now drawn by us), safe areas (`viewport-fit=cover` + `env()` insets), `text-size-adjust`, phone-landscape hero frames sized to the screen.
+- Part 2: axe-core 0 violations on 15 route/state combinations; fixed duplicate id, link names not containing their visible text, a keyboard-unreachable scroller, story navbar contrast over the photo; pause buttons for the moving bands (WCAG 2.2.2); every target ≥ 44 px; a global reduced-motion safety net for CSS transitions.
+- Part 3: link previews per route (static HTML written at build time), `public/og.jpg`, favicons, `SITE_URL`, `vercel.json` (rewrites, `X-Robots-Tag`, caching, security headers). Zero third-party requests on every page.
+- Part 4: error boundary (page-level + root), lazy chunk retry → friendly reload page, `<noscript>`, failed images hide without layout shift.
+- Part 5: `npm run e2e` (not in `npm run check`).
+- Part 6: logo never taller than 52 px (≈ 74 CSS px wide).
+- Known, by design: the measured entrances move content (navbar 24 px during the first ~0.8 s, blocks rising for ~0.7 s after they appear); a tap aimed at a control in that moment can land just next to it.
+
+## 13. Latest Lighthouse (mobile, 3 runs each, local static server)
+
+| Route | Performance | Accessibility | Best practices | LCP | CLS |
+|---|---|---|---|---|---|
+| `/` | 95–97 | 100 | 100 | 2.4–2.6 s | 0 |
+| `/flavors` | 93 | 100 | 100 | 3.2 s | 0 |
+| `/flavors/lemon` | 98 | 100 | 100 | 2.4 s | 0 |
+| `/flavors/peach` | 97–98 | 100 | 100 | 2.4 s | 0 |
+| `/distributors` | 96 | 100 | 100 | 2.7 s | 0 |
+| `/our-story` | 99 | 100 | 100 | 2.3 s | 0 |
+| unknown route (404) | 99 | 100 | 100 | 2.3 s | 0 |
 

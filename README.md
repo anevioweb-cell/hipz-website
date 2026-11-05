@@ -14,7 +14,13 @@ npm run measure:reference   # Playwright motion measurement of the reference (wr
 npm run copy:review  # docs/COPY_REVIEW.md: all copy by page/section, draft list, banned-claims scan
 node scripts/measure-motion.mjs   # frame-by-frame motion measurement of the reference (docs/MOTION_SPEC.md)
 node scripts/compare-motion.mjs   # our curves vs the reference (needs a served build on :4174)
+npm run e2e          # build + 9 end-to-end flows in Chromium (add --engine webkit|firefox via node scripts/e2e.mjs)
+node scripts/qa-matrix.mjs && node scripts/qa-devices.mjs && node scripts/qa-report.mjs   # browser/device matrix → docs/QA_MATRIX.md (needs a served build on :4174)
+node scripts/a11y-audit.mjs       # axe-core on every route and key state (served build on :4174)
+node scripts/serve-vercel.mjs dist 4190   # serve a build with the vercel.json rules (rewrites + headers)
 ```
+
+Handover (where content lives, how to approve copy, how to deploy a private preview): **`docs/HANDOVER.md`**.
 
 ## Copy review
 
@@ -47,6 +53,7 @@ Photos, videos, logo and bottle images (`docs/inputs/`, `sourse of Kada and Milo
 ## Config flags (`src/config.js`)
 
 - `DEMO_MODE` — see above.
+- `SITE_URL` — public origin of the deployment (empty: TODO). Needed for link-preview images.
 - `SMOOTH_SCROLL` — Lenis smooth scrolling. **Off** since Phase 6 (the reference scrolls natively); when on, loaded after first paint and never under `prefers-reduced-motion`.
 
 ## Images

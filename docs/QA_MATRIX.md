@@ -50,21 +50,21 @@ Each cell checks: no console errors or failed requests, no horizontal overflow, 
 | chromium | `/flavors` | 4 | none | none |
 | chromium | `/flavors/lemon` | 4 | none | none |
 | chromium | `/flavors/peach` | 4 | none | none |
-| chromium | `/distributors` | 34 | none | none |
+| chromium | `/distributors` | 32 | none | none |
 | chromium | `/our-story` | 3 | none | none |
 | chromium | `/no-such-page` | 3 | none | none |
 | firefox | `/` | 3 | none | none |
 | firefox | `/flavors` | 4 | none | none |
 | firefox | `/flavors/lemon` | 4 | none | none |
 | firefox | `/flavors/peach` | 4 | none | none |
-| firefox | `/distributors` | 34 | none | none |
+| firefox | `/distributors` | 32 | none | none |
 | firefox | `/our-story` | 3 | none | none |
 | firefox | `/no-such-page` | 3 | none | none |
 | webkit | `/` | 3 | none | none |
 | webkit | `/flavors` | 4 | none | none |
 | webkit | `/flavors/lemon` | 4 | none | none |
 | webkit | `/flavors/peach` | 4 | none | none |
-| webkit | `/distributors` | 34 | none | Choose your wilayaAdrar (أدرار, Choose a typeShops & supermark, Choose a wilayaAdrar (أدرار)Ch |
+| webkit | `/distributors` | 32 | none | none |
 | webkit | `/our-story` | 3 | none | none |
 | webkit | `/no-such-page` | 3 | none | none |
 

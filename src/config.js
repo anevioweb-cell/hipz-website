@@ -9,3 +9,9 @@ export const SMOOTH_SCROLL = false;
 // Endpoint for the wholesale request form when DEMO_MODE is false. null = not configured: the form then
 // shows a visible "not available yet" state (see src/lib/submit.js).
 export const FORM_ENDPOINT = null;
+
+// Public origin of the deployed site, e.g. 'https://hipz-preview.vercel.app' (no trailing slash).
+// TODO(deploy): set this to the deployment URL. Link previews (WhatsApp / Instagram DM) need ABSOLUTE
+// og:image / og:url values: while this is empty the tags fall back to relative paths, which most chat
+// apps ignore (no preview image). noindex stays either way.
+export const SITE_URL = '';

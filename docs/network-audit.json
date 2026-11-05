@@ -1,0 +1,100 @@
+{
+ "origin": "http://localhost:4174",
+ "pages": [
+  {
+   "route": "/",
+   "requests": 16,
+   "thirdParty": [],
+   "kbAtLoad": 671,
+   "kbAfterScroll": 671,
+   "kbByType": {
+    "Document": 14,
+    "Script": 134,
+    "Font": 188,
+    "Image": 336
+   }
+  },
+  {
+   "route": "/flavors",
+   "requests": 12,
+   "thirdParty": [],
+   "kbAtLoad": 530,
+   "kbAfterScroll": 530,
+   "kbByType": {
+    "Document": 14,
+    "Script": 134,
+    "Font": 124,
+    "Image": 259
+   }
+  },
+  {
+   "route": "/flavors/lemon",
+   "requests": 13,
+   "thirdParty": [],
+   "kbAtLoad": 553,
+   "kbAfterScroll": 553,
+   "kbByType": {
+    "Document": 14,
+    "Script": 134,
+    "Font": 124,
+    "Image": 282
+   }
+  },
+  {
+   "route": "/flavors/peach",
+   "requests": 13,
+   "thirdParty": [],
+   "kbAtLoad": 536,
+   "kbAfterScroll": 536,
+   "kbByType": {
+    "Document": 14,
+    "Script": 134,
+    "Font": 124,
+    "Image": 265
+   }
+  },
+  {
+   "route": "/distributors",
+   "requests": 13,
+   "thirdParty": [],
+   "kbAtLoad": 470,
+   "kbAfterScroll": 470,
+   "kbByType": {
+    "Document": 14,
+    "Script": 141,
+    "Font": 167,
+    "Image": 149
+   }
+  },
+  {
+   "route": "/our-story",
+   "requests": 18,
+   "thirdParty": [],
+   "kbAtLoad": 757,
+   "kbAfterScroll": 757,
+   "kbByType": {
+    "Document": 14,
+    "Script": 140,
+    "Font": 188,
+    "Image": 416
+   }
+  },
+  {
+   "route": "/no-such-page",
+   "requests": 6,
+   "thirdParty": [],
+   "kbAtLoad": 277,
+   "kbAfterScroll": 277,
+   "kbByType": {
+    "Document": 14,
+    "Script": 134,
+    "Font": 103,
+    "Image": 26
+   }
+  }
+ ],
+ "idleCpu": {
+  "heroVisibleMsPer5s": 98,
+  "scrolledAwayMsPer5s": 3
+ }
+}

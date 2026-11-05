@@ -6,6 +6,33 @@ const draft = (fields) => ({ draft: true, ...fields });
 const approved = (fields) => ({ draft: false, ...fields });
 
 export const copy = {
+  // Per-page <title> + meta description + link preview text (Open Graph / Twitter). Neutral, no claims.
+  meta: {
+    '/': draft({ title: 'Hipz', description: 'Hipz: lemon and peach soda from Kada & Miloud.' }),
+    '/flavors': draft({
+      title: 'Flavors — Hipz',
+      description: 'Two flavors, one smile: Hipz Lemon and Hipz Peach.',
+    }),
+    '/flavors/lemon': draft({
+      title: 'Lemon — Hipz',
+      description: 'Hipz Lemon. Serve it ice cold.',
+    }),
+    '/flavors/peach': draft({
+      title: 'Peach — Hipz',
+      description: 'Hipz Peach. Serve it ice cold.',
+    }),
+    '/distributors': draft({
+      title: 'Distributors — Hipz',
+      description: 'Shops, wholesalers, cafés and events: get in touch with the Hipz team.',
+    }),
+    '/our-story': draft({
+      title: 'Our story — Hipz',
+      description: 'Kada & Miloud and Hipz: two friends, two flavors, one smile.',
+    }),
+    imageAlt: draft({
+      text: 'A bottle of Hipz Lemon with lemon slices and splashes, and the Hipz logo.',
+    }),
+  },
   nav: {
     flavors: draft({ text: 'Flavors' }),
     distributors: draft({ text: 'Distributors' }),

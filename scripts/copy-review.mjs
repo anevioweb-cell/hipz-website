@@ -14,7 +14,7 @@ import {
 } from '../src/data/bannedClaims.js';
 
 const PAGES = [
-  ['Every page (navigation, footer)', ['nav', 'footer']],
+  ['Every page (navigation, footer, titles and link previews)', ['meta', 'nav', 'footer']],
   ['Home (/)', ['hero', 'ticker', 'sections', 'moments', 'why', 'both', 'community']],
   ['Flavors (/flavors and /flavors/:slug)', ['flavors']],
   ['Distributors (/distributors)', ['distributors']],

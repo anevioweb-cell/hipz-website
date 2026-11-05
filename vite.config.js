@@ -6,6 +6,10 @@ import { DIST_BOTTLES } from './src/lib/distHeroClasses.js';
 import { STORY_HERO } from './src/lib/storyHeroClasses.js';
 import { creatorPhotos } from './src/data/creators.js';
 import { pruneCreatorImages } from './scripts/creator-images.mjs';
+import { META_ROUTES, metaTags, withMeta } from './src/lib/pageMeta.js';
+import { copy } from './src/data/copy.js';
+import { SITE_URL } from './src/config.js';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 
 // Build-only HTML tweaks for the first paint (measured with Lighthouse mobile, see the Phase 4 report):
 // 1. preload the display font (headline) so it does not reflow when it arrives (CLS 0);
@@ -87,17 +91,58 @@ const heroShell = () => ({
   },
 });
 
+// Link previews: the home meta goes into index.html; every other route gets its own static copy
+// (dist/<route>/index.html) with its own title/description/Open Graph tags, because chat apps read the
+// HTML without running JS. The SPA boots the same way from any of them.
+const tagsFor = (route) =>
+  metaTags(route, copy.meta[route], {
+    // SITE_URL from src/config.js; a SITE_URL environment variable overrides it for a one-off build
+    siteUrl: process.env.SITE_URL || SITE_URL,
+    imageAlt: copy.meta.imageAlt.text,
+  });
+const pageMeta = () => {
+  let outDir = 'dist';
+  return {
+    name: 'page-meta',
+    configResolved(c) {
+      outDir = c.build.outDir;
+    },
+    transformIndexHtml: {
+      order: 'post',
+      handler: (html) => withMeta(html, tagsFor('/')),
+    },
+    closeBundle() {
+      let html;
+      try {
+        html = readFileSync(`${outDir}/index.html`, 'utf8');
+      } catch {
+        return; // not a build
+      }
+      for (const route of META_ROUTES.filter((r) => r !== '/')) {
+        mkdirSync(`${outDir}${route}`, { recursive: true });
+        writeFileSync(`${outDir}${route}/index.html`, withMeta(html, tagsFor(route)));
+      }
+    },
+  };
+};
+
 // public/ is copied whole by Vite; drop creator photos that no page uses (selected: false) from dist/.
-const creatorImages = () => ({
-  name: 'creator-images',
-  apply: 'build',
-  closeBundle() {
-    pruneCreatorImages('dist');
-  },
-});
+const creatorImages = () => {
+  let outDir = 'dist';
+  return {
+    name: 'creator-images',
+    apply: 'build',
+    configResolved(c) {
+      outDir = c.build.outDir;
+    },
+    closeBundle() {
+      pruneCreatorImages(outDir);
+    },
+  };
+};
 
 export default defineConfig({
-  plugins: [react(), tailwindcss(), firstPaintTweaks(), heroShell(), creatorImages()],
+  plugins: [react(), tailwindcss(), firstPaintTweaks(), heroShell(), creatorImages(), pageMeta()],
   test: {
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.js'],

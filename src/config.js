@@ -11,7 +11,7 @@ export const SMOOTH_SCROLL = false;
 export const FORM_ENDPOINT = null;
 
 // Public origin of the deployed site, e.g. 'https://hipz-preview.vercel.app' (no trailing slash).
-// TODO(deploy): set this to the deployment URL. Link previews (WhatsApp / Instagram DM) need ABSOLUTE
+// Production domain of the Vercel project hipz-website. Link previews (WhatsApp / Instagram DM) need ABSOLUTE
 // og:image / og:url values: while this is empty the tags fall back to relative paths, which most chat
 // apps ignore (no preview image). noindex stays either way.
-export const SITE_URL = '';
+export const SITE_URL = 'https://hipz-website-snowy.vercel.app';

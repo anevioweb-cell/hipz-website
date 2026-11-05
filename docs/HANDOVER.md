@@ -43,23 +43,21 @@ Proposals are in `docs/STORY_PROPOSALS.md`. Only after the owner confirms one: a
 
 `DEMO_MODE = true` (`src/config.js`): the wholesale form validates and shows a success message, but **nothing is sent or stored** (no network request, no storage, no cookies). Before any real use: set up a backend, set `FORM_ENDPOINT`, and set `DEMO_MODE = false` (or keep it on deliberately). With `DEMO_MODE = false` and no endpoint the form shows "not available yet".
 
-## Deploy a PRIVATE preview (Vercel)
+## Deploy (Vercel) — ALWAYS from this machine
 
-The repo and the deployment contain creator photos and the logo: keep both private.
+The live site is the Vercel project **hipz-website** (team "anevio", Hobby), production domain **https://hipz-website-snowy.vercel.app** — unlisted, `noindex`, no password (see `docs/DEPLOY_NOTES.md` for why: protected pages cannot be read by WhatsApp / Instagram preview bots).
 
-1. Create a Vercel project from this folder **on this machine** (the creator photos are gitignored, so a Git-connected build would not have them):
-   ```bash
-   npm i -g vercel
-   vercel login
-   vercel link              # new private project
-   vercel build             # runs npm run build and applies vercel.json
-   vercel deploy --prebuilt # uploads the local build → a preview URL
-   ```
-   Never `vercel deploy --prod` to a public domain without the owner's approval.
-2. In the Vercel dashboard → Project → Settings → **Deployment Protection**: turn on Vercel Authentication for previews (only logged-in team members can open it), or Password Protection if the plan includes it. To let Kada & Miloud in without an account, use the deployment's **Share** link (a bypass link) rather than removing protection.
-3. Set `SITE_URL` in `src/config.js` to the preview URL (or `SITE_URL=https://… vercel build`), rebuild and redeploy, so link previews get an absolute image.
-4. **Trade-off:** a protected deployment also blocks the WhatsApp / Instagram preview bots, so the card may show without image or title. Test by sending the link to yourself first. If the card matters more than the extra lock, the owner can choose an unprotected preview URL (still `noindex`, `robots.txt` Disallow, `X-Robots-Tag`, unlisted random URL) — that is the owner's call.
-5. Check after deploying: deep links (`/flavors/lemon`, refresh), an unknown path (404 page), `curl -I <url>` shows `X-Robots-Tag: noindex, nofollow`.
+**Never connect the GitHub repository to Vercel (no Git auto-deploy).** The creator photos are gitignored, so a Git build ships the site without them (this happened once on the first import). Deploy only a build made on this machine, which has the photos:
+
+```bash
+npm run check                    # must be green; also proves dist/ has only the selected creator photos
+vercel build --prod              # local build into .vercel/output (needs the masters/derivatives on this machine)
+vercel deploy --prebuilt --prod  # upload that build to the production domain
+```
+
+First time on a new machine: `npm i -g vercel@latest`, `vercel login`, `vercel link` (existing project: **yes**, scope **anevio**, project **hipz-website**), `vercel pull --yes --environment=production`. `SITE_URL` in `src/config.js` must stay the production domain (link previews need absolute URLs).
+
+After deploying: open the site on a phone, check `/our-story` (hero photo, collage, gallery), and send yourself the link on WhatsApp to see the preview card.
 
 ## Before any public launch
 

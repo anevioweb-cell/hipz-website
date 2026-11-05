@@ -40,7 +40,7 @@ Contact sheet of the selected images: `docs/shots/creators-sheet.png`.
 ## Phase 6 Part A — Kada (`@kada.kwm`), checked 2026-11-04
 
 What the public, logged-out account shows (Playwright, one profile visit, no login, nothing dismissed):
-- **1 post** in total (the profile header says "1 Posts"): a reel that is a **collaboration post owned by another account**, https://www.instagram.com/kasstay.podcast/reel/DF-9fbdIi6a/ ("Video by Kasstay | كاس تاي", 12 Feb 2025). It is a podcast-studio video frame (another brand's show, microphone, a patterned scarf), the cover is 361×640, and it is a video, not a photo → **rejected** (other brand, low resolution, video frame).
+- **1 post** in total (the profile header says "1 Posts"): a reel that is a **collaboration post owned by another account** (a third party; not linked here). It is a video frame from another brand's show, the cover is 361×640, and it is a video, not a photo → **rejected** (other brand, low resolution, video frame).
 - **Profile picture**: a mirror selfie in a tiled room, phone in hand. Logged out it is served at **150×150 px only** → too small; also a bathroom mirror selfie is weak for a brand page → **not taken**.
 - One story highlight ("ذكر", a calligraphy image, not a photo of Kada) → not relevant.
 

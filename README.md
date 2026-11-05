@@ -2,7 +2,7 @@
 
 A fast, mobile-first, bilingual-accent brand website for **Hipz**, the soda brand owned by the Algerian creators **Kada & Miloud** — two flavors, **Lemon** and **Peach**.
 
-> **Status:** private pitch build (`pitch-v1`). It is shared privately as an unlisted, `noindex` preview and is **not yet approved for public launch** (see [Rights and permissions](#rights-and-permissions)).
+> **Status:** pitch build (`pitch-v1`), live as an unlisted, `noindex` preview at **https://hipz-website-snowy.vercel.app**. It is an independent project, not yet approved for public launch (see [Rights and permissions](#rights-and-permissions)).
 
 ---
 
@@ -138,7 +138,7 @@ Editing content, approving copy and deploying: **[`docs/HANDOVER.md`](docs/HANDO
 
 **Copy** — all text in `src/data/copy.js`, each entry flagged `draft` / `approved`; the banned-claims list (`src/data/bannedClaims.js`) runs as a unit test.
 
-**Hosting** — `vercel.json`: route rewrites + SPA fallback (deep links and refresh work), `X-Robots-Tag: noindex, nofollow`, immutable caching for hashed assets, revalidation for HTML, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`. Deploy from a local build (`vercel build` → `vercel deploy --prebuilt`), because creator photos are not in git.
+**Hosting** — deploy **only from a local build**: `npm run check` → `vercel build --prod` → `vercel deploy --prebuilt --prod`. Never connect Git auto-deploys: the creator photos are not in the repository, so a Git build would ship the site without them. `vercel.json`: route rewrites + SPA fallback (deep links and refresh work), `X-Robots-Tag: noindex, nofollow`, immutable caching for hashed assets, revalidation for HTML, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`.
 
 **Link previews and noindex** — `noindex` (robots meta, `robots.txt`, `X-Robots-Tag`) keeps the site out of search engines; it does not stop link previews, because chat apps fetch a shared page on behalf of the person sharing it.
 
@@ -146,13 +146,13 @@ Editing content, approving copy and deploying: **[`docs/HANDOVER.md`](docs/HANDO
 
 ## Rights and permissions
 
-- The Hipz name, logo and product, and the names, likeness and photos of Kada & Miloud belong to their owners. **Written permission is required before any public launch.**
+This is an independent project. The Hipz name, logo and product images belong to their owners, and so do the names and likeness of Kada & Miloud. **Photos of people are not included in this repository**; the live preview gets them from a local build. Written permission is required before any public launch.
+
 - The hero and flavor scenes are **AI-generated concept art** made from real bottle photos; real photography can replace them at any time.
-- Creator photos come from Kada & Miloud's own public accounts, are used privately for this pitch and are **not stored in this repository**.
 - The visual language follows a measured reference design; all code, copy and images here are original — no reference files, text, images or fonts were reused.
 - Fonts: SIL Open Font License 1.1; dependencies: see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
-**License:** proprietary — all rights reserved. Not open source.
+**Copyright © anevioweb-cell. All rights reserved.** No open-source license is granted: you may read the code, but not copy, modify or redistribute it without permission.
 
 ---
 

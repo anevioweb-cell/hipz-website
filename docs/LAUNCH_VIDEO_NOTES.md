@@ -20,7 +20,7 @@
 >
 > We're truly sorry for every moment we made you worry about us. ❤️ / We wanted to share a dream we've poured our hearts into, in a way you'd never forget. / Because true friendship is more than just a word… it's the moments, memories, and stories that bring us together. ❤️ / Today, with love and pride, we finally introduce HIPZ! 🍋🍑 / HIPZ, Always Friends. ❤️ / @hipzdrink
 
-**Visible comments (summary of the ~12 shown logged-out, no usernames):** short positive reactions ("HIPZ", "Finally", "C'est du lourd", emojis, Arabic praise), one person eager to add the drink to their routine, one person mentioning missing an actor from the video, and one lukewarm "nothing special". French, Arabic and darija mixed.
+**Visible comments:** not recorded here (they are third-party content; only the comment count above is kept).
 
 ## How it was obtained
 - `yt-dlp` (open source, **no login, no cookies**) on the public post URL: **worked** (video + audio streams merged, 17.9 MB). No downloader site was used.

@@ -568,7 +568,7 @@ Everything below needs the owner's approval before the site is shown to Kada and
 - `story.plant`
 - `story.closing`
 
-## Banned-claims scan (copy.js + story.js, 218 strings)
+## Banned-claims scan (copy.js + story.js, 227 strings)
 
 Rules (`src/data/bannedClaims.js`, easy to extend): fruit-content claim; naturalness claim; health claim; sugar claim; calorie claim; nutrition claim; organic claim; superlative claim; ranking claim; award claim; founding date (unconfirmed); origin / production claim; delivery promise; shipping promise; price promotion; percentage figure; review / rating; audience numbers (third-party, unconfirmed); and any digit except the allow-list.
 

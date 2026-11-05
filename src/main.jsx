@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { LazyMotion, domAnimation } from 'motion/react';
 import './index.css';
 import App from './App.jsx';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
 import { hideHeroShell } from './lib/heroShell.js';
 
 // safety net: never leave the static first frame visible if the hero image fails to load
@@ -13,7 +14,10 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <LazyMotion features={domAnimation} strict>
       <BrowserRouter>
-        <App />
+        {/* last resort: an error outside the pages (navbar, layout) still shows the designed page */}
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
       </BrowserRouter>
     </LazyMotion>
   </StrictMode>,

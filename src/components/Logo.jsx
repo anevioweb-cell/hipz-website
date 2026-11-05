@@ -11,6 +11,9 @@ export default function Logo({ className = '', height = 'h-12', tone = 'light' }
         width="398"
         height="279"
         className={`${height} w-auto`}
+        onError={(e) => {
+          e.currentTarget.style.visibility = 'hidden';
+        }}
       />
     </Link>
   );

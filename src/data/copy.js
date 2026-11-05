@@ -33,6 +33,24 @@ export const copy = {
       text: 'A bottle of Hipz Lemon with lemon slices and splashes, and the Hipz logo.',
     }),
   },
+  // Error states (404, crash fallback, failed page load). Short and calm, no blame.
+  errors: {
+    notFound: draft({
+      title: 'Page not found',
+      text: 'This page does not exist, but the drinks do.',
+      cta: 'Back home',
+    }),
+    crash: draft({
+      title: 'Something went wrong',
+      text: 'Please reload the page.',
+      reload: 'Reload',
+      home: 'Back home',
+    }),
+    chunk: draft({
+      title: 'This page did not load',
+      text: 'Check your connection and reload.',
+    }),
+  },
   nav: {
     flavors: draft({ text: 'Flavors' }),
     distributors: draft({ text: 'Distributors' }),

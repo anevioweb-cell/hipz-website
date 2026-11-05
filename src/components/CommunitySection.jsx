@@ -54,7 +54,7 @@ function Tile({ tile }) {
           width="398"
           height="279"
           loading="lazy"
-          className="h-24 w-auto"
+          className="h-[52px] w-auto"
         />
       </div>
     );

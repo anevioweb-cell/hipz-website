@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-site flex-col gap-12 px-gutter pt-24 pb-[calc(2.25rem+env(safe-area-inset-bottom))] lg:px-gutter-lg">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <PopBlock y={40} className="flex flex-col gap-4">
-            <Logo height="h-20" />
+            <Logo height="h-[52px]" />
             <p className="font-display text-h3 font-bold">{copy.footer.tagline.text}</p>
           </PopBlock>
           <PopBlock y={40} delay={0.12} className="flex flex-wrap gap-16">

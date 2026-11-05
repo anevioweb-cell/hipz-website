@@ -1,0 +1,207 @@
+{
+ "at": "2026-11-05T09:06:12.460Z",
+ "devices": [
+  {
+   "device": "iPhone SE",
+   "engine": "webkit",
+   "viewport": {
+    "width": 320,
+    "height": 568
+   },
+   "dpr": 2,
+   "overflow": {
+    "/": 0,
+    "/flavors": 0,
+    "/flavors/lemon": 0,
+    "/flavors/peach": 0,
+    "/distributors": 0,
+    "/our-story": 0
+   },
+   "carousel": {
+    "moved": 254,
+    "snapType": "x mandatory",
+    "snapped": true
+   },
+   "menu": {
+    "trapped": true,
+    "closedOnEscape": true,
+    "focusBack": true
+   },
+   "safeArea": {
+    "viewportFit": true,
+    "bodyPadding": "0px"
+   },
+   "rotated": {
+    "overflow": 0,
+    "frameH": 620,
+    "vh": 320
+   },
+   "errors": []
+  },
+  {
+   "device": "iPhone 15 Pro Max",
+   "engine": "webkit",
+   "viewport": {
+    "width": 430,
+    "height": 739
+   },
+   "dpr": 3,
+   "overflow": {
+    "/": 0,
+    "/flavors": 0,
+    "/flavors/lemon": 0,
+    "/flavors/peach": 0,
+    "/distributors": 0,
+    "/our-story": 0
+   },
+   "carousel": {
+    "moved": 275,
+    "snapType": "x mandatory",
+    "snapped": true
+   },
+   "menu": {
+    "trapped": true,
+    "closedOnEscape": true,
+    "focusBack": true
+   },
+   "safeArea": {
+    "viewportFit": true,
+    "bodyPadding": "0px"
+   },
+   "rotated": {
+    "overflow": 0,
+    "frameH": 620,
+    "vh": 430
+   },
+   "errors": []
+  },
+  {
+   "device": "Pixel 7",
+   "engine": "chromium",
+   "viewport": {
+    "width": 412,
+    "height": 839
+   },
+   "dpr": 2.625,
+   "overflow": {
+    "/": 0,
+    "/flavors": 0,
+    "/flavors/lemon": 0,
+    "/flavors/peach": 0,
+    "/distributors": 0,
+    "/our-story": 0
+   },
+   "carousel": {
+    "moved": 284,
+    "snapType": "x mandatory",
+    "snapped": true
+   },
+   "menu": {
+    "trapped": true,
+    "closedOnEscape": true,
+    "focusBack": true
+   },
+   "safeArea": {
+    "viewportFit": true,
+    "bodyPadding": "0px",
+    "textSizeAdjust": "100%"
+   },
+   "rotated": {
+    "overflow": 0,
+    "frameH": 620,
+    "vh": 412
+   },
+   "errors": []
+  },
+  {
+   "device": "iPad portrait",
+   "engine": "webkit",
+   "viewport": {
+    "width": 810,
+    "height": 1080
+   },
+   "dpr": 2,
+   "overflow": {
+    "/": 0,
+    "/flavors": 0,
+    "/flavors/lemon": 0,
+    "/flavors/peach": 0,
+    "/distributors": 0,
+    "/our-story": 0
+   },
+   "carousel": {
+    "moved": 170,
+    "snapType": "x mandatory",
+    "snapped": true
+   },
+   "menu": "desktop nav (no menu button)",
+   "safeArea": {
+    "viewportFit": true,
+    "bodyPadding": "0px"
+   },
+   "rotated": {
+    "overflow": 0,
+    "frameH": 720,
+    "vh": 810
+   },
+   "errors": []
+  },
+  {
+   "device": "iPad landscape",
+   "engine": "webkit",
+   "viewport": {
+    "width": 1080,
+    "height": 810
+   },
+   "dpr": 2,
+   "overflow": {
+    "/": 0,
+    "/flavors": 0,
+    "/flavors/lemon": 0,
+    "/flavors/peach": 0,
+    "/distributors": 0,
+    "/our-story": 0
+   },
+   "carousel": {
+    "moved": 0,
+    "snapType": "x mandatory",
+    "snapped": true
+   },
+   "menu": "desktop nav (no menu button)",
+   "safeArea": {
+    "viewportFit": true,
+    "bodyPadding": "0px"
+   },
+   "rotated": {
+    "overflow": 0,
+    "frameH": 620,
+    "vh": 1080
+   },
+   "errors": []
+  }
+ ],
+ "reflow": [
+  {
+   "label": "320 px",
+   "overflow": {
+    "/": 0,
+    "/flavors": 0,
+    "/flavors/lemon": 0,
+    "/flavors/peach": 0,
+    "/distributors": 0,
+    "/our-story": 0
+   }
+  },
+  {
+   "label": "200 % zoom of 1280×800",
+   "overflow": {
+    "/": 0,
+    "/flavors": 0,
+    "/flavors/lemon": 0,
+    "/flavors/peach": 0,
+    "/distributors": 0,
+    "/our-story": 0
+   }
+  }
+ ]
+}

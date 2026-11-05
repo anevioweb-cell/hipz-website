@@ -223,7 +223,7 @@ export default function WholesaleForm() {
                   aria-describedby={describedBy('wilaya')}
                   value={values.wilaya}
                   onChange={set('wilaya')}
-                  className={inputCls}
+                  className={`${inputCls} select-field`}
                 >
                   <option value="">{f.wilayaPlaceholder}</option>
                   {wilayas.map((w) => (
@@ -243,7 +243,7 @@ export default function WholesaleForm() {
                   aria-describedby={describedBy('type')}
                   value={type}
                   onChange={(e) => setRequestType(e.target.value)}
-                  className={inputCls}
+                  className={`${inputCls} select-field`}
                 >
                   <option value="">{f.typePlaceholder}</option>
                   {BUSINESS_TYPES.map((t) => (

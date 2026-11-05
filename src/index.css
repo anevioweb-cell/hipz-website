@@ -137,6 +137,9 @@
   html {
     background: var(--color-ink);
     scroll-behavior: smooth;
+    /* iOS: no automatic text inflation in landscape */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
   body {
     margin: 0;
@@ -147,6 +150,9 @@
     font-size: var(--text-body);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    /* viewport-fit=cover: keep content clear of the notch / rounded corners in landscape */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
   :focus-visible {
     outline: 3px solid var(--color-ink);
@@ -161,6 +167,15 @@
 }
 
 @layer components {
+  /* Selects drawn by us: Safari/WebKit does not paint box-shadow (our focus ring) on native menulists */
+  .select-field {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 2.75rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1.5l6 6 6-6' fill='none' stroke='%2316130e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+  }
   .ar {
     font-family: var(--font-arabic);
     unicode-bidi: isolate;
@@ -335,6 +350,26 @@
     :root {
       --frame-m: 14px;
       --frame-h: calc(100svh - 28px);
+    }
+  }
+}
+
+/* Phones in landscape (short screens): framed page heroes fit the screen instead of the 620 px phone
+   frame, so the headline and photo are on the first screen. The home hero keeps its fixed frame. */
+@layer components {
+  @media (orientation: landscape) and (max-height: 500px) {
+    .detail-frame,
+    .detail-frame-content {
+      min-height: calc(100svh - 2 * var(--frame-m));
+    }
+    .detail-frame-content {
+      padding-top: 4.5rem !important;
+      padding-bottom: 1.5rem !important;
+    }
+    .hero-shell--detail .hero-frame,
+    .hero-shell--dist .hero-frame,
+    .hero-shell--story .hero-frame {
+      height: calc(100svh - 2 * var(--frame-m) + 2px);
     }
   }
 }

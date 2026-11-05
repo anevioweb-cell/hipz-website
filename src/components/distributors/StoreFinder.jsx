@@ -41,7 +41,7 @@ export default function StoreFinder({ stores = realStores }) {
                 id="finder-wilaya"
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
-                className={inputCls}
+                className={`${inputCls} select-field`}
               >
                 <option value="">{t.placeholder}</option>
                 {wilayas.map((w) => (

@@ -76,6 +76,12 @@ export default function Navbar() {
       // offsets measured inside the reference frame: frame margin + 16/32/38 px sides, + 14/24/29 px top
       className={`absolute inset-x-0 top-0 z-40 px-6 pt-[22px] lg:px-11 lg:pt-9 min-[1200px]:px-[52px] min-[1200px]:pt-[43px] ${dark ? 'text-ink' : 'text-paper'}${navShown ? ' opacity-100! transform-none!' : ''}`}
       initial={reduce ? false : { y: -24, opacity: 0 }}
+      // safe areas (viewport-fit=cover): the header is positioned against the viewport, not the body
+      style={{
+        left: 'env(safe-area-inset-left)',
+        right: 'env(safe-area-inset-right)',
+        marginTop: 'env(safe-area-inset-top)',
+      }}
       animate={entrance}
       // keyboard focus during the entrance jumps to the final state (never focus an invisible link)
       onFocusCapture={() => {
@@ -123,7 +129,7 @@ export default function Navbar() {
             role="dialog"
             aria-modal="true"
             aria-label="Menu"
-            className="fixed inset-0 z-50 flex flex-col bg-ink px-gutter pt-6 pb-10 text-paper"
+            className="fixed inset-0 z-50 flex flex-col bg-ink px-[max(var(--spacing-gutter),env(safe-area-inset-left))] pt-[max(1.5rem,env(safe-area-inset-top))] pb-[calc(2.5rem+env(safe-area-inset-bottom))] text-paper"
             initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

@@ -10,7 +10,7 @@ import { SOCIAL_LINKS } from '../data/site.js';
 export default function Footer() {
   return (
     <footer className="bg-ink text-paper">
-      <div className="mx-auto flex max-w-site flex-col gap-12 px-gutter pt-24 pb-9 lg:px-gutter-lg">
+      <div className="mx-auto flex max-w-site flex-col gap-12 px-gutter pt-24 pb-[calc(2.25rem+env(safe-area-inset-bottom))] lg:px-gutter-lg">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <PopBlock y={40} className="flex flex-col gap-4">
             <Logo height="h-20" />

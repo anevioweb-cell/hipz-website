@@ -50,14 +50,14 @@ describe('submitWholesaleRequest', () => {
     await expect(
       submitWholesaleRequest(
         { ...data, website: 'spam' },
-        { demo: false, endpoint: 'https://x.test' },
+        { simulated: false, endpoint: 'https://x.test' },
       ),
     ).resolves.toEqual({ ok: true, ignored: true });
     noNetwork();
   });
   it('DEMO_MODE off without an endpoint: fails loudly instead of faking success', async () => {
     await expect(
-      submitWholesaleRequest(data, { demo: false, endpoint: null }),
+      submitWholesaleRequest(data, { simulated: false, endpoint: null }),
     ).rejects.toMatchObject({ code: 'NOT_AVAILABLE' });
     noNetwork();
   });

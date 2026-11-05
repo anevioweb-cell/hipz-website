@@ -9,7 +9,7 @@ Reviewed 2026-11-03. Masters are in `docs/inputs/` (gitignored). Real references
 | `Peach.jpeg` | Styled hero scene: peach bottle on ice with peach slices, orange background | 1856×2304 JPEG | **ACCEPTED ONLY CROPPED** (see below); full image REJECTED |
 | `lemonNoBg.png` | Lemon bottle cutout (transparent) | 448×557 RGBA | **ACCEPTED, low resolution** |
 | `PeachNoBg.png` | Peach bottle cutout (transparent) | 448×557 RGBA | **ACCEPTED ONLY CROPPED** (same reason); low resolution |
-| `public/logo.jpg` | Hipz round logo: white wordmark + smile on lime circle, black corners | **150×150** JPEG | Accepted as source; low resolution |
+| `brand/logo.jpg` (moved out of `public/` in Phase 8 so it is not deployed) | Hipz round logo: white wordmark + smile on lime circle, black corners | **150×150** JPEG | Accepted as source; low resolution |
 
 Note: the brief mentioned four images (white-background + hero scene per flavor). What arrived are two hero scenes and two ready-made cutouts; no white-background originals. The cutouts are only 448 px wide.
 
@@ -31,7 +31,7 @@ Result:
 - Nothing was repainted, re-lettered or edited by me.
 
 ## Logo
-- `public/logo.jpg` is untouched. Derived by `scripts/make-logo.mjs`:
+- `brand/logo.jpg` (moved out of `public/` in Phase 8 so it is not deployed) is untouched. Derived by `scripts/make-logo.mjs`:
   - `public/logo-white.png`: white wordmark + smile on transparent (398×279, built from a 4× upscale with whiteness → alpha). Edges are slightly soft and the ® mark is too faint to survive. Fine at navbar size (≈ 90–110 px wide, downscaled); **would look soft above ~200 px**. It is used in the Navbar and Footer.
   - `public/logo-badge.png`: round version in original colors (for icons).
 - **Better file to request:** the vector logo (SVG/AI/PDF) or a PNG ≥ 1000 px with transparent background, including the ® mark.

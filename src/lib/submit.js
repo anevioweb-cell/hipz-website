@@ -9,10 +9,10 @@ import { DEMO_MODE, FORM_ENDPOINT } from '../config.js';
 // - DEMO_MODE false with an endpoint: POSTs JSON. Replace/extend this before any public launch.
 export async function submitWholesaleRequest(
   data,
-  { demo = DEMO_MODE, endpoint = FORM_ENDPOINT, delay = 900 } = {},
+  { simulated = DEMO_MODE, endpoint = FORM_ENDPOINT, delay = 900 } = {},
 ) {
   if (data.website) return { ok: true, ignored: true };
-  if (demo) {
+  if (simulated) {
     await new Promise((r) => setTimeout(r, delay));
     return { ok: true };
   }

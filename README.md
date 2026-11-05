@@ -58,7 +58,7 @@ Photos, videos, logo and bottle images (`docs/inputs/`, `sourse of Kada and Milo
 
 ## Images
 
-Masters (`docs/inputs/*.jpeg|png|jpg`) are gitignored. `npm run images` creates the optimized set. The logo is derived from `public/logo.jpg` (150×150 — request a vector/large PNG), see `docs/ASSET_REPORT.md`.
+Masters (`docs/inputs/*.jpeg|png|jpg`) are gitignored. `npm run images` creates the optimized set. The logo is derived from `brand/logo.jpg` (moved out of `public/` in Phase 8 so it is not deployed) (150×150 — request a vector/large PNG), see `docs/ASSET_REPORT.md`.
 
 ## Forms: `src/lib/submit.js`
 

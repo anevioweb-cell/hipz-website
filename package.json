@@ -15,7 +15,8 @@
     "measure:reference": "node scripts/measure-reference.mjs",
     "images": "node scripts/images.mjs && node scripts/make-share.mjs",
     "copy:review": "node scripts/copy-review.mjs",
-    "e2e": "vite build && node scripts/e2e.mjs"
+    "e2e": "vite build && node scripts/e2e.mjs",
+    "notices": "node scripts/notices.mjs"
   },
   "dependencies": {
     "@fontsource-variable/bricolage-grotesque": "^5.3.0",

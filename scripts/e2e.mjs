@@ -81,7 +81,7 @@ await flow('navigate to each flavor', async (p) => {
     ['peach', 'Peach'],
   ]) {
     await p.goto(B + '/flavors');
-    const link = p.locator(`a[href="/flavors/${slug}"]`).first();
+    const link = p.locator(`#root a[href="/flavors/${slug}"]`).first(); // not the static frame
     // blocks rise into place for ~0.7 s after entering the view (measured motion): let it settle
     await link.scrollIntoViewIfNeeded();
     await p.waitForTimeout(1200);

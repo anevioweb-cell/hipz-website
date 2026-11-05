@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-// Real Hipz logo, derived from the supplied public/logo.jpg (see docs/ASSET_REPORT.md).
+// Real Hipz logo, derived from the supplied brand/logo.jpg (see docs/ASSET_REPORT.md).
 // tone "light" = white logo (for dark backgrounds), "dark" = ink logo (for bright backgrounds).
 // The only source is a 150 px file (no vector): never show the wordmark taller than 52 px (≈ 74 CSS px
 // wide), so it stays sharp on 2× screens. Enforced by Logo.test.jsx.

@@ -15,6 +15,7 @@ export function flavorsFirstBand() {
       </MemoryRouter>
     </LazyMotion>,
   );
-  // decorative duplicate: no ids (no duplicates with the React copy), no labelling references
-  return html.replace(/\s(id|aria-labelledby|aria-describedby)="[^"]*"/g, '');
+  // decorative duplicate: no ids (no duplicates with the React copy), no labelling references and no
+  // link targets (the page's skip link stays the first link in the document)
+  return html.replace(/\s(id|aria-labelledby|aria-describedby|href)="[^"]*"/g, '');
 }

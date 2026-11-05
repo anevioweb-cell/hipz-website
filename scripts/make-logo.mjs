@@ -1,8 +1,8 @@
 // Builds public/logo-white.png (white wordmark on transparent) and public/logo-badge.png (round badge)
-// from the supplied public/logo.jpg. The original JPG is never modified; nothing is redrawn.
+// from the supplied brand/logo.jpg. The original JPG is never modified; nothing is redrawn.
 import sharp from 'sharp';
 
-const SRC = 'public/logo.jpg';
+const SRC = 'brand/logo.jpg'; // the supplied original (not deployed)
 const SCALE = 4;
 const { width: w, height: h } = await sharp(SRC).metadata();
 

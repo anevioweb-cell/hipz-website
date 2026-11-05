@@ -1,9 +1,9 @@
-import Ar from '../components/Ar.jsx';
-import Button from '../components/Button.jsx';
-import Picture from '../components/Picture.jsx';
-import PopBlock from '../components/PopBlock.jsx';
-import SectionHeader from '../components/SectionHeader.jsx';
-import PopText from '../components/PopText.jsx';
+import Ar from '../components/ui/Ar.jsx';
+import Button from '../components/ui/Button.jsx';
+import Picture from '../components/ui/Picture.jsx';
+import PopBlock from '../components/motion/PopBlock.jsx';
+import SectionHeader from '../components/ui/SectionHeader.jsx';
+import PopText from '../components/motion/PopText.jsx';
 import { heroText } from '../motion.js';
 import ContactBand, { PhoneLinks } from '../components/distributors/ContactBand.jsx';
 import WaysToWork from '../components/distributors/WaysToWork.jsx';

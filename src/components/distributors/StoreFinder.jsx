@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import SectionHeader from '../SectionHeader.jsx';
-import Button from '../Button.jsx';
+import SectionHeader from '../ui/SectionHeader.jsx';
+import Button from '../ui/Button.jsx';
 import { wilayaLabel, wilayas } from '../../data/wilayas.js';
 import { stores as realStores } from '../../data/stores.js';
 import { PUBLIC_CONTACT } from '../../data/site.js';

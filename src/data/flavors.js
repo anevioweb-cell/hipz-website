@@ -1,4 +1,4 @@
-// Flavors: exactly two, confirmed by the owner (docs/BRAND_BRIEF.md rows 12–14, 22).
+// Flavors: exactly two, confirmed by the owner (docs/brand/BRAND_BRIEF.md rows 12–14, 22).
 // Only verified facts live here. `volume`: 330 ml, one single size (owner statement, BRAND_BRIEF row 34).
 // It is shown only as an attribute in "The basics" on flavor pages — never on images, never as "medium".
 // Colors reference tokens in src/index.css; hex values live ONLY there.

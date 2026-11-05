@@ -5,7 +5,7 @@ import { images } from './src/data/images.generated.js';
 import { DIST_BOTTLES } from './src/lib/distHeroClasses.js';
 import { STORY_HERO } from './src/lib/storyHeroClasses.js';
 import { creatorPhotos } from './src/data/creators.js';
-import { pruneCreatorImages } from './scripts/creator-images.mjs';
+import { pruneCreatorImages } from './scripts/build/creator-images.mjs';
 import { META_ROUTES, metaTags, withMeta } from './src/lib/pageMeta.js';
 import { copy } from './src/data/copy.js';
 import { SITE_URL } from './src/config.js';

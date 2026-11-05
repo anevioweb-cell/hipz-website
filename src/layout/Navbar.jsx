@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AnimatePresence, m, useAnimationControls, useReducedMotion } from 'motion/react';
-import Logo from '../components/Logo.jsx';
-import Button from '../components/Button.jsx';
+import Logo from '../components/ui/Logo.jsx';
+import Button from '../components/ui/Button.jsx';
 import { navLinks } from './navLinks.js';
 import { useNavToneValue } from '../hooks/useNavTone.js';
 import { copy } from '../data/copy.js';

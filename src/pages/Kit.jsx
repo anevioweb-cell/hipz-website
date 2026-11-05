@@ -1,18 +1,18 @@
-import Ar from '../components/Ar.jsx';
-import Button from '../components/Button.jsx';
-import Chip from '../components/Chip.jsx';
-import EmptyState from '../components/EmptyState.jsx';
-import FlavorTheme from '../components/FlavorTheme.jsx';
-import InsetCard from '../components/InsetCard.jsx';
-import Marquee from '../components/Marquee.jsx';
-import PopBlock from '../components/PopBlock.jsx';
-import Section from '../components/Section.jsx';
-import Bottle from '../components/Bottle.jsx';
-import Ticker from '../components/Ticker.jsx';
-import PopText from '../components/PopText.jsx';
-import Parallax from '../components/Parallax.jsx';
-import SectionHeader from '../components/SectionHeader.jsx';
-import { useToast } from '../components/toast-context.js';
+import Ar from '../components/ui/Ar.jsx';
+import Button from '../components/ui/Button.jsx';
+import Chip from '../components/ui/Chip.jsx';
+import EmptyState from '../components/ui/EmptyState.jsx';
+import FlavorTheme from '../components/flavor/FlavorTheme.jsx';
+import InsetCard from '../components/ui/InsetCard.jsx';
+import Marquee from '../components/motion/Marquee.jsx';
+import PopBlock from '../components/motion/PopBlock.jsx';
+import Section from '../components/ui/Section.jsx';
+import Bottle from '../components/flavor/Bottle.jsx';
+import Ticker from '../components/home/Ticker.jsx';
+import PopText from '../components/motion/PopText.jsx';
+import Parallax from '../components/motion/Parallax.jsx';
+import SectionHeader from '../components/ui/SectionHeader.jsx';
+import { useToast } from '../components/ui/toast-context.js';
 import { flavors } from '../data/flavors.js';
 
 const colors = [

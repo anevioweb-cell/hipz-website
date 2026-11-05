@@ -1,4 +1,4 @@
-// Public site facts. Everything here is confirmed by the owner (docs/BRAND_BRIEF.md).
+// Public site facts. Everything here is confirmed by the owner (docs/brand/BRAND_BRIEF.md).
 export const SITE = {
   name: 'Hipz',
   nameAr: 'هايبز',

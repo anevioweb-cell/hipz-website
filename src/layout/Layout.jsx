@@ -2,9 +2,9 @@ import Navbar from './Navbar.jsx';
 import Footer from './Footer.jsx';
 import { useLocation } from 'react-router-dom';
 import PageTransition from './PageTransition.jsx';
-import ErrorBoundary from '../components/ErrorBoundary.jsx';
-import ToastProvider from '../components/Toast.jsx';
-import SmoothScroll from '../components/SmoothScroll.jsx';
+import ErrorBoundary from './ErrorBoundary.jsx';
+import ToastProvider from '../components/ui/Toast.jsx';
+import SmoothScroll from '../components/motion/SmoothScroll.jsx';
 
 export default function Layout() {
   const { pathname } = useLocation();

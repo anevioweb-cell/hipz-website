@@ -1,5 +1,5 @@
-import SectionHeader from '../SectionHeader.jsx';
-import PopBlock from '../PopBlock.jsx';
+import SectionHeader from '../ui/SectionHeader.jsx';
+import PopBlock from '../motion/PopBlock.jsx';
 import { PUBLIC_CONTACT, SOCIAL_LINKS } from '../../data/site.js';
 import { telHref } from '../../lib/phone.js';
 import { copy } from '../../data/copy.js';

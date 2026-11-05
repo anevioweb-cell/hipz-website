@@ -36,7 +36,7 @@ A fast, mobile-first, bilingual-accent brand website for **Hipz**, the soda bran
 - Accessible to everyone: keyboard, screen readers, large touch targets, readable contrast.
 - No tracking, no cookies, no third-party scripts.
 
-**Content is easy to change** — all text, flavors, story facts, links and photos live in small data files; see [`docs/HANDOVER.md`](docs/HANDOVER.md).
+**Content is easy to change** — all text, flavors, story facts, links and photos live in small data files; see [`docs/project/HANDOVER.md`](docs/project/HANDOVER.md).
 
 ---
 
@@ -50,9 +50,9 @@ A fast, mobile-first, bilingual-accent brand website for **Hipz**, the soda bran
 | Distributors           | 96          | 100           | 100            | 2.7 s | 0   |
 | Our story              | 99          | 100           | 100            | 2.3 s | 0   |
 
-_Lighthouse mobile, 3 runs each, local production build. Live numbers: [`docs/RELEASE_NOTES.md`](docs/RELEASE_NOTES.md)._
+_Lighthouse mobile, 3 runs each, local production build. Live numbers: [`docs/project/RELEASE_NOTES.md`](docs/project/RELEASE_NOTES.md)._
 
-- **Cross-browser:** Chromium, Firefox and WebKit × 7 routes × 4 widths — 84/84 pass; emulated iPhone SE, iPhone 15 Pro Max, Pixel 7 and iPad ([`docs/QA_MATRIX.md`](docs/QA_MATRIX.md)).
+- **Cross-browser:** Chromium, Firefox and WebKit × 7 routes × 4 widths — 84/84 pass; emulated iPhone SE, iPhone 15 Pro Max, Pixel 7 and iPad ([`docs/qa/QA_MATRIX.md`](docs/qa/QA_MATRIX.md)).
 - **Accessibility:** axe-core, 0 violations on 15 routes and UI states (WCAG 2.2 AA + best practices), plus manual checks (headings, landmarks, focus, contrast over images, reduced motion).
 - **End-to-end:** 9 user flows pass on Chromium, Firefox and WebKit (`npm run e2e`).
 - **Unit tests:** 163 (Vitest + Testing Library), including content rules (no unconfirmed claims, numbers or names).
@@ -80,16 +80,34 @@ React 19 · Vite · Tailwind CSS v4 (design tokens in `@theme`) · `motion` (Laz
 
 ```
 src/
-  pages/        Home, Flavors, FlavorDetail, Distributors, OurStory, NotFound
-  components/   PopText, PopBlock, Picture, FlavorScene, Marquee, ErrorBoundary, …
-  layout/       Navbar (+ accessible mobile menu), Footer, PageTransition
-  data/         copy.js, flavors.js, story.js, creators.js, site.js, wilayas.js, stores.js
-  lib/          form submit (DEMO_MODE), validation, phone formats, page meta, chunk retry
-  ssr/          build-time render of the /flavors first frame
-  config.js     DEMO_MODE, FORM_ENDPOINT, SITE_URL, SMOOTH_SCROLL
-  index.css     all design tokens
-scripts/        images, link-preview image, QA matrix, a11y, e2e, motion measurement, notices
-docs/           handover, roadmap, QA matrix, motion spec, copy review, release notes
+  pages/                Home, Flavors, FlavorDetail, Distributors, OurStory, NotFound
+  components/
+    ui/                 Button, Chip, Ar (Arabic), Section, SectionHeader, Picture, Logo, Toast…
+    motion/             PopText, PopBlock, Parallax, Marquee, SmoothScroll
+    flavor/             FlavorScene, FlavorBand, FlavorCard, FlavorCarousel, Bottle, ThirstEffects…
+    home/               Hero, Ticker and the home sections
+    distributors/       ContactBand, WaysToWork, WholesaleForm, StoreFinder
+    icons/              small SVG icons
+  layout/               Layout, Navbar (+ mobile menu), Footer, PageTransition, ErrorBoundary
+  data/                 copy, flavors, story, creators, site, wilayas, stores (+ their tests)
+  lib/                  form submit (DEMO_MODE), validation, phone formats, page meta, chunk retry
+  hooks/                small React hooks
+  ssr/                  build-time render of the /flavors first frame
+  config.js             DEMO_MODE, FORM_ENDPOINT, SITE_URL, SMOOTH_SCROLL
+  index.css             all design tokens (@theme)
+scripts/
+  build/                npm run check, image pipeline, link-preview image, dist checks
+  qa/                   e2e, browser/device matrix, axe audit, contrast, network, live checks
+  research/             reference measurement and motion comparison
+  docs/                 generators for COPY_REVIEW.md, QA_MATRIX.md, THIRD_PARTY_NOTICES.md
+docs/
+  project/              roadmap, handover, deploy notes, release notes
+  brand/                brand brief, assets, font licenses
+  content/              copy review, story proposals, creator-photo records
+  design/               reference analysis, motion spec and measurements
+  qa/                   QA matrix and audit results
+brand/                  the supplied logo (source file, not deployed)
+public/                 deployed static files (optimized images, icons, og.jpg, robots.txt)
 ```
 
 ---
@@ -110,14 +128,14 @@ More scripts:
 
 ```bash
 npm run images       # rebuild optimized images, og.jpg and icons from the masters (masters are not in git)
-npm run copy:review  # docs/COPY_REVIEW.md — every string, its status and the banned-claims scan
+npm run copy:review  # docs/content/COPY_REVIEW.md — every string, its status and the banned-claims scan
 npm run notices      # THIRD_PARTY_NOTICES.md from the production dependency tree
-node scripts/qa-matrix.mjs && node scripts/qa-devices.mjs && node scripts/qa-report.mjs   # browser/device matrix (served build on :4174)
-node scripts/a11y-audit.mjs       # axe-core on every route and key state (served build on :4174)
-node scripts/serve-vercel.mjs dist 4190   # serve a build with the vercel.json rules
+node scripts/qa/qa-matrix.mjs && node scripts/qa/qa-devices.mjs && node scripts/docs/qa-report.mjs   # browser/device matrix (served build on :4174)
+node scripts/qa/a11y-audit.mjs       # axe-core on every route and key state (served build on :4174)
+node scripts/qa/serve-vercel.mjs dist 4190   # serve a build with the vercel.json rules
 ```
 
-Editing content, approving copy and deploying: **[`docs/HANDOVER.md`](docs/HANDOVER.md)**.
+Editing content, approving copy and deploying: **[`docs/project/HANDOVER.md`](docs/project/HANDOVER.md)**.
 
 ---
 
@@ -158,16 +176,17 @@ This is an independent project. The Hipz name, logo and product images belong to
 
 ## Documentation
 
-| Document                                         | What it covers                                            |
-| ------------------------------------------------ | --------------------------------------------------------- |
-| [`docs/HANDOVER.md`](docs/HANDOVER.md)           | Where content lives, approving copy, DEMO_MODE, deploying |
-| [`docs/RELEASE_NOTES.md`](docs/RELEASE_NOTES.md) | Live preview, version, numbers, known limitations         |
-| [`docs/ROADMAP.md`](docs/ROADMAP.md)             | Phases, decisions and the pre-launch checklist            |
-| [`docs/QA_MATRIX.md`](docs/QA_MATRIX.md)         | Browser × width × device results                          |
-| [`docs/MOTION_SPEC.md`](docs/MOTION_SPEC.md)     | Measured motion and how it was rebuilt                    |
-| [`docs/COPY_REVIEW.md`](docs/COPY_REVIEW.md)     | Every string, its status, the banned-claims scan          |
-| [`docs/BRAND_BRIEF.md`](docs/BRAND_BRIEF.md)     | Confirmed facts and owner decisions, with sources         |
-| [`docs/FONT_LICENSES.md`](docs/FONT_LICENSES.md) | Fonts and licenses                                        |
+| Document                                                         | What it covers                                            |
+| ---------------------------------------------------------------- | --------------------------------------------------------- |
+| [`docs/project/HANDOVER.md`](docs/project/HANDOVER.md)           | Where content lives, approving copy, DEMO_MODE, deploying |
+| [`docs/project/RELEASE_NOTES.md`](docs/project/RELEASE_NOTES.md) | Live preview, version, numbers, known limitations         |
+| [`docs/project/ROADMAP.md`](docs/project/ROADMAP.md)             | Phases, decisions and the pre-launch checklist            |
+| [`docs/qa/QA_MATRIX.md`](docs/qa/QA_MATRIX.md)                   | Browser × width × device results                          |
+| [`docs/design/MOTION_SPEC.md`](docs/design/MOTION_SPEC.md)       | Measured motion and how it was rebuilt                    |
+| [`docs/content/COPY_REVIEW.md`](docs/content/COPY_REVIEW.md)     | Every string, its status, the banned-claims scan          |
+| [`docs/brand/BRAND_BRIEF.md`](docs/brand/BRAND_BRIEF.md)         | Confirmed facts and owner decisions, with sources         |
+| [`docs/brand/FONT_LICENSES.md`](docs/brand/FONT_LICENSES.md)     | Fonts and licenses                                        |
+| [`docs/README.md`](docs/README.md)                               | Index of all documents                                    |
 
 ---
 

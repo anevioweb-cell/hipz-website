@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
-import SectionHeader from '../SectionHeader.jsx';
-import Button from '../Button.jsx';
+import SectionHeader from '../ui/SectionHeader.jsx';
+import Button from '../ui/Button.jsx';
 import { wilayaLabel, wilayas } from '../../data/wilayas.js';
 import { copy } from '../../data/copy.js';
 import { BUSINESS_TYPES, MESSAGE_MAX, validateRequest } from '../../lib/validate.js';

@@ -1,6 +1,6 @@
 // Motion constants. Source of truth for easing/durations is src/index.css (--ease-out, --duration-*);
 // these mirror them for the motion JS API (which needs numbers, not var()).
-// "measured" values come from docs/reference-measurements.json (see docs/REFERENCE_ANALYSIS.md §6).
+// "measured" values come from docs/design/reference-measurements.json (see docs/design/REFERENCE_ANALYSIS.md §6).
 export const ease = [0.22, 1, 0.36, 1];
 export const duration = {
   fast: 0.2,
@@ -20,7 +20,7 @@ export const revealMargin = '0px 0px -18% 0px'; // measured: reveals start when 
 export const stagger = 0.08;
 export const speeds = { ticker: 60, reviewRows: 54 }; // px/s, measured (ticker re-measured in Phase 6)
 
-// ---- Phase 6 Part C: text pop + scroll reveals, re-measured frame by frame (docs/MOTION_SPEC.md) ----
+// ---- Phase 6 Part C: text pop + scroll reveals, re-measured frame by frame (docs/design/MOTION_SPEC.md) ----
 // Headings (h1/h2): every CHARACTER pops from scale 0 to 1 (opacity stays 1), no overflow mask,
 // transform-origin centre, 30 ms between characters, each 420 ms on an overshooting curve
 // (peak 1.143 at ≈ 217 ms, lands on 1 at ≈ 400 ms, no undershoot).

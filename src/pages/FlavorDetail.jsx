@@ -1,16 +1,16 @@
 import { useParams } from 'react-router-dom';
 import { m, useReducedMotion } from 'motion/react';
-import Section from '../components/Section.jsx';
-import SectionHeader from '../components/SectionHeader.jsx';
-import PopBlock from '../components/PopBlock.jsx';
-import Button from '../components/Button.jsx';
-import Chip from '../components/Chip.jsx';
-import Ar from '../components/Ar.jsx';
-import Bottle from '../components/Bottle.jsx';
-import FlavorScene from '../components/FlavorScene.jsx';
-import FlavorTheme from '../components/FlavorTheme.jsx';
-import FlavorCard from '../components/FlavorCard.jsx';
-import BothFlavorsCard from '../components/BothFlavorsCard.jsx';
+import Section from '../components/ui/Section.jsx';
+import SectionHeader from '../components/ui/SectionHeader.jsx';
+import PopBlock from '../components/motion/PopBlock.jsx';
+import Button from '../components/ui/Button.jsx';
+import Chip from '../components/ui/Chip.jsx';
+import Ar from '../components/ui/Ar.jsx';
+import Bottle from '../components/flavor/Bottle.jsx';
+import FlavorScene from '../components/flavor/FlavorScene.jsx';
+import FlavorTheme from '../components/flavor/FlavorTheme.jsx';
+import FlavorCard from '../components/flavor/FlavorCard.jsx';
+import BothFlavorsCard from '../components/flavor/BothFlavorsCard.jsx';
 import { getFlavor, otherFlavor } from '../data/flavors.js';
 import { copy } from '../data/copy.js';
 import { useNavTone } from '../hooks/useNavTone.js';
@@ -70,7 +70,7 @@ function FlavorPage({ flavor }) {
             className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-[68%] bg-linear-to-t from-ink via-ink/80 to-transparent portrait:block"
           />
           <div className="relative z-10 mx-auto detail-frame-content flex max-w-site flex-col justify-end gap-5 px-gutter pt-28 pb-10 text-ink portrait:text-paper lg:px-gutter-lg lg:pb-16 landscape:[&>*]:max-w-[min(34rem,46vw)]">
-            {/* measured detail-page entrance (docs/MOTION_SPEC.md): a cascade of blocks after load —
+            {/* measured detail-page entrance (docs/design/MOTION_SPEC.md): a cascade of blocks after load —
                 heading +0.16 s (y 40), then text blocks +0.26…0.47 s (y 30), chips pop +0.63 s */}
             <ul className="flex flex-wrap gap-2" aria-label="Facts">
               {attrs.map((k, i) => (

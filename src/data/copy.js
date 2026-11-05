@@ -1,5 +1,5 @@
 // ALL site copy lives here. Every leaf carries a `draft` flag: `draft(...)` = waiting for the owner,
-// `approved(...)` = reviewed. Phase 8: the owner reviewed all copy (docs/COPY_REVIEW.md) → all approved.
+// `approved(...)` = reviewed. Phase 8: the owner reviewed all copy (docs/content/COPY_REVIEW.md) → all approved.
 // New copy starts as `draft(...)` again.
 // Rules: no health claims, ingredients, calories, sugar/fruit-content claims, origin, awards, numbers,
 // fake reviews or customer names. Arabic accent words go in `ar` and render through <Ar>.

@@ -1,5 +1,5 @@
-import SectionHeader from '../SectionHeader.jsx';
-import PopBlock from '../PopBlock.jsx';
+import SectionHeader from '../ui/SectionHeader.jsx';
+import PopBlock from '../motion/PopBlock.jsx';
 import { setRequestType } from '../../lib/requestType.js';
 import { copy } from '../../data/copy.js';
 

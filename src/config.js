@@ -3,7 +3,7 @@
 export const DEMO_MODE = true;
 
 // Smooth scrolling (Lenis). OFF since Phase 6: the reference scrolls natively (a 100 px wheel step lands
-// within one frame, no easing or inertia — docs/MOTION_SPEC.md). Kept as an option, never under reduced motion.
+// within one frame, no easing or inertia — docs/design/MOTION_SPEC.md). Kept as an option, never under reduced motion.
 export const SMOOTH_SCROLL = false;
 
 // Endpoint for the wholesale request form when DEMO_MODE is false. null = not configured: the form then

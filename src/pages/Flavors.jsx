@@ -1,9 +1,9 @@
-import Section from '../components/Section.jsx';
-import SectionHeader from '../components/SectionHeader.jsx';
-import PopBlock from '../components/PopBlock.jsx';
-import Button from '../components/Button.jsx';
-import FlavorBand from '../components/FlavorBand.jsx';
-import BothFlavorsCard from '../components/BothFlavorsCard.jsx';
+import Section from '../components/ui/Section.jsx';
+import SectionHeader from '../components/ui/SectionHeader.jsx';
+import PopBlock from '../components/motion/PopBlock.jsx';
+import Button from '../components/ui/Button.jsx';
+import FlavorBand from '../components/flavor/FlavorBand.jsx';
+import BothFlavorsCard from '../components/flavor/BothFlavorsCard.jsx';
 import { flavors } from '../data/flavors.js';
 import { copy } from '../data/copy.js';
 import { useNavTone } from '../hooks/useNavTone.js';

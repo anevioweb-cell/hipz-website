@@ -11,12 +11,12 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "vitest run",
-    "check": "node scripts/check.mjs",
-    "measure:reference": "node scripts/measure-reference.mjs",
-    "images": "node scripts/images.mjs && node scripts/make-share.mjs",
-    "copy:review": "node scripts/copy-review.mjs",
-    "e2e": "vite build && node scripts/e2e.mjs",
-    "notices": "node scripts/notices.mjs"
+    "check": "node scripts/build/check.mjs",
+    "measure:reference": "node scripts/research/measure-reference.mjs",
+    "images": "node scripts/build/images.mjs && node scripts/build/make-share.mjs",
+    "copy:review": "node scripts/docs/copy-review.mjs",
+    "e2e": "vite build && node scripts/qa/e2e.mjs",
+    "notices": "node scripts/docs/notices.mjs"
   },
   "dependencies": {
     "@fontsource-variable/bricolage-grotesque": "^5.3.0",

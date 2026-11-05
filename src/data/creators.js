@@ -4,7 +4,7 @@
 // `image` = generated set name (npm run images → public/images/creators/, gitignored);
 // `focal` = point to keep in view when cropping (fractions of the image, set by hand).
 // `selected` = actually shown on a page. ONLY selected photos are copied into the build (dist/); the rest
-// stay local (vite.config.js prunes them, scripts/check-dist.mjs fails the check if one slips through).
+// stay local (vite.config.js prunes them, scripts/build/check-dist.mjs fails the check if one slips through).
 // `use` = where /our-story shows it: 'hero' (duo, big), 'solo' (duo-band collage, labelled with the one
 // person on his own account), 'bottling' (the bottling-line gallery). Solo photos of Kada are picked up
 // automatically once an entry with people: ['kada'], use: 'solo', selected: true exists.

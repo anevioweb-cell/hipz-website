@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import Logo from '../components/Logo.jsx';
-import PopBlock from '../components/PopBlock.jsx';
+import Logo from '../components/ui/Logo.jsx';
+import PopBlock from '../components/motion/PopBlock.jsx';
 import { navLinks } from './navLinks.js';
 import { copy } from '../data/copy.js';
 import { SOCIAL_LINKS } from '../data/site.js';

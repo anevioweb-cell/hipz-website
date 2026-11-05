@@ -1,4 +1,4 @@
-// Facts for /our-story. ONLY confirmed facts, each with its source (docs/BRAND_BRIEF.md rows 42–50).
+// Facts for /our-story. ONLY confirmed facts, each with its source (docs/brand/BRAND_BRIEF.md rows 42–50).
 // Wording lives in src/data/copy.js (copy.story); this file holds what is TRUE and where it comes from.
 //
 // Optional facts are null / [] until the owner confirms them. Every optional entry needs a `source`;

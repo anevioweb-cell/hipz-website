@@ -1,5 +1,5 @@
 // Banned-claims list, run over every displayed string of src/data/copy.js and src/data/story.js
-// (src/data/claims.test.js, and the scan section of docs/COPY_REVIEW.md via `npm run copy:review`).
+// (src/data/claims.test.js, and the scan section of docs/content/COPY_REVIEW.md via `npm run copy:review`).
 // To extend: add { pattern, why } to BANNED. Digits are banned everywhere except the patterns in
 // DIGIT_ALLOW (each with the reason it is fine).
 

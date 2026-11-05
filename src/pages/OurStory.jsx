@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import Ar from '../components/Ar.jsx';
-import Button from '../components/Button.jsx';
-import Parallax from '../components/Parallax.jsx';
-import Picture from '../components/Picture.jsx';
-import PopBlock from '../components/PopBlock.jsx';
-import PopText from '../components/PopText.jsx';
-import SectionHeader from '../components/SectionHeader.jsx';
+import Ar from '../components/ui/Ar.jsx';
+import Button from '../components/ui/Button.jsx';
+import Parallax from '../components/motion/Parallax.jsx';
+import Picture from '../components/ui/Picture.jsx';
+import PopBlock from '../components/motion/PopBlock.jsx';
+import PopText from '../components/motion/PopText.jsx';
+import SectionHeader from '../components/ui/SectionHeader.jsx';
 import { soloPhotos, story as realStory, storySections, visibleOptional } from '../data/story.js';
 import { creatorPhotos } from '../data/creators.js';
 import { flavors } from '../data/flavors.js';

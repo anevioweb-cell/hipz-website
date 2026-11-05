@@ -4,7 +4,7 @@
 import { renderToStaticMarkup } from 'react-dom/server';
 import { MemoryRouter } from 'react-router-dom';
 import { LazyMotion, domAnimation } from 'motion/react';
-import FlavorBand from '../components/FlavorBand.jsx';
+import FlavorBand from '../components/flavor/FlavorBand.jsx';
 import { flavors } from '../data/flavors.js';
 
 export function flavorsFirstBand() {

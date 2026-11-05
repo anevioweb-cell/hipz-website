@@ -1,6 +1,6 @@
-import Section from '../components/Section.jsx';
-import SectionHeader from '../components/SectionHeader.jsx';
-import Button from '../components/Button.jsx';
+import Section from '../components/ui/Section.jsx';
+import SectionHeader from '../components/ui/SectionHeader.jsx';
+import Button from '../components/ui/Button.jsx';
 import { copy } from '../data/copy.js';
 import { usePageTitle } from '../hooks/usePageTitle.js';
 

@@ -48,3 +48,8 @@ vercel deploy --prebuilt --prod # production domain: https://hipz-website-snowy.
 Check in the dashboard → Settings → Git that **no repository is connected**. Keep **Standard Protection** in Settings → Deployment Protection (production domain public, other deployment URLs protected).
 
 Redeploy after any change: `npm run check` → `vercel build --prod` → `vercel deploy --prebuilt --prod`. Never re-connect Git.
+
+## Lesson: no `cleanUrls` (2026-11-05)
+
+The first local deploy served unknown paths (`/flavors/mango`, `/no/such/page`) as Vercel's own 404 instead of the app. Vercel's generated routes (`.vercel/output/config.json`) showed why: with `"cleanUrls": true` the file `index.html` is registered as `/`, so the SPA fallback rewrite to `/index.html` failed its filesystem check. `cleanUrls` was removed (the per-route rewrites already point at real files); a unit test keeps it out. The local stand-in `scripts/serve-vercel.mjs` does not model `cleanUrls`, which is why it had not caught this.
+

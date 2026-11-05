@@ -7,7 +7,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-config-prettier';
 
 export default [
-  { ignores: ['dist', 'coverage', 'docs', 'node_modules', 'sourse of Kada and Miloud'] },
+  { ignores: ['dist', '.vercel', 'coverage', 'docs', 'node_modules', 'sourse of Kada and Miloud'] },
   js.configs.recommended,
   react.configs.flat.recommended,
   react.configs.flat['jsx-runtime'],

@@ -7,7 +7,11 @@ import assert from 'node:assert/strict';
 import { chromium, firefox, webkit } from 'playwright';
 
 const PORT = 4195;
-const B = `http://localhost:${PORT}`;
+// --base https://… runs the flows against a deployed site (no local server)
+const LIVE = process.argv.includes('--base')
+  ? process.argv[process.argv.indexOf('--base') + 1]
+  : null;
+const B = LIVE || `http://localhost:${PORT}`;
 const engine = process.argv.includes('--engine')
   ? process.argv[process.argv.indexOf('--engine') + 1]
   : 'chromium';
@@ -17,9 +21,9 @@ const kill = setTimeout(() => {
   process.exit(1);
 }, 120_000);
 
-const server = spawn('node', ['scripts/serve-vercel.mjs', 'dist', String(PORT)], {
-  stdio: 'ignore',
-});
+const server = LIVE
+  ? { kill() {} }
+  : spawn('node', ['scripts/serve-vercel.mjs', 'dist', String(PORT)], { stdio: 'ignore' });
 for (let i = 0; i < 50; i++) {
   try {
     await fetch(B);

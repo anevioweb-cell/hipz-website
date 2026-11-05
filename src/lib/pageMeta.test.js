@@ -54,6 +54,9 @@ describe('hosting config (vercel.json) and noindex', () => {
       destination: '/index.html',
     });
   });
+  it('does not use cleanUrls (it breaks the /index.html SPA fallback: unknown paths got Vercel 404s)', () => {
+    expect(v.cleanUrls).toBeUndefined();
+  });
   it('keeps the robots meta and robots.txt', () => {
     expect(readFileSync('index.html', 'utf8')).toContain(
       '<meta name="robots" content="noindex, nofollow" />',

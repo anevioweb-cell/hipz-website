@@ -20,12 +20,16 @@ const ROUTES = [
   '/our-story',
   '/no-such-page',
 ];
-const WIDTHS = [
+const ALL_WIDTHS = [
   [390, 844],
   [768, 1024],
   [1024, 768],
   [1440, 900],
 ];
+const WIDTHS = arg('--widths', '390,768,1024,1440')
+  .split(',')
+  .map(Number)
+  .map((w) => ALL_WIDTHS.find(([x]) => x === w));
 const OUT = 'docs/shots/qa';
 mkdirSync(OUT, { recursive: true });
 const types = { chromium, firefox, webkit };
@@ -224,7 +228,7 @@ for (const engine of ENGINES) {
   }
   await browser.close();
 }
-writeFileSync('docs/qa-matrix.json', JSON.stringify(result, null, 1));
+writeFileSync(arg('--out', 'docs/qa-matrix.json'), JSON.stringify(result, null, 1));
 console.log(
   'keyboard',
   JSON.stringify(result.keyboard.filter((k) => k.invisible.length || k.noRing.length)),
